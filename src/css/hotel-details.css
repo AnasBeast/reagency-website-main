@@ -81,6 +81,37 @@ nav img {
   height: 100%;
   
 }
+.infos li button{
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+.infos li button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: -1em;
+  left: 0;
+  background-color: #000000;
+  transform-origin: center;
+  transition: transform 0.25s ease-out;
+}
+.infos li button:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+.infos .infos-active:after{
+  transform: scaleX(1);
+  transform-origin: center;
+}
+.none{
+  display: none!important;
+}
 #content #landing #logo {
   margin-top: 70px;
   -webkit-filter: drop-shadow(2.544px 1.59px 0.98px rgba(0, 0, 0, 0.67));
@@ -204,7 +235,7 @@ nav img {
   gap: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: grid;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
@@ -213,6 +244,8 @@ nav img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 150px;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 2fr 0fr 1fr;
 }
 
 #content #grid section:first-child {
@@ -410,10 +443,12 @@ nav img {
   background: linear-gradient(0deg, #021033 -25%, rgba(0, 212, 255, 0) 100%);
 }
 
-#content #selection-chambres #title {
+ #title {
   z-index: 996;
   color: #fff;
   width: 90%;
+  position: relative;
+  top: 100px;
   margin-top: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -430,11 +465,11 @@ nav img {
           justify-content: space-between;
 }
 
-#content #selection-chambres #title h1 {
+ #title h1 {
   font-size: 35px;
 }
 
-#content #selection-chambres #title button {
+ #title button {
   height: 50px;
   width: 220px;
   font-weight: 600;
@@ -448,7 +483,7 @@ nav img {
   transition: color 300ms, border 300ms, background 300ms;
 }
 
-#content #selection-chambres #title button:hover {
+ #title button:hover {
   color: #021033;
   border-color: #021033;
   background: #fff;
@@ -460,27 +495,28 @@ nav img {
   background: #fff;
 }
 
-#content #selection-chambres #main {
-  margin-top: 100px;
+.title #main {
   width: 95%;
+  position: relative;
   margin-left: 5%;
+  top: 350px;
   z-index: 996;
   color: #fff;
   font-weight: 500;
 }
 
-#content #selection-chambres #main h1 {
+.title #main h1 {
   font-size: 80px;
   margin: 0;
 }
 
-#content #selection-chambres #main p {
+.title #main p {
   width: 600px;
   font-weight: 600;
   font-size: 16px;
 }
 
-#content #selection-chambres #main button {
+.title #main button {
   border: none;
   border-radius: 0;
   width: 250px;
@@ -496,7 +532,7 @@ nav img {
   transition: background 300ms;
 }
 
-#content #selection-chambres #main button:hover {
+.title #main button:hover {
   background: #cc4400;
 }
 
@@ -858,7 +894,7 @@ nav img {
     padding: 20px 0 !important;
   }
   #avis h1 {
-    font-size: 30px !important;
+    font-size: 30px;
     text-align: center !important;
     width: 100% !important;
     margin-left: 0 !important;
@@ -929,4 +965,212 @@ nav img {
     margin: 0 !important;
     font-size: 16px !important;
   }
+  #title h1 {
+    font-size: 20px;
+    max-width: 80%;
+    position: relative;
+    top: 3em;
+  }
+  #title button{
+    font-size: 15px;
+    width: 150px;
+    visibility: hidden;
+  }
+  .title #main h1 {
+    font-size: 40px;
+    top: -150px;
+    text-align: center;
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .title #main p {
+    max-width: 80%;
+    visibility: hidden;
+  }
+  .title #main button{
+    visibility: hidden;
+  }
+  .title{
+    margin: 0 !important;
+  }
+  #content #grid{
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  #number h1{
+    font-size: 30px !important;
+  }
+  #underlined{
+    flex-direction: column !important;
+  }
+  #content #grid section:first-child button {
+    position: relative;
+    left: 15vw;
+    width: 80%;
+  }
+  .title{
+    margin: 0;
+    
+  }
+  #title{
+    position: relative;
+    top: 150px;
+    margin: 0 !important;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+  }
+  .title #main {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .title #main p{
+    margin-left: 10vw;
+  }
+  .title #main button {
+    width: 80%;
+  }
+  #avis h1 {
+    font-size: 20px;
+  }
+  #content #features {
+    margin-bottom: 75px;
+  }
+  #content #inter #top h1{
+    font-size: 20px;
+  }
+  #inter #top ul{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .infos li button::after{
+    opacity: 0;
+  }
+  footer #upper img{
+    width: 80%;
+  }
+  footer #lower{
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .swiper{
+    height: 10vh !important;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 80vh;
+  height: 80svh;
+  min-height: 320px;
+  background-color: #46677b;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      359deg,
+      rgb(16.863% 17.647% 25.882%) 0%,
+      rgb(15.809% 16.544% 24.265% / 0.9375) 6.25%,
+      rgb(14.755% 15.441% 22.647% / 0.875) 12.5%,
+      rgb(13.701% 14.338% 21.029% / 0.8125) 18.75%,
+      rgb(12.647% 13.235% 19.412% / 0.75) 25%,
+      rgb(11.593% 12.132% 17.794% / 0.6875) 31.25%,
+      rgb(10.539% 11.029% 16.176% / 0.625) 37.5%,
+      rgb(9.485% 9.926% 14.559% / 0.5625) 43.75%,
+      rgb(8.431% 8.824% 12.941% / 0.5) 50%,
+      rgb(7.377% 7.721% 11.324% / 0.4375) 56.25%,
+      rgb(6.324% 6.618% 9.706% / 0.375) 62.5%,
+      rgb(5.27% 5.515% 8.088% / 0.3125) 68.75%,
+      rgb(4.216% 4.412% 6.471% / 0.25) 75%,
+      rgb(3.162% 3.309% 4.853% / 0.1875) 81.25%,
+      rgb(2.108% 2.206% 3.235% / 0.125) 87.5%,
+      rgb(1.054% 1.103% 1.618% / 0.0625) 93.75%,
+      rgb(0% 0% 0% / 0) 100%
+    );
+  }
+}
+
+.title {
+  position: absolute;
+  margin-left: 5vw;
+  top: 10%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 1;
+  color: #ffffff;
+
+  &__text {
+    letter-spacing: -2px;
+    font-size: clamp(3rem, 0.3864rem + 13.0682vw, 7rem);
+    margin-bottom: 0;
+    margin-top: 0;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 100%;
+      content: "";
+      display: block;
+      width: 100px;
+      height: 0.25em;
+      background-color: #ef233c;
+    }
+  }
+}
+
+/*
+  Style up the image behind each slide
+*/
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    mix-blend-mode: luminosity;
+  }
+}
+
+.room-img{
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-prev{
+  color: white !important;
+}
+.swiper-button-next{
+  color: white !important;
+}
+.navigation-bar{
+  justify-content: center;
+}
+.navigation-bar li a{
+  color: black;
 }

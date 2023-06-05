@@ -274,4 +274,49 @@
   #background-page #msg #text p {
     font-size: 25px !important;
   }
+  .content-subtitle{
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width:650px){
+  .container-content{
+    display: flex !important;
+    flex-direction: column;
+  }
+  #input-wrapper h1{
+    text-align: center;
+  }
+  .container-content div div img{
+    width: 100%;
+  }
+  .container-content div{
+    text-align: center;
+  }
+  .container-content div p{
+    width: 100%;
+  }
+  .container-fluid{
+    margin-top: 200px;
+  }
+  #mail #container{
+    height: auto !important;
+    top: 0vw !important;
+    left: 0vw !important;
+    width: 100vw !important;
+  }
+  #mail{
+    margin-top: 10vw;
+    margin-bottom: 20vw;
+  }
+  footer #upper img{
+    width: 80%;
+  }
+  footer #lower{
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
 }

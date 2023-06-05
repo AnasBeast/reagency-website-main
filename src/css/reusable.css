@@ -54,6 +54,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-family: 'Caviar Dreams';
+  overflow-x: hidden;
 }
 
 body.hidden {

@@ -8,6 +8,10 @@
     
     <link rel="stylesheet" href="src/css/reusable.css">
     <link rel="stylesheet" href="src/css/hotel-details.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
 </head>
 <body>
     <script type="text/javascript" src="src/js/index.js"></script>
@@ -109,12 +113,27 @@
         <div id="features">
             <div id="top">
                 <div class="seperation"></div>
-                <ul>
-                    <li>RÉGIONS DU MONDE</li>
-                    <li>PAYS</li>
-                    <li>STYLE</li>
-                    <li>ATMOSPHÈRE</li>
-                    <li>AMÉNAGEMENTS</li>
+                <ul class="navigation-bar">
+                    <li>
+                        <a href="#info">
+                            Informations sur l'hôtel
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#info">
+                            Explorer sur la carte
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#info">
+                            Voir les photos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#info">
+                            Avis
+                        </a>
+                    </li>
                 </ul>
                 <div class="seperation"></div>
             </div>
@@ -126,19 +145,7 @@
             </div>
 
             <div id="grid">
-                <section>
-                    <h1>Influences Art Deco face à Hyde Park</h1>
-                    <p id="main">45 Park Lane a été conçu par Thierry Despont dans un style contemporain avec des influences Art déco. Avec seulement 46 chambres et suites, chaque chambre dispose d'une vue sur Hyde Park.</p>
-
-                    <div id="underlined">
-                        <p>SPA</p>
-                        <p>PISCINE INTÉRIEURE</p>
-                        <p>CENTRE DE FITNESS</p>
-                        <p>GASTRONOMIQUE</p>
-                    </div>
-
-                    <button>RÉSERVER</button>
-                </section>
+                
 
                 <div id="seperation"></div>
                 
@@ -163,106 +170,87 @@
                         </div>
                     </div>
 
-                    <p>Pour découvrir tous vos avantages:</p>
-                    <div id="compte">
-                        <p>CONNECTEZ-VOUS</p>
-                        <p>&nbspOU&nbsp</p>
-                        <p>CRÉEZ UN COMPTE</p>
-                    </div>
+                    
 
                     <h1>Ce qui distingue cet hôtel</h1>
                     <div id="distingue">
-                        <p>Chaque chambre et suite a une vue donnant sur Hyde Park.</p>
-                        <p>Découvrez l'une des suites Penthouse sur le toit avec une terrasse tout autour et une vue imprenable sur Londres.</p>
-                        <p>Savourez un repas au premier restaurant londonien, CUT de Wolfgang Puck.</p>
+                        
                     </div>
                 </section>
             </div>
         </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!-- <div class="swiper-slide">
+                <div class="title">
+                    <div id="title">
+                        <h1>Notre sélection de chambres et suites</h1>
+                        <button>VISITER LES CHAMBRES</button>
+                    </div>
+                    <div id="seperation"></div>
 
-        <div id="selection-chambres">
-            <div id="gradient"></div>
-
-            <div id="title">
-                <h1>Notre sélection de chambres et suites</h1>
-                <button>VISITER LES CHAMBRES</button>
+                    <div id="main">
+                        <h1>Deluxe Room</h1>
+                        <p>36 m2, Vue: Hyde Park - Localisation : chaque étage -Baignoire et douche dans routes les chambers</p>
+        
+                        <button>RÉSERVER</button>
+                    </div>
+                </div>
+                <div class="background-image">
+                  <img class="room-img" src="src/img/hotels/hotel-1.png" alt="A random unsplash image" />
+                </div>
+              </div>
+          
+              <div class="swiper-slide">
+                <div class="title">
+                    <div id="title">
+                        <h1>Notre sélection de chambres et suites</h1>
+                        <button>VISITER LES CHAMBRES</button>
+                    </div>
+                    <div id="seperation"></div>
+                    
+                    <div id="main">
+                        <h1>Deluxe Room</h1>
+                        <p>36 m2, Vue: Hyde Park - Localisation : chaque étage -Baignoire et douche dans routes les chambers</p>
+        
+                        <button>RÉSERVER</button>
+                    </div>
+                </div>
+                <div class="background-image">
+                  <img class="room-img" src="src/img/hotels/hotel-2.png" alt="A random unsplash image" />
+                </div>
+              </div> -->
             </div>
-            
-            <div id="seperation"></div>
-
-            <div id="main">
-                <h1>Deluxe Room</h1>
-                <p>36 m2, Vue: Hyde Park - Localisation : chaque étage -Baignoire et douche dans routes les chambers</p>
-
-                <button>RÉSERVER</button>
-            </div>
+          
+          
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
+        
 
         <div id="avis">
             <h1>Nos clients donnent leur avis</h1>
 
             <div id="avis-wrapper">
-                <div class="avis">
-                    <div id="top">
-                        <h3>Steve J.- Royaume-Uni </h3>
-                        <h3>8/10</h3>
-                    </div>
-    
-                    <h2>CLIENT DEPUIS SEPTEMBRE 2011, ULTIMATE</h2>
-    
-                    <div id="seperation"></div>
-    
-                    <p>Hôtel très bien - la technologie était un peu difficile mais il fallait plus d'une nuit et un diplôme en technologie !!</p>
-                </div>
-    
-                <div class="avis">
-                    <div id="top">
-                        <h3>Anita G. - États-Unis d'Amérique</h3>
-                        <h3>10/10</h3>
-                    </div>
-    
-                    <h2>CLIENT DEPUIS MAI 2015, CONNAISSEUR</h2>
-    
-                    <div id="seperation"></div>
-    
-                    <p>C'est un hôtel parfait car il est totalement axé sur les clients à tous les niveaux de contact. Le ménage est impeccable.</p>
-                </div>
-    
-                <div class="avis">
-                    <div id="top">
-                        <h3>David A. - États-Unis d'Amérique</h3>
-                        <h3>10/10</h3>
-                    </div>
-    
-                    <h2>CLIENT DEPUIS SEPTEMBRE 2011, ULTIMATE</h2>
-    
-                    <div id="seperation"></div>
-    
-                    <p>J'ai séjourné plusieurs fois au 45 Park Lane. C'est l'un de mes hôtels préférés au monde. La qualité de la chambre est superbe et le personnel est super sympa.</p>
-                </div>
-    
-                <div class="avis">
-                    <div id="top">
-                        <h3>Anita G.- États-Unis d'Amérique</h3>
-                        <h3>10/10</h3>
-                    </div>
-    
-                    <h2>CLIENT DEPUIS MAI 2015, CONNAISSEUR</h2>
-    
-                    <div id="seperation"></div>
-    
-                    <p>Petit hôtel privé exceptionnel avec un accès complet à toutes les ressources du Dorchester de l'autre côté de la route.</p>
-                </div>
+                
             </div>
         </div>
 
         <div id="inter">
             <div id="top">
                 <h1>L'hôtel en bref</h1>
-                <ul>
-                    <li>INFORMATIONS PRATIQUES</li>
-                    <li>SPA ET LOISIRS</li>
-                    <li>RESTAURANTS ET BARS</li>
+                <ul class="infos">
+                    <li>
+                        <button class="infos-active infos-info">INFORMATIONS PRATIQUES </button> 
+                    </li>
+                    <li>
+                        <button class="infos-restau">RESTAURANTS ET BARS </button> 
+
+                    </li>
+                    <li>
+                        <button class="infos-spa">SPA ET LOISIRS </button>
+                        
+                    </li>
                 </ul>
 
                 <div class="seperation"></div>
@@ -270,16 +258,19 @@
         </div>
 
         <div id="info">
-            <div id="hotel-info" class="horizontal-grid">
-                <div class="point">
+            
+            <div id="hotel-info" class="horizontal-grid informations">
+                <!-- <div class="point">
                     <h2>Adresse</h2>
                     <p>45 Park Lane, Mayfair, Londres</p>
 
                     <h2>Heure d'arrivée / de départ</h2>
-                    <p>nregistrement15:00 <br> Heure de départmidi</p>
+                    <p><strong>Enregistrement:</strong> 15:00 </p>
+                    <p><strong>Heure de départ:</strong> midi </p>
 
                     <h2>Chambres</h2>
-                    <p>46 chambres et suites Equipements dans les chambres Connecteur iPod, TV à écran plat, coffre-fort dans la chambre, mini-bar, cafetière / théière, produits de salle de bains Noble Isle</p>
+                    <p>46 chambres et suites</p>
+                    <p> <strong>Equipements dans les chambres :</strong> Connecteur iPod, TV à écran plat, coffre-fort dans la chambre, mini-bar, cafetière / théière, produits de salle de bains Noble Isle</p>
                 </div>
                 <div class="seperation">
                     <div></div>
@@ -287,10 +278,11 @@
     
                 <div class="point">
                     <h2>Internet</h2>
-                    <p>Espaces publics gratuit <br> En chambregratuit</p>
+                    <p><strong>Espaces publics:</strong> gratuit </p>
+                    <p><strong>En chambre :</strong> gratuit</p>
 
                     <h2>Transport et transfert</h2>
-                    <p>Transfertsoumis à supplément</p>
+                    <p><strong>Transfert:</strong> soumis à supplément</p>
 
                     <h2>Toujours inclus dans cet hôtel</h2>
                     <p>Internet offert</p>
@@ -307,13 +299,54 @@
                     <p>Enfants bienvenus</p>
 
                     <h2>Politique fumeurs</h2>
-                    <p>Espaces publics non-fumeurs <br> Chambres fumeursnon disponibles</p>
+                    <p>Espaces publics non-fumeurs </p>
+                    <p> <strong>Chambres fumeurs :</strong> non disponibles</p>
 
                     <h2>Services disponibles</h2>
                     <p>Hôtel climatisé <br> Service de blanchisserie <br> Service de conciergerie</p>
-                </div>
+                </div> -->
             </div>
+            <div id="hotel-info" class="horizontal-grid restaurants none">
+                <!-- <div class="point">
+                    <h2>Restaurants and bars options</h2>
 
+                    <p><strong>CUT at 45 Park Lane :</strong> Restaurant gastronomique: cuisine steak house, Petit déjeuner, Afternoon tea </p>
+                    <p> <strong>BAR 45 :</strong> Bar</p>
+                </div>
+                <div class="seperation">
+                    <div></div>
+                </div>
+    
+                <div class="point">
+                    <h2>Petit déjeuner</h2>
+                    <p><strong>Petit déjeuner continental:</strong> disponible </p>
+                    <p><strong>Petit déjeuner américain :</strong> disponible</p>
+
+                    
+                </div> -->
+                
+            </div>
+            <div id="hotel-info" class="horizontal-grid spa none">
+                <!-- <div class="point">
+                    <h2>Spa (The Spa at 45 Park Lane)</h2>
+                    
+                    <p> Massages</p>
+
+                    <p> Hammam</p>
+                </div>
+                <div class="seperation">
+                    <div></div>
+                </div>
+    
+                <div class="point">
+                    <h2>Loisirs</h2>
+                    <p>Piscine intérieure </p>
+                    <p>Centre de fitness</p>
+
+                    
+                </div> -->
+                
+            </div>
             <button>RÉSERVER</button>
         </div>
 
@@ -436,6 +469,49 @@
     </div>
 
     <script>
+        const restaurants = document.querySelector(".restaurants");
+        const informations = document.querySelector(".informations");
+        const spa = document.querySelector(".spa");
+
+        const infoBtn = document.querySelector(".infos-info")
+        const restauBtn = document.querySelector(".infos-restau")
+        const spaBtn = document.querySelector(".infos-spa")
+
+
+        function displayInfomartions(){
+            infoBtn.classList.add("infos-active")
+            restauBtn.classList.remove("infos-active")
+            spaBtn.classList.remove("infos-active")
+
+            informations.classList.remove("none")
+            restaurants.classList.add("none")
+            spa.classList.add("none")
+        }
+        infoBtn.addEventListener("click",displayInfomartions)
+
+        function displayRestaurants(){
+            infoBtn.classList.remove("infos-active")
+            restauBtn.classList.add("infos-active")
+            spaBtn.classList.remove("infos-active")
+
+            informations.classList.add("none")
+            restaurants.classList.remove("none")
+            spa.classList.add("none")
+        }
+        restauBtn.addEventListener("click",displayRestaurants)
+
+        function displaySpa(){
+            infoBtn.classList.remove("infos-active")
+            restauBtn.classList.remove("infos-active")
+            spaBtn.classList.add("infos-active")
+
+            informations.classList.add("none")
+            restaurants.classList.add("none")
+            spa.classList.remove("none")
+        }
+        spaBtn.addEventListener("click",displaySpa)
+    </script>
+    <script>
         // Getting hotel from Page url param
         function GetUrlParameter(sParam){
             var sPageURL= document.URL;
@@ -450,8 +526,12 @@
             }
         }
         var Pageid = GetUrlParameter("id")
+        
+
         function GetHotelToDisplay(Pageid)
         {        
+            if(Pageid.includes("#")){Pageid = Pageid.substring(0,Pageid.indexOf("#"))}
+
             return hotels.find(({ id }) => id == Pageid);
         }
 
@@ -476,6 +556,220 @@
         text.appendChild(stars);
         text.innerHTML+=subTitle;
         console.log(text)
+
+        // div grid
+        const grid = document.getElementById("grid")
+        const services = document.createElement("div");
+        services.id="underlined"
+
+        for (var i = 0; i < hotel.services.length; i++) 
+        {
+            const serviceItem = document.createElement("p");
+            serviceItem.textContent=hotel.services[i];
+            services.appendChild(serviceItem);
+        }
+        const gridSection = `
+                <section>
+                    <h1>${hotel.subtitle}</h1>
+                    <p id="main">${hotel.description}</p>
+                    <div id="underlined">
+                        ${services.innerHTML}    
+                    </div>
+                    <button>RÉSERVER</button>
+                </section>`;
+
+        grid.innerHTML = gridSection + grid.innerHTML
+        // div distingue
+        const distingue = document.getElementById('distingue')
+        for (var i = 0; i < hotel.exceptions.length; i++) 
+        {
+            const exceptionItem = document.createElement("p");
+            exceptionItem.textContent=hotel.exceptions[i];
+            distingue.appendChild(exceptionItem);
+        }
+
+        // div avis-wrapper
+        const feedbacks  = document.getElementById("avis-wrapper")
+        for (var i = 0; i < hotel.feedback.length; i++) 
+        {
+            const feedbackItem = document.createElement("div");
+            feedbackItem.className = "avis"
+            var note = 
+            `<div id="top">
+                <h3>${hotel.feedback[i].name}</h3>
+                <h3>${hotel.feedback[i].rate}</h3>
+            </div>
+    
+            <h2>${hotel.feedback[i].date}</h2>
+    
+            <div id="seperation"></div>
+    
+            <p>${hotel.feedback[i].note}</p>
+            `
+            feedbackItem.innerHTML+=note
+            feedbacks.appendChild(feedbackItem);
+        }
+
+        // hotel-info
+        const infos = document.querySelector(".informations");
+        const restaus = document.querySelector(".restaurants");
+        const spas = document.querySelector(".spa");
+        const hotelBref = hotel.informations;
+
+        var hotelServices = document.createElement("div")
+        for (var i = 0; i < hotelBref.pratiques.services.length; i++) 
+        {
+            const service = document.createElement("p");
+            service.textContent = hotelBref.pratiques.services[i]
+            hotelServices.innerHTML+=service.innerHTML + "<br>"
+        }
+
+        var spaServices = document.createElement("div")
+        for (var i = 0; i < hotelBref.spa.services.length; i++) 
+        {
+            const service = document.createElement("p");
+            service.textContent = hotelBref.spa.services[i]
+            spaServices.innerHTML+=service.innerHTML + "<br>"
+        }
+
+        var loisirs = document.createElement("div")
+        for (var i = 0; i < hotelBref.spa.loisirs.length; i++) 
+        {
+            const service = document.createElement("p");
+            service.textContent = hotelBref.spa.loisirs[i]
+            loisirs.innerHTML+=service.innerHTML + "<br>"
+        }
+
+        var inclusion = document.createElement("p")
+        for (var i = 0; i < hotelBref.pratiques.inclus.length; i++) 
+        {
+            var inclus = document.createElement("p")
+            inclus.textContent = hotelBref.pratiques.inclus[i]
+            inclusion.innerHTML+=inclus.innerHTML + "<br>"
+        }
+        const hotelInfo = `
+        <div class="point">
+            <h2>Adresse</h2>
+            <p>${hotelBref.pratiques.address}</p>
+            <h2>Heure d'arrivée / de départ</h2>
+            <p><strong>Enregistrement:</strong> ${hotelBref.pratiques.arrival} </p>
+            <p><strong>Heure de départ:</strong> ${hotelBref.pratiques.departure} </p>
+            <h2>Chambres</h2>
+            <p>${hotelBref.pratiques.rooms}</p>
+            <p> <strong>Equipements dans les chambres :</strong> ${hotelBref.pratiques.equipments}</p>
+        </div>
+        <div class="seperation">
+            <div></div>
+        </div>
+    
+        <div class="point">
+            <h2>Internet</h2>
+            <p><strong>Espaces publics:</strong> ${hotelBref.pratiques.publicSpace} </p>
+            <p><strong>En chambre :</strong> ${hotelBref.pratiques.inRoom}</p>
+            <h2>Transport et transfert</h2>
+            <p><strong>Transfert:</strong> ${hotelBref.pratiques.transfer}</p>
+            <h2>Toujours inclus dans cet hôtel</h2>
+            <p>${inclusion.innerHTML}</p>
+            <h2>Animaux de compagnie</h2>
+            <p>${hotelBref.pratiques.animals}</p>
+        </div>
+        <div class="seperation">
+            <div></div>
+        </div>
+    
+        <div class="point">
+            <h2>Accueil des enfants</h2>
+            <p>${hotelBref.pratiques.kids}</p>
+            <h2>Politique fumeurs</h2>
+            <p>${hotelBref.pratiques.smokers}</p>
+            <p> <strong>Chambres fumeurs :</strong> ${hotelBref.pratiques.smokersRoom}</p>
+            <h2>Services disponibles</h2>
+            ${hotelServices.innerHTML}
+        </div>`
+
+        const hotelRestau = `
+        <div class="point">
+            <h2>Restaurants and bars options</h2>
+            <p><strong>CUT at 45 Park Lane :</strong> ${hotelBref.restaurants.cut} </p>
+            <p> <strong>BAR 45 :</strong> ${hotelBref.restaurants.bar} </p>
+        </div>
+        <div class="seperation">
+            <div></div>
+        </div>
+   
+        <div class="point">
+            <h2>Petit déjeuner</h2>
+            <p><strong>Petit déjeuner continental:</strong> ${hotelBref.restaurants.breakfeastContinental} </p>
+            <p><strong>Petit déjeuner américain :</strong> ${hotelBref.restaurants.breakfeastAmericain}</p>
+        </div>`
+
+        const hotelSpa = `
+        <div class="point">
+            <h2>Spa (The Spa at 45 Park Lane)</h2>
+            ${spaServices.innerHTML}
+        </div>
+        <div class="seperation">
+            <div></div>
+        </div>
+        <div class="point">
+            <h2>Loisirs</h2>
+            ${loisirs.innerHTML}
+        </div>`
+        infos.innerHTML+=hotelInfo
+        restaus.innerHTML+=hotelRestau
+        spas.innerHTML+=hotelSpa
+    </script>
+    <script>
+        const slides = document.querySelector(".swiper-wrapper");
+        for (var i = 0; i < hotelBref.spa.loisirs.length; i++) 
+        {
+            const slide = document.createElement("div")
+            slide.className="swiper-slide"
+            slide.innerHTML+=`
+            <div class="title">
+                <div id="title">
+                    <h1>Notre sélection de chambres et suites</h1>
+                    <button>VISITER LES CHAMBRES</button>
+                </div>
+                <div id="seperation"></div>
+
+                <div id="main">
+                    <h1>${hotel.rooms[i].name}</h1>
+                    <p>${hotel.rooms[i].description}</p>
+        
+                    <button>RÉSERVER</button>
+                </div>
+            </div>
+            <div class="background-image">
+                <img class="room-img" src=${hotel.rooms[i].img} alt="A random unsplash image" />
+            </div>
+            `
+            console.log(slide)
+            slides.appendChild(slide)
+        }
+        
+        
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const settings = {
+    loop: true,
+  
+    speed: 700,
+  
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets"
+    },
+  
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+};
+  
+const swiper = new Swiper(".mySwiper", settings);
     </script>
 </body>
 </html>

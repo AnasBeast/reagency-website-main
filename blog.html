@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="src/css/reusable.css">
+    <link rel="stylesheet" href="src/css/blog.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <script type="text/javascript" src="src/js/index.js"></script>
+    <id id="overlay" onclick="hideMobileNav()"></id>
+
+	<div id="mobileNavbar">
+		<div onclick="hideMobileNav()" id="cross">
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 17 17" xml:space="preserve">
+				<path fill="#fff" d="M9.6,8.5L14,4.1c0.3-0.3,0.3-0.8,0-1.1c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.4L4,3C3.7,2.7,3.2,2.7,2.9,3s-0.3,0.8,0,1.1l4.5,4.5 L2.9,13c-0.3,0.3-0.3,0.8,0,1.1c0.1,0.1,0.3,0.2,0.5,0.2c0.1,0,0.3,0,0.6-0.2l4.5-4.5l4.4,4.5c0.1,0.1,0.3,0.2,0.5,0.2 s0.4,0,0.6-0.2c0.3-0.3,0.3-0.8,0-1.1L9.6,8.5z"></path>
+			</svg>
+		</div>
+
+		<h1 class="text-4xl">Menu</h1>
+		<div class="seperation"></div>
+
+		<ul class="pl-8 text-white">
+			<a href="qui-sommes-nous.html" ><li>
+				<p class="my-4"> QUI SOMMES-NOUS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href=""><li>
+				<p class="my-4"> DESTINATIONS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href="collection-hotels.html"><li>
+				<p class="my-4"> COLLECTION D'HOTELS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+
+            <a href="conciergerie.html"><li>
+				<p class="my-4"> CONCIERGERIE </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+			<div class="seperation"></div>
+			<div id="call"><p>RESERVEZ EN LIGNE OU APPELEZ</p> <p>+44 20 35 19 2700</p></div>
+
+			<div class="seperation"></div>
+			<div id="inputs" class="text-black">
+				<select>
+					<option value="AR" selected>AR</option>
+					<option value="FR">FR</option>
+					<option value="EN">EN</option>
+				</select>
+
+				<select>
+					<option value="TND" selected>TND</option>
+					<option value="USD">USD</option>
+					<option value="EUR">AUR</option>
+				</select>
+			</div>
+		</ul>
+	</div>
+
+    <nav>
+		<a href="index.html">
+            <img src="src/img/regency-logo.png" alt="Logo">
+        </a>
+
+		<div style="display: flex" id="menu" onclick="showMobileNav()">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</nav>
+
+    <div id="content">
+        <div id="landing">
+            <div id="gradient"></div>
+            <div class="flex items-center justify-center landing-title w-full">
+            </div>
+        </div>
+        <div class="blog-subtitle w-full p-8">
+            <p>HOTELS • 26 MAY 2023</p>
+            <h3 class="text-3xl"> <strong> 3 HÔTELS INCONTOURNABLES À SINGAPOUR</strong> </h3>
+        </div>
+        <div id="list-wrapper">
+            <div id="list">
+                <h1 class="text-center mx-auto w-full">LES DERNIERS ARTICLES VALIDÉE</h1>
+                <div id="planes" class="grid grid-cols-3 gap-8 w-full text-center">
+                    <div>
+                        <div>
+                            <img src="./src/img/blog-img-1.png" alt="plane" class="mx-auto">
+                            <div class="text-left mt-4">
+                                <p>DESTINATIONS • 10 MAY 2023</p>
+                                <p class="font-semibold"> <span class="text-xl">QUE FAIRE ET OÙ LOGER EN ALGARVE</span>
+                                    <br> <br>
+                                Située dans la région la plus méridionale du 
+                                Portugal, l'Algarve possède un littoral 
+                                accidenté, des plages de sable, des…
+
+                                    RESTAURANTS, ORGANISER DES SOIRÉES PRIVÉES, DES ÉVÉNEMENTS SPÉCIAUX OU ENCORE POUR RÉSERVER DES SOINS SPA, NOTRE CONCIERGERIE DE VOYAGE DE LUXE EST LÀ POUR RÉPONDRE À TOUTES LES EXIGENCES DE NOS CLIENTS.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <img src="./src/img/blog-img-2.png" alt="blog-img-2" >
+                            <div class="text-left mt-4">
+                                <p>DESTINATIONS • 10 MAY 2023</p>
+                                <p class="font-semibold"> <span class="text-xl">ITINÉRAIRE DE 5 JOURS À MIAMI</span>
+                                    <br> <br>
+                                  La ville de Miami est située à 
+                                    la pointe sud-est de l'état 
+                                    de Floride, sur Biscayne
+           
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        
+                        <div>
+                            <img src="./src/img/blog-img-3.png" alt="plane" class="mx-auto">
+                            <div class="text-left mt-4">
+                                <p>DESTINATIONS • 10 MAY 2023</p>
+                                <p class="font-semibold"> <span class="text-xl">ITINÉRAIRE DE 4 JOURS À MADRID</span>
+                                    <br> <br>
+                                    Capitale de l'Espagne, Madrid est l'une 
+                                    des capitales européennes les plus 
+                                    dynamiques avec…
+                                    
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <img src="./src/img/blog-img-4.png" alt="plane" class="mx-auto">
+                            <div class="text-left mt-4">
+                                <p>DESTINATIONS • 10 MAY 2023</p>
+                                <p class="font-semibold"> <span class="text-xl">QUE FAIRE ET OÙ LOGER À BALI</span>
+                                    <br> <br>
+                                    L'île indonésienne de Bali est située 
+                                    entre les îles de Java et de Lombok. Il…
+                                   
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <div>
+                            <h1 class="text-sm">HOTELS</h1>
+                            <img src="./src/img/blog-img-6.png" alt="hotel" class="mt-4 w-2/3">
+                            <p>
+                                3 HÔTELS INCONTOURNABLES 
+                                À SINGAPOUR
+                            </p>
+                            <img src="./src/img/blog-img-8.png" alt="hotel" class="mt-4 w-2/3">
+                            <p>
+                                LES MEILLEURES STATIONS 
+                                BALNÉAIRES DU MONDE
+
+                            </p>
+                            <img src="./src/img/blog-img-9.png" alt="hotel"  class="mt-4 w-2/3">
+                            <p>
+                                COMMENT CHOISIR SON 
+                                PALACE À LONDRES                            
+                            </p>
+                        </div>
+                        <div class="mt-8">
+                            <h1>DESTINATIONS</h1>
+                            <img src="./src/img/blog-img-7.png" alt="hotel" class="mt-4 w-2/3">
+                            <p>
+                                QUE FAIRE ET OÙ LOGER 
+                                EN ALGARVE
+                            </p>
+                            <img src="./src/img/blog-img-10.png" alt="hotel" class="mt-4 w-2/3">
+                            <p>
+                                ITINÉRAIRE DE 4 JOURS 
+                                À MADRID    
+
+                            </p>
+                            <img src="./src/img/blog-img-5.png" alt="hotel"  class="mt-4 w-2/3">
+                            <p>
+                                ITINÉRAIRE DE 5 JOURS 
+                                À MIAMI
+                                                        
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-12 mb-2 text-2xl w-2/3 text-center mx-auto">
+                    AUSTRALIA  / AUSTRIA  / CARIBBEAN  / CZECH REPUBLIC  / DENMARK  / ENGLAND  / FRANCE  / GREECE  / HONG KONG  / INDONESIA  / ITALY  / JAPAN  / MALAYSIA  / MALDIVES  / MAURITIUS  / MEXICO  / MONTENEGRO  / MOROCCO  / OMAN  / PORTUGAL  / QATAR  / RWANDA  / 
+                    SCOTLAND  / SEYCHELLES  / SPAIN  / SRI LANKA  / SWITZERLAND  / THAILAND  / UNITED ARAB 
+                    EMIRATES  / UNITED STATES 
+                </p>
+            </div>
+        </div>
+
+        <div id="contact-us-section" class="w-full pb-4">
+            <div class="container mx-auto">
+                <div id="contact-us" class="p-8">
+                    <h1 class="text-center">INSPIRATION VOYAGE</h1>
+                </div>
+                <div id="cards" class="grid grid-cols-3 gap-8 w-full text-left">
+                    <div>
+                        <img src="./src/img/card-img-1.png" alt="card-img-1">
+                        <p class="mt-4">DESTINATIONS</p>
+                        <h3 class="font-semibold text-xl mt-4">
+                            QUE FAIRE ET OÙ LOGER EN 
+                            ALGARVE
+                        </h3>
+                    </div>
+                    <div>
+                        <img src="./src/img/card-img-2.png" alt="card-img-2">
+                        <p class="mt-4">DESTINATIONS</p>
+                        <h3 class="font-semibold text-xl mt-4">
+                            ITINÉRAIRE DE 4 JOURS À MADRID
+                        </h3>
+                    </div>
+                    <div>
+                        <img src="./src/img/card-img-3.png" alt="card-img-3">
+                        <p class="mt-4">DESTINATIONS</p>
+                        <h3 class="font-semibold text-xl mt-4">
+                            ITINÉRAIRE DE 5 JOURS À MIAMI
+
+                        </h3>
+                    </div>
+                </div>
+                <button>PLUS DE DESTINATIONS</button>
+            </div>
+        </div>
+
+
+        <div id="mail">
+            <div id="background" class="flex flex-col items-center text-center justify-center mx-auto">
+                <h2 class="font-medium text-3xl">
+                    RECEVEZ NOTRE NEWSLETTER <br>
+                    DES OFFRES EXCLUSIVES, DES INSPIRATIONS INÉDITES
+                    
+                </h2>
+                <div class="flex gap-4 mt-4 justify-center items-center w-2/3">
+                    <input type="email" id="email" class="block p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Adresse E-mail" required>
+                    <button type="button" data-te-ripple-init data-te-ripple-color="light"
+                    class=" inline-block bg-blue-950 px-6 py-3 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                    S'ABONNER
+                    </button>
+                </div>
+                <p class="text-sm mt-12 text-left w-2/3">
+                    Vos données personnelles sont destinées à l'entité juridique REGENCY TRAVEL SARL dans le but de vous fournir les services REGENCY TRAVEL que vous avez demandés, de vous envoyer des informations sur les activités et services de REGENCY TRAVEL et de vous proposer des offres adaptées à vos centres d'intérêt. Vous pouvez à tout moment vous opposer à recevoir des offres de notre part en utilisant le lien de désinscription présent dans chaque message de REGENCY TRAVEL, demander à accéder, faire porter à un tiers, rectifier ou supprimer les informations vous concernant traitées par REGENCY TRAVEL. Pour exercer vos droits auprès de REGENCY TRAVEL, écrivez à contact@regencytravel.com . Pour en savoir plus sur le traitement de vos données personnelles par REGENCY TRAVEL et sur vos droits, consultez notre Charte pour la protection des données personnelles et de la vie privée à l'adresse suivante : Politique de confidentialité .
+                </p>
+            </div>
+            
+            
+        </div>
+        <footer>
+            <div id="upper">
+                <img src="src/img/logo-blanc.png" alt="Regency Logo">
+    
+                <ul>
+                    <h3>EN SAVOIR PLUS</h3>
+    
+                    <a href="qui-sommes-nous.html"><li>QUI SOMMES-NOUS</li></a>
+                    <a href=""><li>DESTINATIONS</li></a>
+                    <a href="collection-hotels.html"><li>COLLECTION D'HOTELS</li></a>
+                    <a href=""><li>CONCIERGERIE</li></a>
+                </ul>
+    
+                <ul>
+                    <h3>LAISSER-NOUS VOS AIDER</h3>
+    
+                    <a href=""><li>NOUS CONTACTER</li></a>
+                    <a href=""><li>AIDE</li></a>
+                    <a href=""><li>CONDITIONS GENERALES D'UTILISATION</li></a>
+                    <a href=""><li>POLITIQUE DE CONFIDENTIALITE</li></a>
+                </ul>
+    
+                <ul>
+                    <h3>ACCREDITATIONS</h3>
+    
+                    <a href=""><li>CERTIFICAT ARC</li></a>
+                    <a href=""><li>CERTIFICAT CLIA</li></a>
+                    <a href=""><li>CERTIFICAT IATA</li></a>
+                    <a href=""><li>CERTIFICAT CST</li></a>
+                </ul>
+            </div>
+    
+            <div id="lower">
+                <div id="phone">
+                    <img src="src/img/phone.png" alt="Phone">
+                    <h3>+44 20 3519 2700</h3>
+                </div>
+    
+                <img id="logo" src="src/img/IATA-white.png" alt="IATA LOGO">
+    
+                <div id="socials">
+                    <a href=""><img src="src/img/instagram.png" alt="Instagram"></a>
+                    <a href=""><img src="src/img/Youtube.png" alt="Youtube"></a>
+                    <a href=""><img src="src/img/facebook.png" alt="Facebook"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
