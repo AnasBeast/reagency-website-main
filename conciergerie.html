@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Conciergerie</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="src/css/reusable.css">
+    <link rel="stylesheet" href="src/css/conciergerie.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <script type="text/javascript" src="src/js/index.js"></script>
+    <id id="overlay" onclick="hideMobileNav()"></id>
+
+	<div id="mobileNavbar">
+		<div onclick="hideMobileNav()" id="cross">
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 17 17" xml:space="preserve">
+				<path fill="#fff" d="M9.6,8.5L14,4.1c0.3-0.3,0.3-0.8,0-1.1c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.4L4,3C3.7,2.7,3.2,2.7,2.9,3s-0.3,0.8,0,1.1l4.5,4.5 L2.9,13c-0.3,0.3-0.3,0.8,0,1.1c0.1,0.1,0.3,0.2,0.5,0.2c0.1,0,0.3,0,0.6-0.2l4.5-4.5l4.4,4.5c0.1,0.1,0.3,0.2,0.5,0.2 s0.4,0,0.6-0.2c0.3-0.3,0.3-0.8,0-1.1L9.6,8.5z"></path>
+			</svg>
+		</div>
+
+		<h1 class="text-4xl">Menu</h1>
+		<div class="seperation"></div>
+
+		<ul class="pl-8 text-white">
+			<a href="qui-sommes-nous.html" ><li>
+				<p class="my-4"> QUI SOMMES-NOUS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href=""><li>
+				<p class="my-4"> DESTINATIONS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href="collection-hotels.html"><li>
+				<p class="my-4"> COLLECTION D'HOTELS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+
+            <a href="conciergerie.html"><li>
+				<p class="my-4"> CONCIERGERIE </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+			<div class="seperation"></div>
+			<div id="call"><p>RESERVEZ EN LIGNE OU APPELEZ</p> <p>+44 20 35 19 2700</p></div>
+
+			<div class="seperation"></div>
+			<div id="inputs" class="text-black">
+				<select>
+					<option value="AR" selected>AR</option>
+					<option value="FR">FR</option>
+					<option value="EN">EN</option>
+				</select>
+
+				<select>
+					<option value="TND" selected>TND</option>
+					<option value="USD">USD</option>
+					<option value="EUR">AUR</option>
+				</select>
+			</div>
+		</ul>
+	</div>
+
+    <nav>
+		<a href="index.html">
+            <img src="src/img/logo-default.png" alt="Logo">
+        </a>
+
+		<div style="display: flex" id="menu" onclick="showMobileNav()">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</nav>
+
+    <div id="content">
+        <div id="landing">
+            <div id="gradient"></div>
+            <div class="flex items-center justify-center landing-title w-full">
+                <h1>CONCIERGERIE</h1>
+            </div>
+        </div>
+
+        <div id="list-wrapper">
+            <div id="top" class="p-8">
+                <h1 class="text-center">CONCIERGERIE INTRODUCTION</h1>
+
+                <p class="text-lg w-2/3 text-center mx-auto">
+                    LA CONCIERGERIE DE VOYAGE DE LUXE DE REGENCY TRAVEL EST UN SERVICE PERSONNALISÉ QUI PERMET À NOS CLIENTS DE BÉNÉFICIER D'UN
+                    TRAITEMENT VIP DÈS LEUR ARRIVÉE À 
+                    DESTINATION. NOTRE CONCIERGERIE DE VOYAGE DE LUXE EST CONÇUE POUR RÉPONDRE AUX DEMANDES LES PLUS EXIGEANTES DE NOS CLIENTS ET LEUR OFFRIR UNE EXPÉRIENCE DE VOYAGE INOUBLIABLE.
+
+                </p>
+            </div>
+
+            <div id="list">
+                <h1 class="text-center mx-auto w-full">CONCIERGERIE INTRODUCTION</h1>
+                <div id="planes" class="grid grid-cols-3 gap-4 w-full text-center">
+                    <div>
+                        <img src="./src/img/plane.png" alt="plane" class="mx-auto">
+                        <div class="box mx-auto p-4">
+                            <h1>
+                                SERVICES DE CONCIERGERIE PERSONNALISÉS
+                            </h1>
+                            <p>
+                                NOS CONCIERGES SONT DISPONIBLES 24 HEURES SUR 24 POUR RÉPONDRE À TOUTES LES DEMANDES DE NOS CLIENTS. QUE CE SOIT POUR RÉSERVER DES 
+                                RESTAURANTS, ORGANISER DES SOIRÉES PRIVÉES, DES ÉVÉNEMENTS SPÉCIAUX OU ENCORE POUR RÉSERVER DES SOINS SPA, NOTRE CONCIERGERIE DE VOYAGE DE LUXE EST LÀ POUR RÉPONDRE À TOUTES LES EXIGENCES DE NOS CLIENTS.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-40">
+                        
+                        <img src="./src/img/plane.png" alt="plane" class="mx-auto">
+                        <div class="box mx-auto p-4">
+                            <h1>
+                                PLANIFICATION DE VOYAGE
+                            </h1>
+                            <p>
+                                NOS CONCIERGES DE VOYAGE DE LUXE SONT LÀ POUR AIDER NOS CLIENTS À PLANIFIER LEUR VOYAGE DE BOUT EN BOUT. NOUS TRAVAILLONS AVEC LES MEILLEURS FOURNISSEURS POUR 
+                                GARANTIR QUE NOS CLIENTS 
+                                BÉNÉFICIENT D'UNE EXPÉRIENCE DE VOYAGE EXCEPTIONNELLE, QUE CE SOIT POUR LA RÉSERVATION DE VOLS, 
+                                D'HÉBERGEMENTS, DE TRANSFERTS 
+                                AÉROPORT OU MÊME POUR DES VISITES 
+                                EXCLUSIVES DE MUSÉES OU DE SITES 
+                                HISTORIQUES.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./src/img/plane.png" alt="plane" class="mx-auto">
+                        <div class="box mx-auto p-4">
+                            <h1>
+                                ASSISTANCE EN CAS DE PROBLÈMES
+                            </h1>
+                            <p>
+                                SI JAMAIS NOS CLIENTS RENCONTRENT DES PROBLÈMES LORS DE LEUR VOYAGE, NOS CONCIERGES DE VOYAGE DE LUXE SONT LÀ POUR LES AIDER. NOUS SOMMES DISPONIBLES 24 HEURES SUR 24 POUR RÉSOUDRE TOUT PROBLÈME, QU'IL S'AGISSE D'UNE ANNULATION DE VOL, D'UNE PERTE DE BAGAGES OU D'UN 
+                                PROBLÈME AVEC UNE RÉSERVATION.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact-us-section" class="w-full">
+            <div class="container mx-auto">
+                <div id="contact-us" class="p-8">
+                    <h1 class="text-center">NOUS CONTACTER</h1>
+    
+                    <p class="text-lg text-center mx-auto">
+                        Contactez Notre équipe d’experts qui seront ravis de repondre à dos demander
+                    </p>
+                </div>
+                <form action="#">
+                    <div>
+                        <input type="text" id="name" class="shadow-sm bg-white-50 border border-black-300 text-black-900 text-sm focus:ring-primary-500 focus:border-primary-500 block w-36 p-2.5 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="M." required>
+                    </div>
+                    <div class="flex gap-4">
+                        <input type="text" id="prenom" class="block mt-4 p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Prénom" required>
+                        <input type="text" id="nom" class="block mt-4 p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Nom de famille" required>
+                    </div>
+                    <div class="flex gap-4">
+                        <input type="text" id="payé" class="block mt-4 p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Payé" required>
+                        <input type="email" id="email" class="block mt-4 p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Adresse E-mail" required>
+                    </div>
+                    <div class="flex gap-4">
+                        <input type="text" id="tel" class="block mt-4 p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Numéro de téléphone" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block mt-2 mb-2 text-sm font-medium text-black-900 dark:text-black-300">VOTRE DEMANDE</label>
+                        <input type="text" id="demande" class="block mt-4 p-3 w-full text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" required>
+                        <p>
+                            Rédigez ci-dessous votre demande, en essayant d'être le plus précis possible, afin que nous 
+                            soyons en mesure de vous répondre dans les plus brefs délais.
+                        </p>
+                    </div>
+                    <div class="my-4">
+                        <input type="text" id="message" class="block mt-4 p-3 w-full h-72 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Votre demande" required>
+
+                    </div>
+                    <button type="button" data-te-ripple-init data-te-ripple-color="light"
+                    class="mb-6 inline-block w-full bg-blue-950 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                    Envoyer la demande
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div id="mail">
+    
+            <p class="p-8">
+                NOTRE CONCIERGERIE DE VOYAGE DE LUXE EST L'UN DES 
+                NOMBREUX AVANTAGES QUE NOUS OFFRONS À NOS CLIENTS. NOUS SOMMES FIERS DE FOURNIR UN SERVICE EXCEPTIONNEL POUR 
+                GARANTIR QUE NOS CLIENTS PASSENT DES VACANCES DE LUXE SANS SOUCI. REGENCY TRAVEL EST VOTRE PARTENAIRE DE VOYAGE DE CONFIANCE ET NOUS SOMMES IMPATIENTS 
+                DE FOURNIR UN SERVICE EXCEPTIONNEL À TOUS NOS CLIENTS.
+
+            </p>
+        </div>
+        <div id="mail">
+            <div id="background" class="flex flex-col items-center text-center justify-center mx-auto">
+                <h2>
+                    RECEVEZ NOTRE NEWSLETTER <br>
+                    DES OFFRES EXCLUSIVES, DES INSPIRATIONS INÉDITES
+                    
+                </h2>
+                <div class="flex gap-4 justify-center items-center w-2/3">
+                    <input type="email" id="email" class="block p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Adresse E-mail" required>
+                    <button type="button" data-te-ripple-init data-te-ripple-color="light"
+                    class=" inline-block bg-blue-950 px-6 py-3 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                    S'ABONNER
+                    </button>
+                </div>
+            </div>
+            
+            
+        </div>
+        <footer>
+            <div id="upper">
+                <img src="src/img/logo-blanc.png" alt="Regency Logo">
+    
+                <ul>
+                    <h3>EN SAVOIR PLUS</h3>
+    
+                    <a href="qui-sommes-nous.html"><li>QUI SOMMES-NOUS</li></a>
+                    <a href=""><li>DESTINATIONS</li></a>
+                    <a href="collection-hotels.html"><li>COLLECTION D'HOTELS</li></a>
+                    <a href=""><li>CONCIERGERIE</li></a>
+                </ul>
+    
+                <ul>
+                    <h3>LAISSER-NOUS VOS AIDER</h3>
+    
+                    <a href=""><li>NOUS CONTACTER</li></a>
+                    <a href=""><li>AIDE</li></a>
+                    <a href=""><li>CONDITIONS GENERALES D'UTILISATION</li></a>
+                    <a href=""><li>POLITIQUE DE CONFIDENTIALITE</li></a>
+                </ul>
+    
+                <ul>
+                    <h3>ACCREDITATIONS</h3>
+    
+                    <a href=""><li>CERTIFICAT ARC</li></a>
+                    <a href=""><li>CERTIFICAT CLIA</li></a>
+                    <a href=""><li>CERTIFICAT IATA</li></a>
+                    <a href=""><li>CERTIFICAT CST</li></a>
+                </ul>
+            </div>
+    
+            <div id="lower">
+                <div id="phone">
+                    <img src="src/img/phone.png" alt="Phone">
+                    <h3>+44 20 3519 2700</h3>
+                </div>
+    
+                <img id="logo" src="src/img/IATA-white.png" alt="IATA LOGO">
+    
+                <div id="socials">
+                    <a href=""><img src="src/img/instagram.png" alt="Instagram"></a>
+                    <a href=""><img src="src/img/Youtube.png" alt="Youtube"></a>
+                    <a href=""><img src="src/img/facebook.png" alt="Facebook"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

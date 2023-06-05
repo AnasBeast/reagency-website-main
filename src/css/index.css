@@ -1,0 +1,636 @@
+@charset "UTF-8";
+nav {
+  width: 100%;
+  padding-top: 20px;
+  position: absolute;
+  z-index: 997;
+  height: 67px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav img {
+  width: 200px;
+  margin-left: 30px;
+}
+
+nav #sections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 0;
+}
+
+nav #sections p {
+  font-weight: 600;
+  color: #fff;
+  font-size: 15px;
+  margin-right: 50px;
+}
+
+nav #menu {
+  width: 30px;
+  height: 25px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  margin-right: 30px;
+  display: none;
+}
+
+nav #menu div {
+  width: 100%;
+  height: 3px;
+  border: none;
+  background: #fff;
+}
+
+#content {
+  width: 100%;
+}
+
+#content #landing {
+  width: 100%;
+  height: 120vh;
+  -webkit-transition: height 300ms;
+  transition: height 300ms;
+  position: relative;
+}
+
+#content #landing .slider {
+  width: 100%;
+  height: 100%;
+}
+
+#content #landing .slider .carr-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#content #landing .slider .carr-page:first-child {
+  background-image: url("../img/paris.png");
+}
+
+#content #landing .slider .carr-page:nth-child(2) {
+  background-image: url("../img/japan.png");
+}
+
+#content #landing .slider .carr-page:nth-child(3) {
+  background-image: url("../img/paris.png");
+}
+
+#content #landing .slider .carr-page:nth-child(4) {
+  background-image: url("../img/japan.png");
+}
+
+#content #current-dest {
+  height: 100%;
+  width: 100%;
+  background: #021033;
+  padding-top: 100px;
+  padding-bottom: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#content #current-dest #gradient {
+  -webkit-transition: top 300ms, height 300ms;
+  transition: top 300ms, height 300ms;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 20vh;
+  background: #021033;
+  background: -webkit-gradient(linear, left bottom, left top, from(#021033), to(rgba(0, 212, 255, 0)));
+  background: linear-gradient(0deg, #021033 0%, rgba(0, 212, 255, 0) 100%);
+}
+
+#content #current-dest h1 {
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+#content #current-dest #panels {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  gap: 30px;
+}
+
+#content #current-dest #panels .panel {
+  height: 600px;
+  width: 30%;
+  position: relative;
+}
+
+#content #current-dest #panels .panel div {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#content #current-dest #panels .panel:first-child div {
+  background-image: url("../img/beach.png");
+}
+
+#content #current-dest #panels .panel:nth-child(3) div {
+  background-image: url("../img/mountain.png");
+}
+
+#content #current-dest #panels .panel:nth-child(2) {
+  width: 40%;
+}
+
+#content #current-dest #panels .panel:nth-child(2) div {
+  background-image: url("../img/castle.png");
+}
+
+#content #current-dest #panels .panel h2 {
+  position: relative;
+}
+
+#content #cta {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("../img/airport.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#content #cta #gradient {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  z-index: 997;
+  top: 0;
+  background: #021033;
+  background: -webkit-gradient(linear, left top, left bottom, from(#021033), to(rgba(0, 212, 255, 0)));
+  background: linear-gradient(180deg, #021033 0%, rgba(0, 212, 255, 0) 100%);
+}
+
+#content #cta h1 {
+  z-index: 997;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 40px;
+}
+
+#content #cta h1:nth-child(2) {
+  color: #ff5500;
+  font-size: 50px;
+  margin-top: -150px;
+  margin-bottom: 20px;
+}
+
+#content #cta h1:nth-child(3) {
+  color: #fff;
+  font-size: 55px;
+}
+
+#content #cta button {
+  z-index: 997;
+  border: none;
+  border-radius: 10px;
+  width: 190px;
+  height: 65px;
+  background: #ff5500;
+  color: #fff;
+  font-family: 'Caviar Dreams';
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 15px;
+  cursor: pointer;
+  -webkit-transition: background 300ms;
+  transition: background 300ms;
+}
+
+#content #cta button:hover {
+  background: #cc4400;
+}
+
+#content #motto {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  height: 400px;
+}
+
+#content #motto h1 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+#content #motto p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+#content #documentaries {
+  width: 100%;
+  height: 650px;
+  background: #021033;
+  padding-top: 40px;
+}
+
+#content #documentaries h1 {
+  color: #fff;
+  font-size: 45px;
+  text-align: center;
+}
+
+#content #documentaries .gallery {
+  width: 100%;
+  margin-top: 50px;
+}
+
+#content #documentaries .gallery .flickity-page-dots {
+  display: none;
+}
+
+#content #documentaries .gallery .gallery-cell {
+  width: 600px;
+  height: 400px;
+  margin-right: 10px;
+  counter-increment: gallery-cell;
+}
+
+#content #documentaries .gallery .gallery-cell iframe, #content #documentaries .gallery .gallery-cell img {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
+#content #documentaries .gallery .gallery-cell.is-selected iframe, #content #documentaries .gallery .gallery-cell.is-selected img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+#content #actualités {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  padding-top: 50px;
+  margin-top: 10px;
+  background-image: url("../img/clouds.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#content #actualités #gradient {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 997;
+  bottom: 0;
+  background: #021033;
+  background: -webkit-gradient(linear, left bottom, left top, from(#021033), to(rgba(0, 212, 255, 0)));
+  background: linear-gradient(0deg, #021033 0%, rgba(0, 212, 255, 0) 100%);
+}
+
+#content #actualités h1 {
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+}
+
+#content #actualités #posts {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5%;
+  z-index: 997;
+  position: absolute;
+  margin-top: 3%;
+}
+
+#content #actualités #posts .post {
+  width: 40%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+#content #actualités #posts .post:first-child #background {
+  background-image: url("../img/street.png");
+}
+
+#content #actualités #posts .post:nth-child(2) #background {
+  background-image: url("../img/city.png");
+}
+
+#content #actualités #posts .post #background {
+  width: 100%;
+  height: 70%;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#content #actualités #posts .post #text {
+  width: 100%;
+  height: 30%;
+  background: #fff;
+  color: #021033;
+  font-size: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#content #actualités #posts .post #text p {
+  width: calc(100% - 100px);
+  height: calc(100% - 50px);
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+#content #actualités #line {
+  width: 100%;
+  height: 150px;
+  top: 100%;
+  position: absolute;
+  background: #021033;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#content #actualités #line h1 {
+  margin-top: 20px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+#content #map {
+  margin-top: 150px;
+  width: 100%;
+  height: 600px;
+  position: relative;
+  background-image: url("../img/map.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 1280px) {
+  nav img {
+    margin-left: 15px;
+  }
+  nav #sections {
+    display: none;
+  }
+  nav #menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  #landing {
+    height: 400px !important;
+  }
+  #landing .slider .next:before, #landing .slider .prev:before {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  #landing .slider .next:before {
+    right: 10px;
+  }
+  #landing .slider .prev:before {
+    left: 10px;
+  }
+  #landing .titles h1 {
+    top: calc(25% - 25px);
+    font-size: 100px;
+  }
+  #landing .titles p {
+    display: none;
+  }
+  #current-dest {
+    padding-bottom: 150px !important;
+  }
+  #current-dest h1 {
+    width: 90% !important;
+    font-size: 35px !important;
+  }
+  #current-dest #gradient {
+    height: 250px !important;
+    top: 150px !important;
+  }
+  #current-dest #panels {
+    width: 90vw !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-flow: column nowrap !important;
+            flex-flow: column nowrap !important;
+  }
+  #current-dest #panels .panel {
+    height: 400px !important;
+    width: 100% !important;
+    margin-bottom: 100px !important;
+  }
+  #current-dest #panels .panel:nth-child(2) {
+    height: 550px !important;
+  }
+  #current-dest #panels .panel h2 {
+    text-align: center !important;
+  }
+  #cta {
+    height: 400px !important;
+  }
+  #cta h1:nth-child(2) {
+    margin-top: 20px !important;
+    font-size: 30px !important;
+    margin-bottom: 10px !important;
+  }
+  #cta h1:nth-child(3) {
+    font-size: 35px !important;
+  }
+  #cta button {
+    width: 150px !important;
+    height: 50px !important;
+  }
+  #motto {
+    padding-bottom: 45px !important;
+  }
+  #motto h1 {
+    margin-left: 5% !important;
+    width: 90% !important;
+    font-size: 35px !important;
+  }
+  #motto p {
+    margin-left: 2.5% !important;
+    width: 95% !important;
+    font-size: 23px !important;
+  }
+  #documentaries h1 {
+    font-size: 35px !important;
+    margin-bottom: 50px;
+  }
+  #actualités {
+    height: auto !important;
+  }
+  #actualités h1 {
+    font-size: 35px !important;
+    margin-bottom: 50px;
+  }
+  #actualités #posts {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-flow: column nowrap !important;
+            flex-flow: column nowrap !important;
+    position: relative !important;
+  }
+  #actualités #posts .post {
+    width: 90vw !important;
+  }
+  #actualités #posts .post:first-child {
+    margin-bottom: 30px;
+  }
+  #actualités #posts .post:last-child {
+    margin-bottom: 80px;
+  }
+  #actualités #line h1 {
+    font-size: 30px;
+  }
+  #map {
+    height: 400px !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #line h1 {
+    width: 90vw;
+    font-size: 30px !important;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  #documentaries {
+    margin-top: 500px !important;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #documentaries {
+    margin-top: 550px !important;
+  }
+}
