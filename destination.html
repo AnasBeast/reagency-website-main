@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Destinations</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="src/css/reusable.css">
+    <link rel="stylesheet" href="src/css/destination.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <script type="text/javascript" src="src/js/index.js"></script>
+    <id id="overlay" onclick="hideMobileNav()"></id>
+
+	<div id="mobileNavbar">
+		<div onclick="hideMobileNav()" id="cross">
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 17 17" xml:space="preserve">
+				<path fill="#fff" d="M9.6,8.5L14,4.1c0.3-0.3,0.3-0.8,0-1.1c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.4L4,3C3.7,2.7,3.2,2.7,2.9,3s-0.3,0.8,0,1.1l4.5,4.5 L2.9,13c-0.3,0.3-0.3,0.8,0,1.1c0.1,0.1,0.3,0.2,0.5,0.2c0.1,0,0.3,0,0.6-0.2l4.5-4.5l4.4,4.5c0.1,0.1,0.3,0.2,0.5,0.2 s0.4,0,0.6-0.2c0.3-0.3,0.3-0.8,0-1.1L9.6,8.5z"></path>
+			</svg>
+		</div>
+
+		<h1 class="text-4xl">Menu</h1>
+		<div class="seperation"></div>
+
+		<ul class="pl-8 text-white">
+			<a href="qui-sommes-nous.html" ><li>
+				<p class="my-4"> QUI SOMMES-NOUS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href=""><li>
+				<p class="my-4"> DESTINATIONS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href="collection-hotels.html"><li>
+				<p class="my-4"> COLLECTION D'HOTELS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+
+            <a href="conciergerie.html"><li>
+				<p class="my-4"> CONCIERGERIE </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+			<div class="seperation"></div>
+			<div id="call"><p>RESERVEZ EN LIGNE OU APPELEZ</p> <p>+44 20 35 19 2700</p></div>
+
+			
+		</ul>
+	</div>
+
+    <nav>
+		<a href="index.html">
+            <img src="src/img/logo-default.png" alt="Logo">
+        </a>
+
+		<div style="display: flex" id="menu" onclick="showMobileNav()">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</nav>
+
+    <div id="content">
+        <div id="list-wrapper">
+            <div id="list">
+                <h1 class="text-center mx-auto w-full">Destinations</h1>
+                <div id="destinations" class="grid grid-cols-4 gap-16 w-full text-left">
+                    <div>
+                        <h1><span class="bg-letter">A</span>frique</h1>
+                        <h3>Afrique du Sud</h3>
+                        <h3>Maroc</h3>
+                        <h3>Rwanda</h3>
+                        <h3>Zombie</h3>
+
+                        <h1><span class="bg-letter">A</span>mérique Centrale</h1>
+                        <h3>Costa Rica</h3>
+
+                        <h1><span class="bg-letter">A</span>mérique du Nord</h1>
+                        <h3>Canada</h3>
+                        <h3>Etats-Unis</h3>
+                        <h3>Mexique</h3>
+
+                        <h1><span class="bg-letter">A</span>mérique du Sud</h1>
+                        <h3>Argentine</h3>
+                        <h3>Brésil</h3>
+                        <h3>Colombie</h3>
+                        <h3>Pérou</h3>
+                    </div>
+                    <div>
+                        <h1><span class="bg-letter">A</span>sie</h1>
+                        <h3>Combodge</h3>
+                        <h3>Chine</h3>
+                        <h3>Hong Kong</h3>
+                        <h3>Inde</h3>
+                        <h3>Indonésie</h3>
+                        <h3>Japon</h3>
+                        <h3>Laos</h3>
+                        <h3>Malaisie</h3>
+                        <h3>Myanmar</h3>
+                        <h3>Philippines</h3>
+                        <h3>Singapour</h3>
+                        <h3>Sri Lanka</h3>
+                        <h3>Thailande</h3>
+                        <h3>Vietnam</h3>
+
+                        <h1><span class="bg-letter">C</span>araïbes</h1>
+                        <h3>Anguilla</h3>
+                        <h3>Iles Turks et Caïques</h3>
+                        <h3>Porto Rico</h3>
+                        <h3>République dominicaine</h3>
+                        <h3>Saint-Barthélemy</h3>
+                        <h3>St Vincent et Grenadines</h3>
+                    </div>
+                    <div>
+                        <h1><span class="bg-letter">E</span>urope</h1>
+                        <h3>Allemagne</h3>
+                        <h3>Autriche</h3>
+                        <h3>Belgique</h3>
+                        <h3>Danemark</h3>
+                        <h3>Espagne</h3>
+                        <h3>France</h3>
+                        <h3>Grèce</h3>
+                        <h3>Hongrie</h3>
+                        <h3>Irlande</h3>
+                        <h3>Italie</h3>
+                        <h3>Monaco</h3>
+                        <h3>Monténégro</h3>
+                        <h3>Pays-Bas</h3>
+                        <h3>Pologne</h3>
+                        <h3>Portugal</h3>
+                        <h3>République tchèque</h3>
+                        <h3>Royaume-Uni</h3>
+                        <h3>Russie</h3>
+                        <h3>Suede</h3>
+                        <h3>Suisse</h3>
+                        <h3>Turquie</h3>
+                    </div>
+                    <div>
+                        <h1><span class="bg-letter">M</span>oyen Orient</h1>
+                        <h3>Arabie saoudite</h3>
+                        <h3>Emirats arabes unis</h3>
+                        <h3>Dubai</h3>
+                        <h3>Oman</h3>
+                        <h3>Qatar</h3>
+
+                        <h1><span class="bg-letter">O</span>céan Indien</h1>
+                        <h3>Maldives</h3>
+                        <h3>Maurice</h3>
+                        <h3>Seychelles</h3>
+
+                        <h1><span class="bg-letter">O</span>céanie</h1>
+                        <h3>Australie</h3>
+                        <h3>Polynésie française</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div id="mail">
+    
+            <div id="certif" class="p-8">
+				<img src="src/img/IATA.png" alt="IATA">
+
+				<h3>Nous somme une agence de voyage certifiée IATA</h3>
+			</div>
+        </div>
+        <div id="mail">
+            
+            
+            
+        </div>
+        <footer>
+            <div id="upper">
+                <img src="src/img/logo-blanc.png" alt="Regency Logo">
+    
+                <ul>
+                    <h3>EN SAVOIR PLUS</h3>
+    
+                    <a href="qui-sommes-nous.html"><li>QUI SOMMES-NOUS</li></a>
+                    <a href=""><li>DESTINATIONS</li></a>
+                    <a href="collection-hotels.html"><li>COLLECTION D'HOTELS</li></a>
+                    <a href=""><li>CONCIERGERIE</li></a>
+                </ul>
+    
+                <ul>
+                    <h3>LAISSER-NOUS VOS AIDER</h3>
+    
+                    <a href=""><li>NOUS CONTACTER</li></a>
+                    <a href=""><li>AIDE</li></a>
+                    <a href=""><li>CONDITIONS GENERALES D'UTILISATION</li></a>
+                    <a href=""><li>POLITIQUE DE CONFIDENTIALITE</li></a>
+                </ul>
+    
+                <ul>
+                    <h3>ACCREDITATIONS</h3>
+    
+                    <a href=""><li>CERTIFICAT ARC</li></a>
+                    <a href=""><li>CERTIFICAT CLIA</li></a>
+                    <a href=""><li>CERTIFICAT IATA</li></a>
+                    <a href=""><li>CERTIFICAT CST</li></a>
+                </ul>
+            </div>
+    
+            <div id="lower">
+                <div id="phone">
+                    <img src="src/img/phone.png" alt="Phone">
+                    <h3>+44 20 3519 2700</h3>
+                </div>
+    
+                <img id="logo" src="src/img/IATA-white.png" alt="IATA LOGO">
+    
+                <div id="socials">
+                    <a href=""><img src="src/img/instagram.png" alt="Instagram"></a>
+                    <a href=""><img src="src/img/Youtube.png" alt="Youtube"></a>
+                    <a href=""><img src="src/img/facebook.png" alt="Facebook"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

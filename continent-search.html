@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Meilleurs Hotels</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="src/css/reusable.css">
+    <link rel="stylesheet" href="src/css/continent-search.css">
+</head>
+<body>
+
+    <script type="text/javascript" src="src/js/index.js"></script>
+    <id id="overlay" onclick="hideMobileNav()"></id>
+
+	<div id="mobileNavbar">
+		<div onclick="hideMobileNav()" id="cross">
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 17 17" xml:space="preserve">
+				<path fill="#fff" d="M9.6,8.5L14,4.1c0.3-0.3,0.3-0.8,0-1.1c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.4L4,3C3.7,2.7,3.2,2.7,2.9,3s-0.3,0.8,0,1.1l4.5,4.5 L2.9,13c-0.3,0.3-0.3,0.8,0,1.1c0.1,0.1,0.3,0.2,0.5,0.2c0.1,0,0.3,0,0.6-0.2l4.5-4.5l4.4,4.5c0.1,0.1,0.3,0.2,0.5,0.2 s0.4,0,0.6-0.2c0.3-0.3,0.3-0.8,0-1.1L9.6,8.5z"></path>
+			</svg>
+		</div>
+
+		<h1>Menu</h1>
+		<div class="seperation"></div>
+
+		<ul>
+			<a href="qui-sommes-nous.html"><li>
+				<p> QUI SOMMES-NOUS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href=""><li>
+				<p> DESTINATIONS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href="collection-hotels.html"><li>
+				<p> COLLECTION D'HOTELS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+
+            <a href="conciergerie.html"><li>
+				<p> CONCIERGERIE </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+			<div class="seperation"></div>
+			<div id="call"><p>RESERVEZ EN LIGNE OU APPELEZ</p> <p>+44 20 35 19 2700</p></div>
+
+			
+		</ul>
+	</div>
+
+    <nav>
+		<a href="index.html">
+            <img src="src/img/logo-default.png" alt="Logo">
+        </a>
+
+		<div style="display: flex" id="menu" onclick="showMobileNav()">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</nav>
+
+    <div id="content">
+        <div id="landing">
+            <img src="src/img/hotels/hotel-2.png" alt="" id="backgroundImg" class="background w-full">
+            <img id="logo" src="src/img/logo-blanc.png" alt="Logo">
+
+            <div id="text">
+                
+            </div>
+
+        </div>
+
+        <div id="list-wrapper">
+            <div id="top">
+                <h1>Hôtel de luxe en Europe</h1>
+                <p class="content-description">
+                    Que ce soit pour ses cités intemporelles telles que Paris et Venise ou ses 
+                    destinations hors des sentiers battus, comme le Monténégro et la vallée 
+                    du Douro, l'Europe est toujours synonyme de vacances réussies. 
+                    Et nous sommes impatients de partager avec vous nos hôtels préférés sur 
+                    l’ensemble du continent, des châteaux médiévaux de la campagne 
+                    irlandaise aux stations de ski ultra-exclusives des Alpes suisses.
+                </p>
+            </div>
+
+            <div id="mid">
+                <h1>LES DESTINATIONS</h1>
+                <p class="content-destinations">
+                    ALLEMAGNE · AUTRICHE · BELGIQUE 
+                    DANEMARK · ESPAGNE · FRANCE · GRÈCE  
+                    HONGRIE · IRLANDE · ITALIE · MONACO · MONTÉNÉGRO 
+                    PAYS-BAS · POLOGNE · PORTUGAL · RÉPUBLIQUE TCHÈQUE 
+                    ROYAUME-UNI · RUSSIE · SUÈDE · SUISSE · TURQUIE
+
+                </p>
+            </div>
+
+            <div id="bottom">
+                <h1>LES PLUS BEAUX HÔTELS D'EUROPE</h1>
+                <p class="content-top">
+                    L’Europe ne manque pas de magnifiques hôtels, mais il en existe qui laisseraient même 
+                    les voyageurs les plus blasés un peu émerveillés. Il y a bien sûr le Ritz Paris, où Coco Chanel 
+                    et Marcel Proust ont résidé des années. Ensuite, il y a les chics boutiques-hôtels de Santorin, 
+                    où les vues sur la mer Égée sont des plus exquises.
+
+
+                </p>
+            </div>
+
+            <div id="list">
+
+            </div>
+        </div>
+
+        
+
+
+
+        <div id="selection-chambres" class="title">
+
+            <div id="title">
+                <h1>Nos destinations préférées en Europe</h1>
+            </div>
+            
+            <div id="seperation"></div>
+
+            <div id="main">
+                <p>I! y a beaucoup de chose que l'on aime en Europe, mais'des villes comme Londres et Paris, avec leur art, 
+                    leur architecture, leurs musées et leurs espaces culturels-pourraient bien être nos endroits-préférés</p>
+                <h1>Londres, Royaume-Uni</h1>
+            </div>
+        </div>
+
+        <div id="options">
+            <h1>Plus d'inspiration de voyage</h1>
+
+            <div id="wrapper">
+                <div class="element">
+                    <div id="background"></div>
+                    <h3>CLARIDGE'S</h3>
+                </div>
+
+                <div class="element">
+                    <div id="background"></div>
+                    <h3>CORINTHIA LONDON</h3>
+                </div>
+
+                <div class="element">
+                    <div id="background"></div>
+                    <h3>HOTEL CAFÉ ROYAL</h3>
+                </div>
+            </div>
+
+            <div id="other-options">
+                <h1>NOS AUTRES DESTINATIONS</h1>
+                <p class="options-bottom">
+                    AFRIQUE - AMÉRIQUE DU NORD  <br>
+                    AMÉRIQUE DU SUD - ASIE - CARAÏBES - MOYEN ORIENT   <br>
+                    OCÉAN INDIEN - OCÉANIE
+
+                </p>
+            </div>
+        </div>
+
+        <div id="mail">
+            <div id="background" class="newsletter flex flex-col items-center text-center justify-center mx-auto">
+                <h2 class="font-medium text-3xl">
+                    RECEVEZ NOTRE NEWSLETTER <br>
+                    DES OFFRES EXCLUSIVES, DES INSPIRATIONS INÉDITES
+                    
+                </h2>
+                <div class="flex gap-4 mt-4 justify-center items-center w-2/3">
+                    <input type="email" id="email" class="block p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Adresse E-mail" required="">
+                    <button type="button" data-te-ripple-init="" data-te-ripple-color="light" class=" inline-block bg-blue-950 px-6 py-3 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                        S'ABONNER
+                    </button>
+                </div>
+                <p class="text-sm mt-12 text-left w-2/3">
+                    Vos données personnelles sont destinées à l'entité juridique REGENCY TRAVEL SARL dans le but de vous fournir les services REGENCY TRAVEL que vous avez demandés, de vous envoyer des informations sur les activités et services de REGENCY TRAVEL et de vous proposer des offres adaptées à vos centres d'intérêt. Vous pouvez à tout moment vous opposer à recevoir des offres de notre part en utilisant le lien de désinscription présent dans chaque message de REGENCY TRAVEL, demander à accéder, faire porter à un tiers, rectifier ou supprimer les informations vous concernant traitées par REGENCY TRAVEL. Pour exercer vos droits auprès de REGENCY TRAVEL, écrivez à contact@regencytravel.com . Pour en savoir plus sur le traitement de vos données personnelles par REGENCY TRAVEL et sur vos droits, consultez notre Charte pour la protection des données personnelles et de la vie privée à l'adresse suivante : Politique de confidentialité .
+                </p>
+            </div>
+            
+            
+        </div>
+    
+        <footer>
+            <div id="upper">
+                <img src="src/img/logo-blanc.png" alt="Regency Logo">
+    
+                <ul>
+                    <h3>EN SAVOIR PLUS</h3>
+    
+                    <a href="qui-sommes-nous.html"><li>QUI SOMMES-NOUS</li></a>
+                    <a href=""><li>DESTINATIONS</li></a>
+                    <a href="collection-hotels.html"><li>COLLECTION D'HOTELS</li></a>
+                    <a href=""><li>CONCIERGERIE</li></a>
+                </ul>
+    
+                <ul>
+                    <h3>LAISSER-NOUS VOS AIDER</h3>
+    
+                    <a href=""><li>NOUS CONTACTER</li></a>
+                    <a href=""><li>AIDE</li></a>
+                    <a href=""><li>CONDITIONS GENERALES D'UTILISATION</li></a>
+                    <a href=""><li>POLITIQUE DE CONFIDENTIALITE</li></a>
+                </ul>
+    
+                <ul>
+                    <h3>ACCREDITATIONS</h3>
+    
+                    <a href=""><li>CERTIFICAT ARC</li></a>
+                    <a href=""><li>CERTIFICAT CLIA</li></a>
+                    <a href=""><li>CERTIFICAT IATA</li></a>
+                    <a href=""><li>CERTIFICAT CST</li></a>
+                </ul>
+            </div>
+    
+            <div id="lower">
+                <div id="phone">
+                    <img src="src/img/phone.png" alt="Phone">
+                    <h3>+44 20 3519 2700</h3>
+                </div>
+    
+                <img id="logo" src="src/img/IATA-white.png" alt="IATA LOGO">
+    
+                <div id="socials">
+                    <a href=""><img src="src/img/instagram.png" alt="Instagram"></a>
+                    <a href=""><img src="src/img/Youtube.png" alt="Youtube"></a>
+                    <a href=""><img src="src/img/facebook.png" alt="Facebook"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Getting hotel from Page url param
+        function GetUrlParameter(sParam){
+            var sPageURL= document.URL;
+            var sURLVariables = sPageURL.split('?');
+            for (var i = 0; i < sURLVariables.length; i++) 
+            {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) 
+                {
+                    return sParameterName[1];
+                }
+            }
+        }
+        var Pageid = GetUrlParameter("continent")
+        
+
+        function GetHotelToDisplay(Pageid)
+        {        
+            if(Pageid.includes("#")){Pageid = Pageid.substring(0,Pageid.indexOf("#"))}
+            
+            return continents.find(({ continent }) => continent.toUpperCase() == Pageid.toUpperCase());
+        }
+        //Modifiying the page to the current Hotel selected
+        var continent = GetHotelToDisplay(Pageid);
+        var hotel = hotels.find(({ id }) => continent.hotelId)
+        
+        const landing = document.getElementById("backgroundImg");
+        landing.src=hotel.images[0];
+        // div TEXT
+        const text = document.getElementById("text");
+        const stars = document.createElement("div");
+        stars.id="stars"
+
+        for (var i = 0; i < parseInt(hotel.stars); i++) 
+        {
+            const starItem = document.createElement("img");
+            starItem.src="src/img/star.png";
+            stars.appendChild(starItem);
+        }
+
+        const subTitle = `<h1>${hotel.name}</h1><h3>${hotel.address}</h3>`
+        text.appendChild(stars);
+        text.innerHTML+=subTitle;
+
+        // div list
+        const hotelsList = document.getElementById("list");
+        continent.hotels.forEach((hotel) => {
+            const hotelItem = document.createElement("a");
+            hotelItem.classList.add("element");
+            hotelItem.href=`/hotel-deatils.html?id=${hotel.id}`;
+            hotelItem.innerHTML = `
+            <div>
+                <div id="background" style="background-image : url(${hotel.thumbnail})"></div>
+                <h3>${hotel.name}</h3>
+                <h4>${hotel.region}</h4>
+            </div>
+            <button>RÉSERVER</button>`;
+            hotelsList.appendChild(hotelItem);
+        })
+
+    </script>
+</body>
+</html>

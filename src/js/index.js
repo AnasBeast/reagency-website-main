@@ -350,67 +350,34 @@ var hotels = [
         stars : "5" 
     },
 ]
-hotels.forEach((hotel)=>{
-    var content =`<div class="content"> <div class="landing" style="background-image : url(${hotel.images[0]})"> <img id="logo" src="src/img/logo-blanc.png" alt="Logo">  <div id="text">
-    <div id="stars">
-        <img src="src/img/star.png" alt="Star">
-        <img src="src/img/star.png" alt="Star">
-        <img src="src/img/star.png" alt="Star">
-        <img src="src/img/star.png" alt="Star">
-        <img src="src/img/star.png" alt="Star">
-    </div>
 
-    <h1>45 Park Lane</h1>
-    <h3>45 PARK LANE, MAYFAIR, LONDRES, ROYAUME-UNI  </h3>
-</div>`  +'</div></div>'
-    var content2 = 
-    `<footer>
-    <div id="upper">
-        <img src="src/img/logo-blanc.png" alt="Regency Logo">
-
-        <ul>
-            <h3>EN SAVOIR PLUS</h3>
-
-            <a href="qui-sommes-nous.html"><li>QUI SOMMES-NOUS</li></a>
-            <a href=""><li>DESTINATIONS</li></a>
-            <a href="collection-hotels.html"><li>COLLECTION D'HOTELS</li></a>
-            <a href=""><li>CONCIERGERIE</li></a>
-        </ul>
-
-        <ul>
-            <h3>LAISSER-NOUS VOS AIDER</h3>
-
-            <a href=""><li>NOUS CONTACTER</li></a>
-            <a href=""><li>AIDE</li></a>
-            <a href=""><li>CONDITIONS GENERALES D'UTILISATION</li></a>
-            <a href=""><li>POLITIQUE DE CONFIDENTIALITE</li></a>
-        </ul>
-
-        <ul>
-            <h3>ACCREDITATIONS</h3>
-
-            <a href=""><li>CERTIFICAT ARC</li></a>
-            <a href=""><li>CERTIFICAT CLIA</li></a>
-            <a href=""><li>CERTIFICAT IATA</li></a>
-            <a href=""><li>CERTIFICAT CST</li></a>
-        </ul>
-    </div>
-
-    <div id="lower">
-        <div id="phone">
-            <img src="src/img/phone.png" alt="Phone">
-            <h3>+44 20 3519 2700</h3>
-        </div>
-
-        <img id="logo" src="src/img/IATA-white.png" alt="IATA LOGO">
-
-        <div id="socials">
-            <a href=""><img src="src/img/instagram.png" alt="Instagram"></a>
-            <a href=""><img src="src/img/Youtube.png" alt="Youtube"></a>
-            <a href=""><img src="src/img/facebook.png" alt="Facebook"></a>
-        </div>
-    </div>
-    </footer>`
-    
-})
-
+var continents = [
+    {   continent : "Europe",
+        hotelId : 1,
+        description : "Que ce soit pour ses cités intemporelles telles que Paris et Venise ou ses destinations hors des sentiers battus, comme le Monténégro et la vallée du Douro, l'Europe est toujours synonyme de vacances réussies. Et nous sommes impatients de partager avec vous nos hôtels préférés sur l’ensemble du continent, des châteaux médiévaux de la campagne irlandaise aux stations de ski ultra-exclusives des Alpes suisses.",
+        destinations : "ALLEMAGNE · AUTRICHE · BELGIQUE DANEMARK · ESPAGNE · FRANCE · GRÈCE  HONGRIE · IRLANDE · ITALIE · MONACO · MONTÉNÉGRO PAYS-BAS · POLOGNE · PORTUGAL · RÉPUBLIQUE TCHÈQUE ROYAUME-UNI · RUSSIE · SUÈDE · SUISSE · TURQUIE",
+        top: "L’Europe ne manque pas de magnifiques hôtels, mais il en existe qui laisseraient même les voyageurs les plus blasés un peu émerveillés. Il y a bien sûr le Ritz Paris, où Coco Chanel et Marcel Proust ont résidé des années. Ensuite, il y a les chics boutiques-hôtels de Santorin, où les vues sur la mer Égée sont des plus exquises.",
+        hotels:[
+            {
+                name:"Ham Yard Hotel",
+                region: "Londres",
+                thumbnail : "./src/img/ham-thumb.png"
+            },
+            {
+                name:"Hotel Arts Barcelona",
+                region: "Bercelona",
+                thumbnail : "./src/img/arts-thumb.png"
+            },
+            {
+                name:"Hôtel Plaza Athénée",
+                region: "Paris",
+                thumbnail : "./src/img/plaza-thumb.png"
+            },
+            {
+                name:"Ritz Paris",
+                region: "Paris",
+                thumbnail : "./src/img/ritz-thumb.png"
+            },
+        ]
+    }
+]

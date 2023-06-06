@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Collection D'hotels</title>
+    <title>Meilleurs Hotels</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="src/css/reusable.css">
-    <link rel="stylesheet" href="src/css/collection-hotels.css">
+    <link rel="stylesheet" href="src/css/hotels-search.css">
 </head>
 <body>
 
@@ -71,8 +71,9 @@
 
     <div id="content">
         <div id="landing">
-            <div id="gradient"></div>
-
+            <div class="landing-title">
+                <h1>Paris</h1>
+            </div>
             <div id="input-wrapper">
 				<div id="input">
 					<img style="display: block" src="src/img/search.png" alt="Search" id="search">
@@ -85,23 +86,24 @@
 
         <div id="list-wrapper">
             <div id="top">
-                <h1>La collection regency</h1>
+                <h1 class="content-title">Hôtel de luxe : Paris</h1>
                 <div class="seperation"></div>
 
                 <ul>
-                    <li>RÉGIONS DU MONDE</li>
-                    <li>PAYS</li>
-                    <li>STYLE</li>
+                    <li>VILLE</li>
                     <li>ATMOSPHÈRE</li>
+                    <li>STYLE</li>
                     <li>AMÉNAGEMENTS</li>
                 </ul>
                 <div class="seperation"></div>
             </div>
 
             <div id="list">
-                
+
             </div>
         </div>
+
+        
 
         <div id="selling-points" class="horizontal-grid">
             <div class="point">
@@ -128,6 +130,21 @@
             <div class="point">
                 <h1>Une expérience hotelière de prestige</h1>
                 <p>Les meilleurs hôtels, les meilleures prestations, les meilleurs services, tout simplement.</p>
+            </div>
+        </div>
+
+        <div id="selection-chambres" class="title">
+
+            <div id="title">
+                <h1>Des idées de destinations</h1>
+                <button>PAR CONTINENT</button>
+            </div>
+            
+            <div id="seperation"></div>
+
+            <div id="main">
+                <h1>Amérique du Nord</h1>
+                <h4>CANADA - ETATS-UNIS - MEXIQUE</h4>
             </div>
         </div>
 
@@ -201,49 +218,49 @@
     </div>
 
     <script>
-        var hotelsCollection = [
+        // Getting hotel from Page url param
+        function GetUrlParameter(sParam){
+            var sPageURL= document.URL;
+            var sURLVariables = sPageURL.split('?');
+            for (var i = 0; i < sURLVariables.length; i++) 
             {
-                id : 1,
-                name : "45 Park Lane",
-                country : "LONDRES",
-                thumbnail : "src/img/hotels/hotel-2.png",
-                region : "Europe"
-            },
-            {
-                id : 2,
-                name : "137 Pillars House",
-                country : "CHIANG MAI",
-                thumbnail : "src/img/hotels/hotel-7.jpg",
-                region : "Asie"
-            },
-            {
-                id : 3,
-                name : "Abadía Retuerta LeDomaine",
-                country : "RETUERTA",
-                thumbnail : "src/img/hotels/hotel-8.jpg",
-                region : "Europe"
-            },
-            {
-                id : 4,
-                name : "Acqualina Resort and Residences on the Beach",
-                country : "MIAMI",
-                thumbnail : "src/img/hotels/hotel-9.jpg",
-                region : "Amérique du Nord"
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) 
+                {
+                    return sParameterName[1];
+                }
             }
-        ]
+        }
+        var Pageid = GetUrlParameter("country")
+        
+
+        function GetHotelToDisplay(Pageid)
+        {        
+            if(Pageid.includes("#")){Pageid = Pageid.substring(0,Pageid.indexOf("#"))}
+
+            return hotels.filter(({ country }) => country.toUpperCase() == Pageid.toUpperCase());
+        }
+        //Modifiying the page to the current Hotel selected
+        var hotel = GetHotelToDisplay(Pageid);
+
         const hotelsList = document.getElementById("list");
-        hotelsCollection.forEach((hotel) => {
+        hotel.forEach((hotel) => {
             const hotelItem = document.createElement("a");
             hotelItem.classList.add("element");
             hotelItem.href=`/hotel-deatils.html?id=${hotel.id}`;
             hotelItem.innerHTML = `
             <div>
-                <div id="background" style="background-image : url(${hotel.thumbnail})"></div>
+                <div id="background" style="background-image : url(${hotel.images[0]})"></div>
                 <h3>${hotel.name}</h3>
             </div>
             <button>RÉSERVER</button>`;
-                            hotelsList.appendChild(hotelItem);
+            hotelsList.appendChild(hotelItem);
         })
+
+        const title = document.querySelector(".landing-title")
+        const contentTitle = document.querySelector(".content-title")
+        contentTitle.textContent = `Hôtel de luxe : ${Pageid}`
+        title.innerHTML=`<h1>${Pageid}</h1>`
     </script>
 </body>
 </html>
