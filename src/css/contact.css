@@ -100,7 +100,7 @@ nav img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-          background: #F7F3F3;
+          background: #F9EFE9;
 }
 
 #content #list-wrapper #top {
@@ -264,11 +264,7 @@ nav img {
   font-size: 25px;
 }
 #mail #background{
-  background-image: url("../img/newsletter-plane.png");
-}
-.color-text{
   color: #FF5500;
-  font-weight: 600;
 }
 #background h2{
   margin-bottom: 5rem;
@@ -314,17 +310,29 @@ nav img {
     font-size: 25px !important;
   }
   #contact-us-section{
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
-  #mail #background{
-    height: auto;
-  }
-  #mail #background div{
+  #top div{
     flex-direction: column;
   }
-  #mail #background div>*{
+  #top button{
+    margin: 0;
+  }
+  #top div p{
     width: 100%;
+  }
+  #tel{
+    width: 100%;
+  }
+  #background div{
+    flex-direction: column;
+  }
+  #background div>*{
+   width: 100%;
+  }
+  #mail #background {
+    height: auto;
   }
   footer{
     margin-top: 0 !important;

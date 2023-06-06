@@ -394,10 +394,42 @@ nav img {
     height: 400px !important;
     width: 100% !important;
   }
+  .landing-title{
+    padding-top: 0;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 701px) {
   #list-wrapper #top h1 {
     font-size: 35px !important;
+  }
+  footer{
+    margin-top: 0 !important;
+  }
+  footer #upper img{
+    width: 80%;
+  }
+  footer #lower{
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+  }
+  #mail #background{
+    height: auto;
+  }
+  #content #selection-chambres{
+    margin-bottom: 0;
+  }
+  #content #mail{
+    margin: 0;
+  }
+  #mail #container{
+    position: relative;
+    width: 100% !important;
+    left: 0 !important;
+  }
+  .landing-title{
+    font-size: 35px;
   }
 }
