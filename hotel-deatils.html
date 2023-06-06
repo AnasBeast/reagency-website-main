@@ -695,7 +695,7 @@
     </script>
     <script>
         const slides = document.querySelector(".swiper-wrapper");
-        for (var i = 0; i < hotelBref.spa.loisirs.length; i++) 
+        for (var i = 0; i < hotel.rooms.length; i++) 
         {
             const slide = document.createElement("div")
             slide.className="swiper-slide"
@@ -728,22 +728,22 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
         const settings = {
-    loop: true,
-  
-    speed: 700,
-  
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets"
-    },
-  
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    }
-};
-  
-const swiper = new Swiper(".mySwiper", settings);
+            loop: true,
+        
+            speed: 700,
+        
+            pagination: {
+            el: ".swiper-pagination",
+            type: "bullets"
+            },
+        
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+            }
+        };
+        
+        const swiper = new Swiper(".mySwiper", settings);
     </script>
 </body>
 </html>

@@ -72,7 +72,7 @@
     <div id="content">
         <div id="landing">
             <div class="landing-title">
-                <h1>Paris</h1>
+                <h1>Regency Travel</h1>
             </div>
             <div id="input-wrapper">
 				<div id="input">
@@ -86,7 +86,7 @@
 
         <div id="list-wrapper">
             <div id="top">
-                <h1 class="content-title">Hôtel de luxe : Paris</h1>
+                <h1 class="content-title">Hôtel de luxe</h1>
                 <div class="seperation"></div>
 
                 <ul>
@@ -97,9 +97,16 @@
                 </ul>
                 <div class="seperation"></div>
             </div>
-            <h2 class="hotel-numbers">1 hôtel incontournable</h2>
+            <h2 class="hotel-numbers"></h2>
             <div id="list">
-
+                
+                <a class="element" href="/hotel-deatils.html?id=1">
+                <div>
+                    <div id="background" style="background-image : url(./src/img/hotels/hotel-2.png)"></div>
+                    <h3>45 Park Lane</h3>
+                </div>
+                <button>RÉSERVER</button></a></div>
+                
             </div>
         </div>
 
@@ -247,6 +254,7 @@
         var hotel = GetHotelToDisplay(Pageid);
 
         const hotelsList = document.getElementById("list");
+        if(Pageid !==undefined){hotelsList.innerHTML = ""}
         const hotelCount = document.querySelector(".hotel-numbers")
         hotel.forEach((hotel) => {
             const hotelItem = document.createElement("a");
@@ -258,13 +266,14 @@
                 <h3>${hotel.name}</h3>
             </div>
             <button>RÉSERVER</button>`;
+            hotelsList.innerHTML = ""
             hotelsList.appendChild(hotelItem);
         })
 
         const title = document.querySelector(".landing-title")
         const contentTitle = document.querySelector(".content-title")
-        contentTitle.textContent = `Hôtel de luxe : ${Pageid}`
-        title.innerHTML=`<h1>${Pageid}</h1>`
+        contentTitle.textContent = `Hôtel de luxe : ${Pageid.toUpperCase()}`
+        title.innerHTML=`<h1>${Pageid.toUpperCase()}</h1>`
         hotelCount.textContent = `${hotel.length}  hôtel(s) incontournable(s)`
     </script>
 </body>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reservation</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="src/css/reusable.css">
+    <link rel="stylesheet" href="src/css/hotel-details.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+</head>
+<body>
+    <script type="text/javascript" src="src/js/index.js"></script>
+    <id id="overlay" onclick="hideMobileNav()"></id>
+
+	<div id="mobileNavbar">
+		<div onclick="hideMobileNav()" id="cross">
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 17 17" xml:space="preserve">
+				<path fill="#fff" d="M9.6,8.5L14,4.1c0.3-0.3,0.3-0.8,0-1.1c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.4L4,3C3.7,2.7,3.2,2.7,2.9,3s-0.3,0.8,0,1.1l4.5,4.5 L2.9,13c-0.3,0.3-0.3,0.8,0,1.1c0.1,0.1,0.3,0.2,0.5,0.2c0.1,0,0.3,0,0.6-0.2l4.5-4.5l4.4,4.5c0.1,0.1,0.3,0.2,0.5,0.2 s0.4,0,0.6-0.2c0.3-0.3,0.3-0.8,0-1.1L9.6,8.5z"></path>
+			</svg>
+		</div>
+
+		<h1>Menu</h1>
+		<div class="seperation"></div>
+
+		<ul class="pl-8 text-white">
+			<a href="qui-sommes-nous.html" ><li>
+				<p class="my-4"> QUI SOMMES-NOUS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href="destination.html"><li>
+				<p class="my-4"> DESTINATIONS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href="collection-hotels.html"><li>
+				<p class="my-4"> COLLECTION D'HOTELS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+
+            <a href="conciergerie.html"><li>
+				<p class="my-4"> CONCIERGERIE </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+			<div class="seperation"></div>
+			<div id="call"><p>RESERVEZ EN LIGNE OU APPELEZ</p> <p>+44 20 35 19 2700</p></div>
+
+			
+		</ul>
+	</div>
+
+    <nav>
+		<a href="index.html">
+            <img src="src/img/logo-default.png" alt="Logo">
+        </a>
+
+		<div style="display: flex" id="menu" onclick="showMobileNav()">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</nav>
+
+    <div id="content">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!-- <div class="swiper-slide">
+                <div class="title">
+                    <div id="title">
+                        <h1>Notre sélection de chambres et suites</h1>
+                        <button>VISITER LES CHAMBRES</button>
+                    </div>
+                    <div id="seperation"></div>
+
+                    <div id="main">
+                        <h1>Deluxe Room</h1>
+                        <p>36 m2, Vue: Hyde Park - Localisation : chaque étage -Baignoire et douche dans routes les chambers</p>
+        
+                        <button>RÉSERVER</button>
+                    </div>
+                </div>
+                <div class="background-image">
+                  <img class="room-img" src="src/img/hotels/hotel-1.png" alt="A random unsplash image" />
+                </div>
+              </div>
+          
+              <div class="swiper-slide">
+                <div class="title">
+                    <div id="title">
+                        <h1>Notre sélection de chambres et suites</h1>
+                        <button>VISITER LES CHAMBRES</button>
+                    </div>
+                    <div id="seperation"></div>
+                    
+                    <div id="main">
+                        <h1>Deluxe Room</h1>
+                        <p>36 m2, Vue: Hyde Park - Localisation : chaque étage -Baignoire et douche dans routes les chambers</p>
+        
+                        <button>RÉSERVER</button>
+                    </div>
+                </div>
+                <div class="background-image">
+                  <img class="room-img" src="src/img/hotels/hotel-2.png" alt="A random unsplash image" />
+                </div>
+              </div> -->
+            </div>
+          
+          
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        
+
+        <div class="w-2/3 mt-12">
+            <form action="#">
+                <h1 class="mb-4 text-xl"><strong>VOS INFORMATIONS</strong></h1>
+                <div class="flex gap-4">
+                    <input type="text" id="prenom" class="block mt-4 p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Prénom" required>
+                    <input type="text" id="nom" class="block mt-4 p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Nom de famille" required>
+                </div>
+                <div class="flex gap-4">
+                    <input type="text" id="pays" class="block mt-4 p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Pays" required>
+                    <input type="email" id="email" class="block mt-4 p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Adresse E-mail" required>
+                </div>
+                <div class="flex gap-4">
+                    <input type="text" id="tel" class="block mt-4 p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Numéro de téléphone" required>
+                </div>
+                <div class="my-4">
+                    <label for="email" class="block mt-2 mb-2 text-sm font-medium text-black-900 dark:text-black-300">VOTRE RESERVATION POUR L'HOTEL : <strong>45 Park Lane</strong></label>
+                    <div class="mb-0">
+                        <label><strong>Durée du séjour:</strong> </label>
+                        <input class="border w-52 py-4" placeholder="Pick date rage" id="kt_daterangepicker_1" required/>
+                    </div>
+                </div>
+                <div class="my-4">
+                    <label for="custom-input-number" class="w-full text-gray-700 text-sm font-semibold">Nombre d'adultes
+                    </label>
+                    <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+                      <button data-action="decrement" class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                        <span class="m-auto text-2xl font-thin">−</span>
+                      </button>
+                      <input type="number" min="1" value="2" onkeydown="return false" max="4" class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
+                      <button data-action="increment" class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                        <span class="m-auto text-2xl font-thin">+</span>
+                      </button>
+                    </div>
+                    <label for="custom-input-number" class="w-full text-gray-700 text-sm font-semibold">Nombre d'enfants</label>
+                    <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+                        <button data-action="decrement2" class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                          <span class="m-auto text-2xl font-thin">−</span>
+                        </button>
+                        <input type="number" min="0" value="0" onkeydown="return false" max="4" class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
+                        <button data-action="increment2" class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                          <span class="m-auto text-2xl font-thin">+</span>
+                        </button>
+                      </div>
+                </div>
+                <div class="my-4"> 
+                    <label for="rooms" class="block mb-2 text-xl font-semibold">Chambre à choisir:</label>
+                    <select id="rooms" class="bg-gray-50 border border-gray-300 text-gray-900 w-full h-16">
+                        <option selected disabled>Choisissez une chambre</option>
+                        
+                    </select>
+                </div>
+                <div class="my-4">
+                    <input type="text" id="message" class="block mt-4 p-3 w-full h-36 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Une message à attacher" required>
+
+                </div>
+                <button type="button" data-te-ripple-init data-te-ripple-color="light"
+                class="mb-6 text-2xl inline-block w-full bg-blue-950 px-6 pt-4 pb-4 font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                Envoyer la demande
+                </button>
+            </form>
+        </div>
+        
+
+       
+
+       
+
+        <div id="selling-points" class="horizontal-grid">
+            <div class="point">
+                <h1>Une Collection unique des plus beaux hôtels du monde</h1>
+                <p>Nous les sélectionnons personnellement et tous sont exceptionnels</p>
+                <button>DÉCOUVREZ NOTRE COLLECTION</button>
+            </div>
+            <div class="seperation">
+                <div></div>
+            </div>
+
+            <div class="point">
+                <h1>Un accompagnement ultra-personnalisé</h1>
+                <p>Tous les avantages "Le Club" et un Guest Experience Manager dédié à votre écoute pour des séjours parfaits, conçus sur-mesure.</p>
+                <div id="phone">
+                    <p>Conctactez-nous au</p>
+                    <p>+44 20 3519 2700</p>
+                </div>
+            </div>
+            <div class="seperation">
+                <div></div>
+            </div>
+
+            <div class="point">
+                <h1>Une expérience hotelière de prestige</h1>
+                <p>Les meilleurs hôtels, les meilleures prestations, les meilleurs services, tout simplement.</p>
+            </div>
+        </div>
+
+       
+        <footer style="background: #F7F3F3;" class="py-56">
+           <img src="/src/img/regency-logo.png" alt="logo-blanc">
+        </footer>
+    </div>
+
+   
+    <script>
+        var hotel = {
+            id : 1,
+            name:"45 Park Lane" ,
+            address:"45 PARK LANE, MAYFAIR, LONDRES, ROYAUME-UNI",
+            country : "Royaume Uni",
+            subtitle : "Influences Art Deco face à Hyde Park",
+            description:"45 Park Lane a été conçu par Thierry Despont dans un style contemporain avec des influences Art déco. Avec seulement 46 chambres et suites, chaque chambre dispose d'une vue sur Hyde Park." ,
+            images : ["./src/img/hotels/hotel-2.png"],
+            services : [
+                "SPA",
+                "PISCINE INTÉRIEURE",
+                "CENTRE DE FITNESS",
+                "GASTRONOMIQUE"
+            ],
+            exceptions : [
+                "Chaque chambre et suite a une vue donnant sur Hyde Park.",
+                "Découvrez l'une des suites Penthouse sur le toit avec une terrasse tout autour et une vue imprenable sur Londres.",
+                "Savourez un repas au premier restaurant londonien, CUT de Wolfgang Puck."
+            ],
+            rooms : [
+                {
+                    name : "Deluxe Room",
+                    description : "36 m2, Vue: Hyde Park - Localisation : chaque étage -Baignoire et douche dans routes les chambers",
+                    img : "https://img1.10bestmedia.com/Images/Photos/378649/Park-Hyatt-New-York-Manhattan-Sky-Suite-Master-Bedroom-low-res_54_990x660.jpg"
+                },
+                {
+                    name : "Park View Studio",
+                    description : "65 m2, Vue: Vues spectaculaires sur Hyde Park - Localisation: Etages supérieurs - Baignoire et douche dans toutes les chambres",
+                    img : "https://www.travelandleisure.com/thmb/OiDnPGo3k9QLRT9__TPhFZcr7PU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/rosewood-carlyle-presidential-suite-LUXESUITE0122-0046808a88924e57922d78c7f1d9ca60.jpg"
+                }
+            ],
+            feedback : [
+                {
+                    name : "Steve J.- Royaume-Uni",
+                    rate : "8/10",
+                    date : "CLIENT DEPUIS SEPTEMBRE 2011, ULTIMATE",
+                    note : "Hôtel très bien - la technologie était un peu difficile mais il fallait plus d'une nuit et un diplôme en technologie !!"
+                },
+                {
+                    name : "Anita G. - États-Unis d'Amérique",
+                    rate : "10/10",
+                    date : "CLIENT DEPUIS MAI 2015, CONNAISSEUR",
+                    note : "C'est un hôtel parfait car il est totalement axé sur les clients à tous les niveaux de contact. Le ménage est impeccable."
+                }
+            ],
+            informations : {
+                pratiques : {
+                    address : "45 Park Lane, Mayfair, Londres",
+                    arrival:"15:00",
+                    departure : "midi",
+                    rooms: "46 chambres et suites",
+                    equipments: "Connecteur iPod, TV à écran plat, coffre-fort dans la chambre, mini-bar, cafetière / théière, produits de salle de bains Noble Isle",
+                    animals: "Chiens non admis",
+                    publicSpace : "gratuit",
+                    inRoom : "gratuit",
+                    transfer : "soumis à supplément",
+                    inclus : ["Internet offert"],
+                    kids : "Enfants bienvenus",
+                    smokers: "Espaces publics non-fumeurs",
+                    smokersRoom : "non disponibles",
+                    services : ["Hôtel climatisé","Service de blanchisserie","Service de conciergerie"]
+
+                },
+                restaurants : {
+                    cut : "Restaurant gastronomique: cuisine steak house, Petit déjeuner, Afternoon tea",
+                    bar : "Bar",
+                    breakfeastContinental : "disponible",
+                    breakfeastAmericain  : "disponible"
+                },
+                spa: {
+                    services : ["Massages","Hammam"],
+                    loisirs : ["Piscine intérieure","Centre de fitness"]
+                }
+            },
+            stars : "5" 
+        }
+        const slides = document.querySelector(".swiper-wrapper");
+        const rooms = document.getElementById("rooms")
+        for (var i = 0; i < hotel.rooms.length; i++) 
+        {
+            const slide = document.createElement("div")
+            const room = document.createElement("option")
+            room.value=hotel.rooms[i].name
+            slide.className="swiper-slide"
+            slide.innerHTML+=`
+            <div class="title">
+                <div id="title">
+                    <h1>Notre sélection de chambres et suites</h1>
+                </div>
+                <div id="seperation"></div>
+
+                <div id="main">
+                    <h1>${hotel.rooms[i].name}</h1>
+                    <p>${hotel.rooms[i].description}</p>
+        
+                </div>
+            </div>
+            <div class="background-image">
+                <img class="room-img" src=${hotel.rooms[i].img} alt="A random unsplash image" />
+            </div>
+            `
+            console.log(slide)
+            room.textContent = hotel.rooms[i].name
+            rooms.appendChild(room)
+            slides.appendChild(slide)
+        }
+        
+        
+
+    </script>
+    <script>
+        function decrement(e) {
+            const btn = e.target.parentNode.parentElement.querySelector(
+            'button[data-action="decrement"]'
+            );
+            const target = btn.nextElementSibling;
+            let value = Number(target.value);
+            if(value!==1){value--}
+            target.value = value;
+        }
+
+        function increment(e) {
+            const btn = e.target.parentNode.parentElement.querySelector(
+            'button[data-action="decrement"]'
+            );
+            const target = btn.nextElementSibling;
+            let value = Number(target.value);
+            if(value!==4){value++}
+            target.value = value;
+        }
+
+        const decrementButtons = document.querySelectorAll(
+            `button[data-action="decrement"]`
+        );
+
+        const incrementButtons = document.querySelectorAll(
+            `button[data-action="increment"]`
+        );
+
+        decrementButtons.forEach(btn => {
+            btn.addEventListener("click", decrement);
+        });
+
+        incrementButtons.forEach(btn => {
+            btn.addEventListener("click", increment);
+        });
+
+        function decrement2(e) {
+            const btn = e.target.parentNode.parentElement.querySelector(
+            'button[data-action="decrement2"]'
+            );
+            const target = btn.nextElementSibling;
+            let value = Number(target.value);
+            if(value!==0){value--}
+            target.value = value;
+        }
+
+        function increment2(e) {
+            const btn = e.target.parentNode.parentElement.querySelector(
+            'button[data-action="decrement2"]'
+            );
+            const target = btn.nextElementSibling;
+            let value = Number(target.value);
+            if(value!==4){value++}
+            target.value = value;
+        }
+
+        const decrement2Buttons = document.querySelectorAll(
+            `button[data-action="decrement2"]`
+        );
+
+        const increment2Buttons = document.querySelectorAll(
+            `button[data-action="increment2"]`
+        );
+
+        decrement2Buttons.forEach(btn => {
+            btn.addEventListener("click", decrement2);
+        });
+
+        increment2Buttons.forEach(btn => {
+            btn.addEventListener("click", increment2);
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const settings = {
+            loop: true,
+        
+            speed: 700,
+        
+            pagination: {
+            el: ".swiper-pagination",
+            type: "bullets"
+            },
+        
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+            }
+        };
+        
+        const swiper = new Swiper(".mySwiper", settings);
+        $("#kt_daterangepicker_1").daterangepicker();
+    </script>
+</body>
+</html>

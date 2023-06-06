@@ -27,7 +27,7 @@ var hotels = [
         id : 1,
         name:"45 Park Lane" ,
         address:"45 PARK LANE, MAYFAIR, LONDRES, ROYAUME-UNI",
-        country : "Royaume-Uni",
+        country : "Royaume Uni",
         subtitle : "Influences Art Deco face à Hyde Park",
         description:"45 Park Lane a été conçu par Thierry Despont dans un style contemporain avec des influences Art déco. Avec seulement 46 chambres et suites, chaque chambre dispose d'une vue sur Hyde Park." ,
         images : ["./src/img/hotels/hotel-2.png"],
