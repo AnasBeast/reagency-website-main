@@ -20,7 +20,7 @@ const showMobileNav = () => {
     document.querySelector('body').classList.add('hidden');
 }
 
-
+const backendURL = "http://localhost:8080"
 
 var hotels = [
     {   
@@ -381,3 +381,10 @@ var continents = [
         ]
     }
 ]
+
+async function logJSONData() {
+    const response = await fetch(`${backendURL}/api/todos`);
+    const jsonData = await response.json();
+    console.log(jsonData);
+}
+logJSONData()
