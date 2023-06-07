@@ -101,72 +101,72 @@ var hotels = [
     },
     {   
         id : 2,
-        name:"137 Pillars House" ,
-        address:"2 Soi 1 Nawatgate Road, Watgate, Chiang Mai, Thaïlande",
-        country : "Thailande",
-        subtitle : "Son histoire remonte à la fin des années 1800. L’hôtel 137 Pillars House est l’une des adresses les plus exclusives de Chiang Mai. Cet établissement en teck magnifiquement restauré, aménagé dans le pur style colonial, donne sur la rive orientale de la rivière Ping.",
-        description:"Avec ses quelque 30 suites érigées autour de l’ancienne résidence de Louis Leonowens, le 137 Pillars House est le boutique-hôtel par excellence… En guise de hall d’accueil, un pavillon posé sur l’eau, décoré de photos relatant l’histoire de la propriété. Un mur de verdure haut de trois étages surplombe une piscine à débordement de 25 mètres. L’omniprésence du bois, qui donne au lieu une atmosphère feutrée et élégante, renvoie d’emblée à l’époque des premiers colons, qui ont démarré, sur les berges de cette rivière, le commerce du teck… Des réminiscences particulièrement présentes dans les deux restaurants de l’hôtel, aménagés dans la propriété d’origine. Pour savourer la cuisine traditionnelle thaïlandaise et asiatique, vous avez le choix entre dîner en plein air ou en salle. Le restaurant Palette est plus intimiste et gastronomique, tandis que le bar de l'hôtel, qui porte le nom d'un ancien résident Écossais, a des allures de Club de gentlemen britanniques, avec sa carte à whisky et son design traditionnel. Le spa de l’hôtel, s’inspirant des Sept piliers du bien-être, propose des soins pour nourrir le corps et apaiser l’esprit." ,
-        images : ["./src/img/hotels/hotel-3.png"],
-        services : [
-            "SPA",
-            "PISCINE INTÉRIEURE",
-            "CENTRE DE FITNESS",
-        ],
-        exceptions : [
-            "L’omniprésence du bois, un clin d’œil à l’architecture du XIXe siècle.",
-            "Les suites d’inspiration coloniale, avec leur haut plafond, leur grande terrasse et leurs fauteuils à bascule.",
-            "Son emplacement : il est situé au coeur du charmant quartier de Wat Gate, à deux pas des galeries marchandes, des boutiques et des bars."
-        ],
-        rooms : [
-            {
-                name : "Louis Leonowens Pool Suite",
-                description : "135 m2, Vue: Jardin / Piscine - Localisation: Bâtiment principal, rez-de-chaussée - Baignoire et douche dans toutes les chambres, Balcon ou Terrasse dans toutes les chambres, Piscine privée",
-                img : "https://img1.10bestmedia.com/Images/Photos/378649/Park-Hyatt-New-York-Manhattan-Sky-Suite-Master-Bedroom-low-res_54_990x660.jpg"
-            },
-            {
-                name : "Rajah Brooke Suite",
-                description : "70 m2, Vue: Jardin - Localisation: Bâtiment principal, rez-de-chaussée et étage supérieur - Baignoire et douche dans toutes les chambres, Balcon ou Terrasse dans toutes les chambres",
-                img : "https://www.redrockresort.com/wp-content/uploads/2020/12/RR-Standard-2-Queen.jpg"
-            },
-            {
-                name : "East Borneo Suite",
-                description : "75 m2, Vue: Jardin - Localisation: Bâtiment principal, rez-de-chaussée et étage supérieur - Baignoire et douche dans toutes les chambres, Balcon ou Terrasse dans toutes les chambres",
-                img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp3Lrsy0QECmq4xjW3S2Noy6mq37YT0ByBUkvv0ictJP9sm67TOJbfmbPCs3w61PBq0qc&usqp=CAU"
-            }
-        ],
-        feedback : [
-            
-        ],
-        informations : {
-            pratiques : {
-                address : "2 Soi 1 Nawatgate Road, Watgate, Chiang Mai, Thaïlande",
-                arrival:"15:00",
-                departure : "midi",
-                rooms: "30 chambres et suites",
-                equipments: "TV à écran plat, coffre-fort dans la chambre, mini-bar, cafetière / théière, journal quotidien gratuit",
-                animals: "Chiens non admis",
-                publicSpace : "gratuit",
-                inRoom : "gratuit",
-                transfer : "soumis à supplément",
-                inclus : ["Boisson de bienvenue offerte","Boisson de bienvenue offerte","Petit déjeuner buffet pour deux, chaque jour","Service de majordome"],
-                kids : "Enfants bienvenus",
-                smokers: "Espaces publics non-fumeurs",
-                smokersRoom : "disponibles",
-                services : ["Hôtel climatisé","Service de blanchisserie","Service de conciergerie"]
+            name:"137 Pillars House" ,
+            address:"2 Soi 1 Nawatgate Road, Watgate, Chiang Mai, Thaïlande",
+            country : "Thailande",
+            subtitle : "Son histoire remonte à la fin des années 1800. L’hôtel 137 Pillars House est l’une des adresses les plus exclusives de Chiang Mai. Cet établissement en teck magnifiquement restauré, aménagé dans le pur style colonial, donne sur la rive orientale de la rivière Ping.",
+            description:"Avec ses quelque 30 suites érigées autour de l’ancienne résidence de Louis Leonowens, le 137 Pillars House est le boutique-hôtel par excellence… En guise de hall d’accueil, un pavillon posé sur l’eau, décoré de photos relatant l’histoire de la propriété. Un mur de verdure haut de trois étages surplombe une piscine à débordement de 25 mètres. L’omniprésence du bois, qui donne au lieu une atmosphère feutrée et élégante, renvoie d’emblée à l’époque des premiers colons, qui ont démarré, sur les berges de cette rivière, le commerce du teck… Des réminiscences particulièrement présentes dans les deux restaurants de l’hôtel, aménagés dans la propriété d’origine. Pour savourer la cuisine traditionnelle thaïlandaise et asiatique, vous avez le choix entre dîner en plein air ou en salle. Le restaurant Palette est plus intimiste et gastronomique, tandis que le bar de l'hôtel, qui porte le nom d'un ancien résident Écossais, a des allures de Club de gentlemen britanniques, avec sa carte à whisky et son design traditionnel. Le spa de l’hôtel, s’inspirant des Sept piliers du bien-être, propose des soins pour nourrir le corps et apaiser l’esprit." ,
+            images : ["./src/img/hotels/hotel-3.png"],
+            services : [
+                "SPA",
+                "PISCINE INTÉRIEURE",
+                "CENTRE DE FITNESS"
+            ],
+            exceptions : [
+                "L’omniprésence du bois, un clin d’œil à l’architecture du XIXe siècle.",
+                "Les suites d’inspiration coloniale, avec leur haut plafond, leur grande terrasse et leurs fauteuils à bascule.",
+                "Son emplacement : il est situé au coeur du charmant quartier de Wat Gate, à deux pas des galeries marchandes, des boutiques et des bars."
+            ],
+            rooms : [
+                {
+                    name : "Louis Leonowens Pool Suite",
+                    description : "135 m2, Vue: Jardin / Piscine - Localisation: Bâtiment principal, rez-de-chaussée - Baignoire et douche dans toutes les chambres, Balcon ou Terrasse dans toutes les chambres, Piscine privée",
+                    img : "https://img1.10bestmedia.com/Images/Photos/378649/Park-Hyatt-New-York-Manhattan-Sky-Suite-Master-Bedroom-low-res_54_990x660.jpg"
+                },
+                {
+                    name : "Rajah Brooke Suite",
+                    description : "70 m2, Vue: Jardin - Localisation: Bâtiment principal, rez-de-chaussée et étage supérieur - Baignoire et douche dans toutes les chambres, Balcon ou Terrasse dans toutes les chambres",
+                    img : "https://www.redrockresort.com/wp-content/uploads/2020/12/RR-Standard-2-Queen.jpg"
+                },
+                {
+                    name : "East Borneo Suite",
+                    description : "75 m2, Vue: Jardin - Localisation: Bâtiment principal, rez-de-chaussée et étage supérieur - Baignoire et douche dans toutes les chambres, Balcon ou Terrasse dans toutes les chambres",
+                    img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp3Lrsy0QECmq4xjW3S2Noy6mq37YT0ByBUkvv0ictJP9sm67TOJbfmbPCs3w61PBq0qc&usqp=CAU"
+                }
+            ],
+            feedback : [
+                
+            ],
+            informations : {
+                pratiques : {
+                    address : "2 Soi 1 Nawatgate Road, Watgate, Chiang Mai, Thaïlande",
+                    arrival:"15:00",
+                    departure : "midi",
+                    rooms: "30 chambres et suites",
+                    equipments: "TV à écran plat, coffre-fort dans la chambre, mini-bar, cafetière / théière, journal quotidien gratuit",
+                    animals: "Chiens non admis",
+                    publicSpace : "gratuit",
+                    inRoom : "gratuit",
+                    transfer : "soumis à supplément",
+                    inclus : ["Boisson de bienvenue offerte","Boisson de bienvenue offerte","Petit déjeuner buffet pour deux, chaque jour","Service de majordome"],
+                    kids : "Enfants bienvenus",
+                    smokers: "Espaces publics non-fumeurs",
+                    smokersRoom : "disponibles",
+                    services : ["Hôtel climatisé","Service de blanchisserie","Service de conciergerie"]
 
+                },
+                restaurants : {
+                    cut : "non disponible",
+                    bar : "non disponible",
+                    breakfeastContinental : "inclus",
+                    breakfeastAmericain  : "inclus"
+                },
+                spa: {
+                    services : ["Massages","Hammam","Sauna"],
+                    loisirs : ["Piscine extérieure","Centre de fitness"]
+                }
             },
-            restaurants : {
-                cut : "non disponible",
-                bar : "non disponible",
-                breakfeastContinental : "inclus",
-                breakfeastAmericain  : "inclus"
-            },
-            spa: {
-                services : ["Massages","Hammam","Sauna"],
-                loisirs : ["Piscine extérieure","Centre de fitness"]
-            }
-        },
-        stars : "5" 
+            stars : "5" 
     },
     {   
         id : 3,
@@ -381,10 +381,11 @@ var continents = [
         ]
     }
 ]
+var hotelsData
+async function hotelsGrab() {
+    await fetch("http://localhost:8080/api/todos")
+        .then((response) => response.json())
+        .then(({hotels}) => {hotelsData = hotels})
 
-async function logJSONData() {
-    const response = await fetch(`${backendURL}/api/todos`);
-    const jsonData = await response.json();
-    console.log(jsonData);
 }
-logJSONData()
+hotelsGrab()

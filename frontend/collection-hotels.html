@@ -5,8 +5,8 @@
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+    <link rel="shortcut icon" href="src/img/icon-png.png" type="image/x-icon">
     
     <link rel="stylesheet" href="src/css/reusable.css">
     <link rel="stylesheet" href="src/css/collection-hotels.css">
@@ -203,49 +203,27 @@
     </div>
 
     <script>
-        var hotelsCollection = [
-            {
-                id : 1,
-                name : "45 Park Lane",
-                country : "LONDRES",
-                thumbnail : "src/img/hotels/hotel-2.png",
-                region : "Europe"
-            },
-            {
-                id : 2,
-                name : "137 Pillars House",
-                country : "CHIANG MAI",
-                thumbnail : "src/img/hotels/hotel-7.jpg",
-                region : "Asie"
-            },
-            {
-                id : 3,
-                name : "Abadía Retuerta LeDomaine",
-                country : "RETUERTA",
-                thumbnail : "src/img/hotels/hotel-8.jpg",
-                region : "Europe"
-            },
-            {
-                id : 4,
-                name : "Acqualina Resort and Residences on the Beach",
-                country : "MIAMI",
-                thumbnail : "src/img/hotels/hotel-9.jpg",
-                region : "Amérique du Nord"
-            }
-        ]
         const hotelsList = document.getElementById("list");
-        hotelsCollection.forEach((hotel) => {
-            const hotelItem = document.createElement("a");
-            hotelItem.classList.add("element");
-            hotelItem.href=`/hotel-deatils.html?id=${hotel.id}`;
-            hotelItem.innerHTML = `
-            <div>
-                <div id="background" style="background-image : url(${hotel.thumbnail})"></div>
-                <h3>${hotel.name}</h3>
-            </div>
-            <button>RÉSERVER</button>`;
-                            hotelsList.appendChild(hotelItem);
-        })
+        async function displayHotels(){
+            await fetch("http://localhost:8080/api/todos")
+                .then((response) => response.json())
+                .then(({hotels}) => {
+                    hotels.forEach((hotel) => {
+                        const hotelItem = document.createElement("a");
+                        hotelItem.classList.add("element");
+                        hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                        hotelItem.innerHTML = `
+                        <div>
+                            <div id="background" style="background-image : url(${hotel.images[0]})"></div>
+                            <h3>${hotel.name}</h3>
+                        </div>
+                        <button>RÉSERVER</button>`;
+                        hotelsList.appendChild(hotelItem);
+                    })
+                });
+        }
+        displayHotels()
+        
     </script>
 </body>
 </html>

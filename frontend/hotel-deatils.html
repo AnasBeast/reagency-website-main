@@ -4,8 +4,8 @@
     <title>45 Park Lane</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+    <link rel="shortcut icon" href="src/img/icon-png.png" type="image/x-icon">
     <link rel="stylesheet" href="src/css/reusable.css">
     <link rel="stylesheet" href="src/css/hotel-details.css">
     <link
@@ -485,6 +485,7 @@
         }
         spaBtn.addEventListener("click",displaySpa)
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
         // Getting hotel from Page url param
         function GetUrlParameter(sParam){
@@ -509,223 +510,253 @@
             return hotels.find(({ id }) => id == Pageid);
         }
 
+        var hotel;
+        async function displayHotel(){
+            await fetch(`http://localhost:8080/api/todos/${Pageid}`)
+                .then((response) => response.json())
+                .then((res) => {
+                    hotel = res 
+                    hotelPage(hotel)
+                });
+        }
+        displayHotel()
         //Modifiying the page to the current Hotel selected
-        var hotel = GetHotelToDisplay(Pageid);
-        // background-image landing
-        const landing = document.getElementById("backgroundImg");
-        landing.src=hotel.images[0];
-        // div TEXT
-        const text = document.getElementById("text");
-        const stars = document.createElement("div");
-        stars.id="stars"
+        function hotelPage(hotel){
+            // background-image landing
+            const landing = document.getElementById("backgroundImg");
+            landing.src=hotel.images[0];
+            // div TEXT
+            const text = document.getElementById("text");
+            const stars = document.createElement("div");
+            stars.id="stars"
 
-        for (var i = 0; i < parseInt(hotel.stars); i++) 
-        {
-            const starItem = document.createElement("img");
-            starItem.src="src/img/star.png";
-            stars.appendChild(starItem);
-        }
+            for (var i = 0; i < parseInt(hotel.stars); i++) 
+            {
+                const starItem = document.createElement("img");
+                starItem.src="src/img/star.png";
+                stars.appendChild(starItem);
+            }
 
-        const subTitle = `<h1>${hotel.name}</h1><h3>${hotel.address}</h3>`
-        text.appendChild(stars);
-        text.innerHTML+=subTitle;
-        console.log(text)
+            const subTitle = `<h1>${hotel.name}</h1><h3>${hotel.address}</h3>`
+            text.appendChild(stars);
+            text.innerHTML+=subTitle;
 
-        // div grid
-        const grid = document.getElementById("grid")
-        const services = document.createElement("div");
-        services.id="underlined"
+            // div grid
+            const grid = document.getElementById("grid")
+            const services = document.createElement("div");
+            services.id="underlined"
 
-        for (var i = 0; i < hotel.services.length; i++) 
-        {
-            const serviceItem = document.createElement("p");
-            serviceItem.textContent=hotel.services[i];
-            services.appendChild(serviceItem);
-        }
-        const gridSection = `
-                <section>
-                    <h1>${hotel.subtitle}</h1>
-                    <p id="main">${hotel.description}</p>
-                    <div id="underlined">
-                        ${services.innerHTML}    
-                    </div>
-                    <button>RÉSERVER</button>
-                </section>`;
+            for (var i = 0; i < hotel.services.length; i++) 
+            {
+                const serviceItem = document.createElement("p");
+                serviceItem.textContent=hotel.services[i];
+                services.appendChild(serviceItem);
+            }
+            const gridSection = `
+                    <section>
+                        <h1>${hotel.subtitle}</h1>
+                        <p id="main">${hotel.description}</p>
+                        <div id="underlined">
+                            ${services.innerHTML}    
+                        </div>
+                        <button>RÉSERVER</button>
+                    </section>`;
 
-        grid.innerHTML = gridSection + grid.innerHTML
-        // div distingue
-        const distingue = document.getElementById('distingue')
-        for (var i = 0; i < hotel.exceptions.length; i++) 
-        {
-            const exceptionItem = document.createElement("p");
-            exceptionItem.textContent=hotel.exceptions[i];
-            distingue.appendChild(exceptionItem);
-        }
+            grid.innerHTML = gridSection + grid.innerHTML
+            // div distingue
+            const distingue = document.getElementById('distingue')
+            for (var i = 0; i < hotel.exceptions.length; i++) 
+            {
+                const exceptionItem = document.createElement("p");
+                exceptionItem.textContent=hotel.exceptions[i];
+                distingue.appendChild(exceptionItem);
+            }
 
-        // div avis-wrapper
-        const feedbacks  = document.getElementById("avis-wrapper")
-        for (var i = 0; i < hotel.feedback.length; i++) 
-        {
-            const feedbackItem = document.createElement("div");
-            feedbackItem.className = "avis"
-            var note = 
-            `<div id="top">
-                <h3>${hotel.feedback[i].name}</h3>
-                <h3>${hotel.feedback[i].rate}</h3>
+            // div avis-wrapper
+            const feedbacks  = document.getElementById("avis-wrapper")
+            if(hotel.feedback.length==0){
+                const feedbackItem = document.createElement("div");
+                feedbackItem.className = "avis"
+                var note = 
+                `<div id="top">
+                    <h3>Aucun Client n'a donné son avis sur cet Hotel.</h3>
+                </div>
+        
+                <div id="seperation"></div>`
+                feedbackItem.innerHTML+=note
+                feedbacks.appendChild(feedbackItem);
+            }
+            for (var i = 0; i < hotel.feedback.length; i++) 
+            {
+                const feedbackItem = document.createElement("div");
+                feedbackItem.className = "avis"
+                var note = 
+                `<div id="top">
+                    <h3>${hotel.feedback[i].name}</h3>
+                    <h3>${hotel.feedback[i].rate}</h3>
+                </div>
+        
+                <h2>${hotel.feedback[i].date}</h2>
+        
+                <div id="seperation"></div>
+        
+                <p>${hotel.feedback[i].note}</p>
+                `
+                feedbackItem.innerHTML+=note
+                feedbacks.appendChild(feedbackItem);
+            }
+
+            // hotel-info
+            const infos = document.querySelector(".informations");
+            const restaus = document.querySelector(".restaurants");
+            const spas = document.querySelector(".spa");
+            const hotelBref = hotel.informations;
+
+            var hotelServices = document.createElement("div")
+            for (var i = 0; i < hotelBref.pratiques.services.length; i++) 
+            {
+                const service = document.createElement("p");
+                service.textContent = hotelBref.pratiques.services[i]
+                hotelServices.innerHTML+=service.innerHTML + "<br>"
+            }
+
+            var spaServices = document.createElement("div")
+            for (var i = 0; i < hotelBref.spa.services.length; i++) 
+            {
+                const service = document.createElement("p");
+                service.textContent = hotelBref.spa.services[i]
+                spaServices.innerHTML+=service.innerHTML + "<br>"
+            }
+
+            var loisirs = document.createElement("div")
+            for (var i = 0; i < hotelBref.spa.loisirs.length; i++) 
+            {
+                const service = document.createElement("p");
+                service.textContent = hotelBref.spa.loisirs[i]
+                loisirs.innerHTML+=service.innerHTML + "<br>"
+            }
+
+            var inclusion = document.createElement("p")
+            for (var i = 0; i < hotelBref.pratiques.inclus.length; i++) 
+            {
+                var inclus = document.createElement("p")
+                inclus.textContent = hotelBref.pratiques.inclus[i]
+                inclusion.innerHTML+=inclus.innerHTML + "<br>"
+            }
+            const hotelInfo = `
+            <div class="point">
+                <h2>Adresse</h2>
+                <p>${hotelBref.pratiques.address}</p>
+                <h2>Heure d'arrivée / de départ</h2>
+                <p><strong>Enregistrement:</strong> ${hotelBref.pratiques.arrival} </p>
+                <p><strong>Heure de départ:</strong> ${hotelBref.pratiques.departure} </p>
+                <h2>Chambres</h2>
+                <p>${hotelBref.pratiques.rooms}</p>
+                <p> <strong>Equipements dans les chambres :</strong> ${hotelBref.pratiques.equipments}</p>
+            </div>
+            <div class="seperation">
+                <div></div>
+            </div>
+        
+            <div class="point">
+                <h2>Internet</h2>
+                <p><strong>Espaces publics:</strong> ${hotelBref.pratiques.publicSpace} </p>
+                <p><strong>En chambre :</strong> ${hotelBref.pratiques.inRoom}</p>
+                <h2>Transport et transfert</h2>
+                <p><strong>Transfert:</strong> ${hotelBref.pratiques.transfer}</p>
+                <h2>Toujours inclus dans cet hôtel</h2>
+                <p>${inclusion.innerHTML}</p>
+                <h2>Animaux de compagnie</h2>
+                <p>${hotelBref.pratiques.animals}</p>
+            </div>
+            <div class="seperation">
+                <div></div>
+            </div>
+        
+            <div class="point">
+                <h2>Accueil des enfants</h2>
+                <p>${hotelBref.pratiques.kids}</p>
+                <h2>Politique fumeurs</h2>
+                <p>${hotelBref.pratiques.smokers}</p>
+                <p> <strong>Chambres fumeurs :</strong> ${hotelBref.pratiques.smokersRoom}</p>
+                <h2>Services disponibles</h2>
+                ${hotelServices.innerHTML}
+            </div>`
+
+            const hotelRestau = `
+            <div class="point">
+                <h2>Restaurants and bars options</h2>
+                <p><strong>CUT at 45 Park Lane :</strong> ${hotelBref.restaurants.cut} </p>
+                <p> <strong>BAR 45 :</strong> ${hotelBref.restaurants.bar} </p>
+            </div>
+            <div class="seperation">
+                <div></div>
             </div>
     
-            <h2>${hotel.feedback[i].date}</h2>
-    
-            <div id="seperation"></div>
-    
-            <p>${hotel.feedback[i].note}</p>
-            `
-            feedbackItem.innerHTML+=note
-            feedbacks.appendChild(feedbackItem);
+            <div class="point">
+                <h2>Petit déjeuner</h2>
+                <p><strong>Petit déjeuner continental:</strong> ${hotelBref.restaurants.breakfeastContinental} </p>
+                <p><strong>Petit déjeuner américain :</strong> ${hotelBref.restaurants.breakfeastAmericain}</p>
+            </div>`
+
+            const hotelSpa = `
+            <div class="point">
+                <h2>Spa (The Spa at 45 Park Lane)</h2>
+                ${spaServices.innerHTML}
+            </div>
+            <div class="seperation">
+                <div></div>
+            </div>
+            <div class="point">
+                <h2>Loisirs</h2>
+                ${loisirs.innerHTML}
+            </div>`
+            infos.innerHTML+=hotelInfo
+            restaus.innerHTML+=hotelRestau
+            spas.innerHTML+=hotelSpa
+
+            
         }
-
-        // hotel-info
-        const infos = document.querySelector(".informations");
-        const restaus = document.querySelector(".restaurants");
-        const spas = document.querySelector(".spa");
-        const hotelBref = hotel.informations;
-
-        var hotelServices = document.createElement("div")
-        for (var i = 0; i < hotelBref.pratiques.services.length; i++) 
-        {
-            const service = document.createElement("p");
-            service.textContent = hotelBref.pratiques.services[i]
-            hotelServices.innerHTML+=service.innerHTML + "<br>"
-        }
-
-        var spaServices = document.createElement("div")
-        for (var i = 0; i < hotelBref.spa.services.length; i++) 
-        {
-            const service = document.createElement("p");
-            service.textContent = hotelBref.spa.services[i]
-            spaServices.innerHTML+=service.innerHTML + "<br>"
-        }
-
-        var loisirs = document.createElement("div")
-        for (var i = 0; i < hotelBref.spa.loisirs.length; i++) 
-        {
-            const service = document.createElement("p");
-            service.textContent = hotelBref.spa.loisirs[i]
-            loisirs.innerHTML+=service.innerHTML + "<br>"
-        }
-
-        var inclusion = document.createElement("p")
-        for (var i = 0; i < hotelBref.pratiques.inclus.length; i++) 
-        {
-            var inclus = document.createElement("p")
-            inclus.textContent = hotelBref.pratiques.inclus[i]
-            inclusion.innerHTML+=inclus.innerHTML + "<br>"
-        }
-        const hotelInfo = `
-        <div class="point">
-            <h2>Adresse</h2>
-            <p>${hotelBref.pratiques.address}</p>
-            <h2>Heure d'arrivée / de départ</h2>
-            <p><strong>Enregistrement:</strong> ${hotelBref.pratiques.arrival} </p>
-            <p><strong>Heure de départ:</strong> ${hotelBref.pratiques.departure} </p>
-            <h2>Chambres</h2>
-            <p>${hotelBref.pratiques.rooms}</p>
-            <p> <strong>Equipements dans les chambres :</strong> ${hotelBref.pratiques.equipments}</p>
-        </div>
-        <div class="seperation">
-            <div></div>
-        </div>
-    
-        <div class="point">
-            <h2>Internet</h2>
-            <p><strong>Espaces publics:</strong> ${hotelBref.pratiques.publicSpace} </p>
-            <p><strong>En chambre :</strong> ${hotelBref.pratiques.inRoom}</p>
-            <h2>Transport et transfert</h2>
-            <p><strong>Transfert:</strong> ${hotelBref.pratiques.transfer}</p>
-            <h2>Toujours inclus dans cet hôtel</h2>
-            <p>${inclusion.innerHTML}</p>
-            <h2>Animaux de compagnie</h2>
-            <p>${hotelBref.pratiques.animals}</p>
-        </div>
-        <div class="seperation">
-            <div></div>
-        </div>
-    
-        <div class="point">
-            <h2>Accueil des enfants</h2>
-            <p>${hotelBref.pratiques.kids}</p>
-            <h2>Politique fumeurs</h2>
-            <p>${hotelBref.pratiques.smokers}</p>
-            <p> <strong>Chambres fumeurs :</strong> ${hotelBref.pratiques.smokersRoom}</p>
-            <h2>Services disponibles</h2>
-            ${hotelServices.innerHTML}
-        </div>`
-
-        const hotelRestau = `
-        <div class="point">
-            <h2>Restaurants and bars options</h2>
-            <p><strong>CUT at 45 Park Lane :</strong> ${hotelBref.restaurants.cut} </p>
-            <p> <strong>BAR 45 :</strong> ${hotelBref.restaurants.bar} </p>
-        </div>
-        <div class="seperation">
-            <div></div>
-        </div>
-   
-        <div class="point">
-            <h2>Petit déjeuner</h2>
-            <p><strong>Petit déjeuner continental:</strong> ${hotelBref.restaurants.breakfeastContinental} </p>
-            <p><strong>Petit déjeuner américain :</strong> ${hotelBref.restaurants.breakfeastAmericain}</p>
-        </div>`
-
-        const hotelSpa = `
-        <div class="point">
-            <h2>Spa (The Spa at 45 Park Lane)</h2>
-            ${spaServices.innerHTML}
-        </div>
-        <div class="seperation">
-            <div></div>
-        </div>
-        <div class="point">
-            <h2>Loisirs</h2>
-            ${loisirs.innerHTML}
-        </div>`
-        infos.innerHTML+=hotelInfo
-        restaus.innerHTML+=hotelRestau
-        spas.innerHTML+=hotelSpa
     </script>
     <script>
-        const slides = document.querySelector(".swiper-wrapper");
-        for (var i = 0; i < hotel.rooms.length; i++) 
-        {
-            const slide = document.createElement("div")
-            slide.className="swiper-slide"
-            slide.innerHTML+=`
-            <div class="title">
-                <div id="title">
-                    <h1>Notre sélection de chambres et suites</h1>
-                    <button>VISITER LES CHAMBRES</button>
-                </div>
-                <div id="seperation"></div>
+        // Image Slider
+        var hotel;
+        async function displaySwiper(){
+            await fetch(`http://localhost:8080/api/todos/${Pageid}`)
+                .then((response) => response.json())
+                .then((res) => {
+                    hotel = res 
+                    const slides = document.querySelector(".swiper-wrapper");
+                    for (var i = 0; i < hotel.rooms.length; i++) 
+                        {
+                            const slide = document.createElement("div")
+                            slide.className="swiper-slide"
+                            slide.innerHTML+=`
+                            <div class="title">
+                                <div id="title">
+                                    <h1>Notre sélection de chambres et suites</h1>
+                                    <button>VISITER LES CHAMBRES</button>
+                                </div>
+                                <div id="seperation"></div>
 
-                <div id="main">
-                    <h1>${hotel.rooms[i].name}</h1>
-                    <p>${hotel.rooms[i].description}</p>
-        
-                    <button>RÉSERVER</button>
-                </div>
-            </div>
-            <div class="background-image">
-                <img class="room-img" src=${hotel.rooms[i].img} alt="A random unsplash image" />
-            </div>
-            `
-            console.log(slide)
-            slides.appendChild(slide)
+                                <div id="main">
+                                    <h1>${hotel.rooms[i].name}</h1>
+                                    <p>${hotel.rooms[i].description}</p>
+                        
+                                    <button>RÉSERVER</button>
+                                </div>
+                            </div>
+                            <div class="background-image">
+                                <img class="room-img" src=${hotel.rooms[i].img} alt="A random unsplash image" />
+                            </div>`
+
+                            slides.appendChild(slide)
+                        }
+                });
         }
+        displaySwiper();
         
-        
-
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
         const settings = {
             loop: true,

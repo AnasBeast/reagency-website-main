@@ -21,7 +21,10 @@ app.use(bodyParser.urlencoded({ extended: false}))
 app.get("/",(req,res)=>{
     res.send("hello world")
 })
-
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
 app.use("/api/todos", todoRoutes);
 app.use("/api/admin", adminRoutes);
 

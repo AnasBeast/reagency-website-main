@@ -16,8 +16,8 @@ exports.getHotels = (req,res,next) =>{
         .then((count)=>{
             res.status(200).json({
                 message: "All Hotels fetched 200!",
-                posts: fetchHotel,
-                maxPosts: count,
+                hotels: fetchHotel,
+                maxHotels: count,
             });
         })
         .catch((err)=>{
@@ -75,8 +75,8 @@ exports.createHotel = (req , res , next)=>{
         .then((result)=>{
             res.status(201).json({
                 message:"Hotel added sucessfully",
-                post: {
-                    ...result,
+                hotel: {
+                    ...result._doc,
                     id: result._id,
                 },
             });
@@ -90,9 +90,9 @@ exports.createHotel = (req , res , next)=>{
 
 exports.getHotelById = (req, res , next)=>{
     Hotel.findById(req.params.id)
-        .then((post)=>{
-            if(post){
-                res.status(200).json(post);
+        .then((hotel)=>{
+            if(hotel){
+                res.status(200).json(hotel);
             }
             else{
                 res.status(404).json({message: "Hotel not Found!"})
