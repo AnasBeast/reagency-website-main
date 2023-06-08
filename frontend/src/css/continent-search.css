@@ -723,11 +723,13 @@ nav img {
     margin-top: 0 !important;
   }
   footer #upper img{
-    width: 100%;
+    width: 80%;
   }
   footer #lower{
     flex-direction: column;
     height: auto;
-    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
   }
 }
