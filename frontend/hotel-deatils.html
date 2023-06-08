@@ -321,7 +321,6 @@
                 </div> -->
                 
             </div>
-            <button>RÉSERVER</button>
         </div>
 
         <div id="options">
@@ -559,7 +558,7 @@
                         <div id="underlined">
                             ${services.innerHTML}    
                         </div>
-                        <button>RÉSERVER</button>
+                        <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>
                     </section>`;
 
             grid.innerHTML = gridSection + grid.innerHTML
@@ -743,7 +742,7 @@
                                     <h1>${hotel.rooms[i].name}</h1>
                                     <p>${hotel.rooms[i].description}</p>
                         
-                                    <button>RÉSERVER</button>
+                                    <button><a href="reservation-hotel.html?id=${hotel._id}"> RÉSERVER</a></button>
                                 </div>
                             </div>
                             <div class="background-image">

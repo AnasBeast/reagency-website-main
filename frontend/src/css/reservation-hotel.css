@@ -51,8 +51,15 @@ nav img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+          background: #F7F3F3;
 }
-
+.container{
+  background: white;
+}
+.seperation{
+  height: 100%;
+  padding-top: 10px;
+}
 #content #landing {
   margin-bottom: 102px;
   width: 100%;
