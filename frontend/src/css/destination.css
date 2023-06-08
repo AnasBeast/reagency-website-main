@@ -302,11 +302,11 @@ nav img {
 .listes{
   list-style: none;
 }
-svg{
-  display: none !important; 
+#arrow{
+  display: none;
 }
 .close-icon{
-  display: none;
+  opacity: 0;
   position: fixed;
   z-index: 202;
   width: 70px;
@@ -361,7 +361,7 @@ svg{
   #destinations div{
     cursor: pointer;
   }
-  svg{
+  .menu-btn svg{
     display: block !important;
     width: 20px;
     cursor: pointer;
@@ -388,6 +388,9 @@ svg{
     flex-direction: row;
     justify-content: space-between;
     max-width: 90%;
+  }
+  .listes svg{
+    width: 20px;
   }
   .checked{
     top: 0%;
