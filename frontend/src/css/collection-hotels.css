@@ -208,7 +208,7 @@ nav img {
 #content #list-wrapper #list .element div h3 {
   font-size: 30px;
   color: #fff;
-  z-index: 999;
+  z-index: 300;
 }
 
 #content #list-wrapper #list .element button {
