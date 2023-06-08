@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reservation</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+    <link rel="shortcut icon" href="src/img/icon-png.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/reusable.css">
+    <link rel="stylesheet" href="src/css/reservation-last.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+</head>
+<body>
+    <script type="text/javascript" src="src/js/index.js"></script>
+    <id id="overlay" onclick="hideMobileNav()"></id>
+
+	<div id="mobileNavbar">
+		<div onclick="hideMobileNav()" id="cross">
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 17 17" xml:space="preserve">
+				<path fill="#fff" d="M9.6,8.5L14,4.1c0.3-0.3,0.3-0.8,0-1.1c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.4L4,3C3.7,2.7,3.2,2.7,2.9,3s-0.3,0.8,0,1.1l4.5,4.5 L2.9,13c-0.3,0.3-0.3,0.8,0,1.1c0.1,0.1,0.3,0.2,0.5,0.2c0.1,0,0.3,0,0.6-0.2l4.5-4.5l4.4,4.5c0.1,0.1,0.3,0.2,0.5,0.2 s0.4,0,0.6-0.2c0.3-0.3,0.3-0.8,0-1.1L9.6,8.5z"></path>
+			</svg>
+		</div>
+
+		<h1>Menu</h1>
+		<div class="seperation"></div>
+
+		<ul class="pl-8 text-white">
+			<a href="qui-sommes-nous.html" ><li>
+				<p class="my-4"> QUI SOMMES-NOUS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href="destination.html"><li>
+				<p class="my-4"> DESTINATIONS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href="collection-hotels.html"><li>
+				<p class="my-4"> COLLECTION D'HOTELS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+
+            <a href="conciergerie.html"><li>
+				<p class="my-4"> CONCIERGERIE </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+			<div class="seperation"></div>
+			<div id="call"><p>RESERVEZ EN LIGNE OU APPELEZ</p> <p>+44 20 35 19 2700</p></div>
+
+			
+		</ul>
+	</div>
+
+    <nav>
+		<a href="index.html">
+            <img src="src/img/logo-default.png" alt="Logo">
+        </a>
+
+		<div style="display: flex" id="menu" onclick="showMobileNav()">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</nav>
+
+    <div id="content">
+        <div class="w-2/3 mt-12">
+            <div class="my-4">
+                <label id="hotel-name" class="block mt-2 mb-2 text-sm font-medium text-black-900 dark:text-black-300">VOTRE RESERVATION POUR L'HOTEL : <strong>45 Park Lane</strong></label>
+                <div class="mb-0">
+                    <label><strong>Durée du séjour:</strong> </label>
+                    <input class="border w-52 py-4" id="kt_daterangepicker_1" disabled/>
+                </div>
+            </div>
+            <div id="input-label" class="flex items-center gap-4">
+                <label for="custom-input-number" class="text-gray-700 text-sm font-semibold">Nombre d'adultes:</label>
+                <div class="flex flex-row h-10 rounded-lg relative bg-transparent mt-1">
+                <button data-action="decrement" class=" bg-gray-300 text-gray-600 hover:text-gray-700 cursor-default h-full w-20 rounded-l  outline-none">
+                    <span class="m-auto text-2xl font-thin">−</span>
+                </button>
+                <input type="number" id="nbAdultes" min="1" value="2" onkeydown="return false" max="4" class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" disabled></input>
+                <button data-action="increment" class="bg-gray-300 text-gray-600 hover:text-gray-700 cursor-default h-full w-20 rounded-r ">
+                    <span class="m-auto text-2xl font-thin">+</span>
+                </button>
+                </div>
+            </div>
+            
+            <div id="input-label" class="flex items-center gap-4 my-4">
+                <label for="custom-input-number" class=" text-gray-700 text-sm font-semibold">Nombre d'enfants:</label>
+                <div class="flex flex-row h-10 rounded-lg relative bg-transparent mt-1">
+                    <button data-action="decrement2" class=" bg-gray-300 text-gray-600 hover:text-gray-700 h-full w-20 rounded-l cursor-default outline-none">
+                    <span class="m-auto text-2xl font-thin">−</span>
+                    </button>
+                    <input type="number" id="nbEnfants" min="0" value="0" onkeydown="return false" max="4" class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" disabled></input>
+                    <button data-action="increment2" class="bg-gray-300 text-gray-600 hover:text-gray-700 h-full w-20 rounded-r cursor-default">
+                    <span class="m-auto text-2xl font-thin">+</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="input-label" class="flex items-center gap-4 my-4"> 
+                <label for="rooms" class="block mb-2 text-xl font-semibold">Votre chambre choisit:</label>
+                <select id="rooms" class="bg-gray-50 border border-gray-300 text-gray-900 w-1/2 h-16" disabled>
+                    <option id="room-type" selected disabled>Deluxe Room</option>
+                    
+                </select>
+                <h1 id="nbChambres">X 1</h1>
+            </div>
+            <form action="#">
+                <h1 class="mb-4 text-xl"><strong>VOS INFORMATIONS</strong></h1>
+                <div class="flex gap-4">
+                    <input type="text" id="prenom" class="block mt-4 p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Prénom" required>
+                    <input type="text" id="nom" class="block mt-4 p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Nom de famille" required>
+                </div>
+                <div class="flex gap-4">
+                    <input type="text" id="pays" class="block mt-4 p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Pays" required>
+                    <input type="email" id="email" class="block mt-4 p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Adresse E-mail" required>
+                </div>
+                <div class="flex gap-4">
+                    <input type="text" id="tel" class="block mt-4 p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Numéro de téléphone" required>
+                </div>
+                
+                <div class="my-4">
+                    
+                </div>
+                
+                <div class="my-4">
+                    <input type="text" id="message" class="block mt-4 p-3 w-full h-36 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Une message à attacher" required>
+
+                </div>
+                <button type="button" data-te-ripple-init data-te-ripple-color="light"
+                class="mb-6 text-2xl inline-block w-full bg-blue-950 px-6 pt-4 pb-4 font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                Envoyer la demande de réservation
+                </button>
+            </form>
+        </div>
+        
+
+
+
+        <div class="bg-white">
+            <div id="selling-points" class="horizontal-grid mx-auto">
+                <div class="point">
+                    <h1>Une Collection unique des plus beaux hôtels du monde</h1>
+                    <p>Nous les sélectionnons personnellement et tous sont exceptionnels</p>
+                    <button>DÉCOUVREZ NOTRE COLLECTION</button>
+                </div>
+                <div class="seperation">
+                    <div></div>
+                </div>
+    
+                <div class="point">
+                    <h1>Un accompagnement ultra-personnalisé</h1>
+                    <p>Tous les avantages "Le Club" et un Guest Experience Manager dédié à votre écoute pour des séjours parfaits, conçus sur-mesure.</p>
+                    <div id="phone">
+                        <p>Conctactez-nous au</p>
+                        <p>+44 20 3519 2700</p>
+                    </div>
+                </div>
+                <div class="seperation">
+                    <div></div>
+                </div>
+    
+                <div class="point">
+                    <h1>Une expérience hotelière de prestige</h1>
+                    <p>Les meilleurs hôtels, les meilleures prestations, les meilleurs services, tout simplement.</p>
+                </div>
+            </div>
+        </div>
+
+       
+        <footer style="background: #F7F3F3;" class="py-56">
+           <img src="./src/img/regency-logo.png" alt="logo-blanc">
+        </footer>
+    </div>
+
+   
+    <script>
+        function GetUrlParameter(sParam){
+            var sPageURL= document.URL;
+            var sPageURL= sPageURL.split("&")
+            if(sParam=="id"){var sURLVariables = sPageURL[0].split('?');}else{var sURLVariables = sPageURL[1].split('?');}
+            for (var i = 0; i < sURLVariables.length; i++) 
+            {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) 
+                {
+                    return sParameterName[1];
+                }
+            }
+        }
+        var Pageid = GetUrlParameter("id")
+
+        var Pageroom = GetUrlParameter("room")
+        Pageroom = Pageroom.replace(/%20/g, " ");
+
+        var hotel;
+        async function displayHotel(){
+            await fetch(`${backendURL}/api/todos/${Pageid}`)
+                .then((response) => response.json())
+                .then((res) => {
+                    hotel = res 
+                    console.log(hotel)
+                    displayInformations(hotel)
+                });
+        }
+        displayHotel()
+
+        const hotelName = document.getElementById("hotel-name");
+        const dateRange = document.getElementById("kt_daterangepicker_1");
+        const nbAdultes = document.getElementById("nbAdultes");
+        const nbEnfants = document.getElementById("nbEnfants");
+        const roomType = document.getElementById("room-type");
+        function displayInformations(hotel){
+            hotelName.innerHTML = `VOTRE RESERVATION POUR L'HOTEL : <strong>${hotel.name}</strong>`;
+            dateRange.value=localStorage.getItem("daterange");
+            nbAdultes.value=localStorage.getItem("nbAdultes");
+            nbEnfants.value=localStorage.getItem("nbEnfants");
+            nbChambres.textContent = "X " +localStorage.getItem("nbChambres");
+            roomType.textContent = Pageroom
+        }
+    </script>
+    
+</body>
+</html>

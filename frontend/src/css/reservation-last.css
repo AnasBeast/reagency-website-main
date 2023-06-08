@@ -1038,6 +1038,28 @@ nav img {
   #content #grid{
     display: flex;
   }
+  #content .mt-12{
+    width: 80%;
+  }
+  #input-label{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+  }
+  #input-label label{
+    font-size: 25px;
+  }
+  #input-label select{
+    width: 100%;
+  }
+  form div{
+    display: flex;
+    flex-direction: column;
+  }
+  form div input{
+    width: 100% !important;
+  }
   footer{
     padding-top: 0 !important;
   }

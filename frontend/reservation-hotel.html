@@ -87,9 +87,22 @@
                 <button data-action="decrement" class="hover:bg-gray-100 text-gray-600 hover:text-gray-700 h-full w-20 rounded-l cursor-pointer outline-none">
                   <span class="m-auto text-2xl font-thin">−</span>
                 </button>
-                <input type="number" min="1" value="2" onkeydown="return false" max="4" class="outline-none focus:outline-none text-center font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
+                <input type="number" id="nbAdultes" min="1" value="2" onkeydown="return false" max="4" class="outline-none focus:outline-none text-center font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
                 <h3>Adultes</h3>
                 <button data-action="increment" class="hover:bg-gray-100 text-gray-600 hover:text-gray-700 h-full w-20 rounded-r cursor-pointer">
+                  <span class="m-auto text-2xl font-thin">+</span>
+                </button>
+            </div>
+            <div class="seperation h-20 border">
+                <div></div>
+            </div>
+            <div class="flex flex-row items-center h-16 relative bg-transparent mt-1 mx-4">
+                <button data-action="decrement3" class="hover:bg-gray-100 text-gray-600 hover:text-gray-700 h-full w-20 rounded-l cursor-pointer outline-none">
+                  <span class="m-auto text-2xl font-thin">−</span>
+                </button>
+                <input type="number" id="nbEnfants" min="1" value="0" onkeydown="return false" max="4" class="outline-none focus:outline-none text-center font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
+                <h3>Enfants</h3>
+                <button data-action="increment3" class="hover:bg-gray-100 text-gray-600 hover:text-gray-700 h-full w-20 rounded-r cursor-pointer">
                   <span class="m-auto text-2xl font-thin">+</span>
                 </button>
             </div>
@@ -100,7 +113,7 @@
                 <button data-action="decrement2" class="hover:bg-gray-100 text-gray-600 hover:text-gray-700 h-full w-20 rounded-l cursor-pointer outline-none">
                   <span class="m-auto text-2xl font-thin">−</span>
                 </button>
-                <input type="number" min="1" value="1" onkeydown="return false" max="4" class="outline-none focus:outline-none text-center font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
+                <input type="number" id="nbChambres" min="1" value="1" onkeydown="return false" max="4" class="outline-none focus:outline-none text-center font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
                 <h3>Chambres</h3>
                 <button data-action="increment2" class="hover:bg-gray-100 text-gray-600 hover:text-gray-700 h-full w-20 rounded-r cursor-pointer">
                   <span class="m-auto text-2xl font-thin">+</span>
@@ -210,7 +223,19 @@
         </footer>
     </div>
 
-   
+   <!-- <script>
+        const nbAdultes = document.getElementById("nbAdultes");
+        const nbEnfants = document.getElementById("nbEnfants");
+        const nbChambres = document.getElementById("nbChambres");
+
+        function save(el){
+            localStorage.setItem(el.id,el.value)
+            console.log(el.value)
+        }
+        nbAdultes.addEventListener("input" , save(nbAdultes))
+        nbEnfants.addEventListener("input" , save(nbEnfants))
+        nbChambres.addEventListener("input" , save(nbChambres))
+   </script> -->
     <script>
         function GetUrlParameter(sParam){
             var sPageURL= document.URL;
@@ -277,9 +302,11 @@
                     <div class="px-8 flex flex-col gap-8">
                         <p><strong>Description :</strong> ${hotel.rooms[i].description}</p>
                         <p><strong>Equipements :</strong> ${hotel.informations.pratiques.equipments}</p>
-                        <button type="button" data-te-ripple-init="" data-te-ripple-color="light" class="mb-6 text-2xl inline-block w-full bg-blue-950 px-6 pt-4 pb-4 font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
-                        CHOISIR
-                        </button>
+                        <a href="reservation-last.html?id=${hotel._id}&room=${hotel.rooms[i].name}">
+                            <button type="button" data-te-ripple-init="" data-te-ripple-color="light" class="mb-6 text-2xl inline-block w-full bg-blue-950 px-6 pt-4 pb-4 font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                            CHOISIR
+                            </button>
+                        </a>
                     </div>
                 </div>
                 `
@@ -292,6 +319,12 @@
 
     </script>
     <script>
+        //default saves for adultes chambres enfants
+        localStorage.setItem("nbAdultes",nbAdultes.value) 
+        localStorage.setItem("nbEnfants",nbEnfants.value) 
+        localStorage.setItem("nbChambres",nbChambres.value) 
+
+        // adultes
         function decrement(e) {
             const btn = e.target.parentNode.parentElement.querySelector(
             'button[data-action="decrement"]'
@@ -300,6 +333,7 @@
             let value = Number(target.value);
             if(value!==1){value--}
             target.value = value;
+            localStorage.setItem("nbAdultes",value)
         }
 
         function increment(e) {
@@ -310,6 +344,7 @@
             let value = Number(target.value);
             if(value!==4){value++}
             target.value = value;
+            localStorage.setItem("nbAdultes",value)
         }
 
         const decrementButtons = document.querySelectorAll(
@@ -328,6 +363,7 @@
             btn.addEventListener("click", increment);
         });
 
+        // chambres
         function decrement2(e) {
             const btn = e.target.parentNode.parentElement.querySelector(
             'button[data-action="decrement2"]'
@@ -336,6 +372,7 @@
             let value = Number(target.value);
             if(value!==1){value--}
             target.value = value;
+            localStorage.setItem("nbChambres",value)
         }
 
         function increment2(e) {
@@ -346,6 +383,7 @@
             let value = Number(target.value);
             if(value!==4){value++}
             target.value = value;
+            localStorage.setItem("nbChambres",value)
         }
 
         const decrement2Buttons = document.querySelectorAll(
@@ -362,6 +400,45 @@
 
         increment2Buttons.forEach(btn => {
             btn.addEventListener("click", increment2);
+        });
+
+        // enfants
+        function decrement3(e) {
+            const btn = e.target.parentNode.parentElement.querySelector(
+            'button[data-action="decrement3"]'
+            );
+            const target = btn.nextElementSibling;
+            let value = Number(target.value);
+            if(value!==0){value--}
+            target.value = value;
+            localStorage.setItem("nbEnfants",value)
+        }
+
+        function increment3(e) {
+            const btn = e.target.parentNode.parentElement.querySelector(
+            'button[data-action="decrement3"]'
+            );
+            const target = btn.nextElementSibling;
+            let value = Number(target.value);
+            if(value!==4){value++}
+            target.value = value;
+            localStorage.setItem("nbEnfants",value)
+        }
+
+        const decrement3Buttons = document.querySelectorAll(
+            `button[data-action="decrement3"]`
+        );
+
+        const increment3Buttons = document.querySelectorAll(
+            `button[data-action="increment3"]`
+        );
+
+        decrement3Buttons.forEach(btn => {
+            btn.addEventListener("click", decrement3);
+        });
+
+        increment3Buttons.forEach(btn => {
+            btn.addEventListener("click", increment3);
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -383,7 +460,22 @@
         };
         
         const swiper = new Swiper(".mySwiper", settings);
+
+        
+
+        const dateRange = document.getElementById("kt_daterangepicker_1");
+
+        
+        
+        //save daterange
+
         $("#kt_daterangepicker_1").daterangepicker();
+        $("#kt_daterangepicker_1").on('apply.daterangepicker', function(){
+            localStorage.setItem("daterange",dateRange.value);
+        });
+
+        //default save
+        localStorage.setItem("daterange",dateRange.value) 
     </script>
 </body>
 </html>
