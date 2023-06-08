@@ -267,7 +267,7 @@
         }
         //Modifiying the page to the current Hotel selected
         var continent = GetHotelToDisplay(Pageid);
-        var hotel = hotels.find(({ id }) => continent.hotelId)
+        var hotel = hotels.find(({ _id }) => continent.hotelId)
         
         const landing = document.getElementById("backgroundImg");
         landing.src=hotel.images[0];

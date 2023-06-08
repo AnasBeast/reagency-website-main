@@ -511,7 +511,7 @@
 
         var hotel;
         async function displayHotel(){
-            await fetch(`http://localhost:8080/api/todos/${Pageid}`)
+            await fetch(`${backendURL}/api/todos/${Pageid}`)
                 .then((response) => response.json())
                 .then((res) => {
                     hotel = res 
@@ -721,7 +721,7 @@
         // Image Slider
         var hotel;
         async function displaySwiper(){
-            await fetch(`http://localhost:8080/api/todos/${Pageid}`)
+            await fetch(`${backendURL}/api/todos/${Pageid}`)
                 .then((response) => response.json())
                 .then((res) => {
                     hotel = res 

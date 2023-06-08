@@ -76,28 +76,91 @@
                 <h1 class="text-center mx-auto w-full">Destinations</h1>
                 <div id="destinations" class="grid grid-cols-4 gap-16 w-full text-left">
                     <div>
-                        <h1><span class="bg-letter">A</span>frique</h1>
+                        <div onclick="hideAfrique()"><svg class="close-icon sc-b47cec0a-0 bgwIwo as--16 close-button-component__icon" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 17 17" xml:space="preserve"><path fill="#fff" d="M9.6,8.5L14,4.1c0.3-0.3,0.3-0.8,0-1.1c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.4L4,3C3.7,2.7,3.2,2.7,2.9,3s-0.3,0.8,0,1.1l4.5,4.5 L2.9,13c-0.3,0.3-0.3,0.8,0,1.1c0.1,0.1,0.3,0.2,0.5,0.2c0.1,0,0.3,0,0.6-0.2l4.5-4.5l4.4,4.5c0.1,0.1,0.3,0.2,0.5,0.2 s0.4,0,0.6-0.2c0.3-0.3,0.3-0.8,0-1.1L9.6,8.5z"></path></svg></div>
+                        <div>
+                            <h1><a href="continent-search.html?continent=Afrique"><span class="bg-letter">A</span>frique</a></h1>
+                            <div>
+                                <input type="checkbox" id="click" class="d-none">
+                                <label for="click" class="menu-btn" onclick="showAfrique(listeAfrique)">
+                                    <svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+                                </label>
+                            </div>
+                        </div>
                         <h3><a href="hotels-search.html?country=Afrique-du-sud">Afrique du Sud</a></h3>
                         <h3><a href="hotels-search.html?country=Maroc">Maroc</a></h3>
                         <h3><a href="hotels-search.html?country=Rwanda">Rwanda</a></h3>
                         <h3><a href="hotels-search.html?country=Zombie">Zombie</a></h3>
+                        <ul id="liste-afrique" class="d-none text-white listes">
+                            <li><a href="hotels-search.html?country=Afrique-du-sud">Afrique du Sud</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Maroc">Maroc</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Rwanda">Rwanda</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Zombie">Zombie</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                        </ul>
 
-                        <h1><span class="bg-letter">A</span>mérique Centrale</h1>
+
+                        <div>
+                            <h1><a href="continent-search.html?continent=Amerique-centrale"><span class="bg-letter">A</span>mérique Centrale</a></h1>
+                            <div>
+                                <input type="checkbox" id="click" class="d-none">
+                                <label for="click" class="menu-btn" onclick="showAfrique(listeAmeriqueCentral)">
+                                    <svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+                                </label>
+                            </div>
+                        </div>
                         <h3><a href="hotels-search.html?country=Cosa-rica">Costa Rica</a></h3>
+                        <ul id="liste-amerique-central" class="d-none text-white listes">
+                            <li><a href="hotels-search.html?country=Cosa-rica">Costa Rica</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                        </ul>
 
-                        <h1><span class="bg-letter">A</span>mérique du Nord</h1>
+
+                        <div>
+                            <h1><a href="continent-search.html?continent=Amerique-du-nord"><span class="bg-letter">A</span>mérique du Nord</a></h1>
+                            <div>
+                                <input type="checkbox" id="click" class="d-none">
+                                <label for="click" class="menu-btn" onclick="showAfrique(listeAmeriqueDuNord)">
+                                    <svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+                                </label>
+                            </div>
+                        </div>
                         <h3><a href="hotels-search.html?country=Canada">Canada</a></h3>
                         <h3><a href="hotels-search.html?country=Etats-Unis">Etats-Unis</a></h3>
                         <h3><a href="hotels-search.html?country=Mexique">Mexique</a></h3>
+                        <ul id="liste-amerique-du-nord" class="d-none text-white listes">
+                            <li><a href="hotels-search.html?country=Canada">Canada</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Etats-Unis">Etats-Unis</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Mexique">Mexique</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                        </ul>
 
-                        <h1><span class="bg-letter">A</span>mérique du Sud</h1>
+                        <div>
+                            <h1><a href="continent-search.html?continent=Amerique-du-sud"><span class="bg-letter">A</span>mérique du Sud</a></h1>
+                            <div>
+                                <input type="checkbox" id="click" class="d-none">
+                                <label for="click" class="menu-btn" onclick="showAfrique(listeAmeriqueDuSud)">
+                                    <svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+                                </label>
+                            </div>
+                        </div>
                         <h3><a href="hotels-search.html?country=Argentine">Argentine</a></h3>
                         <h3><a href="hotels-search.html?country=Brésil">Brésil</a></h3>
                         <h3><a href="hotels-search.html?country=Colombie">Colombie</a></h3>
                         <h3><a href="hotels-search.html?country=Pérou">Pérou</a></h3>
+                        <ul id="liste-amerique-du-sud" class="d-none text-white listes">
+                            <li><a href="hotels-search.html?country=Argentine">Argentine</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Brésil">Brésil</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Colombie">Colombie</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Pérou">Pérou</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                        </ul>
                     </div>
                     <div>
-                        <h1><span class="bg-letter">A</span>sie</h1>
+                        <div>
+                            <h1><a href="continent-search.html?continent=Asie"><span class="bg-letter">A</span>sie</a></h1>
+                            <div>
+                                <input type="checkbox" id="click" class="d-none">
+                                <label for="click" class="menu-btn" onclick="showAfrique(listeAsie)">
+                                    <svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+                                </label>
+                            </div>
+                        </div>
                         <h3><a href="hotels-search.html?country=Combodge">Combodge</a></h3>
                         <h3><a href="hotels-search.html?country=Chine">Chine</a></h3>
                         <h3><a href="hotels-search.html?country=Hong-kong">Hong Kong</a></h3>
@@ -112,17 +175,57 @@
                         <h3><a href="hotels-search.html?country=Sri-lanka">Sri Lanka</a></h3>
                         <h3><a href="hotels-search.html?country=Thailande">Thailande</a></h3>
                         <h3><a href="hotels-search.html?country=Vietnam">Vietnam</a></h3>
+                        <ul id="liste-asie" class="d-none text-white listes">
+                            <li><a href="hotels-search.html?country=Combodge">Combodge</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Chine">Chine</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Hong-kong">Hong Kong</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Inde">Inde</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Indonésie">Indonésie</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Japon">Japon</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Laos">Laos</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Malaisie">Malaisie</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Myanmar">Myanmar</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Philippines">Philippines</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Singapour">Singapour</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Sri-lanka">Sri Lanka</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Thailande">Thailande</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Vietnam">Vietnam</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                        </ul>
 
-                        <h1><span class="bg-letter">C</span>araïbes</h1>
+                        <div>
+                            <h1><a href="continent-search.html?continent=Caraibes"><span class="bg-letter">C</span>araïbes</a></h1>
+                            <div>
+                                <input type="checkbox" id="click" class="d-none">
+                                <label for="click" class="menu-btn" onclick="showAfrique(listeCaraibes)">
+                                    <svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+                                </label>
+                            </div>
+                        </div>
                         <h3><a href="hotels-search.html?country=Anguilla">Anguilla</a></h3>
                         <h3><a href="hotels-search.html?country=Iles-turks-et-caïques">Iles Turks et Caïques</a></h3>
                         <h3><a href="hotels-search.html?country=Port-rico">Porto Rico</a></h3>
                         <h3><a href="hotels-search.html?country=République-dominicaine">République dominicaine</a></h3>
                         <h3><a href="hotels-search.html?country=Saint-barthélemy">Saint-Barthélemy</a></h3>
                         <h3><a href="hotels-search.html?country=St-vincent-et-grenadines">St Vincent et Grenadines</a></h3>
+                        <ul id="liste-caraibes" class="d-none text-white listes">
+                            <li><a href="hotels-search.html?country=Anguilla">Anguilla</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Iles-turks-et-caïques">Iles Turks et Caïques</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Port-rico">Porto Rico</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=République-dominicaine">République dominicaine</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Saint-barthélemy">Saint-Barthélemy</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=St-vincent-et-grenadines">St Vincent et Grenadines</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                        </ul>
                     </div>
                     <div>
-                        <h1><a href="continent-search.html?continent=Europe"><span class="bg-letter">E</span>urope</a></h1>
+                        <div>
+                            <h1><a href="continent-search.html?continent=Europe"><span class="bg-letter">E</span>urope</a></h1>
+                            <div>
+                                <input type="checkbox" id="click" class="d-none">
+                                <label for="click" class="menu-btn" onclick="showAfrique(listeEurope)">
+                                    <svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+                                </label>
+                            </div>
+                        </div>
                         <h3><a href="hotels-search.html?country=Allemagne">Allemagne</a></h3>
                         <h3><a href="hotels-search.html?country=Autriche">Autriche</a></h3>
                         <h3><a href="hotels-search.html?country=Belgique">Belgique</a></h3>
@@ -144,23 +247,88 @@
                         <h3><a href="hotels-search.html?country=Suede">Suede</a></h3>
                         <h3><a href="hotels-search.html?country=Suisse">Suisse</a></h3>
                         <h3><a href="hotels-search.html?country=Turquie">Turquie</a></h3>
+                        <ul id="liste-europe" class="d-none text-white listes">
+                            <li><a href="hotels-search.html?country=Allemagne">Allemagne</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Autriche">Autriche</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Belgique">Belgique</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Danemark">Danemark</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Espagne">Espagne</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=France">France</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Grèce">Grèce</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Hongrie">Hongrie</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Irlande">Irlande</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Italie">Italie</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Monaco">Monaco</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Monténégro">Monténégro</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Pays-Bas">Pays-Bas</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Pologne">Pologne</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Portugal">Portugal</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=République-tchèque">République tchèque</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Royaume-Uni">Royaume-Uni</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Russie">Russie</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Suede">Suede</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Suisse">Suisse</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Turquie">Turquie</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                        </ul>
                     </div>
                     <div>
-                        <h1><span class="bg-letter">M</span>oyen Orient</h1>
+                        <div>
+                            <h1><a href="continent-search.html?continent=Moyen-orient"><span class="bg-letter">M</span>oyen Orient</a></h1>
+                            <div>
+                                <input type="checkbox" id="click" class="d-none">
+                                <label for="click" class="menu-btn" onclick="showAfrique(listeMoyenOrient)">
+                                    <svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+                                </label>
+                            </div>
+                        </div>
                         <h3><a href="hotels-search.html?country=Arabie-saoudite">Arabie saoudite</a></h3>
                         <h3><a href="hotels-search.html?country=Emirats-arabes-unis">Emirats arabes unis</a></h3>
                         <h3><a href="hotels-search.html?country=Dubai">Dubai</a></h3>
                         <h3><a href="hotels-search.html?country=Oman">Oman</a></h3>
                         <h3><a href="hotels-search.html?country=Qatar">Qatar</a></h3>
+                        <ul id="liste-moyen-orient" class="d-none text-white listes">
+                            <li><a href="hotels-search.html?country=Arabie-saoudite">Arabie saoudite</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Emirats-arabes-unis">Emirats arabes unis</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Dubai">Dubai</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Oman">Oman</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Qatar">Qatar</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                        </ul>
 
-                        <h1><span class="bg-letter">O</span>céan Indien</h1>
+
+                        <div>
+                            <h1><a href="continent-search.html?continent=Ocean-indien"><span class="bg-letter">O</span>céan Indien</a></h1>
+                            <div>
+                                <input type="checkbox" id="click" class="d-none">
+                                <label for="click" class="menu-btn" onclick="showAfrique(listeOceanIndien)">
+                                    <svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+                                </label>
+                            </div>
+                        </div>
                         <h3><a href="hotels-search.html?country=Maldives">Maldives</a></h3>
                         <h3><a href="hotels-search.html?country=Maurice">Maurice</a></h3>
                         <h3><a href="hotels-search.html?country=Seychelles">Seychelles</a></h3>
+                        <ul id="liste-ocean-indien" class="d-none text-white listes">
+                            <li><a href="hotels-search.html?country=Maldives">Maldives</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Maurice">Maurice</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Seychelles">Seychelles</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                        </ul>
 
-                        <h1><span class="bg-letter">O</span>céanie</h1>
+                        <div>
+                            <h1><a href="continent-search.html?continent=Oceanie"><span class="bg-letter">O</span>céanie</a></h1>
+                            <div>
+                                <input type="checkbox" id="click" class="d-none">
+                                <label for="click" class="menu-btn" onclick="showAfrique(listeOceanie)">
+                                    <svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+                                </label>
+                            </div>
+                        </div>
                         <h3><a href="hotels-search.html?country=Australie">Australie</a></h3>
                         <h3><a href="hotels-search.html?country=Polynésie-française">Polynésie française</a></h3>
+                        <ul id="liste-oceanie" class="d-none text-white listes">
+                            <li><a href="hotels-search.html?country=Australie">Australie</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                            <li><a href="hotels-search.html?country=Polynésie-française">Polynésie française</a><svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg></li>
+                        </ul>
+                        
                     </div>
                 </div>
             </div>
@@ -229,5 +397,63 @@
             </div>
         </footer>
     </div>
+    <script>
+        const listeAfrique = document.getElementById("liste-afrique")
+        const listeAmeriqueCentral = document.getElementById("liste-amerique-central")
+        const listeAmeriqueDuNord = document.getElementById("liste-amerique-du-nord")
+        const listeAmeriqueDuSud = document.getElementById("liste-amerique-du-sud")
+        const listeAsie = document.getElementById("liste-asie")
+        const listeEurope = document.getElementById("liste-europe")
+        const listeCaraibes = document.getElementById("liste-caraibes")
+        const listeMoyenOrient = document.getElementById("liste-moyen-orient")
+        const listeOceanIndien = document.getElementById("liste-ocean-indien")
+        const listeOceanie = document.getElementById("liste-oceanie")
+
+
+        const body = document.querySelector("body")
+        const closeIcon = document.querySelector(".close-icon")
+        function showAfrique(el){
+            if(el.classList.contains("d-none"))
+            {
+                el.classList.remove("d-none"); 
+                el.classList.add("checked")
+                body.classList.add("overlay")
+                closeIcon.style.display = "block"
+            
+            }
+            else{
+                el.classList.add("d-none"); 
+                el.classList.remove("checked")
+                body.classList.remove("overlay")
+                closeIcon.style.display = "none"
+
+            }
+        }
+
+        function hideAfrique(){
+            listeAfrique.classList.add("d-none");
+            listeAmeriqueCentral.classList.add("d-none");
+            listeAmeriqueDuNord.classList.add("d-none");
+            listeAmeriqueDuSud.classList.add("d-none");
+            listeAsie.classList.add("d-none");
+            listeEurope.classList.add("d-none");
+            listeCaraibes.classList.add("d-none");
+            listeMoyenOrient.classList.add("d-none");
+            listeOceanIndien.classList.add("d-none");
+            listeOceanie.classList.add("d-none");
+
+            listeAfrique.classList.remove("checked");
+            listeAmeriqueCentral.classList.remove("checked");
+            listeAmeriqueDuNord.classList.remove("checked");
+            listeAmeriqueDuSud.classList.remove("checked");
+            listeAsie.classList.remove("checked");
+            listeEurope.classList.remove("checked");
+            listeCaraibes.classList.remove("checked");
+            listeMoyenOrient.classList.remove("checked");
+            listeOceanIndien.classList.remove("checked");
+            listeOceanie.classList.remove("checked");
+            body.classList.remove("overlay")
+        }
+    </script>
 </body>
 </html>

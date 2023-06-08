@@ -20,7 +20,7 @@ const showMobileNav = () => {
     document.querySelector('body').classList.add('hidden');
 }
 
-const backendURL = "http://localhost:8080"
+const backendURL = "https://reagency-website-main-production.up.railway.app"
 
 var hotels = [
     {   
@@ -352,7 +352,37 @@ var hotels = [
 ]
 
 var continents = [
-    {   continent : "Europe",
+    { 
+        continent : "Europe",
+        hotelId : "648114ceaf84905a70ac8a5d",
+        description : "Que ce soit pour ses cités intemporelles telles que Paris et Venise ou ses destinations hors des sentiers battus, comme le Monténégro et la vallée du Douro, l'Europe est toujours synonyme de vacances réussies. Et nous sommes impatients de partager avec vous nos hôtels préférés sur l’ensemble du continent, des châteaux médiévaux de la campagne irlandaise aux stations de ski ultra-exclusives des Alpes suisses.",
+        destinations : "ALLEMAGNE · AUTRICHE · BELGIQUE DANEMARK · ESPAGNE · FRANCE · GRÈCE  HONGRIE · IRLANDE · ITALIE · MONACO · MONTÉNÉGRO PAYS-BAS · POLOGNE · PORTUGAL · RÉPUBLIQUE TCHÈQUE ROYAUME-UNI · RUSSIE · SUÈDE · SUISSE · TURQUIE",
+        top: "L’Europe ne manque pas de magnifiques hôtels, mais il en existe qui laisseraient même les voyageurs les plus blasés un peu émerveillés. Il y a bien sûr le Ritz Paris, où Coco Chanel et Marcel Proust ont résidé des années. Ensuite, il y a les chics boutiques-hôtels de Santorin, où les vues sur la mer Égée sont des plus exquises.",
+        hotels:[
+            {
+                name:"Ham Yard Hotel",
+                region: "Londres",
+                thumbnail : "./src/img/ham-thumb.png"
+            },
+            {
+                name:"Hotel Arts Barcelona",
+                region: "Bercelona",
+                thumbnail : "./src/img/arts-thumb.png"
+            },
+            {
+                name:"Hôtel Plaza Athénée",
+                region: "Paris",
+                thumbnail : "./src/img/plaza-thumb.png"
+            },
+            {
+                name:"Ritz Paris",
+                region: "Paris",
+                thumbnail : "./src/img/ritz-thumb.png"
+            },
+        ]
+    },
+    { 
+        continent : "Afrique",
         hotelId : 1,
         description : "Que ce soit pour ses cités intemporelles telles que Paris et Venise ou ses destinations hors des sentiers battus, comme le Monténégro et la vallée du Douro, l'Europe est toujours synonyme de vacances réussies. Et nous sommes impatients de partager avec vous nos hôtels préférés sur l’ensemble du continent, des châteaux médiévaux de la campagne irlandaise aux stations de ski ultra-exclusives des Alpes suisses.",
         destinations : "ALLEMAGNE · AUTRICHE · BELGIQUE DANEMARK · ESPAGNE · FRANCE · GRÈCE  HONGRIE · IRLANDE · ITALIE · MONACO · MONTÉNÉGRO PAYS-BAS · POLOGNE · PORTUGAL · RÉPUBLIQUE TCHÈQUE ROYAUME-UNI · RUSSIE · SUÈDE · SUISSE · TURQUIE",
@@ -383,7 +413,7 @@ var continents = [
 ]
 var hotelsData
 async function hotelsGrab() {
-    await fetch("http://localhost:8080/api/todos")
+    await fetch(`${backendURL}/api/todos`)
         .then((response) => response.json())
         .then(({hotels}) => {hotelsData = hotels})
 

@@ -100,7 +100,7 @@
                 <button data-action="decrement2" class="hover:bg-gray-100 text-gray-600 hover:text-gray-700 h-full w-20 rounded-l cursor-pointer outline-none">
                   <span class="m-auto text-2xl font-thin">−</span>
                 </button>
-                <input type="number" min="1" value="2" onkeydown="return false" max="4" class="outline-none focus:outline-none text-center font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
+                <input type="number" min="1" value="1" onkeydown="return false" max="4" class="outline-none focus:outline-none text-center font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
                 <h3>Chambres</h3>
                 <button data-action="increment2" class="hover:bg-gray-100 text-gray-600 hover:text-gray-700 h-full w-20 rounded-r cursor-pointer">
                   <span class="m-auto text-2xl font-thin">+</span>
@@ -228,7 +228,7 @@
 
         var hotel;
         async function displayHotel(){
-            await fetch(`http://localhost:8080/api/todos/${Pageid}`)
+            await fetch(`${backendURL}/api/todos/${Pageid}`)
                 .then((response) => response.json())
                 .then((res) => {
                     hotel = res 
@@ -272,7 +272,7 @@
                 room.classList="w-2/3 py-8 mx-auto"
                 room.innerHTML+=`
                 <h1 class="text-2xl font-semibold">${hotel.rooms[i].name}</h1>
-                <div class="grid grid-cols-2 mt-8">
+                <div class="grid grid-cols-2 mt-8" id="room">
                     <img src=${hotel.rooms[i].img} alt="room">
                     <div class="px-8 flex flex-col gap-8">
                         <p><strong>Description :</strong> ${hotel.rooms[i].description}</p>

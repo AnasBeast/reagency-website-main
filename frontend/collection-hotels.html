@@ -205,7 +205,7 @@
     <script>
         const hotelsList = document.getElementById("list");
         async function displayHotels(){
-            await fetch("http://localhost:8080/api/todos")
+            await fetch(`${backendURL}/api/todos`)
                 .then((response) => response.json())
                 .then(({hotels}) => {
                     hotels.forEach((hotel) => {
