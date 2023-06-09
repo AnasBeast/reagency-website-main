@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin Dashboard</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 maximum-scale=1"
+    />
+    <link rel="shortcut icon" href="src/img/icon-png.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <script type="text/javascript" src="src/js/index.js"></script>
+    <img src="./src/img/logo-noir.png" alt="logo" class="mx-auto w-56" />
+    <section class="mx-auto max-w-7xl sm:px-6 lg:px-8 mt-12">
+      <div class="px-4 sm:px-0 mb-4 flex justify-between items-center">
+        <h2 class="text-sm md:text-xl font-medium text-gray-900">Hotels</h2>
+        <button
+          id="add-hotel"
+          type="button"
+          class="inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+        >
+          Add new hotel
+        </button>
+      </div>
+      <ul
+        class="mt-5 px-4 divide-y divide-gray-200 border-gray-200 sm:mt-0 sm:border-t-0"
+        id="list"
+      >
+        <!-- <li class="mb-4">
+                <div class="flex items-center py-5 px-4 sm:py-6 sm:px-0 shadow-md border hover:shadow-lg">
+                    <div class="flex min-w-0 flex-1 items-center px-4 flex-col justify-center md:flex-row gap-4 md:gap-0">
+                        <div class="flex-shrink-0 w-full md:w-auto"><img class="h-3/4 w-full md:h-12 md:w-24 rounded group-hover:opacity-75" 
+                            src="http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcTnavcE0R1cW9vbZSJU9A_92W41dYEqmnQRVz51osw9lq-dYLXMRz2uqIIL1LrWzvQN" alt="">
+                        </div><div class="min-w-0 flex-1 px-4 flex flex-col md:grid md:grid-cols-4 md:items-center gap-2 md:gap-4">
+                        <div>
+                            <p class="md:truncate text-sm font-medium text-purple-600">Dubai</p>
+                            <p class="mt-2 flex items-center text-sm text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="mr-1.5 h-5 w-5 flex-shrink-0 text-green-400"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path></svg>
+                                <span class="md:truncate">United Arab Emirates</span></p>
+                            </div>
+                            <div class=" md:block col-span-1 col-start-4">
+                                <div>
+                                    <button type="button" 
+                                        class="inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                        Edit
+                                    </button>
+                                    <button type="button" 
+                                        class="inline-flex items-center rounded-md border border-gray-300 bg-red-600 text-white px-3 py-2 text-sm font-medium leading-4 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li> -->
+      </ul>
+    </section>
+
+    <script>
+      const hotelsList = document.getElementById("list");
+      async function displayHotels() {
+        await fetch(`${backendURL}/api/todos`)
+          .then((response) => response.json())
+          .then(({ hotels }) => {
+            hotels.forEach((hotel) => {
+              const hotelItem = document.createElement("li");
+              hotelItem.classList.add("mb-4");
+              hotelItem.innerHTML = `
+                        <div class="flex items-center py-5 px-4 sm:py-6 sm:px-0 shadow-md border hover:shadow-lg">
+                            <div class="flex min-w-0 flex-1 items-center px-4 flex-col justify-center md:flex-row gap-4 md:gap-0">
+                                <div class="flex-shrink-0 w-full md:w-auto"><img class="h-3/4 w-full md:h-12 md:w-24 rounded group-hover:opacity-75" 
+                                    src=${hotel.images[0]} alt="">
+                                </div><div class="min-w-0 flex-1 px-4 flex flex-col md:grid md:grid-cols-4 md:items-center gap-2 md:gap-4">
+                                <div>
+                                    <p class="md:truncate text-sm font-medium text-purple-600">${hotel.name}</p>
+                                    <p class="mt-2 flex items-center text-sm text-gray-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="mr-1.5 h-5 w-5 flex-shrink-0 text-green-400"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path></svg>
+                                        <span class="md:truncate">${hotel.country}</span></p>
+                                    </div>
+                                    <div class=" md:block col-span-1 col-start-4">
+                                        <div>
+                                            <button type="button" 
+                                                class="inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                                Edit
+                                            </button>
+                                            <button type="button" 
+                                                class="inline-flex items-center rounded-md border border-gray-300 bg-red-600 text-white px-3 py-2 text-sm font-medium leading-4 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                                Delete
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`;
+              hotelsList.appendChild(hotelItem);
+            });
+          });
+      }
+      displayHotels();
+    </script>
+    <<!-- div id="headlessui-portal-root" class="">
+      <div data-headlessui-portal="">
+        <button
+          type="button"
+          aria-hidden="true"
+          style="
+            position: fixed;
+            top: 1px;
+            left: 1px;
+            width: 1px;
+            height: 0px;
+            padding: 0px;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0px, 0px, 0px, 0px);
+            white-space: nowrap;
+            border-width: 0px;
+          "
+        ></button>
+        <div>
+          <div
+            class="relative z-10"
+            id="headlessui-dialog-:ri:"
+            role="dialog"
+            aria-modal="true"
+            data-headlessui-state="open"
+            aria-labelledby="headlessui-dialog-title-:rk:"
+          >
+            <div class="fixed inset-0"></div>
+            <div class="fixed inset-0 overflow-hidden">
+              <div class="absolute inset-0 overflow-hidden">
+                <div
+                  class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10 sm:pl-16"
+                >
+                  <div
+                    class="pointer-events-auto w-screen max-w-md translate-x-0"
+                    id="headlessui-dialog-panel-:rj:"
+                    data-headlessui-state="open"
+                  >
+                    <form
+                      class="flex h-full flex-col divide-y divide-gray-200 bg-white shadow-xl"
+                      action="#"
+                    >
+                      <div class="h-0 flex-1 overflow-y-auto">
+                        <div class="bg-gray-700 py-6 px-4 sm:px-6">
+                          <div class="flex items-center justify-between">
+                            <h2
+                              class="text-lg font-medium text-white"
+                              id="headlessui-dialog-title-:rk:"
+                              data-headlessui-state="open"
+                            >
+                              New Hotel
+                            </h2>
+                            <div class="ml-3 flex h-7 items-center">
+                              <button
+                                id="close-btn"
+                                type="button"
+                                class="rounded-md bg-gray-700 text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                                tabindex="0"
+                              >
+                                <span class="sr-only">Close panel</span>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  aria-hidden="true"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M6 18L18 6M6 6l12 12"
+                                  ></path>
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="mt-1">
+                            <p class="text-sm text-gray-300">
+                              Get started by filling in the information below to
+                              add the new hotel.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="flex flex-1 flex-col justify-between">
+                          <div class="divide-y divide-gray-200 px-4 sm:px-6">
+                            <div class="space-y-6 pt-6 pb-5">
+                              <div>
+                                <label
+                                  for="destination-name"
+                                  class="block text-sm font-medium text-gray-900"
+                                  >Hotel name</label
+                                >
+                                <div class="mt-1">
+                                  <input
+                                    type="text"
+                                    name="destination-name"
+                                    id="destination-name"
+                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                    required=""
+                                  />
+                                </div>
+                              </div>
+                              <div>
+                                <label
+                                  for="address"
+                                  class="block text-sm font-medium text-gray-900"
+                                  >Hotel address</label
+                                >
+                                <div class="mt-1">
+                                  <input
+                                    type="text"
+                                    name="address"
+                                    id="address"
+                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                    required=""
+                                  />
+                                </div>
+                              </div>
+                              <div>
+                                <label
+                                  for="country-name"
+                                  class="block text-sm font-medium text-gray-900"
+                                  >Country name</label
+                                >
+                                <div class="mt-1">
+                                  <input
+                                    type="text"
+                                    name="country-name"
+                                    id="country-name"
+                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                    required=""
+                                  />
+                                </div>
+                              </div>
+                              <div>
+                                <label
+                                  for="subtitle"
+                                  class="block text-sm font-medium text-gray-900"
+                                  >Hotel subtitle</label
+                                >
+                                <div class="mt-1">
+                                  <input
+                                    type="text"
+                                    name="subtitle"
+                                    id="subtitle"
+                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                    required=""
+                                  />
+                                </div>
+                              </div>
+                              <div>
+                                <label
+                                  for="description"
+                                  class="block text-sm font-medium text-gray-900"
+                                  >Hotel description</label
+                                >
+                                <div class="mt-1">
+                                  <textarea
+                                    id="description"
+                                    name="description"
+                                    rows="4"
+                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                    required=""
+                                  >
+                                  </textarea>
+                                </div>
+                              </div>
+                              <div>
+                                <label
+                                  for="services"
+                                  class="block text-sm font-medium text-gray-900"
+                                  >Hotel services (seperate by ",")</label
+                                >
+                                <div class="mt-1">
+                                  <input
+                                    type="text"
+                                    name="services"
+                                    id="services"
+                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                    required=""
+                                  />
+                                </div>
+                              </div>
+                              <div>
+                                <label
+                                  for="exceptions"
+                                  class="block text-sm font-medium text-gray-900"
+                                  >Hotel exceptions (seperate by ",")</label
+                                >
+                                <div class="mt-1">
+                                  <input
+                                    type="text"
+                                    name="exceptions"
+                                    id="exceptions"
+                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                    required=""
+                                  />
+                                </div>
+                              </div>
+                              <div>
+                                <label
+                                  for="rooms-types"
+                                  class="block text-sm font-medium text-gray-900"
+                                  >Rooms TYPES</label
+                                >
+                                <div class="mt-1">
+                                  <input
+                                    type="number"
+                                    name="rooms-types"
+                                    id="rooms-types"
+                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                    value="1"
+                                    min="1"
+                                    onkeydown="return false"
+                                    required=""
+                                  />
+                                </div>
+                              </div>
+                              <div>
+                                <label
+                                  for="destination-rating"
+                                  class="block text-sm font-medium text-gray-900"
+                                  >Rating /5</label
+                                >
+                                <div class="mt-1">
+                                  <input
+                                    type="number"
+                                    min="1"
+                                    onkeydown="return false"
+                                    max="5"
+                                    name="destination-rating"
+                                    id="destination-rating"
+                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                    required=""
+                                  />
+                                </div>
+                              </div>
+                              <div>
+                                <label
+                                  for="image-url"
+                                  class="block text-sm font-medium text-gray-900"
+                                  >Image Url</label
+                                >
+                                <div class="mt-1">
+                                  <input
+                                    type="text"
+                                    name="image-url"
+                                    id="image-url"
+                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                    required=""
+                                  />
+                                </div>
+                              </div>
+                              <div>
+                                <label
+                                  for="video-url"
+                                  class="block text-sm font-medium text-gray-900"
+                                  >Embed Youtube Video ID</label
+                                >
+                                <div class="mt-1">
+                                  <input
+                                    type="text"
+                                    name="video-url"
+                                    id="video-url"
+                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                    required=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-shrink-0 justify-end px-4 py-4">
+                        <button
+                          id="cancel-btn"
+                          type="button"
+                          class="rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        >
+                          Cancel</button
+                        ><button
+                          type="submit"
+                          class="ml-4 inline-flex justify-center rounded-md border border-transparent bg-gray-900 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        >
+                          Add
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          type="button"
+          aria-hidden="true"
+          style="
+            position: fixed;
+            top: 1px;
+            left: 1px;
+            width: 1px;
+            height: 0px;
+            padding: 0px;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0px, 0px, 0px, 0px);
+            white-space: nowrap;
+            border-width: 0px;
+          "
+        ></button>
+      </div>
+    </div> -->
+    <script>
+      const closeBtn = document.querySelector("#close-btn");
+      const cancelBtn = document.querySelector("#cancel-btn");
+      const addHotel = document.querySelector("#add-hotel");
+      const portal = document.querySelector("#headlessui-portal-root");
+      function hidePortal() {
+        portal.classList.add("d-none");
+      }
+      function displayPortal() {
+        portal.classList.remove("d-none");
+      }
+      closeBtn.addEventListener("click", hidePortal);
+      cancelBtn.addEventListener("click", hidePortal);
+      addHotel.addEventListener("click", displayPortal);
+    </script>
+  </body>
+</html>

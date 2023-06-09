@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin Add Hotel</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 maximum-scale=1"
+    />
+    <link rel="shortcut icon" href="src/img/icon-png.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <script type="text/javascript" src="src/js/index.js"></script>
+    <img src="./src/img/logo-noir.png" alt="logo" class="mx-auto w-56" />
+    <section class="mx-auto max-w-7xl sm:px-6 lg:px-8 mt-12">
+      <div class="px-4 sm:px-0 mb-4 flex justify-between items-center">
+        <h2 class="text-sm md:text-xl font-medium text-gray-900">Add Hotel</h2>
+       
+      </div>
+      <form class="flex h-full flex-col divide-y divide-gray-200 bg-white" action="#">
+        <div class="h-0 flex-1 overflow-y-auto">
+          <div class="bg-gray-700 py-6 px-4 sm:px-6">
+            <div class="flex items-center justify-between">
+              <h2 class="text-lg font-medium text-white" id="headlessui-dialog-title-:rk:" data-headlessui-state="open">
+                New Hotel
+              </h2>
+              <div class="ml-3 flex h-7 items-center">
+                <button id="close-btn" type="button"
+                  class="rounded-md bg-gray-700 text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                  tabindex="0">
+                  <span class="sr-only">Close panel</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="mt-1">
+              <p class="text-sm text-gray-300">
+                Get started by filling in the information below to
+                add the new hotel.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col justify-between">
+            <div class="divide-y divide-gray-200 px-4 sm:px-6">
+              <div class="space-y-6 pt-6 pb-5">
+                <div>
+                  <label for="destination-name" class="block text-sm font-medium text-gray-900">Hotel name</label>
+                  <div class="mt-1">
+                    <input type="text" name="destination-name" id="destination-name"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+                <div>
+                  <label for="address" class="block text-sm font-medium text-gray-900">Hotel address</label>
+                  <div class="mt-1">
+                    <input type="text" name="address" id="address"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+                <div>
+                  <label for="country-name" class="block text-sm font-medium text-gray-900">Country name</label>
+                  <div class="mt-1">
+                    <input type="text" name="country-name" id="country-name"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+                <div>
+                  <label for="subtitle" class="block text-sm font-medium text-gray-900">Hotel subtitle</label>
+                  <div class="mt-1">
+                    <input type="text" name="subtitle" id="subtitle"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+                <div>
+                  <label for="description" class="block text-sm font-medium text-gray-900">Hotel description</label>
+                  <div class="mt-1">
+                    <textarea id="description" name="description" rows="4"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="">
+                    </textarea>
+                  </div>
+                </div>
+                <div>
+                  <label for="services" class="block text-sm font-medium text-gray-900">Hotel services (seperate by
+                    ",")</label>
+                  <div class="mt-1">
+                    <input type="text" name="services" id="services"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+                <div>
+                  <label for="exceptions" class="block text-sm font-medium text-gray-900">Hotel exceptions (seperate by
+                    ",")</label>
+                  <div class="mt-1">
+                    <input type="text" name="exceptions" id="exceptions"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+                <div>
+                  <label for="rooms-types" class="block text-sm font-medium text-gray-900">Rooms TYPES</label>
+                  <div class="mt-1">
+                    <input type="number" name="rooms-types" id="rooms-types"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      value="1" min="1" onkeydown="return false" required="" />
+                  </div>
+                </div>
+                <div id="rooms">
+                  <div class="flex justify-center gap-4 mt-4">
+                    <label for="room-type" class="block text-sm font-medium text-gray-900">Room n°1 Type : </label>
+                    <div class="mt-1">
+                      <input type="text" name="room-type" id="room-type"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                    <label for="room-description" class="block text-sm font-medium text-gray-900">Room n°1 description : </label>
+                    <div class="mt-1">
+                      <input type="text" name="room-description" id="room-description"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                    <label for="room-image" class="block text-sm font-medium text-gray-900">Room n°1 image URL : </label>
+                    <div class="mt-1">
+                      <input type="text" name="room-image" id="room-image"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                  </div>
+                </div>
+
+
+                <div>
+                  <label for="feedback-numbers" class="block text-sm font-medium text-gray-900">Feedbacks</label>
+                  <div class="mt-1">
+                    <input type="number" name="feedback-numbers" id="feedback-numbers"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      value="1" min="0" onkeydown="return false" required="" />
+                  </div>
+                </div>
+                <div id="feedbacks">
+                  <div class="flex justify-center gap-4 mt-4">
+                    <label for="feedback-name" class="block text-sm font-medium text-gray-900">Feedback n°1 Name : </label>
+                    <div class="mt-1">
+                      <input type="text" name="feedback-name" id="feedback-name"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                    <label for="feedback-rate" class="block text-sm font-medium text-gray-900">Feedback n°1 Rate /10 : </label>
+                    <div class="mt-1">
+                      <input type="text" name="feedback-rate" id="feedback-rate"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" /> 
+                    </div>
+                    <label for="feedback-note" class="block text-sm font-medium text-gray-900">Feedback n°1 Note : </label>
+                    <div class="mt-1">
+                      <input type="text" name="feedback-note" id="feedback-note"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                    <label for="feedback-date" class="block text-sm font-medium text-gray-900">Feedback n°1 date (example: CLIENT DEPUIS SEPTEMBRE 2011, ULTIMATE) : </label>
+                    <div class="mt-1">
+                      <input type="text" name="feedback-date" id="feedback-date"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                  </div>
+                </div>
+
+
+                <div>
+                  <label for="subtitle" class="block text-xl font-medium text-gray-900">Hotel Informations</label>
+                  <label for="subtitle" class="block text-sm font-medium text-gray-900">Hotel arrival time (ex:15:00) :</label>
+                  <div class="mt-1">
+                    <input type="text" name="subtitle" id="subtitle"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="destination-rating" class="block text-sm font-medium text-gray-900">Rating /5</label>
+                  <div class="mt-1">
+                    <input type="number" min="1" onkeydown="return false" max="5" name="destination-rating"
+                      id="destination-rating"
+                      class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+                <div>
+                  <label for="image-url" class="block text-sm font-medium text-gray-900">Image Url</label>
+                  <div class="mt-1">
+                    <input type="text" name="image-url" id="image-url"
+                      class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+                <div>
+                  <label for="video-url" class="block text-sm font-medium text-gray-900">Embed Youtube Video ID</label>
+                  <div class="mt-1">
+                    <input type="text" name="video-url" id="video-url"
+                      class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-shrink-0 justify-end px-4 py-4">
+          <button id="cancel-btn" type="button"
+            class="rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            Cancel</button><button type="submit"
+            class="ml-4 inline-flex justify-center rounded-md border border-transparent bg-gray-900 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            Add
+          </button>
+        </div>
+      </form>
+    </section>
+    <script>
+
+      //feedbacks
+      const feedbacksNumbers = document.querySelector("#feedback-numbers");
+      const feedbacks = document.querySelector("#feedbacks")
+      var nbFeedbacks = feedbacksNumbers.value;
+
+      feedbacksNumbers.addEventListener("change", function () {
+        nbFeedbacks = feedbacksNumbers.value;
+        feedbacks.innerHTML = ""
+        for(let i =0 ;i<nbFeedbacks;i++){
+          feedbacks.innerHTML += 
+          `<div class="flex justify-center gap-4 mt-4">
+                    <label for="feedback-name" class="block text-sm font-medium text-gray-900">Feedback n°${i+1} Name : </label>
+                    <div class="mt-1">
+                      <input type="text" name="feedback-name" id="feedback-name"
+                        class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                    <label for="feedback-rate" class="block text-sm font-medium text-gray-900">Feedback n°${i+1} Rate /10 : </label>
+                    <div class="mt-1">
+                      <input type="text" name="feedback-rate" id="feedback-rate"
+                        class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                    <label for="feedback-note" class="block text-sm font-medium text-gray-900">Feedback n°${i+1} Note : </label>
+                    <div class="mt-1">
+                      <input type="text" name="feedback-note" id="feedback-note"
+                        class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                    <label for="feedback-date" class="block text-sm font-medium text-gray-900">Feedback n°${i+1} date (example: CLIENT DEPUIS SEPTEMBRE 2011, ULTIMATE) : </label>
+                    <div class="mt-1">
+                      <input type="text" name="feedback-date" id="feedback-date"
+                        class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                  </div>`
+        }
+      })
+    </script>
+    <script>
+
+      //rooms types
+      const roomsTypes = document.querySelector("#rooms-types");
+      const rooms = document.querySelector("#rooms")
+      var nbRooms = roomsTypes.value;
+
+      roomsTypes.addEventListener("change", function () {
+        nbRooms = roomsTypes.value;
+        rooms.innerHTML = ""
+        for(let i =0 ;i<nbRooms;i++){
+          rooms.innerHTML += 
+          `<div class="flex justify-center gap-4">
+                    <label for="room-type" class="block text-sm font-medium text-gray-900">Room n°${i+1} Type : </label>
+                    <div class="mt-1">
+                      <input type="text" name="room-type" id="room-type"
+                        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                    <label for="room-description" class="block text-sm font-medium text-gray-900">Room n°${i+1} description : </label>
+                    <div class="mt-1">
+                      <input type="text" name="room-description" id="room-description"
+                        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                    <label for="room-image" class="block text-sm font-medium text-gray-900">Room n°${i+1} image URL : </label>
+                    <div class="mt-1">
+                      <input type="text" name="room-image" id="room-image"
+                        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                  </div>`
+        }
+      })
+    </script>
+    <script>
+      const closeBtn = document.querySelector("#close-btn");
+      const cancelBtn = document.querySelector("#cancel-btn");
+      const addHotel = document.querySelector("#add-hotel");
+      const portal = document.querySelector("#headlessui-portal-root");
+      function hidePortal() {
+        portal.classList.add("d-none");
+      }
+      function displayPortal() {
+        portal.classList.remove("d-none");
+      }
+      closeBtn.addEventListener("click", hidePortal);
+      cancelBtn.addEventListener("click", hidePortal);
+      addHotel.addEventListener("click", displayPortal);
+    </script>
+  </body>
+</html>

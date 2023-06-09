@@ -310,7 +310,7 @@ nav img {
   position: fixed;
   z-index: 202;
   width: 70px;
-  top: 120px;
+  top: 10vh;
   left: 0vw;
 }
 @media only screen and (max-width: 1050px) {

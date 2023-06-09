@@ -339,13 +339,13 @@ nav img {
 }
 
 #content #list-wrapper #bottom{
-  width: 50%;
+  width: 80%;
   text-align: center;
   margin-top: 100px;
 }
 #content #list-wrapper #bottom p{
   font-weight: 300;
-  font-size: 30px;
+  font-size: 20px;
   margin: 0;
   margin-bottom: 14px;
   line-height: 45px;
@@ -368,12 +368,12 @@ nav img {
 
 #content #list-wrapper #mid{
   margin-top: 100px;
-  width: 50%;
+  width: 80%;
   text-align: center;
 }
 #content #list-wrapper #mid p{
   font-weight: 300;
-  font-size: 30px;
+  font-size: 20px;
   margin: 0;
   margin-bottom: 14px;
   line-height: 45px;
@@ -647,6 +647,10 @@ nav img {
   #list-wrapper #list .element {
     height: 400px !important;
     width: 100% !important;
+  }
+  #content #landing #logo{
+    margin-top: 0;
+    margin-bottom: 70px;
   }
 }
 
