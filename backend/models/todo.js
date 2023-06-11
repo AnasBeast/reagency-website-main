@@ -38,7 +38,6 @@ const hotelSchema = mongoose.Schema({
             kids : {type:String, required:true},
             smokers : {type:String, required:true},
             smokersRoom : {type:String, required:true},
-            smokersRoom : {type:String, required:true},
             services : [{type:String, required:true}],
             inclus : [{type:String, required:true}],
         },

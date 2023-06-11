@@ -101,7 +101,7 @@
             </div>
 
             <div id="list">
-                
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" alt="" style="width: 100%;">
             </div>
         </div>
 
@@ -208,6 +208,7 @@
             await fetch(`${backendURL}/api/todos`)
                 .then((response) => response.json())
                 .then(({hotels}) => {
+                    hotelsList.innerHTML=""
                     hotels.forEach((hotel) => {
                         const hotelItem = document.createElement("a");
                         hotelItem.classList.add("element");

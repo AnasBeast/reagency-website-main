@@ -79,7 +79,8 @@
                     if(res.message){
                         alert(res.message)
                     }else{
-                        localStorage.setItem("accessToekn",res.token)
+                        localStorage.setItem("accessToken",res.token)
+                        window.location.href = 'admin-dashboard.html'
                     }
                 }); 
         }

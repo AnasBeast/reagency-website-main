@@ -1,6 +1,6 @@
 const Hotel = require("../models/todo");
 
-exports.getHotels = (req,res,next) =>{
+exports.getHotels = async(req,res,next) =>{
     const pageSize = +req.query.pagesize;
     const currPage = +req.query.page;
     const hotelQuery = Hotel.find();
@@ -8,7 +8,7 @@ exports.getHotels = (req,res,next) =>{
     if (pageSize && currPage){
         hotelQuery.skip(pageSize * (currPage -1 )).limit(pageSize);
     }
-    hotelQuery
+    await hotelQuery
         .then((doc)=>{
             fetchHotel = doc;
             return Hotel.countDocuments();
@@ -27,7 +27,7 @@ exports.getHotels = (req,res,next) =>{
         });
 };
 
-exports.createHotel = (req , res , next)=>{
+exports.createHotel = async(req , res , next)=>{
     const hotel = new Hotel({
         name : req.body.name,
         address : req.body.address,
@@ -70,7 +70,7 @@ exports.createHotel = (req , res , next)=>{
         },
         stars : req.body.stars,
     });
-    hotel
+    await hotel
         .save()
         .then((result)=>{
             res.status(201).json({
@@ -84,12 +84,13 @@ exports.createHotel = (req , res , next)=>{
         .catch((err)=>{
             res.status(500).json({
                 message: "Fail to create hotel!",
+                error : err,
             })
         })
 }
 
-exports.getHotelById = (req, res , next)=>{
-    Hotel.findById(req.params.id)
+exports.getHotelById = async(req, res , next)=>{
+    await Hotel.findById(req.params.id)
         .then((hotel)=>{
             if(hotel){
                 res.status(200).json(hotel);
@@ -105,8 +106,8 @@ exports.getHotelById = (req, res , next)=>{
         });
 }
 
-exports.updateHotel = (req , res , next)=>{
-    const hotel = new Hotel({
+exports.updateHotel = async(req , res , next)=>{
+    /* const hotel = new Hotel({
         _id : req.params.id,
         name : req.body.name,
         address : req.body.address,
@@ -148,26 +149,28 @@ exports.updateHotel = (req , res , next)=>{
 
         },
         stars : req.body.stars,
-    });
-    Hotel.updateOne({_id: req.params.id}, hotel)
+    }); */
+    await Hotel.updateOne({_id: req.params.id}, req.body)
         .then((result)=>{
             res.status(200).json({message:"Update is successful!"});
         })
         .catch((err)=>{
             res.status(500).json({
-                message: "Couldn't update hotel!"
+                message: "Couldn't update hotel!",
+                error : err,
             })
         })
 }
 
-exports.deleteHotel = (req, res, next) =>{
-    Hotel.deleteOne({ _id: req.params.id })
+exports.deleteHotel = async(req, res, next) =>{
+    await Hotel.deleteOne({ _id: req.params.id })
     .then((resp) =>{
        res.status (200).json({ message: "Delete is successful!" });
     })
     .catch((error) =>{
         res.status (500).json({
             message: "Couldn't delete hotel!",
+            err: error
         });
     });
 };
