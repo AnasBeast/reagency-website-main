@@ -174,3 +174,36 @@ exports.deleteHotel = async(req, res, next) =>{
         });
     });
 };
+
+exports.searchHotels = async(req,res,next) =>{
+    const query = req.query.query
+    await Hotel.find({
+        $or: [
+            {
+              name: {
+                $regex: ".*" + query + ".*",
+                $options: "i",
+              },
+            },
+            {
+              country: {
+                $regex: ".*" + query + ".*",
+                $options: "i",
+              },
+            }
+          ],
+        })
+        .then((resp) =>{
+            res.status (200).json({ 
+                data : resp
+
+            });
+         })
+         .catch((error) =>{
+             res.status (500).json({
+                 message: "Couldn't found any hotel!",
+                 err: error
+             });
+         });
+        
+};

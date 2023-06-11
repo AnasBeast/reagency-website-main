@@ -78,10 +78,10 @@
             <div id="input-wrapper">
 				<div id="input">
 					<img style="display: block" src="src/img/search.png" alt="Search" id="search">
-					<input type="text" placeholder="recherchez un hotel , une destination">
+					<input type="text" id="search-text" placeholder="recherchez un hotel , une destination">
 				</div>
 
-				<button>Recherche</button>
+				<button id="searchBtn">Recherche</button>
 			</div>
         </div>
 
@@ -202,7 +202,9 @@
         </footer>
     </div>
 
+
     <script>
+        //HOTELS DISPLAY
         const hotelsList = document.getElementById("list");
         async function displayHotels(){
             await fetch(`${backendURL}/api/todos`)
@@ -224,7 +226,37 @@
                 });
         }
         displayHotels()
-        
+        // DISPLAY SEARCHED HOTELS/DESTINATIONS
+        const searchBtn = document.querySelector("#searchBtn");
+        const searchText = document.querySelector("#search-text");
+
+        async function searchHotels(){
+            hotelsList.innerHTML=`<img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" alt="" style="width: 100%;">`
+            await fetch(`${backendURL}/api/todos/search?query=${searchText.value}`,{
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+            })
+                .then((response) => response.json())
+                .then(({data}) => {
+                    hotelsList.innerHTML=""
+                    data.forEach((hotel) => {
+                        const hotelItem = document.createElement("a");
+                        hotelItem.classList.add("element");
+                        hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                        hotelItem.innerHTML = `
+                        <div>
+                            <div id="background" style="background-image : url(${hotel.images[0]})"></div>
+                            <h3>${hotel.name}</h3>
+                        </div>
+                        <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
+                        hotelsList.appendChild(hotelItem);
+                    })
+                });
+        }
+        searchBtn.addEventListener("click",searchHotels)
     </script>
 </body>
 </html>
