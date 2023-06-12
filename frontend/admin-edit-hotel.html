@@ -451,6 +451,7 @@
         .then((response) => response.json())
         .then((res) => {
           hotel = res 
+          if(res.message){alert(res.message)}
           hotelPage(hotel)
         });        
       }

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin Reservation</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 maximum-scale=1"
+    />
+    <link rel="shortcut icon" href="src/img/icon--blanc-png.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <script type="text/javascript" src="src/js/index.js"></script>
+    <a href="admin-dashboard.html"><img src="./src/img/logo-noir.png" alt="logo" class="mx-auto w-56" /></a>
+    <section class="sm:px-6 lg:px-4 mt-12">
+      <div class="px-4 sm:px-0 mb-4 flex justify-between items-center">
+        <h2 class="text-sm md:text-xl font-medium text-gray-900">Reservation</h2>
+       
+      </div>
+      <form class="flex h-full flex-col divide-y divide-gray-200 bg-white" action="#">
+        <div class="h-0 flex-1 overflow-y-auto">
+          <div class="flex flex-1 flex-col justify-between">
+            <div class="divide-y divide-gray-200 px-4 sm:px-6">
+              <div class="space-y-6 pt-6 pb-5">
+                <div>
+                  <label for="booking-name" class="block text-sm font-medium text-gray-900">Nom</label>
+                  <div class="mt-1">
+                    <input type="text" name="booking-name" id="booking-name"
+                      class="block w-full h-8 pl-2 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      disabled />
+                  </div>
+                </div>
+                <div>
+                  <label for="booking-prenom" class="block text-sm font-medium text-gray-900">Prenom</label>
+                  <div class="mt-1">
+                    <input type="text" name="booking-prenom" id="booking-prenom"
+                      class="block w-full h-8 pl-2 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      disabled />
+                  </div>
+                </div>
+                <div>
+                  <label for="booking-country" class="block text-sm font-medium text-gray-900">Pays</label>
+                  <div class="mt-1">
+                    <input type="text" name="booking-country" id="booking-country"
+                      class="block w-full h-8 pl-2 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      disabled />
+                  </div>
+                </div>
+                <div>
+                  <label for="booking-email" class="block text-sm font-medium text-gray-900">Email</label>
+                  <div class="mt-1">
+                    <input type="text" name="booking-email" id="booking-email"
+                      class="block w-full h-8 pl-2 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      disabled />
+                  </div>
+                </div>
+                <div>
+                  <label for="booking-phone" class="block text-sm font-medium text-gray-900">Tel</label>
+                  <div class="mt-1">
+                    <input type="text" name="booking-phone" id="booking-phone"
+                      class="block w-full h-8 pl-2 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      disabled />
+                  </div>
+                </div>
+                <div>
+                  <label for="booking-message" class="block text-sm font-medium text-gray-900">Message</label>
+                  <div class="mt-1">
+                      <textarea id="booking-message" name="booking-message" rows="4"
+                      class="block w-full h-8 pl-2 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      disabled>
+                    </textarea>
+                  </div>
+                </div>
+                <div>
+                  <label for="booking-hotel" class="block text-sm font-medium text-gray-900">Hotel</label>
+                  <div class="mt-1">
+                    <input type="text" name="booking-hotel" id="booking-hotel"
+                      class="block w-full h-8 pl-2 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      disabled />
+                  </div>
+                </div>
+                <div>
+                  <label for="booking-room" class="block text-sm font-medium text-gray-900">Chambre</label>
+                  <div class="mt-1">
+                    <input type="text" name="booking-room" id="booking-room"
+                      class="block w-full h-8 pl-2 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      disabled />
+                  </div>
+                </div>
+                <div>
+                  <label for="booking-adults" class="block text-sm font-medium text-gray-900">Nombre d'adultes</label>
+                  <div class="mt-1">
+                    <input type="number" name="booking-adults" id="booking-adults"
+                      class="block w-full h-8 pl-2 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      value="1" min="1" disabled />
+                  </div>
+                </div>
+                <div>
+                  <label for="booking-kids" class="block text-sm font-medium text-gray-900">Nombre d'enfants</label>
+                  <div class="mt-1">
+                    <input type="number" name="booking-kids" id="booking-kids"
+                      class="block w-full h-8 pl-2 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      value="1" min="1" disabled />
+                  </div>
+                </div>
+                <div>
+                  <label for="booking-duration" class="block text-sm font-medium text-gray-900">Durée</label>
+                  <div class="mt-1">
+                    <input type="text" name="booking-duration" id="booking-duration"
+                      class="block w-full h-8 pl-2 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      value="1" min="1" disabled />
+                  </div>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="flex flex-shrink-0 justify-end px-4 py-4">
+        <button id="delete-booking" class="ml-4 inline-flex justify-center rounded-md border border-transparent bg-red-700 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+          Supprimer
+        </button>
+        <a href="admin-reservations.html">
+          <button class="ml-4 inline-flex justify-center rounded-md border border-transparent bg-gray-900 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            Retourner
+          </button>
+        </a>
+      </div>
+      
+    </section>  
+    <script>
+      // Getting hotel from Page url param
+      function GetUrlParameter(sParam){
+            var sPageURL= document.URL;
+            var sURLVariables = sPageURL.split('?');
+            for (var i = 0; i < sURLVariables.length; i++) 
+            {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) 
+                {
+                    return sParameterName[1];
+                }
+            }
+        }
+        var Pageid = GetUrlParameter("id")
+
+      //LOAD BOOKING
+      const bookingName = document.querySelector("#booking-name");
+      const bookingPrenom = document.querySelector("#booking-prenom");
+      const bookingCountry = document.querySelector("#booking-country");
+      const bookingEmail = document.querySelector("#booking-email");
+      const bookingPhone = document.querySelector("#booking-phone");
+      const bookingMessage = document.querySelector("#booking-message");
+      const bookingHotel = document.querySelector("#booking-hotel");
+      const bookingRoom = document.querySelector("#booking-room");
+      const bookingAdults = document.querySelector("#booking-adults");
+      const bookingKids = document.querySelector("#booking-kids");
+      const bookingDuration = document.querySelector("#booking-duration");
+
+
+      async function loadBooking(){
+        await fetch(`${backendURL}/api/bookings/${Pageid}`,{headers:{"x-access-token" : localStorage.getItem("accessToken")}})
+        .then((response) => response.json())
+        .then((res) => {
+          booking = res 
+          if(res.message){alert(res.message)}
+          bookingPage(booking)
+        });        
+      }
+      function bookingPage(booking){
+        bookingName.value = booking.nom;
+        bookingPrenom.value = booking.prenom;
+        bookingCountry.value = booking.pays;
+        bookingEmail.value = booking.email;
+        bookingPhone.value = booking.number;
+        bookingMessage.value = booking.message;
+        bookingHotel.value = booking.hotel;
+        bookingRoom.value = booking.room;
+        bookingAdults.value = booking.adultes;
+        bookingKids.value = booking.enfants;
+        bookingDuration.value = booking.duree;
+       
+      }
+
+      loadBooking()
+      
+    </script>
+    <script>
+      //DELETE BOOKING
+      const deleteBtn = document.querySelector("#delete-booking");
+
+      async function deleteBooking(){
+        await fetch(`${backendURL}/api/bookings/${Pageid}`,{
+          method: "DELETE",
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            "x-access-token" : localStorage.getItem("accessToken")
+          },
+
+        })
+        .then((response) => response.json())
+        .then((res) => {
+          console.log(res)
+          if(res.message.includes("successful")){window.location.href = "admin-dashboard.html"}
+        }); 
+      }
+      deleteBtn.addEventListener("click",deleteBooking)
+    </script>
+    <script>
+      // CHECK ADMIN OR NOT
+      window.onload = async function() {
+        if(!(localStorage.getItem("accessToken"))){
+          window.location.href = 'admin-login.html'
+        }else{
+          await fetch(`${backendURL}/api/admin/checkuser`,{
+          method: "POST",
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body : JSON.stringify({
+            "token" : localStorage.getItem("accessToken")
+          })
+
+        })
+        .then((response) => response.json())
+        .then((res) => {
+          if(!(res.email)){window.location.href = 'admin-login.html';}
+        });
+        }
+      };
+    </script>
+  </body>
+</html>
