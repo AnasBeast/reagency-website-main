@@ -108,17 +108,11 @@
 
 			<div id="input-wrapper">
 				<div id="input">
-					<img src="src/img/search.png" alt="Search" id="search">
-					<input type="text" placeholder="recherchez un hotel , une  distination">
-					<div class="seperation"></div>
-
-					<input type="date">
-					<div class="seperation"></div>
-
-					<img src="src/img/person.png" alt="Person" id="person">
+					<img style="display: block" src="src/img/search.png" alt="Search" id="search">
+					<input type="text" id="search-text" placeholder="recherchez un hotel , une destination">
 				</div>
 
-				<button>Recherche</button>
+				<button id="searchBtn">Recherche</button>
 			</div>
 		</div>
 
@@ -162,7 +156,7 @@
 			<p>Trouvez le parfait endroit pour séjourner lors de votre prochain voyage avec notre selection <br> d'hotels de qualité. Reservez facilement en ligne avec notre <br> processus de reservation simple et securise.</p>
 		</div>
 
-		<div id="mail">
+		<div id="mail" style="margin-bottom: 230px;">
 			<div id="background"></div>
 
 			<div id="certif">
@@ -289,6 +283,15 @@
 
     <script type="text/javascript" src="src/js/caroussel.js"></script>
 	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<script>
+		//SEARCH
+		const searchBtn = document.querySelector("#searchBtn");
+        const searchText = document.querySelector("#search-text");
 
+		function redirectSearch(){
+			window.location.href = `hotels-search.html?country=${searchText.value}`
+		}
+		searchBtn.addEventListener("click",redirectSearch)
+	</script>
 </body>
 </html>

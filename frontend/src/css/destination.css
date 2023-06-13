@@ -301,6 +301,10 @@ nav img {
 }
 .listes{
   list-style: none;
+  display: none;
+}
+.menu-btn svg{
+  display: none !important;
 }
 #arrow{
   display: none;
@@ -312,6 +316,12 @@ nav img {
   width: 70px;
   top: 10vh;
   left: 0vw;
+}
+.return-btn{
+  position: absolute;
+  top: 5vh;
+  width: 70px;
+  right: 10vw;
 }
 @media only screen and (max-width: 1050px) {
   #list-wrapper {
@@ -393,7 +403,7 @@ nav img {
     width: 20px;
   }
   .checked{
-    top: 10%;
+    top: 0;
     left: 0%;
   }
   /* .overlay::after {

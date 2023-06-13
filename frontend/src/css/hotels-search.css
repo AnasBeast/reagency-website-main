@@ -8,7 +8,10 @@
 
 nav {
   width: 100%;
-  height: 90px;
+  padding-top: 15px;
+  position: relative;
+  z-index: 997;
+  height: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,19 +25,54 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #fff;
-}
-
-nav #menu {
-  margin-top: -2px;
-}
-
-nav #menu div {
-  background: #000;
 }
 
 nav img {
   width: 200px;
+  margin-left: 30px;
+}
+
+nav #sections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 0;
+}
+
+nav #sections p {
+  font-weight: 600;
+  color: black;
+  font-size: 15px;
+  margin-right: 50px;
+}
+
+nav #menu {
+  width: 30px;
+  height: 25px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  margin-right: 30px;
+  display: none;
+}
+
+nav #menu div {
+  width: 100%;
+  height: 3px;
+  border: none;
+  background: black;
 }
 
 #content {
@@ -73,7 +111,7 @@ nav img {
   background-position: center;
   background-size: cover;
 }
-#content #selection-chambres {
+#selection-chambres {
   width: 100%;
   height: 700px;
   position: relative;
@@ -95,8 +133,8 @@ nav img {
 }
 #title {
   z-index: 996;
-  color: #fff;
   width: 90%;
+  color: #fff;
   position: relative;
   margin-top: 75px;
   display: -webkit-box;
@@ -137,7 +175,7 @@ nav img {
   border-color: #021033;
   background: #fff;
 }
-#content #selection-chambres #seperation {
+#selection-chambres #seperation {
   height: 1px;
   width: 90%;
   background: #fff;
@@ -156,7 +194,7 @@ nav img {
   font-size: 30px;
   font-weight: 200;
 }
-#content #selection-chambres #gradient {
+#selection-chambres #gradient {
   position: absolute;
   width: 100%;
   height: 70%;
@@ -330,9 +368,35 @@ nav img {
   background: #021033;
 }
 
-#content #mail {
+#mail {
   width: 100%;
   margin-bottom: 250px;
+}
+
+
+@media only screen and (max-width: 1235px) {
+  nav {
+    height: 100px !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-flow: row nowrap !important;
+            flex-flow: row nowrap !important;
+  }
+  nav img {
+    margin-top: 13px !important;
+    width: 200px !important;
+  }
+  nav #gradient {
+    height: 100px !important;
+  }
+  nav #sections {
+    display: none !important;
+  }
+  nav #menu {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -421,7 +485,7 @@ nav img {
   #content #selection-chambres{
     margin-bottom: 0;
   }
-  #content #mail{
+  #mail{
     margin: 0;
   }
   #mail #container{

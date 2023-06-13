@@ -58,11 +58,17 @@
 	</div>
 
     <nav>
-		<a href="index.html">
-            <img src="src/img/logo-default.png" alt="Logo">
-        </a>
+		<a href="index.html"><img src="src/img/logo-default.png" alt="Logo"></a>
 
-		<div style="display: flex" id="menu" onclick="showMobileNav()">
+		<div id="sections">
+			<a href="qui-sommes-nous.html"><p>QUI SOMMES-NOUS</p></a>
+			<a href="destination.html"><p>DESTINATIONS</p></a>
+			<a href="collection-hotels.html"><p>COLLECTION D'HOTELS</p></a>
+			<a href="conciergerie.html"><p>CONCIERGERIE</p></a>
+			<a href="collection-hotels.html"><p>RESERVEZ EN LIGNE OU APPELEZ <br> +44 20 35 19 2700</p></a>
+		</div>
+
+		<div id="menu" onclick="showMobileNav()">
 			<div></div>
 			<div></div>
 			<div></div>
@@ -77,10 +83,10 @@
             <div id="input-wrapper">
 				<div id="input">
 					<img style="display: block" src="src/img/search.png" alt="Search" id="search">
-					<input type="text" placeholder="recherchez un hotel , une  distination">
+					<input type="text" id="search-text" placeholder="recherchez un hotel , une destination">
 				</div>
 
-				<button>Recherche</button>
+				<button id="searchBtn">Recherche</button>
 			</div>
         </div>
 
@@ -192,7 +198,7 @@
                     <h3>LAISSER-NOUS VOS AIDER</h3>
     
                     <a href="contact.html"><li>NOUS CONTACTER</li></a>
-                    <a href="contact.html"><li>AIDE</li></a>
+                    <a href="blog.html"><li>Blog</li></a>
                     <a href="tos.html"><li>CONDITIONS GENERALES D'UTILISATION</li></a>
                     <a href="politique.html"><li>POLITIQUE DE CONFIDENTIALITE</li></a>
                 </ul>
@@ -239,42 +245,56 @@
             }
         }
         var Pageid = GetUrlParameter("country")
-        for (var i = 0; i < Pageid.length; i++) 
+        /* for (var i = 0; i < Pageid.length; i++) 
         {
             if(Pageid[i]=="-"){Pageid=Pageid.substring(0,i) + " " + Pageid.substring(i+1);}
-        }
+        } */
 
-        function GetHotelToDisplay(Pageid)
-        {        
-            if(Pageid.includes("#")){Pageid = Pageid.substring(0,Pageid.indexOf("#"))}
-
-            return hotels.filter(({ country }) => country.toUpperCase() == Pageid.toUpperCase());
-        }
-        //Modifiying the page to the current Hotel selected
-        var hotel = GetHotelToDisplay(Pageid);
-
+        // DISPLAY SEARCHED HOTELS/DESTINATIONS
+        const searchBtn = document.querySelector("#searchBtn");
+        const searchText = document.querySelector("#search-text");
+        var hotel;
         const hotelsList = document.getElementById("list");
-        if(Pageid !==undefined){hotelsList.innerHTML = ""}
-        const hotelCount = document.querySelector(".hotel-numbers")
-        hotel.forEach((hotel) => {
-            const hotelItem = document.createElement("a");
-            hotelItem.classList.add("element");
-            hotelItem.href=`/hotel-deatils.html?id=${hotel.id}`;
-            hotelItem.innerHTML = `
-            <div>
-                <div id="background" style="background-image : url(${hotel.images[0]})"></div>
-                <h3>${hotel.name}</h3>
-            </div>
-            <button>RÉSERVER</button>`;
-            hotelsList.innerHTML = ""
-            hotelsList.appendChild(hotelItem);
-        })
-
-        const title = document.querySelector(".landing-title")
-        const contentTitle = document.querySelector(".content-title")
-        contentTitle.textContent = `Hôtel de luxe : ${Pageid.toUpperCase()}`
-        title.innerHTML=`<h1>${Pageid.toUpperCase()}</h1>`
-        hotelCount.textContent = `${hotel.length}  hôtel(s) incontournable(s)`
+        async function searchHotels(){
+            hotelsList.innerHTML=`<img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" alt="" style="width: 100%;">`
+            Pageid = GetUrlParameter("country")
+            await fetch(`${backendURL}/api/todos/search?query=${Pageid}`,{
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+            })
+                .then((response) => response.json())
+                .then(({data}) => {
+                    console.log(data)
+                    hotel = data;
+                    hotelsList.innerHTML=""
+                    data.forEach((hotel) => {
+                        const hotelItem = document.createElement("a");
+                        hotelItem.classList.add("element");
+                        hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                        hotelItem.innerHTML = `
+                        <div>
+                            <div id="background" style="background-image : url(${hotel.images[0]})"></div>
+                            <h3>${hotel.name}</h3>
+                        </div>
+                        <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
+                        hotelsList.appendChild(hotelItem);
+                    })
+                    const hotelCount = document.querySelector(".hotel-numbers")
+                    const title = document.querySelector(".landing-title")
+                    const contentTitle = document.querySelector(".content-title")
+                    contentTitle.textContent = `Hôtel de luxe : ${Pageid.toUpperCase()}`
+                    title.innerHTML=`<h1>${Pageid.toUpperCase()}</h1>`
+                    hotelCount.textContent = `${hotel.length}  hôtel(s) incontournable(s)`
+                });
+        }
+        function redirectSearch(){
+            window.location.href = `hotels-search.html?country=${searchText.value}`;
+        }
+        searchBtn.addEventListener("click",redirectSearch)
+        searchHotels()
     </script>
 </body>
 </html>
