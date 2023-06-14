@@ -191,6 +191,7 @@ nav #menu div {
   margin: 0 auto;
   text-shadow: 2px 2px black;
   position: relative;
+  line-height: 70px;
 }
 .author{
   font-size: 1.25rem;
