@@ -105,7 +105,7 @@ nav #menu div {
 }
 
 #content #landing #input-wrapper {
-  top: calc(120vh - 520px);
+  top: 95%;
 }
 
 
