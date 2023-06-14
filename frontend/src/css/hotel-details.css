@@ -269,7 +269,7 @@ nav #menu div {
 }
 
 #content #grid {
-  width: calc(100% - 520px);
+  width: calc(100% - 220px);
   gap: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -291,11 +291,11 @@ nav #menu div {
 }
 
 #content #grid section:first-child h1 {
-  font-size: 35px;
+  font-size: 30px;
 }
 
 #content #grid section:first-child #main {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 #content #grid section:first-child #underlined {
@@ -360,7 +360,7 @@ nav #menu div {
 }
 
 #content #grid section:last-of-type h1 {
-  font-size: 35px;
+  font-size: 30px;
   margin: 0;
 }
 
@@ -373,7 +373,7 @@ nav #menu div {
 }
 
 #content #grid section:last-of-type #main {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 #content #grid section:last-of-type #club-advantages {
@@ -447,7 +447,7 @@ nav #menu div {
 
 #content #grid section:last-of-type #distingue p {
   font-weight: 600;
-  font-size: 17px;
+  font-size: 20px;
   margin-top: 25px;
 }
 
@@ -539,7 +539,7 @@ nav #menu div {
   width: 95%;
   position: relative;
   margin-left: 5%;
-  top: 350px;
+  top: 300px;
   z-index: 996;
   color: #fff;
   font-weight: 500;
@@ -1037,7 +1037,7 @@ nav #menu div {
     font-size: 20px;
     max-width: 80%;
     position: relative;
-    top: 3em;
+    top: auto;
   }
   #title button{
     font-size: 15px;
