@@ -110,6 +110,25 @@ nav #menu div {
   background: black;
 }
 
+.landing-title{
+  padding: 15%;
+  font-size: 45px;
+  position: relative;
+  text-shadow: 2px 2px black;
+}
+#content #landing #input-wrapper {
+  top: 95%;
+}
+#content #landing #gradient {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  top: 30%;
+  background: #021033;
+  background: -webkit-gradient(linear, left bottom, left top, from(#021033), to(rgba(0, 212, 255, 0)));
+  background: linear-gradient(0deg, #021033 0%, rgba(0, 212, 255, 0) 100%);
+  
+}
 .content-description{
   background: #F1C6B0;
   padding: 10%;
