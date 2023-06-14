@@ -108,15 +108,7 @@ nav #menu div {
   top: calc(120vh - 30px);
 }
 
-#content #landing #gradient {
-  position: absolute;
-  width: 100%;
-  height: 70%;
-  top: 30%;
-  background: #021033;
-  background: -webkit-gradient(linear, left bottom, left top, from(#021033), to(rgba(0, 212, 255, 0)));
-  background: linear-gradient(0deg, #021033 0%, rgba(0, 212, 255, 0) 100%);
-}
+
 
 #content #landing #input-wrapper input[type="text"] {
   display: block;
@@ -181,6 +173,17 @@ nav #menu div {
           justify-content: space-between;
           text-align: center;
 }
+.quote{
+  color: white;
+  font-size: 2.5rem;
+  padding-top: 20%;
+  max-width: 60%;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 auto;
+  text-shadow: 2px 2px black;
+}
+
 .element div h3{
   max-width: 75%;
 }
@@ -326,11 +329,25 @@ nav #menu div {
     height: 400px !important;
     width: 100% !important;
   }
+  .quote{
+    color: white;
+    font-size: 2rem;
+    padding-top: 5%;
+    max-width: 90%;
+    margin: 0 auto;
+    text-shadow: 2px 2px black;
+  }
+  
 }
 
 @media only screen and (max-width: 701px) {
   #list-wrapper #top h1 {
     font-size: 35px !important;
+  }
+  .quote{
+    font-size: 1.5rem;
+    margin: 0 auto;
+    text-shadow: 2px 2px black;
   }
 }
 
