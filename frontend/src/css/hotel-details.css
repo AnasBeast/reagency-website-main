@@ -269,7 +269,7 @@ nav #menu div {
 }
 
 #content #grid {
-  width: calc(100% - 120px);
+  width: calc(100% - 520px);
   gap: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
