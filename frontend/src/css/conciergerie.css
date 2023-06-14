@@ -186,6 +186,9 @@ nav #menu div {
 #contact-us-section{
   background: #F9EFE9;
 }
+#contact-us-section .container{
+  width: 80%;
+}
 .box h1{
   font-size: 20px !important;
   color: #FF5500 !important;
