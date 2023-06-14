@@ -77,7 +77,7 @@ nav #menu div {
 
 #content #landing {
   width: 100%;
-  height: auto;
+  height: 70vh;
   -webkit-transition: height 300ms;
   transition: height 300ms;
   position: relative;
@@ -87,11 +87,13 @@ nav #menu div {
   background-size: cover;
 }
 .landing-title{
-  padding: 25%;
+  padding: 15%;
   font-size: 45px;
+  position: relative;
+  text-shadow: 2px 2px black;
 }
 #content #landing #input-wrapper {
-  top: calc(120vh - 30px);
+  top: 95%;
 }
 .blog-subtitle{
   background: #F9EFE9;
