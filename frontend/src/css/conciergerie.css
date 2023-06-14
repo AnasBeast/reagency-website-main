@@ -93,7 +93,7 @@ nav #menu div {
 
 #content #landing {
   width: 100%;
-  height: auto;
+  height: 70vh;
   -webkit-transition: height 300ms;
   transition: height 300ms;
   position: relative;
@@ -103,11 +103,12 @@ nav #menu div {
   background-size: cover;
 }
 .landing-title{
-  padding: 25%;
+  padding: 15%;
   font-size: 45px;
+  z-index: 100;
 }
 #content #landing #input-wrapper {
-  top: calc(120vh - 30px);
+  top: 95%;
 }
 
 #content #landing #gradient {
@@ -118,6 +119,7 @@ nav #menu div {
   background: #021033;
   background: -webkit-gradient(linear, left bottom, left top, from(#021033), to(rgba(0, 212, 255, 0)));
   background: linear-gradient(0deg, #021033 0%, rgba(0, 212, 255, 0) 100%);
+  
 }
 
 #content #landing #input-wrapper input[type="text"] {
