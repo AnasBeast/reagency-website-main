@@ -319,9 +319,10 @@ nav img {
 }
 .return-btn{
   position: absolute;
-  top: 5vh;
-  width: 70px;
-  right: 10vw;
+  top: 3vh;
+  width: 35px;
+  right: 3vw;
+  cursor: pointer;
 }
 @media only screen and (max-width: 1050px) {
   #list-wrapper {
