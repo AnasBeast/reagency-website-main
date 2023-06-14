@@ -348,8 +348,14 @@ nav #menu div {
     max-width: 90%;
     margin: 0 auto;
     text-shadow: 2px 2px black;
+    line-height: normal;
   }
-  
+  #content #list-wrapper #list{
+    width: 80%;
+  }
+  #content #list-wrapper #top{
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 701px) {
@@ -361,6 +367,7 @@ nav #menu div {
     margin: 0 auto;
     text-shadow: 2px 2px black;
   }
+  
 }
 
 @media only screen and (max-width: 460px){

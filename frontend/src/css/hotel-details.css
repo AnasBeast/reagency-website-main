@@ -94,7 +94,7 @@ nav #menu div {
 #content #landing {
   margin-bottom: 102px;
   width: 100%;
-  height: 120vh;
+  height: 70vh;
   -webkit-transition: height 300ms;
   transition: height 300ms;
   position: relative;
@@ -157,12 +157,8 @@ nav #menu div {
   width: 330px;
 }
 
-#content #landing h1 {
-  font-size: 100px;
-}
-
 #content #landing h3 {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 #content #landing #input-wrapper {
@@ -178,6 +174,7 @@ nav #menu div {
   background: #021033;
   background: -webkit-gradient(linear, left bottom, left top, from(#021033), to(rgba(0, 212, 255, 0)));
   background: linear-gradient(0deg, #021033 0%, rgba(0, 212, 255, 0) 100%);
+  z-index: 1;
 }
 
 #content #landing #text {
@@ -212,6 +209,7 @@ nav #menu div {
   color: #fff;
   z-index: 996;
   margin: 0;
+  font-size: 2rem;
   max-width: 60%;
   text-align: center;
 }
@@ -996,10 +994,13 @@ nav #menu div {
     margin-top: -100px !important;
   }
   #landing #text h1 {
-    font-size: 50px !important;
+    font-size: 30px !important;
   }
   #landing #text h3 {
     font-size: 16px !important;
+  }
+  .swiper {
+    height: 50vh;
   }
 }
 
@@ -1063,6 +1064,9 @@ nav #menu div {
   }
   #content #grid{
     display: flex;
+  }
+  .swiper {
+    height: 30vh !important;
   }
 }
 
@@ -1135,7 +1139,6 @@ nav #menu div {
 .swiper {
   width: 100%;
   height: 80vh;
-  height: 80svh;
   min-height: 320px;
   background-color: #46677b;
 }
