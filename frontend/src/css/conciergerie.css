@@ -105,7 +105,8 @@ nav #menu div {
 .landing-title{
   padding: 15%;
   font-size: 45px;
-  z-index: 100;
+  position: relative;
+  text-shadow: 2px 2px black;
 }
 #content #landing #input-wrapper {
   top: 95%;
