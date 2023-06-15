@@ -322,6 +322,12 @@ nav #menu div {
   #list-wrapper {
     margin-top: 100px !important;
   }
+  #mail #container{
+    top: 10% !important;
+  }
+  #content #mail {
+    margin-bottom: 0px;
+  }
 }
 
 @media only screen and (max-width: 880px) {
@@ -356,6 +362,7 @@ nav #menu div {
   #content #list-wrapper #top{
     width: 80%;
   }
+  
 }
 
 @media only screen and (max-width: 701px) {

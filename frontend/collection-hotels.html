@@ -7,13 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
     <link rel="shortcut icon" href="src/img/icon-png.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="stylesheet" href="src/css/reusable.css">
     <link rel="stylesheet" href="src/css/collection-hotels.css">
 
 </head>
 <body>
-
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script type="text/javascript" src="src/js/index.js"></script>
     <id id="overlay" onclick="hideMobileNav()"></id>
 
@@ -99,12 +100,168 @@
                 <h1>La collection regency</h1>
                 <div class="seperation"></div>
 
-                <ul>
-                    <li>RÉGIONS DU MONDE</li>
-                    <li>PAYS</li>
-                    <li>STYLE</li>
-                    <li>ATMOSPHÈRE</li>
-                    <li>AMÉNAGEMENTS</li>
+                <ul class="pl-12 my-4">
+                    <li>
+                        <div class="flex justify-center">
+                            <div x-data="{ dropdownOpen: false }" class="relative" style="z-index: 999;">
+                              <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 flex items-center rounded-md bg-white p-2 focus:outline-none">
+                                Régions du monde
+                                <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                              </button>
+                            
+                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                            
+                              <div x-show="dropdownOpen" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
+                                <fieldset class="px-4 border" id="countries">
+                                    <legend class="sr-only">
+                                        Countries
+                                    </legend>
+                            
+                                    <div class="flex items-center my-4">
+                                        <input id="country-option-1" type="checkbox" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="country-option-1" aria-describedby="country-option-1">
+                                        <label for="country-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
+                                        Europe
+                                        </label>
+                                    </div>
+                            
+                                    
+                            
+                                </fieldset>
+                              </div>
+                            </div>
+                            </div>
+                    </li>
+
+                    <li>
+                        <div class="flex justify-center">
+                            <div x-data="{ dropdownOpen: false }" class="relative" style="z-index: 999;">
+                              <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 flex items-center rounded-md bg-white p-2 focus:outline-none">
+                                PAYS
+                                <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                              </button>
+                            
+                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                            
+                              <div x-show="dropdownOpen" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
+                                <fieldset class="px-4 border" id="pays">
+                                    <legend class="sr-only">
+                                        PAYS
+                                    </legend>
+                            
+                                    <div class="flex items-center my-4">
+                                        <input id="pays-option-1" type="checkbox" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="pays-option-1" aria-describedby="pays-option-1">
+                                        <label for="pays-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
+                                        Etats-Unis
+                                        </label>
+                                    </div>
+                            
+                                    
+                            
+                                </fieldset>
+                              </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex justify-center">
+                            <div x-data="{ dropdownOpen: false }" class="relative" style="z-index: 999;">
+                              <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 flex items-center rounded-md bg-white p-2 focus:outline-none">
+                                STYLE
+                                <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                              </button>
+                            
+                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                            
+                              <div x-show="dropdownOpen" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
+                                <fieldset class="px-4 border" id="style">
+                                    <legend class="sr-only">
+                                        STYLE
+                                    </legend>
+                            
+                                    <div class="flex items-center my-4">
+                                        <input id="style-option-1" type="checkbox" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="style-option-1" aria-describedby="style-option-1">
+                                        <label for="style-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
+                                            Contemporain
+                                        </label>
+                                    </div>
+                            
+                                    
+                            
+                                </fieldset>
+                              </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex justify-center">
+                            <div x-data="{ dropdownOpen: false }" class="relative" style="z-index: 999;">
+                              <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 flex items-center rounded-md bg-white p-2 focus:outline-none">
+                                ATMOSPHÈRE
+                                <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                              </button>
+                            
+                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                            
+                              <div x-show="dropdownOpen" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
+                                <fieldset class="px-4 border" id="atmosphere">
+                                    <legend class="sr-only">
+                                        ATMOSPHÈRE
+                                    </legend>
+                            
+                                    <div class="flex items-center my-4">
+                                        <input id="atmosphere-option-1" type="checkbox" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="atmosphere-option-1" aria-describedby="atmosphere-option-1">
+                                        <label for="atmosphere-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
+                                            Charme
+                                        </label>
+                                    </div>
+                            
+                                    
+                            
+                                </fieldset>
+                              </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex justify-center">
+                            <div x-data="{ dropdownOpen: false }" class="relative" style="z-index: 999;">
+                              <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 flex items-center rounded-md bg-white p-2 focus:outline-none">
+                                AMÉNAGEMENTS
+                                <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                              </button>
+                            
+                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                            
+                              <div x-show="dropdownOpen" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
+                                <fieldset class="px-4 border" id="amenagement">
+                                    <legend class="sr-only">
+                                        AMÉNAGEMENTS
+                                    </legend>
+                            
+                                    <div class="flex items-center my-4">
+                                        <input id="amenagement-option-1" type="checkbox" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="amenagement-option-1" aria-describedby="amenagement-option-1">
+                                        <label for="amenagement-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
+                                            Centre de fitness
+                                        </label>
+                                    </div>
+                            
+                                    
+                            
+                                </fieldset>
+                              </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
                 <div class="seperation"></div>
             </div>
@@ -278,6 +435,78 @@
                 });
         }
         searchBtn.addEventListener("click",searchHotels)
+    </script>
+
+    <script>
+        const countries = document.querySelector("#countries");
+        countriesList = ["Asie", "Amérique du Nord","Moyen Orient","Amérique du Sud","Océan Indien","Afrique","Caraibes","Océanie","Amérique Centrale" ]
+        for(let i=0;i<countriesList.length;i++){
+            countryItem = document.createElement("div")
+            countryItem.classList = "flex items-center my-4"
+            countryItem.innerHTML=`
+            <input id="country-option-${i+1}" type="checkbox" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="country-option-1" aria-describedby="country-option-1" >
+            <label for="country-option-${i+1}" class="text-sm font-medium text-gray-900 ml-2 block">
+            ${countriesList[i]}
+            </label>
+            `
+            countries.append(countryItem)
+        }
+
+        const pays = document.querySelector("#pays");
+        paysList = ["Royaume-Uni","Italie","France","Chine","Thailande","Suisse","Emirates arabes unis","Espagne","Inde","Indonésie"]
+        for(let i=0;i<paysList.length;i++){
+            paysItem = document.createElement("div")
+            paysItem.classList = "flex items-center my-4"
+            paysItem.innerHTML=`
+            <input id="pays-option-${i+1}" type="checkbox" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="pays-option-1" aria-describedby="pays-option-1" >
+            <label for="pays-option-${i+1}" class="text-sm font-medium text-gray-900 ml-2 block">
+            ${paysList[i]}
+            </label>
+            `
+            pays.append(paysItem)
+        }
+
+        const style = document.querySelector('#style');
+        styleList = ["Historique","Classique","Design","Insolite"]
+        for(let i=0;i<styleList.length;i++){
+            styleItem = document.createElement("div")
+            styleItem.classList = "flex items-center my-4"
+            styleItem.innerHTML=`
+            <input id="style-option-${i+1}" type="checkbox" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="style-option-1" aria-describedby="style-option-1" >
+            <label for="style-option-${i+1}" class="text-sm font-medium text-gray-900 ml-2 block">
+            ${styleList[i]}
+            </label>
+            `
+            style.append(styleItem)
+        }
+
+        const atmosphere = document.querySelector("#atmosphere");
+        atmosphereList = ["Nature","Tendance","Intime","Evasion","Tropical","Mythe","Vie de château","Colonial","Campagne"]
+        for(let i=0;i<styleList.length;i++){
+            atmosphereItem = document.createElement("div")
+            atmosphereItem.classList = "flex items-center my-4"
+            atmosphereItem.innerHTML=`
+            <input id="atmosphere-option-${i+1}" type="checkbox" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="atmosphere-option-1" aria-describedby="atmosphere-option-1" >
+            <label for="atmosphere-option-${i+1}" class="text-sm font-medium text-gray-900 ml-2 block">
+            ${atmosphereList[i]}
+            </label>
+            `
+            atmosphere.append(atmosphereItem)
+        }
+
+        const amenagement = document.querySelector("#amenagement");
+        amenagementList = ["Spa","Piscine extérieure","Parking","Piscine intérieure","Tennis sur site","Club enfants","Plage","Animaux de compagnie","Sports nautiques","Plongée","Golf","Ski"]
+        for(let i=0;i<styleList.length;i++){
+            amenagementItem = document.createElement("div")
+            amenagementItem.classList = "flex items-center my-4"
+            amenagementItem.innerHTML=`
+            <input id="amenagement-option-${i+1}" type="checkbox" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="amenagement-option-1" aria-describedby="amenagement-option-1" >
+            <label for="amenagement-option-${i+1}" class="text-sm font-medium text-gray-900 ml-2 block">
+            ${amenagementList[i]}
+            </label>
+            `
+            amenagement.append(amenagementItem)
+        }
     </script>
 </body>
 </html>

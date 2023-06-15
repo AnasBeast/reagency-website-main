@@ -235,6 +235,12 @@ nav #menu div {
   margin-bottom: 150px;
 }
 
+#content #landing #input-wrapper input[type="text"] {
+  display: block;
+  width: 100%;
+  text-align: start;
+}
+
 #content #features #top {
   width: 90%;
 }
@@ -949,7 +955,7 @@ nav #menu div {
 
 @media only screen and (max-width: 1100px) {
   footer {
-    margin-top: 200px !important;
+    margin-top: 70px !important;
   }
 }
 
@@ -1068,6 +1074,15 @@ nav #menu div {
   .swiper {
     height: 30vh !important;
   }
+  #content #landing #text h1{
+    max-width: fit-content;
+  }
+  #content #number{
+    margin-top: 20px;
+  }
+  #content #grid{
+    margin-top: 20px;
+  }
 }
 
 @media only screen and (max-width: 460px) {
@@ -1079,7 +1094,7 @@ nav #menu div {
   }
   #content #grid section:first-child button {
     position: relative;
-    left: 15vw;
+    left: 7vw;
     width: 80%;
   }
   .title{
@@ -1115,11 +1130,16 @@ nav #menu div {
     font-size: 20px;
   }
   #inter #top ul{
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 2em!important;
+    padding-right: 2em!important;
   }
-  .infos li button::after{
+  /* .infos li button::after{
     opacity: 0;
+  } */
+  #top .seperation{
+    height: 0;
   }
   footer #upper img{
     width: 80%;

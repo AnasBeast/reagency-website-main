@@ -206,6 +206,12 @@ nav #menu div {
   background-size: cover;
 }
 
+#content #landing #input-wrapper input[type="text"] {
+  display: block;
+  width: 100%;
+  text-align: start;
+}
+
 #content #contact-cta {
   width: 100%;
   overflow: hidden;

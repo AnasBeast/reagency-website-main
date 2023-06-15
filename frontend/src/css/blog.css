@@ -170,12 +170,15 @@ nav #menu div {
   font-size: 25px;
   width: 50%;
   height: 70px;
-  -webkit-transition: color 400ms, background 400ms;
-  transition: color 400ms, background 400ms;
+  -webkit-transition: color 200ms, background 200ms;
+  transition: color 200ms, background 200ms;
   font-weight: 600;
   cursor: pointer;
   margin-top: 40px;
   margin-left: 25%;
+}
+#contact-us-section .container button:hover{
+  background: white;
 }
 .box{
   position: relative;

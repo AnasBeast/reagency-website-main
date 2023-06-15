@@ -396,4 +396,8 @@ nav #menu div {
     justify-content: center;
     gap: 20px;
   }
+  #contact-us-section{
+    padding-left: 0%;
+    padding-right: 0%;
+  }
 }

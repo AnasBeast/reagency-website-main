@@ -581,8 +581,8 @@ nav #menu div {
   }
   #mail #certif {
     margin-left: 10% !important;
-    width: 80% !important;
-    margin-top: 450px !important;
+    width: 100% !important;
+    margin-top: 250px !important;
   }
   #mail #certif img {
     width: 70px !important;
@@ -590,6 +590,9 @@ nav #menu div {
   #mail #certif h3 {
     font-size: 20px !important;
     text-align: center;
+  }
+  #mail #container p {
+    font-size: 10px;
   }
 }
 

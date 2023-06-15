@@ -58,14 +58,46 @@
                   </div>
                 </div>
                 <div>
+                  <label for="continent" class="block text-sm font-medium text-gray-900">Region</label>
+                  <div class="mt-1">
+
+                      <select id="continents" class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                        <option selected disabled>Choose a region</option>
+                      </select>
+                  </div>
+                </div>
+                <div>
                   <label for="country-name" class="block text-sm font-medium text-gray-900">Country name</label>
                   <div class="mt-1">
-                    <input type="text" name="country-name" id="country-name"
-                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                      required="" 
-                      placeholder="Royaume-Uni"
-                      
-                      />
+                      <select id="countries" class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                        <option selected disabled>Choose a country</option>
+                      </select>
+                  </div>
+                </div>
+                <div>
+                  <label for="style" class="block text-sm font-medium text-gray-900">Style</label>
+                  <div class="mt-1">
+                      <select id="style" class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                        <option selected disabled>Choose a style</option>
+                      </select>
+                  </div>
+                </div>
+                <div>
+                  <label for="atmosphere" class="block text-sm font-medium text-gray-900">Atmosphere</label>
+                  <div class="mt-1">
+
+                      <select id="atmosphere" class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                        <option selected disabled>Choose an atmosphere</option>
+                      </select>
+                  </div>
+                </div>
+                <div>
+                  <label for="amenagement" class="block text-sm font-medium text-gray-900">Amenagement</label>
+                  <div class="mt-1">
+
+                      <select id="amenagement" class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                        <option selected disabled>Choose an amenagement</option>
+                      </select>
                   </div>
                 </div>
                 <div>
@@ -414,11 +446,62 @@
           </div>
       </div>
   </div>
+
+    <script>
+      const countries = document.querySelector("#countries");
+      countriesList = ["Etats-Unis","Royaume-Uni","Italie","France","Chine","Thailande","Suisse","Emirates arabes unis","Espagne","Inde","Indonésie"]
+      for(let i=0;i<countriesList.length;i++){
+        country = document.createElement("option")
+        country.value = countriesList[i]
+        country.textContent = countriesList[i]
+        countries.append(country)
+      }
+
+      const regions = document.querySelector("#continents");
+      regionsList = ["Europe","Asie", "Amérique du Nord","Moyen Orient","Amérique du Sud","Océan Indien","Afrique","Caraibes","Océanie","Amérique Centrale"]
+      for(let i=0;i<regionsList.length;i++){
+        continent = document.createElement("option")
+        continent.value = regionsList[i]
+        continent.textContent = regionsList[i]
+        regions.append(continent)
+      }
+
+      const style = document.querySelector("#style");
+      styleList = ["Historique","Classique","Design","Insolite"]
+      for(let i=0;i<styleList.length;i++){
+        styleItem = document.createElement("option")
+        styleItem.value = styleList[i]
+        styleItem.textContent = styleList[i]
+        style.append(styleItem)
+      }
+
+      const atmosphere = document.querySelector("#atmosphere");
+      atmosphereList = ["Nature","Tendance","Intime","Evasion","Tropical","Mythe","Vie de château","Colonial","Campagne"]
+      for(let i=0;i<atmosphereList.length;i++){
+        atmosphereItem = document.createElement("option")
+        atmosphereItem.value = atmosphereList[i]
+        atmosphereItem.textContent = atmosphereList[i]
+        atmosphere.append(atmosphereItem)
+      }
+
+      const amenagement = document.querySelector("#amenagement");
+      amenagementList = ["Spa","Piscine extérieure","Parking","Piscine intérieure","Tennis sur site","Club enfants","Plage","Animaux de compagnie","Sports nautiques","Plongée","Golf","Ski"]
+      for(let i=0;i<amenagementList.length;i++){
+        amenagementItem = document.createElement("option")
+        amenagementItem.value = amenagementList[i]
+        amenagementItem.textContent = amenagementList[i]
+        amenagement.append(amenagementItem)
+      }
+    </script>
     <script>
       //ADD HOTEL
       const hotelName = document.querySelector("#hotel-name");
       const hotelAdress = document.querySelector("#address");
-      const hotelCountry = document.querySelector("#country-name");
+      const hotelCountry = document.querySelector("#countries");
+      const hotelRegion = document.querySelector("#continents");
+      const hotelStyle = document.querySelector("#style");
+      const hotelAtmosphere = document.querySelector("#atmosphere");
+      const hotelAmenagement = document.querySelector("#amenagement");
       const hotelSubtitle = document.querySelector("#subtitle");
       const hotelDescription = document.querySelector("#description");
       const hotelImages = document.querySelector("#hotel-images");
@@ -474,7 +557,11 @@
         var data = {
           name: hotelName.value,
           address: hotelAdress.value,
-          country: hotelCountry.value,
+          country: hotelCountry.options[hotelCountry.selectedIndex].text,
+          region: hotelRegion.options[hotelRegion.selectedIndex].text,
+          style: hotelStyle.options[hotelStyle.selectedIndex].text,
+          atmosphere: hotelAtmosphere.options[hotelAtmosphere.selectedIndex].text,
+          amenagement: hotelAmenagement.options[hotelAmenagement.selectedIndex].text,
           subtitle : hotelSubtitle.value,
           description : hotelDescription.value,
           images : hotelImages.value.split(","),

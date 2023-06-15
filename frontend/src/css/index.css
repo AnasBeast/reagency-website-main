@@ -130,7 +130,11 @@ nav #menu div {
       -ms-flex-align: center;
           align-items: center;
 }
-
+#content #landing #input-wrapper input[type="text"] {
+  display: block;
+  width: 100%;
+  text-align: start;
+}
 #content #current-dest #gradient {
   -webkit-transition: top 300ms, height 300ms;
   transition: top 300ms, height 300ms;
@@ -351,7 +355,6 @@ nav #menu div {
   height: 800px;
   position: relative;
   padding-top: 50px;
-  margin-top: 10px;
   background-image: url("../img/clouds.png");
   background-repeat: no-repeat;
   background-position: center;
