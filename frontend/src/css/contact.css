@@ -138,11 +138,11 @@ nav #menu div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-          background: #F9EFE9;
+          background: #F7F3F3;
 }
 
 #content #list-wrapper #top {
-  width: 90%;
+  width: 80%;
 }
 
 #content #list-wrapper #top h1 {
@@ -181,7 +181,13 @@ nav #menu div {
   width: 80%;
 }
 #contact-us-section{
-  background: #F9EFE9;
+  background: #F7F3F3;
+}
+#contact-us-section .container{
+  width: 80%;
+}
+form button{
+  background-color: #021033 !important;
 }
 .box h1{
   font-size: 20px !important;
