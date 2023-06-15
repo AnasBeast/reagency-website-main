@@ -311,6 +311,9 @@ nav #menu div {
   background-image: none;
 }
 
+#cards{
+  width: 90%;
+}
 @media only screen and (max-width: 1235px) {
   nav {
     height: 100px !important;
