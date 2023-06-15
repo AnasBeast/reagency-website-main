@@ -204,7 +204,7 @@ nav #menu div {
   background: linear-gradient(0deg, #021033 -25%, rgba(0, 212, 255, 0) 100%);
 }
 #content #landing #input-wrapper {
-  top: calc(120vh - 30px);
+  top: 95%;
 }
 
 #content #landing #gradient {
