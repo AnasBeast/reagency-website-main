@@ -313,7 +313,9 @@ nav #menu div {
 #background h2{
   margin-bottom: 5rem;
 }
-
+form button{
+  background-color: #021033 !important;
+}
 @media only screen and (max-width: 1235px) {
   nav {
     height: 100px !important;
