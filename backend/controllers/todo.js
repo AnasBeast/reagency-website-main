@@ -211,3 +211,54 @@ exports.searchHotels = async(req,res,next) =>{
          });
         
 };
+
+exports.filterHotels = async(req,res,next) =>{
+    const query = req.query.query
+    await Hotel.find({
+        $or: [
+            {
+                country: {
+                $regex: ".*" + query + ".*",
+                $options: "i",
+              },
+            },
+            {
+                region: {
+                $regex: ".*" + query + ".*",
+                $options: "i",
+              },
+            },
+            {
+                style: {
+                $regex: ".*" + query + ".*",
+                $options: "i",
+              },
+            },
+            {
+                atmosphere: {
+                $regex: ".*" + query + ".*",
+                $options: "i",
+              },
+            },
+            {
+                amenagements: {
+                $regex: ".*" + query + ".*",
+                $options: "i",
+              },
+            }
+          ],
+        })
+        .then((resp) =>{
+            res.status (200).json({ 
+                data : resp
+
+            });
+         })
+         .catch((error) =>{
+             res.status (500).json({
+                 message: "Couldn't found any hotel!",
+                 err: error
+             });
+         });
+        
+};

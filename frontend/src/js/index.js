@@ -23,7 +23,7 @@ const showMobileNav = () => {
 const backendURL = "https://reagency-website-main-production.up.railway.app"
 // const backendURL ="http://localhost:8080"
 
-var hotels = [
+var hotelsTest = [
     {   
         id : 1,
         name:"45 Park Lane" ,
@@ -412,11 +412,3 @@ var continents = [
         ]
     }
 ]
-var hotelsData
-async function hotelsGrab() {
-    await fetch(`${backendURL}/api/todos`)
-        .then((response) => response.json())
-        .then(({hotels}) => {hotelsData = hotels})
-
-}
-hotelsGrab()

@@ -15,4 +15,6 @@ router.delete("/:id",auth , todoController.deleteHotel);
 
 router.post("/search", todoController.searchHotels);
 
+router.post("/filter", todoController.filterHotels);
+
 module.exports = router;
