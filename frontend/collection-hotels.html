@@ -217,16 +217,18 @@
                               <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
                             
                               <div id="drop-atmosphere" x-show="dropdownOpen" style="z-index: 999;" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
-                                <fieldset class="px-4 border" id="atmosphere">
+                                <fieldset class="px-4 border">
                                     <legend class="sr-only">
                                         ATMOSPHÈRE
                                     </legend>
                             
-                                    <div class="flex items-center my-4">
-                                        <input id="atmosphere-option-1" type="checkbox" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="atmosphere-option-1" aria-describedby="atmosphere-option-1">
-                                        <label for="atmosphere-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
-                                            Charme
-                                        </label>
+                                    <div class="flex gap-4 flex-col items-start my-4" id="atmosphere">
+                                        <div class="flex items-center">
+                                            <input id="atmosphere-option-1" type="radio" name="atmosphere" value="Charme" class="atmcheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="atmosphere-option-1" aria-describedby="atmosphere-option-1">
+                                            <label for="atmosphere-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
+                                                Charme
+                                            </label>
+                                        </div>
                                     </div>
                             
                                     
@@ -249,16 +251,18 @@
                               <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
                             
                               <div id="drop-amenagements" x-show="dropdownOpen" style="z-index: 999;" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
-                                <fieldset class="px-4 border" id="amenagement">
+                                <fieldset class="px-4 border" >
                                     <legend class="sr-only">
                                         AMÉNAGEMENTS
                                     </legend>
                             
-                                    <div class="flex items-center my-4">
-                                        <input id="amenagement-option-1" type="checkbox" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="amenagement-option-1" aria-describedby="amenagement-option-1">
-                                        <label for="amenagement-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
-                                            Centre de fitness
-                                        </label>
+                                    <div class="flex gap-4 flex-col items-start my-4" id="amenagement">
+                                        <div class="flex items-center">
+                                            <input id="amenagement-option-1" type="radio" name="amenagement" value="Centre de fitness" class="amecheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="amenagement-option-1" aria-describedby="amenagement-option-1">
+                                            <label for="amenagement-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
+                                                Centre de fitness
+                                            </label>
+                                        </div>
                                     </div>
                             
                                     
@@ -392,6 +396,8 @@
         var regionElements = document.getElementsByClassName('regioncheckbox');
         var countryElements = document.getElementsByClassName('countrycheckbox');
         var styleElements = document.getElementsByClassName('stylecheckbox');
+        var atmElements = document.getElementsByClassName("atmcheckbox");
+        var ameElements = document.getElementsByClassName("amecheckbox");
         const hotelsList = document.getElementById("list");
         var obj;
         async function displayHotels(){
@@ -414,16 +420,19 @@
                     })
                 });
                 for(let i=0; i<regionElements.length; i++){
-                    console.log(regionElements[i])
                     regionElements[i].addEventListener("click", regionFilter);
                 }
                 for(let i=0; i<countryElements.length; i++){
-                    console.log(countryElements[i])
                     countryElements[i].addEventListener("click", countryFilter);
                 }
                 for(let i=0; i<styleElements.length; i++){
-                    console.log(styleElements[i])
                     styleElements[i].addEventListener("click", styleFilter);
+                }
+                for(let i=0; i<atmElements.length; i++){
+                    atmElements[i].addEventListener("click", atmFilter);
+                }
+                for(let i=0; i<ameElements.length; i++){
+                    ameElements[i].addEventListener("click", ameFilter);
                 }
         }
         displayHotels()
@@ -431,7 +440,6 @@
         var filters=[];
         var hotels=[];
         function regionFilter(e){
-            console.log(e.target.value)
             hotels = obj.filter((hotel)=>hotel.region.toUpperCase()==e.target.value.toUpperCase())
             hotels.length ==0 ? hotelsList.innerHTML=`<h1 class="text-2xl mb-4">0 hôtel(s) incontournable(s)</h1>` : hotelsList.innerHTML=``
             hotels.forEach((hotel) => {
@@ -467,7 +475,6 @@
         }
 
         function styleFilter(e){
-            console.log(e.target.value)
             hotels = obj.filter((hotel)=>hotel.style.toUpperCase()==e.target.value.toUpperCase());
             hotels.length ==0 ? hotelsList.innerHTML=`<h1 class="text-2xl mb-4">0 hôtel(s) incontournable(s)</h1>` : hotelsList.innerHTML=``
             hotels.forEach((hotel) => {
@@ -483,7 +490,38 @@
                 hotelsList.appendChild(hotelItem);
             })          
         }
-        
+        function atmFilter(e){
+            hotels = obj.filter((hotel)=>hotel.atmosphere.toUpperCase()==e.target.value.toUpperCase());
+            hotels.length ==0 ? hotelsList.innerHTML=`<h1 class="text-2xl mb-4">0 hôtel(s) incontournable(s)</h1>` : hotelsList.innerHTML=``
+            hotels.forEach((hotel) => {
+                const hotelItem = document.createElement("a");
+                hotelItem.classList.add("element");
+                hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                hotelItem.innerHTML = `
+                <div>
+                    <div id="background" style="background-image : url(${hotel.images[0]})"></div>
+                    <h3>${hotel.name}</h3>
+                </div>
+                <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
+                hotelsList.appendChild(hotelItem);
+            })  
+        }
+        function ameFilter(e){
+            hotels = obj.filter((hotel)=>hotel.amenagement.toUpperCase()==e.target.value.toUpperCase());
+            hotels.length ==0 ? hotelsList.innerHTML=`<h1 class="text-2xl mb-4">0 hôtel(s) incontournable(s)</h1>` : hotelsList.innerHTML=``
+            hotels.forEach((hotel) => {
+                const hotelItem = document.createElement("a");
+                hotelItem.classList.add("element");
+                hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                hotelItem.innerHTML = `
+                <div>
+                    <div id="background" style="background-image : url(${hotel.images[0]})"></div>
+                    <h3>${hotel.name}</h3>
+                </div>
+                <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
+                hotelsList.appendChild(hotelItem);
+            })  
+        }
         // DISPLAY SEARCHED HOTELS/DESTINATIONS
         const searchBtn = document.querySelector("#searchBtn");
         const searchText = document.querySelector("#search-text");
@@ -623,9 +661,9 @@
         atmosphereList = ["Nature","Tendance","Intime","Evasion","Tropical","Mythe","Vie de château","Colonial","Campagne"]
         for(let i=0;i<styleList.length;i++){
             atmosphereItem = document.createElement("div")
-            atmosphereItem.classList = "flex items-center my-4"
+            atmosphereItem.classList = "flex items-center"
             atmosphereItem.innerHTML=`
-            <input id="atmosphere-option-${i+1}" type="checkbox" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="atmosphere-option-1" aria-describedby="atmosphere-option-1" >
+            <input id="atmosphere-option-${i+1}" type="radio" name="atmosphere" value="${atmosphereList[i]}" class="atmcheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="atmosphere-option-1" aria-describedby="atmosphere-option-1" >
             <label for="atmosphere-option-${i+1}" class="text-sm font-medium text-gray-900 ml-2 block">
             ${atmosphereList[i]}
             </label>
@@ -637,9 +675,9 @@
         amenagementList = ["Spa","Piscine extérieure","Parking","Piscine intérieure","Tennis sur site","Club enfants","Plage","Animaux de compagnie","Sports nautiques","Plongée","Golf","Ski"]
         for(let i=0;i<styleList.length;i++){
             amenagementItem = document.createElement("div")
-            amenagementItem.classList = "flex items-center my-4"
+            amenagementItem.classList = "flex items-center"
             amenagementItem.innerHTML=`
-            <input id="amenagement-option-${i+1}" type="checkbox" name="countries" value="USA" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="amenagement-option-1" aria-describedby="amenagement-option-1" >
+            <input id="amenagement-option-${i+1}" type="radio" name="amenagement" value="${amenagementList[i]}" class="amecheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="amenagement-option-1" aria-describedby="amenagement-option-1" >
             <label for="amenagement-option-${i+1}" class="text-sm font-medium text-gray-900 ml-2 block">
             ${amenagementList[i]}
             </label>
