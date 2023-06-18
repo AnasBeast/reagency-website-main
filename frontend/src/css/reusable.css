@@ -695,11 +695,14 @@ footer #lower #phone {
 }
 
 footer #lower #phone img {
-  height: 35px;
+  height: 28px;
+}
+footer #lower #phone h3 {
+  font-size: 12.8px;
 }
 
 footer #lower #logo {
-  height: 50px;
+  height: 40px;
   margin-right: 60px;
 }
 
@@ -709,7 +712,7 @@ footer #lower #socials {
 }
 
 footer #lower #socials img {
-  height: 35px;
+  height: 28px;
 }
 
 .horizontal-grid {
