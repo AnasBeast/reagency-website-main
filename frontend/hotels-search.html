@@ -240,7 +240,7 @@
                 var sParameterName = sURLVariables[i].split('=');
                 if (sParameterName[0] == sParam) 
                 {
-                    return sParameterName[1];
+                    return sParameterName[1].replace(/%20/g, " ");
                 }
             }
         }
@@ -249,7 +249,29 @@
         {
             if(Pageid[i]=="-"){Pageid=Pageid.substring(0,i) + " " + Pageid.substring(i+1);}
         } */
-
+        const landing = document.getElementById("landing")
+        const dests = {
+            "Europe":["Allemagne","Autriche","Belgique","Danemark","Espagne","France","Grece","Hongrie","Irlande","Italie","Monaco","Montenegro","Pays Bas","Pologne","Portugal","Republique tcheque","Royaume Uni","Russie","Suede","Suisse","Turquie"],
+            "MoyenOrient":["Arabie saoudite","Emirats arabes unis","Dubai","Oman","Qatar"],
+            "OcéanIndien":["Maldives","Maurice","Seychelles"],
+            "Océanie":["Australie","Polynesie francaise"],
+            "Afrique":["Afrique du sud","Maroc","Rwanda","Zombie"],
+            "AmeriqueCentrale":["Costa rica"],
+            "AmeriqueduNord":["Canada","Etats-Unis","Mexique"],
+            "AmeriqueduSud":["Argentine","Bresil","Colombie","Perou"],
+            "Asie":["Combodge","Chine","Hong kong","Inde","Indonesie","Japon","Laos","Malaisie","Myanmar","Philippines","Singapour","Sri lanka","Thailande","Vietnam"],
+            "Caraibes":["Anguilla","Iles turks et caiques","Porto rico","Republique dominicaine","Saint-Barthelemy","St-vincent et grenadines"]
+        }
+        if(dests.Europe.includes(Pageid)){landing.style.backgroundImage=`url("./src/img/hotels/hotel-2.png")`}
+        if(dests.MoyenOrient.includes(Pageid)){landing.style.backgroundImage=`url("./src/img/qatar.jpg")`}
+        if(dests.OcéanIndien.includes(Pageid)){landing.style.backgroundImage=`url("./src/img/maldives.png")`}
+        if(dests.Océanie.includes(Pageid)){landing.style.backgroundImage=`url("./src/img/oceanie.jpg")`}
+        if(dests.Afrique.includes(Pageid)){landing.style.backgroundImage=`url("./src/img/sidibou.jpg")`}
+        if(dests.AmeriqueCentrale.includes(Pageid)){landing.style.backgroundImage=`url("./src/img/caraibes.jpg")`}
+        if(dests.AmeriqueduNord.includes(Pageid)){landing.style.backgroundImage=`url("./src/img/canada.jpg")`}
+        if(dests.AmeriqueduSud.includes(Pageid)){landing.style.backgroundImage=`url("./src/img/colombie.jpg")`}
+        if(dests.Asie.includes(Pageid)){landing.style.backgroundImage=`url("./src/img/asie.jpg")`}
+        if(dests.Caraibes.includes(Pageid)){landing.style.backgroundImage=`url("./src/img/caraibes.jpg")`}
         // DISPLAY SEARCHED HOTELS/DESTINATIONS
         const searchBtn = document.querySelector("#searchBtn");
         const searchText = document.querySelector("#search-text");

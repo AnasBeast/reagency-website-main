@@ -88,7 +88,7 @@
 
         <div id="list-wrapper">
             <div id="top">
-                <h1>Hôtel de luxe en Europe</h1>
+                <!-- <h1>Hôtel de luxe en Europe</h1>
                 <p class="content-description">
                     Que ce soit pour ses cités intemporelles telles que Paris et Venise ou ses 
                     destinations hors des sentiers battus, comme le Monténégro et la vallée 
@@ -96,31 +96,24 @@
                     Et nous sommes impatients de partager avec vous nos hôtels préférés sur 
                     l’ensemble du continent, des châteaux médiévaux de la campagne 
                     irlandaise aux stations de ski ultra-exclusives des Alpes suisses.
-                </p>
+                </p> -->
             </div>
 
             <div id="mid">
                 <h1>LES DESTINATIONS</h1>
                 <p class="content-destinations">
-                    ALLEMAGNE · AUTRICHE · BELGIQUE 
-                    DANEMARK · ESPAGNE · FRANCE · GRÈCE  
-                    HONGRIE · IRLANDE · ITALIE · MONACO · MONTÉNÉGRO 
-                    PAYS-BAS · POLOGNE · PORTUGAL · RÉPUBLIQUE TCHÈQUE 
-                    ROYAUME-UNI · RUSSIE · SUÈDE · SUISSE · TURQUIE
-
+                    
                 </p>
             </div>
 
             <div id="bottom">
-                <h1>LES PLUS BEAUX HÔTELS D'EUROPE</h1>
+                <!-- <h1>LES PLUS BEAUX HÔTELS D'EUROPE</h1>
                 <p class="content-top">
                     L’Europe ne manque pas de magnifiques hôtels, mais il en existe qui laisseraient même 
                     les voyageurs les plus blasés un peu émerveillés. Il y a bien sûr le Ritz Paris, où Coco Chanel 
                     et Marcel Proust ont résidé des années. Ensuite, il y a les chics boutiques-hôtels de Santorin, 
                     où les vues sur la mer Égée sont des plus exquises.
-
-
-                </p>
+                </p> -->
             </div>
 
             <div id="list">
@@ -134,17 +127,17 @@
 
         <div id="selection-chambres" class="title">
 
-            <div id="title">
+            <!-- <div id="title">
                 <h1>Nos destinations préférées en Europe</h1>
             </div>
             
             <div id="seperation"></div>
 
             <div id="main">
-                <p>I! y a beaucoup de chose que l'on aime en Europe, mais'des villes comme Londres et Paris, avec leur art, 
+                <p>Il y a beaucoup de chose que l'on aime en Europe, mais'des villes comme Londres et Paris, avec leur art, 
                     leur architecture, leurs musées et leurs espaces culturels-pourraient bien être nos endroits-préférés</p>
                 <h1>Londres, Royaume-Uni</h1>
-            </div>
+            </div> -->
         </div>
 
         <div id="options">
@@ -268,30 +261,49 @@
         function GetHotelToDisplay(Pageid)
         {        
             if(Pageid.includes("#")){Pageid = Pageid.substring(0,Pageid.indexOf("#"))}
-            
+            for (var i = 0; i < Pageid.length; i++) 
+            {
+                if(Pageid[i]=="-"){Pageid=Pageid.substring(0,i) + " " + Pageid.substring(i+1);}
+            }
             return continents.find(({ continent }) => continent.toUpperCase() == Pageid.toUpperCase());
         }
+        
         //Modifiying the page to the current Hotel selected
         var continent = GetHotelToDisplay(Pageid);
-        var hotel = hotels.find(({ _id }) => continent.hotelId)
-        
+        const contentDestinations = document.querySelector(".content-destinations");
         const landing = document.getElementById("backgroundImg");
-        landing.src=hotel.images[0];
+        const roomsSelection = document.getElementById("selection-chambres");
+        landing.src=continent.image;
         // div TEXT
         const text = document.getElementById("text");
-        const stars = document.createElement("div");
-        stars.id="stars"
+        const textTop = document.getElementById("top");
+        const textBottom = document.getElementById("bottom");
+        textTop.innerHTML=
+        `       <h1>Hôtel de luxe en ${continent.continent}</h1>
+                <p class="content-description">
+                    ${continent.description}
+                </p>
+        `;
+        textBottom.innerHTML=
+        `       <h1>LES PLUS BEAUX HÔTELS D'${continent.continent}</h1>
+                <p class="content-top">
+                    ${continent.top}
+                </p>
+        `;
+        roomsSelection.innerHTML=
+        `   <div id="title">
+                <h1>Nos destinations préférées en ${continent.continent}</h1>
+            </div>
+            
+            <div id="seperation"></div>
 
-        for (var i = 0; i < parseInt(hotel.stars); i++) 
-        {
-            const starItem = document.createElement("img");
-            starItem.src="src/img/star.png";
-            stars.appendChild(starItem);
-        }
-
-        const subTitle = `<h1>${hotel.name}</h1><h3>${hotel.address}</h3>`
-        text.appendChild(stars);
-        text.innerHTML+=subTitle;
+            <div id="main">
+                <p>${continent.slide}</p>
+                <h1>${continent.address}</h1>
+            </div>
+        `;
+        roomsSelection.style.backgroundImage = `url(${continent.slidebg})`
+        contentDestinations.textContent=continent.destinations
 
         // div list
         const hotelsList = document.getElementById("list");
