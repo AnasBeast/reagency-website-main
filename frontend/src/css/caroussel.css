@@ -19,7 +19,7 @@
 
 .slider .titles p {
   color: #ff5500;
-  font-size: 40px;
+  font-size: 32px;
   position: absolute;
   z-index: 997;
   top: calc(50vh + 80px);
@@ -29,7 +29,7 @@
   position: absolute;
   top: 15vh;
   color: #fff;
-  font-size: 200px;
+  font-size: 150px;
   font-weight: 600;
   z-index: 997;
   opacity: 0;
