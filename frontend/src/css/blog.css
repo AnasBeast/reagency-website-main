@@ -314,6 +314,54 @@ nav #menu div {
 #cards{
   width: 90%;
 }
+#contact-us-section #wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#contact-us-section #wrapper .element {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#contact-us-section #wrapper .element:first-child #background {
+  background-image: url("../img/card-img-1.png");
+}
+
+#contact-us-section #wrapper .element:nth-child(2) #background {
+  background-image: url("../img/card-img.jpg");
+}
+
+#contact-us-section #wrapper .element:nth-child(3) #background {
+  background-image: url("../img/card-img-3.png");
+}
+
+#contact-us-section #wrapper .element #background {
+  height: 550px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 @media only screen and (max-width: 1235px) {
   nav {
     height: 100px !important;
@@ -411,6 +459,12 @@ nav #menu div {
   }
   #mail #background{
     height: auto;
+  }
+  #contact-us-section #wrapper{
+    flex-direction: column;
+  }
+  #contact-us-section #wrapper .element{
+    width: 100%;
   }
   footer #upper img{
     width: 80%;
