@@ -111,7 +111,7 @@
                                 </svg>
                               </button>
                             
-                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full" style="z-index: 998;position: fixed;"></div>
                             
                               <div id="drop-countries" x-show="dropdownOpen" style="z-index: 999;" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                                 <fieldset class="px-4 border" >
@@ -146,7 +146,7 @@
                                 </svg>
                               </button>
                             
-                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full" style="z-index: 998;position: fixed;"></div>
                             
                               <div id="drop-pays" x-show="dropdownOpen" style="z-index: 999;" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                                 <fieldset class="px-4 border" >
@@ -180,7 +180,7 @@
                                 </svg>
                               </button>
                             
-                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full" style="z-index: 998;position: fixed;"></div>
                             
                               <div id="drop-style" x-show="dropdownOpen" style="z-index: 999;" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                                 <fieldset class="px-4 border" >
@@ -214,7 +214,7 @@
                                 </svg>
                               </button>
                             
-                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full" style="z-index: 998;position: fixed;"></div>
                             
                               <div id="drop-atmosphere" x-show="dropdownOpen" style="z-index: 999;" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                                 <fieldset class="px-4 border">
@@ -248,7 +248,7 @@
                                 </svg>
                               </button>
                             
-                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full" style="z-index: 998;position: fixed;"></div>
                             
                               <div id="drop-amenagements" x-show="dropdownOpen" style="z-index: 999;" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                                 <fieldset class="px-4 border" >
@@ -562,6 +562,8 @@
         const searchText = document.querySelector("#search-text");
 
         async function searchHotels(){
+            var clist = document.getElementsByTagName("input");
+            for (var i = 0; i < clist.length; ++i) { clist[i].checked = false; }
             hotelsList.innerHTML=`<img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" alt="" style="width: 100%;">`
             await fetch(`${backendURL}/api/todos/search?query=${searchText.value}`,{
                 method: "POST",
@@ -590,18 +592,64 @@
         searchBtn.addEventListener("click",searchHotels)
     </script>
     <script>
-        // DROPDOWN
-        const dropCountries = document.querySelector("#drop-countries");
-        const dropPays = document.querySelector("#drop-pays");
-        const dropStyle = document.querySelector("#drop-style");
-        const dropAtmosphere = document.querySelector("#drop-atmosphere");
-        const dropAmenagement = document.querySelector("#drop-amenagements");
-
+        // DROPDOWN REMOVE CHECKS WHILE SWAPING
         const countriesBtn = document.querySelector("#countriesBtn");
         const paysBtn = document.querySelector("#paysBtn");
         const styleBtn = document.querySelector("#styleBtn");
         const atmosphereBtn = document.querySelector("#atmosphereBtn");
         const amenagementsBtn = document.querySelector("#amenagementsBtn");
+
+        function removeCheck(parent){
+            for(let i=0;i<parent.children.length;i++){
+                parent.children[i].children[0].checked = false;
+            }
+        }
+        function countriesChecked(){
+            removeCheck(amenagement);
+            removeCheck(atmosphere);
+            removeCheck(style);
+            removeCheck(pays);
+        }
+        countriesBtn.addEventListener("click",countriesChecked)
+        
+        function paysChecked(){
+            removeCheck(amenagement);
+            removeCheck(atmosphere);
+            removeCheck(style);
+            removeCheck(countries);
+        }
+        paysBtn.addEventListener("click",paysChecked)
+
+        function styleChecked(){
+            removeCheck(amenagement);
+            removeCheck(atmosphere);
+            removeCheck(countries);
+            removeCheck(pays);
+        }
+        styleBtn.addEventListener("click",styleChecked)
+
+        function atmChecked(){
+            removeCheck(amenagement);
+            removeCheck(countries);
+            removeCheck(style);
+            removeCheck(pays);
+        }
+        atmosphereBtn.addEventListener("click",atmChecked)
+
+        function ameChecked(){
+            removeCheck(countries);
+            removeCheck(atmosphere);
+            removeCheck(style);
+            removeCheck(pays);
+        }
+        amenagementsBtn.addEventListener("click",ameChecked)
+        
+        /* 
+        const dropCountries = document.querySelector("#drop-countries");
+        const dropPays = document.querySelector("#drop-pays");
+        const dropStyle = document.querySelector("#drop-style");
+        const dropAtmosphere = document.querySelector("#drop-atmosphere");
+        const dropAmenagement = document.querySelector("#drop-amenagements");
 
         function displayAm(){
             dropAmenagement.classList.remove("d-none")
@@ -646,7 +694,9 @@
             dropAtmosphere.classList.add("d-none")
             dropAmenagement.classList.add("d-none")
         }
-        countriesBtn.addEventListener("click",displayCou)
+        countriesBtn.addEventListener("click",displayCou) */
+
+
 
     </script>
     <script>

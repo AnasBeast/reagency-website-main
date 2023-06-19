@@ -238,7 +238,7 @@ nav #menu div {
 }
 
 #content #list-wrapper #top {
-  width: 90%;
+  width: 70%;
 }
 
 #content #list-wrapper #top h1 {
@@ -251,7 +251,7 @@ nav #menu div {
 
 #content #list-wrapper #list {
   margin-top: 25px;
-  width: 90%;
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -7,10 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
     <link rel="shortcut icon" href="src/img/icon-png.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="src/css/reusable.css">
     <link rel="stylesheet" href="src/css/hotels-search.css">
 </head>
 <body>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
     <script type="text/javascript" src="src/js/index.js"></script>
     <id id="overlay" onclick="hideMobileNav()"></id>
@@ -25,31 +27,31 @@
 		<h1>Menu</h1>
 		<div class="seperation"></div>
 
-		<ul>
+		<ul class="pl-8 text-white">
 			<a href="qui-sommes-nous.html"><li>
-				<p> QUI SOMMES-NOUS </p>
+				<p class="my-4"> QUI SOMMES-NOUS </p>
 
 				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
 			</li></a>
 
 			<a href="destination.html"><li>
-				<p> DESTINATIONS </p>
+				<p class="my-4"> DESTINATIONS </p>
 
 				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
 			</li></a>
 
 			<a href="collection-hotels.html"><li>
-				<p> COLLECTION D'HOTELS </p>
+				<p class="my-4"> COLLECTION D'HOTELS </p>
 
 				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
 			</li></a>
 
-
-            <a href="conciergerie.html"><li>
-				<p> CONCIERGERIE </p>
+			<a href="conciergerie.html"><li>
+				<p class="my-4"> CONCIERGERIE </p>
 
 				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
 			</li></a>
+
 			<div class="seperation"></div>
 			<div id="call"><p>RESERVEZ EN LIGNE OU APPELEZ</p> <p>+44 20 35 19 2700</p></div>
 
@@ -95,15 +97,113 @@
                 <h1 class="content-title">Hôtel de luxe</h1>
                 <div class="seperation"></div>
 
-                <ul>
-                    <li>VILLE</li>
-                    <li>ATMOSPHÈRE</li>
-                    <li>STYLE</li>
-                    <li>AMÉNAGEMENTS</li>
+                <ul class="pl-12 my-4">
+                    <li>
+                        <div class="flex justify-center">
+                            <div id="styleBtn" x-data="{ dropdownOpen: false }" class="relative">
+                              <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 flex items-center rounded-md bg-white p-2 focus:outline-none">
+                                STYLE
+                                <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                              </button>
+                            
+                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full" style="z-index: 998;position: fixed;"></div>
+                            
+                              <div id="drop-style" x-show="dropdownOpen" style="z-index: 999;" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
+                                <fieldset class="px-4 border" >
+                                    <legend class="sr-only">
+                                        STYLE
+                                    </legend>
+                            
+                                    <div class="flex gap-4 flex-col items-start my-4" id="style">
+                                        <div class="flex items-center">
+                                            <input id="style-option-1" type="checkbox" name="style" value="Contemporain" class="stylecheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="style-option-1" aria-describedby="style-option-1">
+                                            <label for="style-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
+                                                Contemporain
+                                            </label>
+                                        </div>
+                                    </div>
+                            
+                                    
+                            
+                                </fieldset>
+                              </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex justify-center">
+                            <div id="atmosphereBtn" x-data="{ dropdownOpen: false }" class="relative">
+                              <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 flex items-center rounded-md bg-white p-2 focus:outline-none">
+                                ATMOSPHÈRE
+                                <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                              </button>
+                            
+                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full" style="z-index: 998;position: fixed;"></div>
+                            
+                              <div id="drop-atmosphere" x-show="dropdownOpen" style="z-index: 999;" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
+                                <fieldset class="px-4 border">
+                                    <legend class="sr-only">
+                                        ATMOSPHÈRE
+                                    </legend>
+                            
+                                    <div class="flex gap-4 flex-col items-start my-4" id="atmosphere">
+                                        <div class="flex items-center">
+                                            <input id="atmosphere-option-1" type="checkbox" name="atmosphere" value="Charme" class="atmcheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="atmosphere-option-1" aria-describedby="atmosphere-option-1">
+                                            <label for="atmosphere-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
+                                                Charme
+                                            </label>
+                                        </div>
+                                    </div>
+                            
+                                    
+                            
+                                </fieldset>
+                              </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex justify-center">
+                            <div x-data="{ dropdownOpen: false }" class="relative">
+                              <button id="amenagementsBtn" @click="dropdownOpen = !dropdownOpen" class="relative z-10 flex items-center rounded-md bg-white p-2 focus:outline-none">
+                                AMÉNAGEMENTS
+                                <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                              </button>
+                            
+                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full" style="z-index: 998;position: fixed;"></div>
+                            
+                              <div id="drop-amenagements" x-show="dropdownOpen" style="z-index: 999;" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
+                                <fieldset class="px-4 border" >
+                                    <legend class="sr-only">
+                                        AMÉNAGEMENTS
+                                    </legend>
+                            
+                                    <div class="flex gap-4 flex-col items-start my-4" id="amenagement">
+                                        <div class="flex items-center">
+                                            <input id="amenagement-option-1" type="checkbox" name="amenagement" value="Centre de fitness" class="amecheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="amenagement-option-1" aria-describedby="amenagement-option-1">
+                                            <label for="amenagement-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
+                                                Centre de fitness
+                                            </label>
+                                        </div>
+                                    </div>
+                            
+                                    
+                            
+                                </fieldset>
+                              </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
                 <div class="seperation"></div>
             </div>
-            <h2 class="hotel-numbers"></h2>
+            <h2 class="hotel-numbers text-2xl my-4"></h2>
             <div id="list">
                 
                 <a class="element" href="/hotel-deatils.html?id=1">
@@ -251,7 +351,7 @@
         } */
         const landing = document.getElementById("landing")
         const dests = {
-            "Europe":['ALLEMAGNE', 'AUTRICHE', 'BELGIQUE', 'DANEMARK', 'ESPAGNE', 'FRANCE', 'GRECE', 'HONGRIE', 'IRLANDE', 'ITALIE', 'MONACO', 'MONTENEGRO', 'PAYS BAS', 'POLOGNE', 'PORTUGAL', 'REPUBLIQUE TCHEQUE', 'ROYAUME UNI', 'RUSSIE', 'SUEDE', 'SUISSE', 'TURQUIE'],
+            "Europe":['ALLEMAGNE', 'AUTRICHE', 'BELGIQUE', 'DANEMARK', 'ESPAGNE', 'FRANCE', 'GRECE', 'HONGRIE', 'IRLANDE', 'ITALIE', 'MONACO', 'MONTENEGRO', 'PAYS BAS', 'POLOGNE', 'PORTUGAL', 'REPUBLIQUE TCHEQUE', 'ROYAUME-UNI', 'RUSSIE', 'SUEDE', 'SUISSE', 'TURQUIE'],
             "MoyenOrient":['ARABIE SAOUDITE', 'EMIRATS ARABES UNIS', 'DUBAI', 'OMAN', 'QATAR'],
             "OcéanIndien":['MALDIVES', 'MAURICE', 'SEYCHELLES'],
             "Océanie":['AUSTRALIE', 'POLYNESIE FRANCAISE'],
@@ -272,11 +372,17 @@
         if(dests.AmeriqueduSud.includes(Pageid)){landing.style.backgroundImage=`url("./src/img/colombie.jpg")`}
         if(dests.Asie.includes(Pageid)){landing.style.backgroundImage=`url("./src/img/asie.jpg")`}
         if(dests.Caraibes.includes(Pageid)){landing.style.backgroundImage=`url("./src/img/caraibes.jpg")`}
+        
         // DISPLAY SEARCHED HOTELS/DESTINATIONS
         const searchBtn = document.querySelector("#searchBtn");
         const searchText = document.querySelector("#search-text");
-        var hotel;
+        var regionElements = document.getElementsByClassName('regioncheckbox');
+        var countryElements = document.getElementsByClassName('countrycheckbox');
+        var styleElements = document.getElementsByClassName('stylecheckbox');
+        var atmElements = document.getElementsByClassName("atmcheckbox");
+        var ameElements = document.getElementsByClassName("amecheckbox");
         const hotelsList = document.getElementById("list");
+        var obj;
         async function searchHotels(){
             hotelsList.innerHTML=`<img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" alt="" style="width: 100%;">`
             Pageid = GetUrlParameter("country")
@@ -290,7 +396,7 @@
                 .then((response) => response.json())
                 .then(({data}) => {
                     console.log(data)
-                    hotel = data;
+                    obj = data;
                     hotelsList.innerHTML=""
                     data.forEach((hotel) => {
                         const hotelItem = document.createElement("a");
@@ -304,20 +410,194 @@
                         <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
                         hotelsList.appendChild(hotelItem);
                     })
+                    for(let i=0; i<styleElements.length; i++){
+                        styleElements[i].addEventListener("click", styleFilter);
+                    }
+                    for(let i=0; i<atmElements.length; i++){
+                        atmElements[i].addEventListener("click", atmFilter);
+                    }
+                    for(let i=0; i<ameElements.length; i++){
+                        ameElements[i].addEventListener("click", ameFilter);
+                    }
                     const hotelCount = document.querySelector(".hotel-numbers")
                     const title = document.querySelector(".landing-title")
                     const contentTitle = document.querySelector(".content-title")
                     contentTitle.textContent = `Hôtel de luxe : ${Pageid.toUpperCase()}`
                     title.innerHTML=`<h1>${Pageid.toUpperCase()}</h1>`
-                    hotelCount.textContent = `${hotel.length}  hôtel(s) incontournable(s)`
+                    hotelCount.textContent = `${obj.length}  hôtel(s) incontournable(s)`
                 });
         }
         function redirectSearch(){
+            var clist = document.getElementsByTagName("input");
+            for (var i = 0; i < clist.length; ++i) { clist[i].checked = false; }
             window.location.href = `hotels-search.html?country=${searchText.value}`;
         }
         searchBtn.addEventListener("click",redirectSearch)
         searchHotels()
-    </script>
 
+        const hotelCount = document.querySelector(".hotel-numbers")
+        var styleFilters = []
+        function styleFilter(e){
+            const index = styleFilters.indexOf(e.target.value)
+            if(index > -1){styleFilters.splice(index, 1)}else{styleFilters.push(e.target.value)}
+            console.log(styleFilters)
+            hotels=[]
+            for(let i=0;i<styleFilters.length;i++){
+                filter = styleFilters[i]
+                obj.forEach((hotel)=>{
+                    if(hotel.style.includes(filter)){hotels.push(hotel)}
+                })
+            }
+            // hotels = obj.filter((hotel)=>hotel.style.toUpperCase()==e.target.value.toUpperCase());
+            hotelsList.innerHTML =``
+            hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
+            hotels.forEach((hotel) => {
+                const hotelItem = document.createElement("a");
+                hotelItem.classList.add("element");
+                hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                hotelItem.innerHTML = `
+                <div>
+                    <div id="background" style="background-image : url(${hotel.images[0]})"></div>
+                    <h3>${hotel.name}</h3>
+                </div>
+                <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
+                hotelsList.appendChild(hotelItem);
+            })          
+        }
+
+        var atmFilters = []
+        function atmFilter(e){
+            const index = atmFilters.indexOf(e.target.value)
+            if(index > -1){atmFilters.splice(index, 1)}else{atmFilters.push(e.target.value)}
+            console.log(atmFilters)
+            hotels=[]
+            for(let i=0;i<atmFilters.length;i++){
+                filter = atmFilters[i]
+                obj.forEach((hotel)=>{
+                    if(hotel.atmosphere.includes(filter)){hotels.push(hotel)}
+                })
+            }
+            // hotels = obj.filter((hotel)=>hotel.atmosphere.toUpperCase()==e.target.value.toUpperCase());
+            hotelsList.innerHTML =``
+            hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
+            hotels.forEach((hotel) => {
+                const hotelItem = document.createElement("a");
+                hotelItem.classList.add("element");
+                hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                hotelItem.innerHTML = `
+                <div>
+                    <div id="background" style="background-image : url(${hotel.images[0]})"></div>
+                    <h3>${hotel.name}</h3>
+                </div>
+                <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
+                hotelsList.appendChild(hotelItem);
+            })  
+        }
+
+        var ameFilters = []
+        function ameFilter(e){
+            const index = ameFilters.indexOf(e.target.value)
+            if(index > -1){ameFilters.splice(index, 1)}else{ameFilters.push(e.target.value)}
+            console.log(ameFilters)
+            hotels=[]
+            for(let i=0;i<ameFilters.length;i++){
+                filter = ameFilters[i]
+                obj.forEach((hotel)=>{
+                    if(hotel.amenagement.includes(filter)){hotels.push(hotel)}
+                })
+            }
+            // hotels = obj.filter((hotel)=>hotel.amenagement.toUpperCase()==e.target.value.toUpperCase());
+            hotelsList.innerHTML =``
+            hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
+            hotels.forEach((hotel) => {
+                const hotelItem = document.createElement("a");
+                hotelItem.classList.add("element");
+                hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                hotelItem.innerHTML = `
+                <div>
+                    <div id="background" style="background-image : url(${hotel.images[0]})"></div>
+                    <h3>${hotel.name}</h3>
+                </div>
+                <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
+                hotelsList.appendChild(hotelItem);
+            })  
+        }
+    </script>
+    <script>
+        // DROPDOWN REMOVE CHECKS WHILE SWAPING
+        const countriesBtn = document.querySelector("#countriesBtn");
+        const paysBtn = document.querySelector("#paysBtn");
+        const styleBtn = document.querySelector("#styleBtn");
+        const atmosphereBtn = document.querySelector("#atmosphereBtn");
+        const amenagementsBtn = document.querySelector("#amenagementsBtn");
+
+        function removeCheck(parent){
+            for(let i=0;i<parent.children.length;i++){
+                parent.children[i].children[0].checked = false;
+            }
+        }
+
+        function styleChecked(){
+            removeCheck(amenagement);
+            removeCheck(atmosphere);
+        }
+        styleBtn.addEventListener("click",styleChecked)
+
+        function atmChecked(){
+            removeCheck(amenagement);
+            removeCheck(style);
+        }
+        atmosphereBtn.addEventListener("click",atmChecked)
+
+        function ameChecked(){
+            removeCheck(atmosphere);
+            removeCheck(style);
+        }
+        amenagementsBtn.addEventListener("click",ameChecked)
+    </script>
+    <script>
+
+        const style = document.querySelector('#style');
+        styleList = ["Historique","Classique","Design","Insolite"]
+        for(let i=0;i<styleList.length;i++){
+            styleItem = document.createElement("div")
+            styleItem.classList = "flex items-center"
+            styleItem.innerHTML=`
+            <input id="style-option-${i+1}" type="checkbox" name="style" value="${styleList[i]}" class="stylecheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="style-option-1" aria-describedby="style-option-1" >
+            <label for="style-option-${i+1}" class="text-sm font-medium text-gray-900 ml-2 block">
+                ${styleList[i]}
+            </label>
+            `
+            style.append(styleItem)
+        }
+
+        const atmosphere = document.querySelector("#atmosphere");
+        atmosphereList = ["Nature","Tendance","Intime","Evasion","Tropical","Mythe","Vie de château","Colonial","Campagne"]
+        for(let i=0;i<styleList.length;i++){
+            atmosphereItem = document.createElement("div")
+            atmosphereItem.classList = "flex items-center"
+            atmosphereItem.innerHTML=`
+            <input id="atmosphere-option-${i+1}" type="checkbox" name="atmosphere" value="${atmosphereList[i]}" class="atmcheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="atmosphere-option-1" aria-describedby="atmosphere-option-1" >
+            <label for="atmosphere-option-${i+1}" class="text-sm font-medium text-gray-900 ml-2 block">
+            ${atmosphereList[i]}
+            </label>
+            `
+            atmosphere.append(atmosphereItem)
+        }
+
+        const amenagement = document.querySelector("#amenagement");
+        amenagementList = ["Spa","Piscine extérieure","Parking","Piscine intérieure","Tennis sur site","Club enfants","Plage","Animaux de compagnie","Sports nautiques","Plongée","Golf","Ski"]
+        for(let i=0;i<styleList.length;i++){
+            amenagementItem = document.createElement("div")
+            amenagementItem.classList = "flex items-center"
+            amenagementItem.innerHTML=`
+            <input id="amenagement-option-${i+1}" type="checkbox" name="amenagement" value="${amenagementList[i]}" class="amecheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="amenagement-option-1" aria-describedby="amenagement-option-1" >
+            <label for="amenagement-option-${i+1}" class="text-sm font-medium text-gray-900 ml-2 block">
+            ${amenagementList[i]}
+            </label>
+            `
+            amenagement.append(amenagementItem)
+        }
+    </script>
 </body>
 </html>
