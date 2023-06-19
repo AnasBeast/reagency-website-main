@@ -250,7 +250,6 @@
 
             <div id="title">
                 <h1>Des idées de destinations</h1>
-                <button>PAR CONTINENT</button>
             </div>
             
             <div id="seperation"></div>
@@ -441,28 +440,46 @@
             const index = styleFilters.indexOf(e.target.value)
             if(index > -1){styleFilters.splice(index, 1)}else{styleFilters.push(e.target.value)}
             console.log(styleFilters)
-            hotels=[]
-            for(let i=0;i<styleFilters.length;i++){
-                filter = styleFilters[i]
-                obj.forEach((hotel)=>{
-                    if(hotel.style.includes(filter)){hotels.push(hotel)}
+            if(styleFilters.length==0){
+                hotels = obj
+                hotelsList.innerHTML =``
+                hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
+                hotels.forEach((hotel) => {
+                    const hotelItem = document.createElement("a");
+                    hotelItem.classList.add("element");
+                    hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                    hotelItem.innerHTML = `
+                    <div>
+                        <div id="background" style="background-image : url(${hotel.images[0]})"></div>
+                        <h3>${hotel.name}</h3>
+                    </div>
+                    <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
+                    hotelsList.appendChild(hotelItem);
                 })
-            }
-            // hotels = obj.filter((hotel)=>hotel.style.toUpperCase()==e.target.value.toUpperCase());
-            hotelsList.innerHTML =``
-            hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
-            hotels.forEach((hotel) => {
-                const hotelItem = document.createElement("a");
-                hotelItem.classList.add("element");
-                hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
-                hotelItem.innerHTML = `
-                <div>
-                    <div id="background" style="background-image : url(${hotel.images[0]})"></div>
-                    <h3>${hotel.name}</h3>
-                </div>
-                <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
-                hotelsList.appendChild(hotelItem);
-            })          
+            }else{
+                hotels=[]
+                for(let i=0;i<styleFilters.length;i++){
+                    filter = styleFilters[i]
+                    obj.forEach((hotel)=>{
+                        if(hotel.style.includes(filter)){hotels.push(hotel)}
+                    })
+                }
+                // hotels = obj.filter((hotel)=>hotel.style.toUpperCase()==e.target.value.toUpperCase());
+                hotelsList.innerHTML =``
+                hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
+                hotels.forEach((hotel) => {
+                    const hotelItem = document.createElement("a");
+                    hotelItem.classList.add("element");
+                    hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                    hotelItem.innerHTML = `
+                    <div>
+                        <div id="background" style="background-image : url(${hotel.images[0]})"></div>
+                        <h3>${hotel.name}</h3>
+                    </div>
+                    <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
+                    hotelsList.appendChild(hotelItem);
+                })
+            }       
         }
 
         var atmFilters = []
@@ -470,28 +487,47 @@
             const index = atmFilters.indexOf(e.target.value)
             if(index > -1){atmFilters.splice(index, 1)}else{atmFilters.push(e.target.value)}
             console.log(atmFilters)
-            hotels=[]
-            for(let i=0;i<atmFilters.length;i++){
-                filter = atmFilters[i]
-                obj.forEach((hotel)=>{
-                    if(hotel.atmosphere.includes(filter)){hotels.push(hotel)}
-                })
+            if(atmFilters.length==0){
+                hotels = obj
+                hotelsList.innerHTML =``
+                hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
+                hotels.forEach((hotel) => {
+                    const hotelItem = document.createElement("a");
+                    hotelItem.classList.add("element");
+                    hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                    hotelItem.innerHTML = `
+                    <div>
+                        <div id="background" style="background-image : url(${hotel.images[0]})"></div>
+                        <h3>${hotel.name}</h3>
+                    </div>
+                    <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
+                    hotelsList.appendChild(hotelItem);
+                }) 
+            }else{
+                hotels=[]
+                for(let i=0;i<atmFilters.length;i++){
+                    filter = atmFilters[i]
+                    obj.forEach((hotel)=>{
+                        if(hotel.atmosphere.includes(filter)){hotels.push(hotel)}
+                    })
+                }
+                // hotels = obj.filter((hotel)=>hotel.atmosphere.toUpperCase()==e.target.value.toUpperCase());
+                hotelsList.innerHTML =``
+                hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
+                hotels.forEach((hotel) => {
+                    const hotelItem = document.createElement("a");
+                    hotelItem.classList.add("element");
+                    hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                    hotelItem.innerHTML = `
+                    <div>
+                        <div id="background" style="background-image : url(${hotel.images[0]})"></div>
+                        <h3>${hotel.name}</h3>
+                    </div>
+                    <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
+                    hotelsList.appendChild(hotelItem);
+                }) 
             }
-            // hotels = obj.filter((hotel)=>hotel.atmosphere.toUpperCase()==e.target.value.toUpperCase());
-            hotelsList.innerHTML =``
-            hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
-            hotels.forEach((hotel) => {
-                const hotelItem = document.createElement("a");
-                hotelItem.classList.add("element");
-                hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
-                hotelItem.innerHTML = `
-                <div>
-                    <div id="background" style="background-image : url(${hotel.images[0]})"></div>
-                    <h3>${hotel.name}</h3>
-                </div>
-                <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
-                hotelsList.appendChild(hotelItem);
-            })  
+             
         }
 
         var ameFilters = []
@@ -499,28 +535,47 @@
             const index = ameFilters.indexOf(e.target.value)
             if(index > -1){ameFilters.splice(index, 1)}else{ameFilters.push(e.target.value)}
             console.log(ameFilters)
-            hotels=[]
-            for(let i=0;i<ameFilters.length;i++){
-                filter = ameFilters[i]
-                obj.forEach((hotel)=>{
-                    if(hotel.amenagement.includes(filter)){hotels.push(hotel)}
-                })
+            if(ameFilters.length==0){
+                hotels = obj;
+                hotelsList.innerHTML =``
+                hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
+                hotels.forEach((hotel) => {
+                    const hotelItem = document.createElement("a");
+                    hotelItem.classList.add("element");
+                    hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                    hotelItem.innerHTML = `
+                    <div>
+                        <div id="background" style="background-image : url(${hotel.images[0]})"></div>
+                        <h3>${hotel.name}</h3>
+                    </div>
+                    <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
+                    hotelsList.appendChild(hotelItem);
+                }) 
+            }else{
+                hotels=[]
+                for(let i=0;i<ameFilters.length;i++){
+                    filter = ameFilters[i]
+                    obj.forEach((hotel)=>{
+                        if(hotel.amenagement.includes(filter)){hotels.push(hotel)}
+                    })
+                }
+                // hotels = obj.filter((hotel)=>hotel.amenagement.toUpperCase()==e.target.value.toUpperCase());
+                hotelsList.innerHTML =``
+                hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
+                hotels.forEach((hotel) => {
+                    const hotelItem = document.createElement("a");
+                    hotelItem.classList.add("element");
+                    hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                    hotelItem.innerHTML = `
+                    <div>
+                        <div id="background" style="background-image : url(${hotel.images[0]})"></div>
+                        <h3>${hotel.name}</h3>
+                    </div>
+                    <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
+                    hotelsList.appendChild(hotelItem);
+                }) 
             }
-            // hotels = obj.filter((hotel)=>hotel.amenagement.toUpperCase()==e.target.value.toUpperCase());
-            hotelsList.innerHTML =``
-            hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
-            hotels.forEach((hotel) => {
-                const hotelItem = document.createElement("a");
-                hotelItem.classList.add("element");
-                hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
-                hotelItem.innerHTML = `
-                <div>
-                    <div id="background" style="background-image : url(${hotel.images[0]})"></div>
-                    <h3>${hotel.name}</h3>
-                </div>
-                <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
-                hotelsList.appendChild(hotelItem);
-            })  
+             
         }
     </script>
     <script>

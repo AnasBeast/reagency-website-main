@@ -699,11 +699,11 @@ nav #menu div {
 }
 
 @media only screen and (max-width: 880px) {
-  #landing {
-    height: 400px !important;
+  #input-wrapper{
+    margin: 0;
   }
   #list-wrapper {
-    margin-top: 20px !important;
+    margin-top: 50px !important;
   }
   #list-wrapper #list {
     -webkit-box-orient: vertical !important;
@@ -737,7 +737,15 @@ nav #menu div {
     text-align: left;
   }
   #content #landing #logo{
-    margin-top: 0;
+    margin: 0;
+  }
+  #content #selection-chambres{
+    margin-bottom: 0;
+  }
+  #content #options h1{
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   #content #landing #text{
     text-align: center;
@@ -769,6 +777,12 @@ nav #menu div {
   #content #options #wrapper .element{
     width: 100%;
   }
+  .background{
+    height: 40vh;
+  }
+  #content #landing{
+    height: 40vh;
+  }
   #other-options{
     width: 90%;
   }
@@ -784,11 +798,17 @@ nav #menu div {
   #mail #background{
     height: auto;
   }
+  #content #landing #text h1{
+    max-width: fit-content;
+  }
   .newsletter div{
     flex-direction: column;
   }
   .newsletter div #email{
     width: 100%;
+  }
+  .newsletter h2{
+    font-size: 25px;
   }
   footer{
     margin-top: 0 !important;

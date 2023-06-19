@@ -92,10 +92,10 @@ nav #menu div {
 }
 .landing-title{
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 15%;
   font-size: 45px;
   color: white;
 }
@@ -445,8 +445,8 @@ nav #menu div {
   #landing {
     height: 400px !important;
   }
-  #list-wrapper {
-    margin-top: 20px !important;
+  #content #list-wrapper {
+    margin-top: 50px !important;
   }
   #list-wrapper #list {
     -webkit-box-orient: vertical !important;
@@ -462,11 +462,15 @@ nav #menu div {
     padding-top: 0;
     text-align: center;
   }
+  #content #list-wrapper>*{
+    width: 90% !important;
+  }
+  
 }
 
 @media only screen and (max-width: 701px) {
   #list-wrapper #top h1 {
-    font-size: 35px !important;
+    font-size: 25px !important;
   }
   footer{
     margin-top: 0 !important;
@@ -482,8 +486,14 @@ nav #menu div {
   #mail #background{
     height: auto;
   }
-  #content #selection-chambres{
+  #selection-chambres{
     margin-bottom: 0;
+  }
+  #selection-chambres #main h1{
+    font-size: 40px !important;
+  }
+  #main h4{
+    font-size: 20px;
   }
   #mail{
     margin: 0;
