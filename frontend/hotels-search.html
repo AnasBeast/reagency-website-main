@@ -80,7 +80,7 @@
     <div id="content">
         <div id="landing">
             <div class="landing-title">
-                <h1>Regency Travel</h1>
+                <h1 class="font-semibold">Regency Travel</h1>
             </div>
             <div id="input-wrapper">
 				<div id="input">
@@ -423,7 +423,7 @@
                     const title = document.querySelector(".landing-title")
                     const contentTitle = document.querySelector(".content-title")
                     contentTitle.textContent = `Hôtel de luxe : ${Pageid.toUpperCase()}`
-                    title.innerHTML=`<h1>${Pageid.toUpperCase()}</h1>`
+                    title.innerHTML=`<h1 class="font-semibold">${Pageid.toUpperCase()}</h1>`
                     hotelCount.textContent = `${obj.length}  hôtel(s) incontournable(s)`
                 });
         }

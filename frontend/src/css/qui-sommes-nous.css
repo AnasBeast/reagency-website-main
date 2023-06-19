@@ -325,6 +325,7 @@ nav #menu div {
   .container-content{
     display: flex !important;
     flex-direction: column;
+    margin-top: 50px;
   }
   #input-wrapper h1{
     text-align: center;
@@ -339,7 +340,18 @@ nav #menu div {
     width: 100%;
   }
   .container-fluid{
-    margin-top: 200px;
+    margin-top: 220px;
+  }
+  .landing-title{
+    padding: 10%;
+    padding-top: 25%;
+    font-size: 30px;
+  }
+  .container-fluid div{
+    margin-bottom: 0;
+  }
+  #mail{
+    margin: 0;
   }
   #mail #container{
     height: auto !important;
@@ -347,9 +359,8 @@ nav #menu div {
     left: 0vw !important;
     width: 100vw !important;
   }
-  #mail{
-    margin-top: 10vw;
-    margin-bottom: 20vw;
+  footer{
+    margin-top: 0px !important;
   }
   footer #upper img{
     width: 80%;

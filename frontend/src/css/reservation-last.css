@@ -83,7 +83,6 @@ input::-webkit-inner-spin-button {
 #content {
   width: 100%;
   margin: 0;
-  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1120,6 +1119,9 @@ input::-webkit-inner-spin-button {
   #input-label select{
     width: 100%;
   }
+  #content{
+    padding-bottom: 5%;
+  }
   form div{
     display: flex;
     flex-direction: column;
@@ -1132,6 +1134,7 @@ input::-webkit-inner-spin-button {
   }
   footer{
     padding-top: 0 !important;
+    margin-top: 0 !important;
   }
   footer img {
     max-width: 90%;
@@ -1189,6 +1192,7 @@ input::-webkit-inner-spin-button {
   .infos li button::after{
     opacity: 0;
   }
+  
   footer #upper img{
     width: 80%;
   }

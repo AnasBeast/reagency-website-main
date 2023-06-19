@@ -397,10 +397,13 @@ nav #menu div {
 
 @media only screen and (max-width: 880px) {
   #input-wrapper {
-    top: 315px !important;
+    top: 102.5% !important;
   }
   #input-wrapper #input, #input-wrapper button {
     height: 45px !important;
+  }
+  #input-wrapper button{
+    box-shadow: none;
   }
 }
 
@@ -818,8 +821,8 @@ footer #lower #socials img {
 
 @media only screen and (max-width: 1140px) {
   .horizontal-grid {
-    margin-top: 400px !important;
-    margin-bottom: 400px !important;
+    margin-top: 150px !important;
+    margin-bottom: 150px !important;
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-flow: column nowrap !important;
