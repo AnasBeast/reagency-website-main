@@ -363,6 +363,14 @@ nav #menu div {
   background-repeat: no-repeat;
   background-position: center;
 }
+#blogbg{
+  height: 673px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/card-img.jpg");
+}
 @media only screen and (max-width: 1235px) {
   nav {
     height: 100px !important;
