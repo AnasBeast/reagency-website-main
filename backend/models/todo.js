@@ -7,7 +7,7 @@ const hotelSchema = mongoose.Schema({
     region : {type:String, required:true},
     style : {type:String, required:true},
     atmosphere : {type:String, required:true},
-    amenagement : {type:String, required:true},
+    amenagement : {type:Array, required:true},
     subtitle : {type:String, required:true},
     description : {type:String, required:true},
     images : [{type:String, required:true}],

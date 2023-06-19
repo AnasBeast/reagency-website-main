@@ -190,7 +190,7 @@
                             
                                     <div class="flex gap-4 flex-col items-start my-4" id="style">
                                         <div class="flex items-center">
-                                            <input id="style-option-1" type="radio" name="style" value="Contemporain" class="stylecheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="style-option-1" aria-describedby="style-option-1">
+                                            <input id="style-option-1" type="checkbox" name="style" value="Contemporain" class="stylecheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="style-option-1" aria-describedby="style-option-1">
                                             <label for="style-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
                                                 Contemporain
                                             </label>
@@ -224,7 +224,7 @@
                             
                                     <div class="flex gap-4 flex-col items-start my-4" id="atmosphere">
                                         <div class="flex items-center">
-                                            <input id="atmosphere-option-1" type="radio" name="atmosphere" value="Charme" class="atmcheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="atmosphere-option-1" aria-describedby="atmosphere-option-1">
+                                            <input id="atmosphere-option-1" type="checkbox" name="atmosphere" value="Charme" class="atmcheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="atmosphere-option-1" aria-describedby="atmosphere-option-1">
                                             <label for="atmosphere-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
                                                 Charme
                                             </label>
@@ -258,7 +258,7 @@
                             
                                     <div class="flex gap-4 flex-col items-start my-4" id="amenagement">
                                         <div class="flex items-center">
-                                            <input id="amenagement-option-1" type="radio" name="amenagement" value="Centre de fitness" class="amecheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="amenagement-option-1" aria-describedby="amenagement-option-1">
+                                            <input id="amenagement-option-1" type="checkbox" name="amenagement" value="Centre de fitness" class="amecheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="amenagement-option-1" aria-describedby="amenagement-option-1">
                                             <label for="amenagement-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
                                                 Centre de fitness
                                             </label>
@@ -474,8 +474,19 @@
             })          
         }
 
+        var styleFilters = []
         function styleFilter(e){
-            hotels = obj.filter((hotel)=>hotel.style.toUpperCase()==e.target.value.toUpperCase());
+            const index = styleFilters.indexOf(e.target.value)
+            if(index > -1){styleFilters.splice(index, 1)}else{styleFilters.push(e.target.value)}
+            console.log(styleFilters)
+            hotels=[]
+            for(let i=0;i<styleFilters.length;i++){
+                filter = styleFilters[i]
+                obj.forEach((hotel)=>{
+                    if(hotel.style.includes(filter)){hotels.push(hotel)}
+                })
+            }
+            // hotels = obj.filter((hotel)=>hotel.style.toUpperCase()==e.target.value.toUpperCase());
             hotels.length ==0 ? hotelsList.innerHTML=`<h1 class="text-2xl mb-4">0 hôtel(s) incontournable(s)</h1>` : hotelsList.innerHTML=``
             hotels.forEach((hotel) => {
                 const hotelItem = document.createElement("a");
@@ -490,8 +501,20 @@
                 hotelsList.appendChild(hotelItem);
             })          
         }
+
+        var atmFilters = []
         function atmFilter(e){
-            hotels = obj.filter((hotel)=>hotel.atmosphere.toUpperCase()==e.target.value.toUpperCase());
+            const index = atmFilters.indexOf(e.target.value)
+            if(index > -1){atmFilters.splice(index, 1)}else{atmFilters.push(e.target.value)}
+            console.log(atmFilters)
+            hotels=[]
+            for(let i=0;i<atmFilters.length;i++){
+                filter = atmFilters[i]
+                obj.forEach((hotel)=>{
+                    if(hotel.atmosphere.includes(filter)){hotels.push(hotel)}
+                })
+            }
+            // hotels = obj.filter((hotel)=>hotel.atmosphere.toUpperCase()==e.target.value.toUpperCase());
             hotels.length ==0 ? hotelsList.innerHTML=`<h1 class="text-2xl mb-4">0 hôtel(s) incontournable(s)</h1>` : hotelsList.innerHTML=``
             hotels.forEach((hotel) => {
                 const hotelItem = document.createElement("a");
@@ -506,8 +529,20 @@
                 hotelsList.appendChild(hotelItem);
             })  
         }
+
+        var ameFilters = []
         function ameFilter(e){
-            hotels = obj.filter((hotel)=>hotel.amenagement.toUpperCase()==e.target.value.toUpperCase());
+            const index = ameFilters.indexOf(e.target.value)
+            if(index > -1){ameFilters.splice(index, 1)}else{ameFilters.push(e.target.value)}
+            console.log(ameFilters)
+            hotels=[]
+            for(let i=0;i<ameFilters.length;i++){
+                filter = ameFilters[i]
+                obj.forEach((hotel)=>{
+                    if(hotel.amenagement.includes(filter)){hotels.push(hotel)}
+                })
+            }
+            // hotels = obj.filter((hotel)=>hotel.amenagement.toUpperCase()==e.target.value.toUpperCase());
             hotels.length ==0 ? hotelsList.innerHTML=`<h1 class="text-2xl mb-4">0 hôtel(s) incontournable(s)</h1>` : hotelsList.innerHTML=``
             hotels.forEach((hotel) => {
                 const hotelItem = document.createElement("a");
@@ -649,7 +684,7 @@
             styleItem = document.createElement("div")
             styleItem.classList = "flex items-center"
             styleItem.innerHTML=`
-            <input id="style-option-${i+1}" type="radio" name="style" value="${styleList[i]}" class="stylecheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="style-option-1" aria-describedby="style-option-1" >
+            <input id="style-option-${i+1}" type="checkbox" name="style" value="${styleList[i]}" class="stylecheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="style-option-1" aria-describedby="style-option-1" >
             <label for="style-option-${i+1}" class="text-sm font-medium text-gray-900 ml-2 block">
                 ${styleList[i]}
             </label>
@@ -663,7 +698,7 @@
             atmosphereItem = document.createElement("div")
             atmosphereItem.classList = "flex items-center"
             atmosphereItem.innerHTML=`
-            <input id="atmosphere-option-${i+1}" type="radio" name="atmosphere" value="${atmosphereList[i]}" class="atmcheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="atmosphere-option-1" aria-describedby="atmosphere-option-1" >
+            <input id="atmosphere-option-${i+1}" type="checkbox" name="atmosphere" value="${atmosphereList[i]}" class="atmcheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="atmosphere-option-1" aria-describedby="atmosphere-option-1" >
             <label for="atmosphere-option-${i+1}" class="text-sm font-medium text-gray-900 ml-2 block">
             ${atmosphereList[i]}
             </label>
@@ -677,7 +712,7 @@
             amenagementItem = document.createElement("div")
             amenagementItem.classList = "flex items-center"
             amenagementItem.innerHTML=`
-            <input id="amenagement-option-${i+1}" type="radio" name="amenagement" value="${amenagementList[i]}" class="amecheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="amenagement-option-1" aria-describedby="amenagement-option-1" >
+            <input id="amenagement-option-${i+1}" type="checkbox" name="amenagement" value="${amenagementList[i]}" class="amecheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="amenagement-option-1" aria-describedby="amenagement-option-1" >
             <label for="amenagement-option-${i+1}" class="text-sm font-medium text-gray-900 ml-2 block">
             ${amenagementList[i]}
             </label>
