@@ -359,7 +359,7 @@ var continents = [
         destinations : "ALLEMAGNE · AUTRICHE · BELGIQUE DANEMARK · ESPAGNE · FRANCE · GRÈCE  HONGRIE · IRLANDE · ITALIE · MONACO · MONTÉNÉGRO PAYS-BAS · POLOGNE · PORTUGAL · RÉPUBLIQUE TCHÈQUE ROYAUME-UNI · RUSSIE · SUÈDE · SUISSE · TURQUIE",
         top: "L’Europe ne manque pas de magnifiques hôtels, mais il en existe qui laisseraient même les voyageurs les plus blasés un peu émerveillés. Il y a bien sûr le Ritz Paris, où Coco Chanel et Marcel Proust ont résidé des années. Ensuite, il y a les chics boutiques-hôtels de Santorin, où les vues sur la mer Égée sont des plus exquises.",
         image : "./src/img/europe.jpg",
-        slide:"Arabie Saoudite Emirats arabes unis Dubai Oman Qatar",
+        slide:"Arabie-Saoudite-Emirats-arabes-unis-Dubai-Oman-Qatar",
         address : "Moyen Orient",
         slidebg : "./src/img/qatar2.png",
         hotels:[
@@ -391,7 +391,7 @@ var continents = [
         destinations : "AFRIQUE DU SUD · MAROC · RWANDA · ZOMBIE",
         top: "L'Afrique regorge de superbes hôtels qui sauront émerveiller même les voyageurs les plus exigeants. Parmi eux, on trouve l'emblématique Royal Mansour à Marrakech, au Maroc, un véritable palais où l'opulence et le raffinement se rencontrent dans un cadre enchanteur. Ensuite, il y a les luxueux lodges de safari en Afrique de l'Est, tels que le Singita Grumeti en Tanzanie, offrant une expérience unique de proximité avec la faune sauvage africaine dans un cadre spectaculaire.",
         image : "./src/img/afrique.jpg",
-        slide:"Allemagne Belgique France Portugal",
+        slide:"Allemagne-Belgique-France-Portugal",
         address : "Europe",
         slidebg : "./src/img/londres.png",
         hotels:[
@@ -423,7 +423,7 @@ var continents = [
         destinations : "COMBODGE · CHINE · HONG KONG · INDE · INDONESIE · JAPON · LAOS · MALAISIE · MYANMAR · PHILIPPINES · SINGAPOUR · SRI LANKA · THAILANDE · VIETNAM",
         top: "L'Asie regorge de somptueux hôtels qui émerveilleront même les voyageurs les plus exigeants. Parmi eux, on retrouve l'emblématique Marina Bay Sands à Singapour, une merveille architecturale offrant une vue imprenable sur la ville depuis sa piscine à débordement située au sommet des tours. ",
         image : "./src/img/asie.jpg",
-        slide:"Australie Polynésie de française",
+        slide:"Australie-Polynésie de française",
         address : "Océanie",
         slidebg : "./src/img/oceanie.jpg",
         hotels:[
@@ -455,7 +455,7 @@ var continents = [
         destinations : "COMBODGE · CHINE · HONG KONG · INDE · INDONESIE · JAPON · LAOS · MALAISIE · MYANMAR · PHILIPPINES · SINGAPOUR · SRI LANKA · THAILANDE · VIETNAM",
         top: "L'océan Indien abrite de somptueux hôtels qui invitent les voyageurs à plonger dans un véritable paradis tropical. Parmi eux, on retrouve le légendaire Four Seasons Resort Maldives at Kuda Huraa, où vous pourrez vous détendre dans des villas luxueuses surplombant les eaux turquoises des Maldives. ",
         image : "./src/img/maldives.png",
-        slide:"Arabie Saoudite Emirats arabes unis Dubai Oman Qatar",
+        slide:"Arabie-Saoudite-Emirats arabes unis-Dubai-Oman-Qatar",
         address : "Moyen Orient",
         slidebg : "./src/img/qatar2.png",
         hotels:[
@@ -487,7 +487,7 @@ var continents = [
         destinations : "AUSTRALIE · POLYNESIE FRANCAISE",
         top: "L'Océan Pacifique regorge de magnifiques hôtels qui séduisent les voyageurs en quête de paradis tropical. Parmi eux, on retrouve l'emblématique St. Regis Bora Bora Resort en Polynésie française, où des bungalows sur pilotis vous offrent une expérience de luxe ultime, avec des eaux cristallines et des récifs coralliens colorés à votre porte.",
         image : "./src/img/oceanie.jpg",
-        slide:"Allemagne Belgique France Portugal",
+        slide:"Allemagne-Belgique-France-Portugal",
         address : "Europe",
         slidebg : "./src/img/londres.png",
         hotels:[
@@ -519,7 +519,7 @@ var continents = [
         destinations : "ANGUILLA · ILES TURKS ET CAIQUES · PORTO RICO · REPUBLIQUE DOMINICAINE · SAINT-BARTHELEMY · ST VINCENT ET GRENADINES",
         top: "Les Caraïbes regorgent de magnifiques hôtels qui séduisent les voyageurs du monde entier grâce à leur charme tropical et leur atmosphère enchanteresse. Parmi eux, on trouve le célèbre Sandy Lane à la Barbade, un paradis luxueux niché sur une plage de sable blanc immaculée et entouré de jardins tropicaux luxuriants. ",
         image : "./src/img/caraibes.jpg",
-        slide:"Allemagne Belgique France Portugal",
+        slide:"Allemagne-Belgique-France-Portugal",
         address : "Europe",
         slidebg : "./src/img/londres.png",
         hotels:[
@@ -551,7 +551,7 @@ var continents = [
         destinations : "COSTA RICA",
         top: "L'Amérique centrale regorge de magnifiques hôtels qui promettent de charmer les voyageurs les plus exigeants et de leur offrir des expériences luxueuses. Parmi eux, on trouve le légendaire Hotel El Convento à San Juan, Porto Rico, qui allie histoire et élégance dans un cadre enchanteur.",
         image : "./src/img/caraibes.jpg",
-        slide:"Laos Japon Malaisie Sri Lanka",
+        slide:"Laos-Japon-Malaisie-Sri Lanka",
         address : "Asie",
         slidebg : "./src/img/asie.jpg",
         hotels:[
@@ -583,7 +583,7 @@ var continents = [
         destinations : "CANADA · ETATS-UNIS · MEXIQUE",
         top: "L'Amérique du Nord regorge de magnifiques hôtels qui séduisent les voyageurs les plus exigeants et leur offrent des expériences luxueuses. Parmi eux, on trouve l'emblématique The Plaza à New York, un symbole intemporel du glamour et du raffinement, où des personnalités du monde entier ont séjourné.",
         image : "./src/img/canada.jpg",
-        slide:"Arabie Saoudite Emirats arabes unis Dubai Oman Qatar",
+        slide:"Arabie Saoudite-Emirats arabes unis-Dubai-Oman-Qatar",
         address : "Moyen Orient",
         slidebg : "./src/img/qatar2.png",
         hotels:[
@@ -615,7 +615,7 @@ var continents = [
         destinations : "ARGENTINE · BRESIL · COLOMBIE · PEROU",
         top: "L'Amérique du Sud regorge de joyaux hôteliers qui charment les voyageurs les plus exigeants et leur offrent des expériences inoubliables. Parmi eux, on retrouve l'emblématique Copacabana Palace à Rio de Janeiro, qui allie glamour et sophistication au cœur de la vibrante Cidade Maravilhosa.",
         image : "./src/img/colombie.jpg",
-        slide:"Australie Polynésie de française",
+        slide:"Australie-Polynésie de française",
         address : "Océanie",
         slidebg : "./src/img/oceanie.jpg",
         hotels:[
@@ -647,7 +647,7 @@ var continents = [
         destinations : "ARABIE SAOUDITE · EMIRATES ARABES UNIS · DUBAI · OMAN · QATAR",
         top: "Le Moyen-Orient regorge de joyaux hôteliers qui séduisent les voyageurs les plus exigeants grâce à leur opulence et leur hospitalité légendaires. Parmi eux, on trouve le luxueux Burj Al Arab à Dubaï, une icône architecturale en forme de voile qui surplombe la mer d'Arabie et offre des intérieurs somptueux et des vues à couper le souffle.",
         image : "./src/img/qatar.jpg",
-        slide:"Allemagne Belgique France Portugal",
+        slide:"Allemagne-Belgique-France-Portugal",
         address : "Europe",
         slidebg : "./src/img/londres.png",
         hotels:[
