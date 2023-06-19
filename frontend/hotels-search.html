@@ -240,7 +240,7 @@
                 var sParameterName = sURLVariables[i].split('=');
                 if (sParameterName[0] == sParam) 
                 {
-                    return sParameterName[1].replace(/%20/g, " ");
+                    return sParameterName[1].replace(/%20/g, " ").toUpperCase();
                 }
             }
         }
@@ -251,16 +251,16 @@
         } */
         const landing = document.getElementById("landing")
         const dests = {
-            "Europe":["Allemagne","Autriche","Belgique","Danemark","Espagne","France","Grece","Hongrie","Irlande","Italie","Monaco","Montenegro","Pays Bas","Pologne","Portugal","Republique tcheque","Royaume Uni","Russie","Suede","Suisse","Turquie"],
-            "MoyenOrient":["Arabie saoudite","Emirats arabes unis","Dubai","Oman","Qatar"],
-            "OcéanIndien":["Maldives","Maurice","Seychelles"],
-            "Océanie":["Australie","Polynesie francaise"],
-            "Afrique":["Afrique du sud","Maroc","Rwanda","Zombie"],
-            "AmeriqueCentrale":["Costa rica"],
-            "AmeriqueduNord":["Canada","Etats-Unis","Mexique"],
-            "AmeriqueduSud":["Argentine","Bresil","Colombie","Perou"],
-            "Asie":["Combodge","Chine","Hong kong","Inde","Indonesie","Japon","Laos","Malaisie","Myanmar","Philippines","Singapour","Sri lanka","Thailande","Vietnam"],
-            "Caraibes":["Anguilla","Iles turks et caiques","Porto rico","Republique dominicaine","Saint-Barthelemy","St-vincent et grenadines"]
+            "Europe":['ALLEMAGNE', 'AUTRICHE', 'BELGIQUE', 'DANEMARK', 'ESPAGNE', 'FRANCE', 'GRECE', 'HONGRIE', 'IRLANDE', 'ITALIE', 'MONACO', 'MONTENEGRO', 'PAYS BAS', 'POLOGNE', 'PORTUGAL', 'REPUBLIQUE TCHEQUE', 'ROYAUME UNI', 'RUSSIE', 'SUEDE', 'SUISSE', 'TURQUIE'],
+            "MoyenOrient":['ARABIE SAOUDITE', 'EMIRATS ARABES UNIS', 'DUBAI', 'OMAN', 'QATAR'],
+            "OcéanIndien":['MALDIVES', 'MAURICE', 'SEYCHELLES'],
+            "Océanie":['AUSTRALIE', 'POLYNESIE FRANCAISE'],
+            "Afrique":['AFRIQUE DU SUD', 'MAROC', 'RWANDA', 'ZOMBIE'],
+            "AmeriqueCentrale":['COSTA RICA'],
+            "AmeriqueduNord":['CANADA', 'ETATS-UNIS', 'MEXIQUE'],
+            "AmeriqueduSud":['ARGENTINE', 'BRESIL', 'COLOMBIE', 'PEROU'],
+            "Asie":['COMBODGE', 'CHINE', 'HONG KONG', 'INDE', 'INDONESIE', 'JAPON', 'LAOS', 'MALAISIE', 'MYANMAR', 'PHILIPPINES', 'SINGAPOUR', 'SRI LANKA', 'THAILANDE', 'VIETNAM'],
+            "Caraibes":['ANGUILLA', 'ILES TURKS ET CAIQUES', 'PORTO RICO', 'REPUBLIQUE DOMINICAINE', 'SAINT-BARTHELEMY', 'ST-VINCENT ET GRENADINES']
         }
         if(dests.Europe.includes(Pageid)){landing.style.backgroundImage=`url("./src/img/europe.jpg")`}
         if(dests.MoyenOrient.includes(Pageid)){landing.style.backgroundImage=`url("./src/img/qatar.jpg")`}
@@ -318,5 +318,6 @@
         searchBtn.addEventListener("click",redirectSearch)
         searchHotels()
     </script>
+
 </body>
 </html>

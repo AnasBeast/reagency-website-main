@@ -318,7 +318,7 @@
 
         // div list
         const hotelsList = document.getElementById("list");
-        continent.hotels.forEach((hotel) => {
+        /* continent.hotels.forEach((hotel) => {
             const hotelItem = document.createElement("a");
             hotelItem.classList.add("element");
             hotelItem.href=`/hotel-deatils.html?id=${hotel.id}`;
@@ -330,8 +330,41 @@
             </div>
             <button>RÉSERVER</button>`;
             hotelsList.appendChild(hotelItem);
-        })
+        }) */
 
+        async function displayHotels(){
+            await fetch(`${backendURL}/api/todos`)
+                .then((response) => response.json())
+                .then(({hotels}) => {
+                    obj = hotels
+                    hotelsToDisplay = hotels.filter(hotel=>hotel.region.toUpperCase()==Pageid.toUpperCase())
+                    console.log(hotelsToDisplay)
+                    hotelsToDisplay.forEach((hotel) => {
+                        const hotelItem = document.createElement("a");
+                        hotelItem.classList.add("element");
+                        hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                        hotelItem.innerHTML = `
+                        <div>
+                            <div id="background" style="background-image : url(${hotel.images[0]})"></div>
+                            <h3>${hotel.name}</h3>
+                            <h4>${hotel.region}</h4>
+                        </div>
+                        <button>RÉSERVER</button>`;
+                        hotelsList.appendChild(hotelItem);
+                    })
+                });
+        }
+        displayHotels()
     </script>
+    <script>
+		//SEARCH
+		const searchBtn = document.querySelector("#searchBtn");
+        const searchText = document.querySelector("#search-text");
+
+		function redirectSearch(){
+			window.location.href = `hotels-search.html?country=${searchText.value}`
+		}
+		searchBtn.addEventListener("click",redirectSearch)
+	</script>
 </body>
 </html>
