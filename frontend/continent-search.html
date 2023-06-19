@@ -79,11 +79,17 @@
         <div id="landing">
             <img src="src/img/hotels/hotel-2.png" alt="" id="backgroundImg" class="background w-full">
             <img id="logo" src="src/img/logo-blanc.png" alt="Logo">
-
             <div id="text">
-                
+                <h1 id="region"></h1>
             </div>
+            <div id="input-wrapper">
+				<div id="input">
+					<img style="display: block" src="src/img/search.png" alt="Search" id="search">
+					<input type="text" id="search-text" placeholder="recherchez un hotel , une destination">
+				</div>
 
+				<button id="searchBtn">Recherche</button>
+			</div>
         </div>
 
         <div id="list-wrapper">
@@ -251,12 +257,15 @@
                 var sParameterName = sURLVariables[i].split('=');
                 if (sParameterName[0] == sParam) 
                 {
-                    return sParameterName[1];
+                    return sParameterName[1].replace(/%20/g, " ");
                 }
             }
         }
         var Pageid = GetUrlParameter("continent")
-        
+        for (var i = 0; i < Pageid.length; i++) 
+        {
+            if(Pageid[i]=="-"){Pageid=Pageid.substring(0,i) + " " + Pageid.substring(i+1);}
+        }
 
         function GetHotelToDisplay(Pageid)
         {        
@@ -275,9 +284,10 @@
         const roomsSelection = document.getElementById("selection-chambres");
         landing.src=continent.image;
         // div TEXT
-        const text = document.getElementById("text");
+        const text = document.getElementById("region");
         const textTop = document.getElementById("top");
         const textBottom = document.getElementById("bottom");
+        text.textContent=continent.continent
         textTop.innerHTML=
         `       <h1>Hôtel de luxe en ${continent.continent}</h1>
                 <p class="content-description">
@@ -292,14 +302,16 @@
         `;
         roomsSelection.innerHTML=
         `   <div id="title">
-                <h1>Nos destinations préférées en ${continent.continent}</h1>
+                <h1>Des idées de destinations</h1>
+                <h1>Par continent</h1>
             </div>
             
             <div id="seperation"></div>
+            <div id="gradient"></div>
 
             <div id="main">
-                <p>${continent.slide}</p>
                 <h1>${continent.address}</h1>
+                <p>${continent.slide}</p>
             </div>
         `;
         roomsSelection.style.backgroundImage = `url(${continent.slidebg})`

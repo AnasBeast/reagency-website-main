@@ -199,6 +199,7 @@ nav #menu div {
 #main h1{
   font-size: 70px;
   margin: 0;
+  position: relative;
 }
 #main h4{
   font-size: 30px;
@@ -206,6 +207,7 @@ nav #menu div {
 }
 #main p{
   font-size: 30px;
+  position: relative;
 }
 
 #content #options {
@@ -291,7 +293,7 @@ nav #menu div {
   background: linear-gradient(0deg, #021033 -25%, rgba(0, 212, 255, 0) 100%);
 }
 #content #landing #input-wrapper {
-  top: calc(120vh - 30px);
+  top: 95%;
 }
 
 #content #landing #gradient {
@@ -342,6 +344,7 @@ nav #menu div {
   z-index: 996;
   margin: 0;
   max-width: 60%;
+  font-size: 6em;
   text-align: center;
 }
 

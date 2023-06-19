@@ -358,10 +358,10 @@ var continents = [
         description : "Que ce soit pour ses cités intemporelles telles que Paris et Venise ou ses destinations hors des sentiers battus, comme le Monténégro et la vallée du Douro, l'Europe est toujours synonyme de vacances réussies. Et nous sommes impatients de partager avec vous nos hôtels préférés sur l’ensemble du continent, des châteaux médiévaux de la campagne irlandaise aux stations de ski ultra-exclusives des Alpes suisses.",
         destinations : "ALLEMAGNE · AUTRICHE · BELGIQUE DANEMARK · ESPAGNE · FRANCE · GRÈCE  HONGRIE · IRLANDE · ITALIE · MONACO · MONTÉNÉGRO PAYS-BAS · POLOGNE · PORTUGAL · RÉPUBLIQUE TCHÈQUE ROYAUME-UNI · RUSSIE · SUÈDE · SUISSE · TURQUIE",
         top: "L’Europe ne manque pas de magnifiques hôtels, mais il en existe qui laisseraient même les voyageurs les plus blasés un peu émerveillés. Il y a bien sûr le Ritz Paris, où Coco Chanel et Marcel Proust ont résidé des années. Ensuite, il y a les chics boutiques-hôtels de Santorin, où les vues sur la mer Égée sont des plus exquises.",
-        image : "./src/img/hotels/hotel-2.png",
-        slide:"Il y a beaucoup de chose que l'on aime en Europe, mais'des villes comme Londres et Paris, avec leur art, leur architecture, leurs musées et leurs espaces culturels-pourraient bien être nos endroits-préférés",
-        address : "Londres, Royaume-Uni",
-        slidebg : "./src/img/view.png",
+        image : "./src/img/europe.jpg",
+        slide:"Arabie Saoudite Emirats arabes unis Dubai Oman Qatar",
+        address : "Moyen Orient",
+        slidebg : "./src/img/qatar2.png",
         hotels:[
             {
                 name:"Ham Yard Hotel",
@@ -390,9 +390,9 @@ var continents = [
         description : "L'Afrique, avec sa diversité culturelle et ses paysages époustouflants, offre une expérience de voyage unique et enrichissante. Que vous soyez attiré par les merveilles naturelles de la réserve de Masai Mara au Kenya, les plages immaculées de Zanzibar en Tanzanie ou les majestueuses pyramides d'Égypte, l'Afrique a tant à offrir aux amateurs de luxe. Nous sommes ravis de vous présenter nos choix d'hôtels de luxe à travers le continent africain, des lodges de safari exclusifs en Afrique du Sud aux riads luxueux nichés au cœur des médinas historiques du Maroc. Plongez dans une expérience inoubliable, mêlant hospitalité raffinée, services de classe mondiale et découverte des richesses culturelles de l'Afrique.",
         destinations : "AFRIQUE DU SUD · MAROC · RWANDA · ZOMBIE",
         top: "L'Afrique regorge de superbes hôtels qui sauront émerveiller même les voyageurs les plus exigeants. Parmi eux, on trouve l'emblématique Royal Mansour à Marrakech, au Maroc, un véritable palais où l'opulence et le raffinement se rencontrent dans un cadre enchanteur. Ensuite, il y a les luxueux lodges de safari en Afrique de l'Est, tels que le Singita Grumeti en Tanzanie, offrant une expérience unique de proximité avec la faune sauvage africaine dans un cadre spectaculaire.",
-        image : "./src/img/sidibou.jpg",
-        slide:"Il y a beaucoup de chose que l'on aime en Afrique, mais'des villes comme Rwanda et Maroc, avec leur art, leur architecture, leurs musées et leurs espaces culturels-pourraient bien être nos endroits-préférés",
-        address : "Londres, Royaume-Uni",
+        image : "./src/img/afrique.jpg",
+        slide:"Allemagne Belgique France Portugal",
+        address : "Europe",
         slidebg : "./src/img/view.png",
         hotels:[
             {
@@ -423,9 +423,9 @@ var continents = [
         destinations : "COMBODGE · CHINE · HONG KONG · INDE · INDONESIE · JAPON · LAOS · MALAISIE · MYANMAR · PHILIPPINES · SINGAPOUR · SRI LANKA · THAILANDE · VIETNAM",
         top: "L'Asie regorge de somptueux hôtels qui émerveilleront même les voyageurs les plus exigeants. Parmi eux, on retrouve l'emblématique Marina Bay Sands à Singapour, une merveille architecturale offrant une vue imprenable sur la ville depuis sa piscine à débordement située au sommet des tours. ",
         image : "./src/img/asie.jpg",
-        slide:"Il y a beaucoup de chose que l'on aime en Asie, mais'des villes comme Japon et Thailande, avec leur art, leur architecture, leurs musées et leurs espaces culturels-pourraient bien être nos endroits-préférés",
-        address : "Londres, Royaume-Uni",
-        slidebg : "./src/img/view.png",
+        slide:"Australie Polynésie de française",
+        address : "Océanie",
+        slidebg : "./src/img/oceanie.jpg",
         hotels:[
             {
                 name:"Ham Yard Hotel",
@@ -455,9 +455,9 @@ var continents = [
         destinations : "COMBODGE · CHINE · HONG KONG · INDE · INDONESIE · JAPON · LAOS · MALAISIE · MYANMAR · PHILIPPINES · SINGAPOUR · SRI LANKA · THAILANDE · VIETNAM",
         top: "L'océan Indien abrite de somptueux hôtels qui invitent les voyageurs à plonger dans un véritable paradis tropical. Parmi eux, on retrouve le légendaire Four Seasons Resort Maldives at Kuda Huraa, où vous pourrez vous détendre dans des villas luxueuses surplombant les eaux turquoises des Maldives. ",
         image : "./src/img/maldives.png",
-        slide:"Il y a beaucoup de chose que l'on aime en l'Océan Indien, mais'des villes comme Maldives et Maurice, avec leur art, leur architecture, leurs musées et leurs espaces culturels-pourraient bien être nos endroits-préférés",
-        address : "Londres, Royaume-Uni",
-        slidebg : "./src/img/view.png",
+        slide:"Arabie Saoudite Emirats arabes unis Dubai Oman Qatar",
+        address : "Moyen Orient",
+        slidebg : "./src/img/qatar2.png",
         hotels:[
             {
                 name:"Ham Yard Hotel",
@@ -487,8 +487,8 @@ var continents = [
         destinations : "AUSTRALIE · POLYNESIE FRANCAISE",
         top: "L'Océan Pacifique regorge de magnifiques hôtels qui séduisent les voyageurs en quête de paradis tropical. Parmi eux, on retrouve l'emblématique St. Regis Bora Bora Resort en Polynésie française, où des bungalows sur pilotis vous offrent une expérience de luxe ultime, avec des eaux cristallines et des récifs coralliens colorés à votre porte.",
         image : "./src/img/oceanie.jpg",
-        slide:"Il y a beaucoup de chose que l'on aime en Océanie, mais'des villes comme Australie et Polynésie française, avec leur art, leur architecture, leurs musées et leurs espaces culturels-pourraient bien être nos endroits-préférés",
-        address : "Londres, Royaume-Uni",
+        slide:"Allemagne Belgique France Portugal",
+        address : "Europe",
         slidebg : "./src/img/view.png",
         hotels:[
             {
@@ -519,8 +519,8 @@ var continents = [
         destinations : "ANGUILLA · ILES TURKS ET CAIQUES · PORTO RICO · REPUBLIQUE DOMINICAINE · SAINT-BARTHELEMY · ST VINCENT ET GRENADINES",
         top: "Les Caraïbes regorgent de magnifiques hôtels qui séduisent les voyageurs du monde entier grâce à leur charme tropical et leur atmosphère enchanteresse. Parmi eux, on trouve le célèbre Sandy Lane à la Barbade, un paradis luxueux niché sur une plage de sable blanc immaculée et entouré de jardins tropicaux luxuriants. ",
         image : "./src/img/caraibes.jpg",
-        slide:"Il y a beaucoup de chose que l'on aime en Caraïbes, mais'des villes comme Anguilla et Porto Rico, avec leur art, leur architecture, leurs musées et leurs espaces culturels-pourraient bien être nos endroits-préférés",
-        address : "Londres, Royaume-Uni",
+        slide:"Allemagne Belgique France Portugal",
+        address : "Europe",
         slidebg : "./src/img/view.png",
         hotels:[
             {
@@ -546,14 +546,14 @@ var continents = [
         ]
     },
     { 
-        continent : "Amérique centrale",
+        continent : "Amerique centrale",
         description : "L'Amérique centrale, une région dynamique et culturellement riche, offre une multitude d'expériences luxueuses pour les voyageurs avides de découvertes. Que vous souhaitiez explorer les anciennes cités mayas du Guatemala, vous détendre sur les plages immaculées du Belize ou vous aventurer dans les forêts tropicales du Costa Rica, l'Amérique centrale regorge de trésors naturels et culturels à explorer. Nous sommes ravis de vous présenter notre sélection d'hôtels de luxe à travers cette région captivante, des lodges écologiques au cœur de la jungle aux complexes balnéaires luxueux en bord de mer. Immergez-vous dans une expérience de voyage exclusive, alliant confort, authenticité et hospitalité chaleureuse, et découvrez la diversité des paysages, des traditions et des saveurs de l'Amérique centrale. Que vous soyez passionné par l'aventure, la détente ou l'exploration culturelle, l'Amérique centrale vous promet des moments inoubliables et une escapade luxueuse dans un cadre enchanteur.",
         destinations : "COSTA RICA",
         top: "L'Amérique centrale regorge de magnifiques hôtels qui promettent de charmer les voyageurs les plus exigeants et de leur offrir des expériences luxueuses. Parmi eux, on trouve le légendaire Hotel El Convento à San Juan, Porto Rico, qui allie histoire et élégance dans un cadre enchanteur.",
         image : "./src/img/caraibes.jpg",
-        slide:"Il y a beaucoup de chose que l'on aime en Amérique centrale, mais'des villes comme Costa Rica, avec leur art, leur architecture, leurs musées et leurs espaces culturels-pourraient bien être nos endroits-préférés",
-        address : "Londres, Royaume-Uni",
-        slidebg : "./src/img/view.png",
+        slide:"Laos Japon Malaisie Sri Lanka",
+        address : "Asie",
+        slidebg : "./src/img/asie.jpg",
         hotels:[
             {
                 name:"Ham Yard Hotel",
@@ -578,14 +578,14 @@ var continents = [
         ]
     },
     { 
-        continent : "Amérique du Nord",
+        continent : "Amerique du Nord",
         description : "L'Amérique du Nord, un continent aux multiples visages, offre une pléthore d'expériences luxueuses pour les voyageurs en quête de découvertes et de confort. Que vous soyez attiré par les gratte-ciel étincelants de New York, les paysages grandioses des Rocheuses canadiennes ou les plages ensoleillées de la Californie, l'Amérique du Nord regorge de destinations emblématiques et de trésors cachés. Nous sommes enchantés de vous présenter notre sélection d'hôtels de luxe à travers ce vaste territoire, des hôtels de renommée mondiale au cœur des grandes villes aux lodges isolés dans les régions sauvages. Plongez dans une expérience raffinée où le confort, l'exclusivité et le service impeccable se combinent pour créer des souvenirs inoubliables. Que vous cherchiez à vivre une vie urbaine trépidante, à vous reconnecter avec la nature ou à vous détendre dans des stations balnéaires de renom, l'Amérique du Nord vous offre une escapade luxueuse qui répondra à toutes vos attentes.",
         destinations : "CANADA · ETATS-UNIS · MEXIQUE",
         top: "L'Amérique du Nord regorge de magnifiques hôtels qui séduisent les voyageurs les plus exigeants et leur offrent des expériences luxueuses. Parmi eux, on trouve l'emblématique The Plaza à New York, un symbole intemporel du glamour et du raffinement, où des personnalités du monde entier ont séjourné.",
         image : "./src/img/canada.jpg",
-        slide:"Il y a beaucoup de chose que l'on aime en Amérique du Nord, mais'des villes comme Canada et Etats-Unis, avec leur art, leur architecture, leurs musées et leurs espaces culturels-pourraient bien être nos endroits-préférés",
-        address : "Londres, Royaume-Uni",
-        slidebg : "./src/img/view.png",
+        slide:"Arabie Saoudite Emirats arabes unis Dubai Oman Qatar",
+        address : "Moyen Orient",
+        slidebg : "./src/img/qatar2.png",
         hotels:[
             {
                 name:"Ham Yard Hotel",
@@ -610,14 +610,14 @@ var continents = [
         ]
     },
     { 
-        continent : "Amérique du Sud",
+        continent : "Amerique du Sud",
         description : "L'Amérique du Sud, un continent vibrant et diversifié, est une destination captivante pour les voyageurs en quête d'expériences luxueuses et d'aventures uniques. Que vous souhaitiez explorer les merveilles naturelles de la forêt amazonienne au Brésil, découvrir les sites historiques de la civilisation inca au Pérou ou vous détendre sur les plages paradisiaques de la côte caribéenne de la Colombie, l'Amérique du Sud regorge de trésors à découvrir. Nous sommes ravis de vous présenter notre sélection d'hôtels de luxe à travers ce continent envoûtant, des haciendas traditionnelles en Équateur aux resorts de luxe en Patagonie. Plongez dans une expérience de voyage exclusive, alliant confort, élégance et hospitalité chaleureuse, et laissez-vous séduire par la beauté époustouflante des paysages, la richesse culturelle et la passion vibrante de l'Amérique du Sud. Que vous soyez attiré par l'aventure, la gastronomie ou l'exploration des sites historiques, l'Amérique du Sud est prête à vous offrir une escapade luxueuse qui comblera tous vos désirs. Que vous cherchiez à vivre une vie urbaine trépidante, à vous reconnecter avec la nature ou à vous détendre dans des stations balnéaires de renom, l'Amérique du Nord vous offre une escapade luxueuse qui répondra à toutes vos attentes.",
         destinations : "ARGENTINE · BRESIL · COLOMBIE · PEROU",
         top: "L'Amérique du Sud regorge de joyaux hôteliers qui charment les voyageurs les plus exigeants et leur offrent des expériences inoubliables. Parmi eux, on retrouve l'emblématique Copacabana Palace à Rio de Janeiro, qui allie glamour et sophistication au cœur de la vibrante Cidade Maravilhosa.",
         image : "./src/img/colombie.jpg",
-        slide:"Il y a beaucoup de chose que l'on aime en Amérique du Sud, mais'des villes comme Bresil et Argentine, avec leur art, leur architecture, leurs musées et leurs espaces culturels-pourraient bien être nos endroits-préférés",
-        address : "Londres, Royaume-Uni",
-        slidebg : "./src/img/view.png",
+        slide:"Australie Polynésie de française",
+        address : "Océanie",
+        slidebg : "./src/img/oceanie.jpg",
         hotels:[
             {
                 name:"Ham Yard Hotel",
@@ -647,8 +647,8 @@ var continents = [
         destinations : "ARABIE SAOUDITE · EMIRATES ARABES UNIS · DUBAI · OMAN · QATAR",
         top: "Le Moyen-Orient regorge de joyaux hôteliers qui séduisent les voyageurs les plus exigeants grâce à leur opulence et leur hospitalité légendaires. Parmi eux, on trouve le luxueux Burj Al Arab à Dubaï, une icône architecturale en forme de voile qui surplombe la mer d'Arabie et offre des intérieurs somptueux et des vues à couper le souffle.",
         image : "./src/img/qatar.jpg",
-        slide:"Il y a beaucoup de chose que l'on aime en Moyen Orient, mais'des villes comme Qatar et Dubai, avec leur art, leur architecture, leurs musées et leurs espaces culturels-pourraient bien être nos endroits-préférés",
-        address : "Londres, Royaume-Uni",
+        slide:"Allemagne Belgique France Portugal",
+        address : "Europe",
         slidebg : "./src/img/view.png",
         hotels:[
             {
