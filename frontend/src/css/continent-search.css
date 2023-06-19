@@ -263,7 +263,7 @@ nav #menu div {
 }
 
 #content #options #wrapper .element:first-child #background {
-  background-image: url("../img/hotels/hotel-1.png");
+  background-image: url("../img/card-img.jpg");
 }
 
 #content #options #wrapper .element:nth-child(2) #background {
@@ -480,7 +480,7 @@ nav #menu div {
   max-width: 75%;
 }
 #content #list-wrapper #list .element:first-child #background {
-  background-image: url("../img/hotels/hotel-1.png");
+  background-image: url("../img/hotels/card");
 }
 
 #content #list-wrapper #list .element:nth-child(2) #background {

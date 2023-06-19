@@ -393,7 +393,7 @@ var continents = [
         image : "./src/img/afrique.jpg",
         slide:"Allemagne Belgique France Portugal",
         address : "Europe",
-        slidebg : "./src/img/view.png",
+        slidebg : "./src/img/londres.png",
         hotels:[
             {
                 name:"Ham Yard Hotel",
@@ -489,7 +489,7 @@ var continents = [
         image : "./src/img/oceanie.jpg",
         slide:"Allemagne Belgique France Portugal",
         address : "Europe",
-        slidebg : "./src/img/view.png",
+        slidebg : "./src/img/londres.png",
         hotels:[
             {
                 name:"Ham Yard Hotel",
@@ -521,7 +521,7 @@ var continents = [
         image : "./src/img/caraibes.jpg",
         slide:"Allemagne Belgique France Portugal",
         address : "Europe",
-        slidebg : "./src/img/view.png",
+        slidebg : "./src/img/londres.png",
         hotels:[
             {
                 name:"Ham Yard Hotel",
@@ -649,7 +649,7 @@ var continents = [
         image : "./src/img/qatar.jpg",
         slide:"Allemagne Belgique France Portugal",
         address : "Europe",
-        slidebg : "./src/img/view.png",
+        slidebg : "./src/img/londres.png",
         hotels:[
             {
                 name:"Ham Yard Hotel",

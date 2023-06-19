@@ -884,4 +884,8 @@ footer #lower #socials img {
   #top ul {
     display: none !important;
   }
+  footer #upper {
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+}
 }
