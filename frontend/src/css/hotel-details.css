@@ -849,8 +849,8 @@ nav #menu div {
             flex-flow: row nowrap !important;
   }
   nav img {
-    margin-top: 13px !important;
     width: 200px !important;
+    margin-left: 0;
   }
   nav #gradient {
     height: 100px !important;

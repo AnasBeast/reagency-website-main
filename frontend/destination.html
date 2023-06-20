@@ -349,14 +349,16 @@
 
         const body = document.querySelector("body")
         const closeIcon = document.querySelector(".close-icon")
+        const reutrnBtn = document.querySelector(".return-btn")
         function showAfrique(el){
             if(el.classList.contains("d-none"))
             {
                 el.classList.remove("d-none"); 
                 el.classList.add("checked")
                 body.classList.add("overlay")
+                closeIcon.style.visibility = "visible"
                 closeIcon.style.opacity = 1
-            
+                reutrnBtn.style.zIndex = 200
             }
             else{
                 el.classList.add("d-none"); 
@@ -390,7 +392,7 @@
             listeOceanIndien.classList.remove("checked");
             listeOceanie.classList.remove("checked");
             body.classList.remove("overlay")
-            closeIcon.style.opacity = 0
+            closeIcon.style.visibility = "hidden"
         }
     </script>
 </body>
