@@ -620,6 +620,12 @@ nav #menu div {
   #mail #certif{
     width: 80% !important;
   }
+  #content #motto{
+    height: auto;
+  }
+  #mail #container{
+    top: 5% !important;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
