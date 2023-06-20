@@ -738,6 +738,7 @@ nav #menu div {
   }
   #content #landing #logo{
     margin: 0;
+    display: none;
   }
   #content #selection-chambres{
     margin-bottom: 0;
@@ -778,10 +779,10 @@ nav #menu div {
     width: 100%;
   }
   .background{
-    height: 40vh;
+    height: 400px;
   }
   #content #landing{
-    height: 40vh;
+    height: 400px;
   }
   #other-options{
     width: 90%;
@@ -800,6 +801,7 @@ nav #menu div {
   }
   #content #landing #text h1{
     max-width: fit-content;
+    font-size: 4em;
   }
   .newsletter div{
     flex-direction: column;

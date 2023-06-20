@@ -386,8 +386,14 @@ form button{
     font-size: 25px !important;
   }
   #contact-us-section{
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  #content #list-wrapper #top{
+    width: 100%;
+  }
+  #contact-us-section .container{
+    width: 100%;
   }
   #top div{
     flex-direction: column;

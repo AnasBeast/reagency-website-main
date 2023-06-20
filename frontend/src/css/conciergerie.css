@@ -384,6 +384,9 @@ form button{
     padding-left: 15%;
     padding-right: 15%;
   }
+  #content #list-wrapper{
+    margin-top: 150px;
+  }
 }
 
 @media only screen and (max-width: 460px) {
