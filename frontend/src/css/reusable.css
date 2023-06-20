@@ -890,4 +890,7 @@ footer #lower #socials img {
     margin: 0 auto;
     width: 70%;
   }
+  footer #lower #socials{
+    margin-right: 0;
+  }
 }
