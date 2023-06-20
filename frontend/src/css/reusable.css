@@ -397,7 +397,7 @@ nav #menu div {
 
 @media only screen and (max-width: 880px) {
   #input-wrapper {
-    top: 102.5% !important;
+    top: 86.5% !important;
   }
   #input-wrapper #input, #input-wrapper button {
     height: 45px !important;
