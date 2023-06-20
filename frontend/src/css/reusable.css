@@ -635,7 +635,6 @@ footer #upper {
 
 footer #upper img {
   width: 350px;
-  margin-left: 5px;
 }
 
 footer #upper ul {
@@ -679,15 +678,11 @@ footer #lower {
 }
 
 footer #lower div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
   color: #fff;
   height: 100%;
 }
@@ -890,5 +885,9 @@ footer #lower #socials img {
   footer #upper {
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
-}
+  }
+  footer #upper img{
+    margin: 0 auto;
+    width: 70%;
+  }
 }
