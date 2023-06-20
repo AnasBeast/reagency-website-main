@@ -521,8 +521,8 @@ nav #menu div {
     left: 10px;
   }
   #landing .titles h1 {
-    top: calc(25% - 25px);
-    font-size: 100px;
+    top: 30%;
+    font-size: 65px;
   }
   #landing .titles p {
     display: none;
@@ -616,6 +616,9 @@ nav #menu div {
   }
   #map {
     height: 400px !important;
+  }
+  #mail #certif{
+    width: 80% !important;
   }
 }
 

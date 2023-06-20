@@ -313,7 +313,7 @@ nav img {
   opacity: 0;
   position: fixed;
   z-index: 202;
-  width: 70px;
+  width: 30px;
   top: 3vh;
   right: 3vw;
 }
