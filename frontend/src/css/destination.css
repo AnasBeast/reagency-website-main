@@ -313,7 +313,7 @@ nav img {
   opacity: 0;
   position: fixed;
   z-index: 202;
-  width: 30px;
+  width: 35px;
   top: 3vh;
   right: 3vw;
 }
@@ -323,6 +323,7 @@ nav img {
   width: 35px;
   right: 3vw;
   cursor: pointer;
+  z-index: 250;
 }
 @media only screen and (max-width: 1050px) {
   #list-wrapper {
