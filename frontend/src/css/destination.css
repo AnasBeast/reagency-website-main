@@ -314,8 +314,8 @@ nav img {
   position: fixed;
   z-index: 202;
   width: 70px;
-  top: 10vh;
-  left: 0vw;
+  top: 3vh;
+  right: 3vw;
 }
 .return-btn{
   position: absolute;
