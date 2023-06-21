@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Meilleurs Hotels</title>
+    <title>Meilleurs Hotels en Europe</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -302,6 +302,7 @@
         const landing = document.getElementById("backgroundImg");
         const roomsSelection = document.getElementById("selection-chambres");
         landing.src=continent.image;
+        document.title = `Meilleurs Hotels en ${continent.continent}`
         // div TEXT
         const text = document.getElementById("region");
         const textTop = document.getElementById("top");

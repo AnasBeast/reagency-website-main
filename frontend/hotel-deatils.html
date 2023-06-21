@@ -547,6 +547,7 @@
                 .then((response) => response.json())
                 .then((res) => {
                     hotel = res 
+                    document.title = hotel.name
                     hotelPage(hotel)
                 });
         }
@@ -788,6 +789,16 @@
         displaySwiper();
         
     </script>
+    <script>
+		//SEARCH
+		const searchBtn = document.querySelector("#searchBtn");
+        const searchText = document.querySelector("#search-text");
+
+		function redirectSearch(){
+			window.location.href = `hotels-search.html?country=${searchText.value}`
+		}
+		searchBtn.addEventListener("click",redirectSearch)
+	</script>
     <script>
         const settings = {
             loop: true,

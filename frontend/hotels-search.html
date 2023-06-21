@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Meilleurs Hotels</title>
+    <title>Recherche sur "Hotel"</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -363,6 +363,7 @@
             }
         }
         var Pageid = GetUrlParameter("country")
+        document.title = `Recherche sur "${Pageid}"`
         /* for (var i = 0; i < Pageid.length; i++) 
         {
             if(Pageid[i]=="-"){Pageid=Pageid.substring(0,i) + " " + Pageid.substring(i+1);}
@@ -440,7 +441,7 @@
                     const hotelCount = document.querySelector(".hotel-numbers")
                     const title = document.querySelector(".landing-title")
                     const contentTitle = document.querySelector(".content-title")
-                    contentTitle.textContent = `Hôtel de luxe : ${Pageid.toUpperCase()}`
+                    contentTitle.textContent = `Hôtels de luxe : ${Pageid.toUpperCase()}`
                     title.innerHTML=`<h1 class="font-semibold">${Pageid.toUpperCase()}</h1>`
                     hotelCount.textContent = `${obj.length}  hôtel(s) incontournable(s)`
                 });
