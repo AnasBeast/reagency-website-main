@@ -606,12 +606,14 @@
                 }) 
             }else{
                 hotels=[]
+                console.log(hotels)
                 for(let i=0;i<ameFilters.length;i++){
                     filter = ameFilters[i]
                     obj.forEach((hotel)=>{
-                        if(hotel.amenagement.includes(filter)){hotels.push(hotel)}
+                        if(!(hotels.includes(hotel))){if(hotel.amenagement.includes(filter)){hotels.push(hotel)}}
                     })
                 }
+                console.log(hotels)
                 // hotels = obj.filter((hotel)=>hotel.amenagement.toUpperCase()==e.target.value.toUpperCase());
                 hotels.length ==0 ? hotelsList.innerHTML=`<h1 class="text-2xl mb-4">0 hôtel(s) incontournable(s)</h1>` : hotelsList.innerHTML=``
                 hotels.forEach((hotel) => {
@@ -681,6 +683,9 @@
             removeCheck(atmosphere);
             removeCheck(style);
             removeCheck(pays);
+            ameFilters = [];
+            styleFilters = [];
+            atmFilters = [];
         }
         countriesBtn.addEventListener("click",countriesChecked)
         
@@ -689,6 +694,9 @@
             removeCheck(atmosphere);
             removeCheck(style);
             removeCheck(countries);
+            ameFilters = [];
+            styleFilters = [];
+            atmFilters = [];
         }
         paysBtn.addEventListener("click",paysChecked)
 
@@ -697,6 +705,8 @@
             removeCheck(atmosphere);
             removeCheck(countries);
             removeCheck(pays);
+            ameFilters = [];
+            atmFilters = [];
         }
         styleBtn.addEventListener("click",styleChecked)
 
@@ -705,6 +715,8 @@
             removeCheck(countries);
             removeCheck(style);
             removeCheck(pays);
+            ameFilters = [];
+            styleFilters = [];
         }
         atmosphereBtn.addEventListener("click",atmChecked)
 
@@ -713,6 +725,8 @@
             removeCheck(atmosphere);
             removeCheck(style);
             removeCheck(pays);
+            styleFilters = [];
+            atmFilters = [];
         }
         amenagementsBtn.addEventListener("click",ameChecked)
         
@@ -816,7 +830,7 @@
 
         const atmosphere = document.querySelector("#atmosphere");
         atmosphereList = ["Nature","Tendance","Intime","Evasion","Tropical","Mythe","Vie de château","Colonial","Campagne"]
-        for(let i=0;i<styleList.length;i++){
+        for(let i=0;i<atmosphereList.length;i++){
             atmosphereItem = document.createElement("div")
             atmosphereItem.classList = "flex items-center"
             atmosphereItem.innerHTML=`
@@ -830,7 +844,7 @@
 
         const amenagement = document.querySelector("#amenagement");
         amenagementList = ["Spa","Piscine extérieure","Parking","Piscine intérieure","Tennis sur site","Club enfants","Plage","Animaux de compagnie","Sports nautiques","Plongée","Golf","Ski"]
-        for(let i=0;i<styleList.length;i++){
+        for(let i=0;i<amenagementList.length;i++){
             amenagementItem = document.createElement("div")
             amenagementItem.classList = "flex items-center"
             amenagementItem.innerHTML=`

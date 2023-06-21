@@ -129,7 +129,7 @@
         })
         .then((response) => response.json())
         .then((res) => {
-          if(!(res.email)){window.location.href = 'admin-login.html';}
+          if(res.message.includes("expired")){window.location.href = 'admin-login.html';}
         });
         }
       };

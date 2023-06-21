@@ -96,18 +96,20 @@ try {
   const token = req.body.token;
 
   // Validate user input
-  if (!(token)) {
-    res.status(400).send("All input is required");
-  }
-  // Validate if user exist in our database
-  const user = await User.findOne({ token });
-
-  if (user) {
-    res.status(200).json(user);
-  }
-  res.status(400).json({
-      message : "User Not Found!"
-  })
+  jwt.verify(token, process.env.TOKEN_KEY, function(err, decoded) {
+    if (err) {
+      console.log(err)
+      return res.status(403).json({
+        message : "Token expired, please login again !"
+      });/*
+        err = {
+          name: 'TokenExpiredError',
+          message: 'jwt expired',
+          expiredAt: 1408621000
+        }
+      */
+    }
+  });
 } catch (err) {
   console.log(err);
 }

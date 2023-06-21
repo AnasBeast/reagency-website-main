@@ -62,7 +62,7 @@
                   <div class="mt-1">
 
                       <select id="continents" class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                        <option selected disabled>Choose a region</option>
+                        <option selected disabled>Choisissez a region</option>
                       </select>
                   </div>
                 </div>
@@ -70,7 +70,7 @@
                   <label for="country-name" class="block text-sm font-medium text-gray-900">Country name</label>
                   <div class="mt-1">
                       <select id="countries" class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                        <option selected disabled>Choose a country</option>
+                        <option selected disabled>Choisissez a country</option>
                       </select>
                   </div>
                 </div>
@@ -78,7 +78,7 @@
                   <label for="style" class="block text-sm font-medium text-gray-900">Style</label>
                   <div class="mt-1">
                       <select id="style" class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                        <option selected disabled>Choose a style</option>
+                        <option selected disabled>Choisissez a style</option>
                       </select>
                   </div>
                 </div>
@@ -87,16 +87,16 @@
                   <div class="mt-1">
 
                       <select id="atmosphere" class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                        <option selected disabled>Choose an atmosphere</option>
+                        <option selected disabled>Choisissez an atmosphere</option>
                       </select>
                   </div>
                 </div>
                 <div>
-                  <label for="amenagement" class="block text-sm font-medium text-gray-900">Amenagement</label>
+                  <label for="amenagement" class="block text-sm font-medium text-gray-900">Amenagement (Maintenez le bouton "CTRL" puis sélectionner l'élément/éléments désiré )</label>
                   <div class="mt-1">
 
-                      <select id="amenagement" class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                        <option selected disabled>Choose an amenagement</option>
+                      <select id="amenagement" class="block w-full h-64 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" multiple>
+                        <option selected disabled>Choisissez an amenagement</option>
                       </select>
                   </div>
                 </div>
@@ -448,15 +448,6 @@
   </div>
 
     <script>
-      const countries = document.querySelector("#countries");
-      countriesList = ["Etats-Unis","Royaume-Uni","Italie","France","Chine","Thailande","Suisse","Emirates arabes unis","Espagne","Inde","Indonésie"]
-      for(let i=0;i<countriesList.length;i++){
-        country = document.createElement("option")
-        country.value = countriesList[i]
-        country.textContent = countriesList[i]
-        countries.append(country)
-      }
-
       const regions = document.querySelector("#continents");
       regionsList = ["Europe","Asie", "Amérique du Nord","Moyen Orient","Amérique du Sud","Océan Indien","Afrique","Caraibes","Océanie","Amérique Centrale"]
       for(let i=0;i<regionsList.length;i++){
@@ -466,8 +457,17 @@
         regions.append(continent)
       }
 
+      const countries = document.querySelector("#countries");
+      countriesList = ["Etats-Unis","Royaume-Uni","Italie","France","Chine","Thailande","Suisse","Emirates arabes unis","Espagne","Inde","Indonésie"]
+      for(let i=0;i<countriesList.length;i++){
+        country = document.createElement("option")
+        country.value = countriesList[i]
+        country.textContent = countriesList[i]
+        countries.append(country)
+      }
+
       const style = document.querySelector("#style");
-      styleList = ["Historique","Classique","Design","Insolite"]
+      styleList = ["Contemporain","Historique","Classique","Design","Insolite"]
       for(let i=0;i<styleList.length;i++){
         styleItem = document.createElement("option")
         styleItem.value = styleList[i]
@@ -476,7 +476,7 @@
       }
 
       const atmosphere = document.querySelector("#atmosphere");
-      atmosphereList = ["Nature","Tendance","Intime","Evasion","Tropical","Mythe","Vie de château","Colonial","Campagne"]
+      atmosphereList = ["Charme","Nature","Tendance","Intime","Evasion","Tropical","Mythe","Vie de château","Colonial","Campagne"]
       for(let i=0;i<atmosphereList.length;i++){
         atmosphereItem = document.createElement("option")
         atmosphereItem.value = atmosphereList[i]
@@ -485,7 +485,7 @@
       }
 
       const amenagement = document.querySelector("#amenagement");
-      amenagementList = ["Spa","Piscine extérieure","Parking","Piscine intérieure","Tennis sur site","Club enfants","Plage","Animaux de compagnie","Sports nautiques","Plongée","Golf","Ski"]
+      amenagementList = ["Centre de fitness","Spa","Piscine extérieure","Parking","Piscine intérieure","Tennis sur site","Club enfants","Plage","Animaux de compagnie","Sports nautiques","Plongée","Golf","Ski"]
       for(let i=0;i<amenagementList.length;i++){
         amenagementItem = document.createElement("option")
         amenagementItem.value = amenagementList[i]
@@ -554,6 +554,12 @@
           }
           feedbacks.push(feedback)
         }
+
+        var amenagements=[];
+        for(let i=0;i<hotelAmenagement.selectedOptions.length;i++){
+          console.log(hotelAmenagement.selectedOptions[i])
+          amenagements.push(hotelAmenagement.selectedOptions[i].innerText)
+        }
         var data = {
           name: hotelName.value,
           address: hotelAdress.value,
@@ -561,7 +567,7 @@
           region: hotelRegion.options[hotelRegion.selectedIndex].text,
           style: hotelStyle.options[hotelStyle.selectedIndex].text,
           atmosphere: hotelAtmosphere.options[hotelAtmosphere.selectedIndex].text,
-          amenagement: hotelAmenagement.options[hotelAmenagement.selectedIndex].text,
+          amenagement: amenagements,
           subtitle : hotelSubtitle.value,
           description : hotelDescription.value,
           images : hotelImages.value.split(","),
@@ -616,7 +622,7 @@
           if(res.message.includes("Hotel")){
             document.querySelector("#successModal").classList.remove("hidden")
           }
-        }); 
+        });
       }
       hotelBtn.addEventListener("click",Addhotel)
 
@@ -723,7 +729,7 @@
         })
         .then((response) => response.json())
         .then((res) => {
-          if(!(res.email)){window.location.href = 'admin-login.html';}
+          if(res.message.includes("expired")){window.location.href = 'admin-login.html';}
         });
         }
       };
