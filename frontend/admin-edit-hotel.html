@@ -441,7 +441,7 @@
       }
 
       const countries = document.querySelector("#countries");
-      countriesList = ["Etats-Unis","Royaume-Uni","Italie","France","Chine","Thailande","Suisse","Emirates arabes unis","Espagne","Inde","Indonésie"]
+      countriesList = ['Afrique du Sud', 'Allemagne', 'Anguilla', 'Antigua-et-Barbuda', 'Arabie saoudite', 'Argentine', 'Australie', 'Autriche', 'Belgique', 'Brésil', 'Cambodge', 'Canada', 'Chine', 'Colombie', 'Costa Rica', 'Danemark', 'Emirates arabes unis', 'Espagne', 'Etats-Unis', 'France', 'Grèce', 'Hong Kong', 'Hongrie', 'Iles Turks et Caïques', 'Inde', 'Indonésie', 'Irlande', 'Israël', 'Italie', 'Japon', 'Laos', 'Malaisie', 'Maldives', 'Maroc', 'Maruice', 'Mexique', 'Monaco', 'Monténégro', 'Myanmar', 'Oman', 'Pays-Bas', 'Philippines', 'Pologne', 'Polynésie française', 'Porto Rico', 'Portugal', 'Pérou', 'Qatar', 'Royaume-Uni', 'Russie', 'Rwanda', 'République dominicaine', 'République tchèque', 'Saint-Barthélemy', 'Seychelles', 'Singapour', 'Sri Lanka', 'St Vincent et Grenadines', 'Suisse', 'Suède', 'Taïwan', 'Thailande', 'Turquie', 'Vietnam', 'Zambie']
       for(let i=0;i<countriesList.length;i++){
         country = document.createElement("option")
         country.value = countriesList[i]
@@ -753,6 +753,7 @@
 
       document.getElementById("continueBtn").addEventListener("click",function (){
         document.querySelector("#successModal").classList.add("hidden")
+        window.location.href = 'admin-dashboard.html'
       })
       document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById('successButton').click();

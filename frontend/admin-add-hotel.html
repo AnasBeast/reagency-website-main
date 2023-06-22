@@ -116,8 +116,7 @@
                     <textarea id="description" name="description" rows="4"
                       class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       required=""
-                      >
-                    </textarea>
+                      ></textarea>
                   </div>
                 </div>
                 <div>
@@ -142,14 +141,15 @@
                   </div>
                 </div>
                 <div>
-                  <label for="exceptions" class="block text-sm font-medium text-gray-900">Hotel exceptions (seperate by
-                    ",")</label>
+                  <label for="exceptions" class="block text-sm font-medium text-gray-900">Hotel exceptions <strong>(seperate by ";")</strong></label>
                   <div class="mt-1">
-                    <input type="text" name="exceptions" id="exceptions"
+                    <textarea type="text" name="exceptions" id="exceptions"
                       class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       required="" 
-                      placeholder="Chaque chambre et suite a une vue donnant sur Hyde Park.,Découvrez l'une des suites Penthouse sur le toit avec une terrasse tout autour et une vue imprenable sur Londres.,Savourez un repas au premier restaurant londonien, CUT de Wolfgang Puck."
-                      />
+                      placeholder="Chaque chambre et suite a une vue donnant sur Hyde Park.;
+Découvrez l'une des suites Penthouse sur le toit avec une terrasse tout autour et une vue imprenable sur Londres.;
+Savourez un repas au premier restaurant londonien, CUT de Wolfgang Puck."
+                      ></textarea>
                   </div>
                 </div>
                 <div>
@@ -193,7 +193,7 @@
                   </div>
                 </div>
                 <div id="feedbacks">
-                  <div class="flex md:flex-row flex-col justify-center gap-4 mt-4">
+                  <div class="flex md:flex-row flex-col items-center justify-center gap-4 mt-4">
                     <label for="feedback-name" class="block text-sm font-medium text-gray-900">Feedback n°1 Name : </label>
                     <div class="mt-1 w-full md:w-auto">
                       <input type="text" name="feedback-name" id="feedback-name1"
@@ -458,7 +458,7 @@
       }
 
       const countries = document.querySelector("#countries");
-      countriesList = ["Etats-Unis","Royaume-Uni","Italie","France","Chine","Thailande","Suisse","Emirates arabes unis","Espagne","Inde","Indonésie"]
+      countriesList = ['Afrique du Sud', 'Allemagne', 'Anguilla', 'Antigua-et-Barbuda', 'Arabie saoudite', 'Argentine', 'Australie', 'Autriche', 'Belgique', 'Brésil', 'Cambodge', 'Canada', 'Chine', 'Colombie', 'Costa Rica', 'Danemark', 'Emirates arabes unis', 'Espagne', 'Etats-Unis', 'France', 'Grèce', 'Hong Kong', 'Hongrie', 'Iles Turks et Caïques', 'Inde', 'Indonésie', 'Irlande', 'Israël', 'Italie', 'Japon', 'Laos', 'Malaisie', 'Maldives', 'Maroc', 'Maruice', 'Mexique', 'Monaco', 'Monténégro', 'Myanmar', 'Oman', 'Pays-Bas', 'Philippines', 'Pologne', 'Polynésie française', 'Porto Rico', 'Portugal', 'Pérou', 'Qatar', 'Royaume-Uni', 'Russie', 'Rwanda', 'République dominicaine', 'République tchèque', 'Saint-Barthélemy', 'Seychelles', 'Singapour', 'Sri Lanka', 'St Vincent et Grenadines', 'Suisse', 'Suède', 'Taïwan', 'Thailande', 'Turquie', 'Vietnam', 'Zambie']
       for(let i=0;i<countriesList.length;i++){
         country = document.createElement("option")
         country.value = countriesList[i]
@@ -572,7 +572,7 @@
           description : hotelDescription.value,
           images : hotelImages.value.split(","),
           services : hotelServices.value.split(","),
-          exceptions : hotelExceptions.value.split(","),
+          exceptions : hotelExceptions.value.split(";"),
           rooms : rooms,
           feedback : feedbacks,
           informations : {
@@ -621,6 +621,8 @@
           console.log(res)
           if(res.message.includes("Hotel")){
             document.querySelector("#successModal").classList.remove("hidden")
+          }else{
+            alert(res.message)
           }
         });
       }
@@ -646,29 +648,31 @@
         feedbacks.innerHTML = ""
         for(let i =0 ;i<nbFeedbacks;i++){
           feedbacks.innerHTML += 
-          `<div class="flex justify-center gap-4 mt-4">
+          `<div class="flex md:flex-row flex-col items-center justify-center gap-4 mt-4">
                     <label for="feedback-name" class="block text-sm font-medium text-gray-900">Feedback n°${i+1} Name : </label>
                     <div class="mt-1 w-full md:w-auto">
                       <input type="text" name="feedback-name" id="feedback-name${i+1}"
-                        class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         required="" />
                     </div>
                     <label for="feedback-rate" class="block text-sm font-medium text-gray-900">Feedback n°${i+1} Rate /10 : </label>
                     <div class="mt-1 w-full md:w-auto">
                       <input type="text" name="feedback-rate" id="feedback-rate${i+1}"
-                        class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        required="" />
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" 
+                        placeholder="8/10"
+                        /> 
                     </div>
                     <label for="feedback-note" class="block text-sm font-medium text-gray-900">Feedback n°${i+1} Note : </label>
                     <div class="mt-1 w-full md:w-auto">
                       <input type="text" name="feedback-note" id="feedback-note${i+1}"
-                        class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         required="" />
                     </div>
                     <label for="feedback-date" class="block text-sm font-medium text-gray-900">Feedback n°${i+1} date (example: CLIENT DEPUIS SEPTEMBRE 2011, ULTIMATE) : </label>
                     <div class="mt-1 w-full md:w-auto">
                       <input type="text" name="feedback-date" id="feedback-date${i+1}"
-                        class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         required="" />
                     </div>
                   </div>`
@@ -688,22 +692,22 @@
         for(let i =0 ;i<nbRooms;i++){
           rooms.innerHTML += 
           `<div class="flex justify-center gap-4">
-                    <label for="room-type" class="block text-sm font-medium text-gray-900">Room n°${i+1} Type : </label>
+            <label for="room-type" class="block text-sm font-medium text-gray-900">Room n°${i+1} Type : </label>
                     <div class="mt-1 w-full md:w-auto">
                       <input type="text" name="room-type" id="room-type${i+1}"
-                        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         required="" />
                     </div>
                     <label for="room-description" class="block text-sm font-medium text-gray-900">Room n°${i+1} description : </label>
                     <div class="mt-1 w-full md:w-auto">
                       <input type="text" name="room-description" id="room-description${i+1}"
-                        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         required="" />
                     </div>
                     <label for="room-image" class="block text-sm font-medium text-gray-900">Room n°${i+1} image URL : </label>
                     <div class="mt-1 w-full md:w-auto">
                       <input type="text" name="room-image" id="room-image${i+1}"
-                        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         required="" />
                     </div>
                   </div>`

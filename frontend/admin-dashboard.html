@@ -17,7 +17,7 @@
 
     <section class="mx-auto max-w-7xl sm:px-6 lg:px-8 mt-12">
       <div class="px-4 sm:px-0 mb-4 flex justify-between items-center">
-        <h2 class="text-sm md:text-xl font-medium text-gray-900">Hotels</h2>
+        <h2 class="text-sm md:text-xl font-medium text-gray-900" id="hotels">Hotels</h2>
         <a href="admin-reservations.html">
           <button
             id="reservations"
@@ -101,6 +101,7 @@
           .then((response) => response.json())
           .then(({ hotels }) => {
             hotelsList.innerHTML=""
+            document.querySelector("#hotels").textContent = `Hotels (${hotels.length})`
             hotels.forEach((hotel) => {
               const hotelItem = document.createElement("li");
               hotelItem.classList.add("mb-4");
