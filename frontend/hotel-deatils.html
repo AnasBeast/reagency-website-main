@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
     <link rel="shortcut icon" href="src/img/icon-png.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="src/css/reusable.css">
     <link rel="stylesheet" href="src/css/hotel-details.css">
     <link
@@ -27,31 +28,31 @@
 		<h1>Menu</h1>
 		<div class="seperation"></div>
 
-		<ul>
-			<a href="qui-sommes-nous.html"><li>
-				<p> QUI SOMMES-NOUS </p>
+		<ul class="pl-8 text-white">
+			<a href="qui-sommes-nous.html" ><li>
+				<p class="my-4"> QUI SOMMES-NOUS </p>
 
 				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
 			</li></a>
 
 			<a href="destination.html"><li>
-				<p> DESTINATIONS </p>
+				<p class="my-4"> DESTINATIONS </p>
 
 				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
 			</li></a>
 
 			<a href="collection-hotels.html"><li>
-				<p> COLLECTION D'HOTELS </p>
+				<p class="my-4"> COLLECTION D'HOTELS </p>
 
 				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
 			</li></a>
 
-			<a href="conciergerie.html"><li>
-				<p> CONCIERGERIE </p>
+
+            <a href="conciergerie.html"><li>
+				<p class="my-4"> CONCIERGERIE </p>
 
 				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
 			</li></a>
-
 			<div class="seperation"></div>
 			<div id="call"><p>RESERVEZ EN LIGNE OU APPELEZ</p> <p>+44 20 35 19 2700</p></div>
 
@@ -100,7 +101,7 @@
         <div id="features">
             <div id="top">
                 <div class="seperation"></div>
-                <ul class="navigation-bar">
+                <ul class="navigation-bar pl-8">
                     <li>
                         <a href="#info">
                             Informations sur l'hôtel
@@ -226,7 +227,7 @@
         <div id="inter">
             <div id="top">
                 <h1>L'hôtel en bref</h1>
-                <ul class="infos">
+                <ul class="infos pl-8">
                     <li>
                         <button class="infos-active infos-info">INFORMATIONS PRATIQUES </button> 
                     </li>
@@ -561,7 +562,7 @@
             const text = document.getElementById("text");
             const stars = document.createElement("div");
             stars.id="stars"
-
+            stars.classList = "flex gap-2"
             for (var i = 0; i < parseInt(hotel.stars); i++) 
             {
                 const starItem = document.createElement("img");
