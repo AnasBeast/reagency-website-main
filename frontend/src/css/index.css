@@ -491,7 +491,10 @@ nav #menu div {
   background-position: center;
   background-size: cover;
 }
-
+.flickity-prev-next-button,.flickity-prev-next-button{
+  color: white !important;
+  background: hsla(0,0%,100%,.75) !important;
+}
 @media only screen and (max-width: 1280px) {
   nav img {
     margin-left: 15px;
@@ -625,6 +628,18 @@ nav #menu div {
   }
   #mail #container{
     top: 5% !important;
+  }
+  #content #documentaries .gallery .gallery-cell iframe{
+    width: 60%;
+    height: 60%;
+    margin: 0 auto;
+    margin-top: 12.5%;
+  }
+  #content #documentaries .gallery{
+    margin: 0;
+  }
+  #content #documentaries{
+    height: auto;
   }
 }
 
