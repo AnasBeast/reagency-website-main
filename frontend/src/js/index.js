@@ -391,7 +391,7 @@ var continents = [
         destinations : "AFRIQUE DU SUD · MAROC · RWANDA · ZOMBIE",
         top: "L'Afrique regorge de superbes hôtels qui sauront émerveiller même les voyageurs les plus exigeants. Parmi eux, on trouve l'emblématique Royal Mansour à Marrakech, au Maroc, un véritable palais où l'opulence et le raffinement se rencontrent dans un cadre enchanteur. Ensuite, il y a les luxueux lodges de safari en Afrique de l'Est, tels que le Singita Grumeti en Tanzanie, offrant une expérience unique de proximité avec la faune sauvage africaine dans un cadre spectaculaire.",
         image : "./src/img/afrique.jpg",
-        slide:"Allemagne-Belgique-France-Portugal",
+        slide:"Allemagne - Belgique - France - Portugal",
         address : "Europe",
         slidebg : "./src/img/londres.png",
         hotels:[

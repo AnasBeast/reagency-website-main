@@ -391,7 +391,7 @@ nav #menu div {
   margin-bottom: 14px;
   line-height: 45px;
 }
-#content #list-wrapper #bottom h1 {
+#content #list-wrapper #bottom h1, .plus{
   font-weight: 600;
   font-size: 45px;
   margin: 0;
@@ -432,7 +432,7 @@ nav #menu div {
 }
 #content #list-wrapper #top p {
   font-weight: 300;
-  font-size: 30px;
+  font-size: 24px;
   margin: 0;
   margin-bottom: 14px;
 }
@@ -765,7 +765,7 @@ nav #menu div {
     width: 90%;
     text-align: left;
   }
-  #content #list-wrapper #bottom h1{
+  #content #list-wrapper #bottom h1,.plus{
     font-size: 25px;
   }
   #content #list-wrapper #bottom p{
