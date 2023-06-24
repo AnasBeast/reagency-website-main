@@ -720,6 +720,9 @@ nav #menu div {
     margin-top: 0;
     margin-bottom: 70px;
   }
+  #options #other-options p{
+    font-size: 20px;
+  }
 }
 
 @media only screen and (max-width: 701px) {
