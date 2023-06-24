@@ -350,7 +350,7 @@ form button{
     height: 400px !important;
   }
   #list-wrapper {
-    padding-top: 20px !important;
+    padding-top: 40px !important;
   }
   #list-wrapper #list {
     -webkit-box-orient: vertical !important;
@@ -384,7 +384,7 @@ form button{
     padding-right: 15%;
   }
   #content #list-wrapper{
-    margin-top: 150px;
+    margin-top: 0px;
   }
 }
 
