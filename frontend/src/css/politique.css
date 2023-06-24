@@ -388,7 +388,7 @@ nav #menu div {
     flex-direction: column;
   }
   #mail #background div>*{
-    width: 100%;
+    width: 80%;
   }
   footer{
     margin-top: 0 !important;
