@@ -287,7 +287,7 @@ nav #menu div {
 }
 
 #content #motto {
-  padding-top: 60px;
+  padding-top: 30px;
   padding-bottom: 100px;
   height: 400px;
 }
@@ -311,7 +311,12 @@ nav #menu div {
   background: #021033;
   padding-top: 40px;
 }
-
+#mail #container{
+  height: 785px;
+}
+#mail #certif{
+  margin-top: 165px;
+}
 #content #documentaries h1 {
   color: #fff;
   font-size: 45px;
