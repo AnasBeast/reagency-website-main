@@ -784,6 +784,9 @@ nav #menu div {
   }
   #mail #background div>*{
     width: 100%;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   #content #landing{
     height: 400px;
