@@ -197,6 +197,7 @@ body.hidden {
 
 #mobileNavbar #call p:first-child {
   margin-bottom: 0;
+  font-size: 18px;
 }
 
 #mobileNavbar #call p:nth-child(2) {
