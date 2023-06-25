@@ -356,10 +356,10 @@ var continents = [
     { 
         continent : "Europe",
         description : "Que ce soit pour ses cités intemporelles telles que Paris et Venise ou ses destinations hors des sentiers battus, comme le Monténégro et la vallée du Douro, l'Europe est toujours synonyme de vacances réussies. Et nous sommes impatients de partager avec vous nos hôtels préférés sur l’ensemble du continent, des châteaux médiévaux de la campagne irlandaise aux stations de ski ultra-exclusives des Alpes suisses.",
-        destinations : "ALLEMAGNE · AUTRICHE · BELGIQUE DANEMARK · ESPAGNE · FRANCE · GRÈCE  HONGRIE · IRLANDE · ITALIE · MONACO · MONTÉNÉGRO PAYS-BAS · POLOGNE · PORTUGAL · RÉPUBLIQUE TCHÈQUE ROYAUME-UNI · RUSSIE · SUÈDE · SUISSE · TURQUIE",
+        destinations : `<a href="hotels-search.html?country=Allemagne">ALLEMAGNE</a> · <a href="hotels-search.html?country=Autriche">AUTRICHE</a> · <a href="hotels-search.html?country=Belgique">BELGIQUE</a> · <a href="hotels-search.html?country=Danemark">DANEMARK</a> · <a href="hotels-search.html?country=Espagne">ESPAGNE</a> · <a href="hotels-search.html?country=France">FRANCE</a> · <a href="hotels-search.html?country=Grece">GRÈCE</a> · <a href="hotels-search.html?country=Hongrie">HONGRIE</a> · <a href="hotels-search.html?country=Irlande">IRLANDE</a> · <a href="hotels-search.html?country=Italie">ITALIE</a> · <a href="hotels-search.html?country=Monaco">MONACO</a> · <a href="hotels-search.html?country=Montenegro">MONTÉNÉGRO</a> · <a href="hotels-search.html?country=Pays%20Bas">PAYS-BAS</a> · <a href="hotels-search.html?country=Pologne">POLOGNE</a> · <a href="hotels-search.html?country=Portugal">PORTUGAL</a> · <a href="hotels-search.html?country=Republique%20tcheque">RÉPUBLIQUE TCHÈQUE</a> · <a href="hotels-search.html?country=Royaume-Uni">ROYAUME-UNI</a> · <a href="hotels-search.html?country=Russie">RUSSIE</a> · <a href="hotels-search.html?country=Suede">SUÈDE</a> · <a href="hotels-search.html?country=Suisse">SUISSE</a> · <a href="hotels-search.html?country=Turquie">TURQUIE</a>`,
         top: "L’Europe ne manque pas de magnifiques hôtels, mais il en existe qui laisseraient même les voyageurs les plus blasés un peu émerveillés. Il y a bien sûr le Ritz Paris, où Coco Chanel et Marcel Proust ont résidé des années. Ensuite, il y a les chics boutiques-hôtels de Santorin, où les vues sur la mer Égée sont des plus exquises.",
         image : "./src/img/europe.jpg",
-        slide:"Arabie - Saoudite - Emirats - arabes unis- Dubai- Oman -Qatar",
+        slide:`<a href="hotels-search.html?country=Arabie%20saoudite">Arabie Saoudite</a> - <a href="hotels-search.html?country=Emirats%20arabes%20unis">Emirats arabes unis</a> - <a href="hotels-search.html?country=Dubai">Dubai</a> - <a href="hotels-search.html?country=Oman">Oman</a> - <a href="hotels-search.html?country=Qatar">Qatar</a>`,
         address : "Moyen Orient",
         slidebg : "./src/img/qatar2.png",
         hotels:[
@@ -388,10 +388,10 @@ var continents = [
     { 
         continent : "Afrique",
         description : "L'Afrique, avec sa diversité culturelle et ses paysages époustouflants, offre une expérience de voyage unique et enrichissante. Que vous soyez attiré par les merveilles naturelles de la réserve de Masai Mara au Kenya, les plages immaculées de Zanzibar en Tanzanie ou les majestueuses pyramides d'Égypte, l'Afrique a tant à offrir aux amateurs de luxe. Nous sommes ravis de vous présenter nos choix d'hôtels de luxe à travers le continent africain, des lodges de safari exclusifs en Afrique du Sud aux riads luxueux nichés au cœur des médinas historiques du Maroc. Plongez dans une expérience inoubliable, mêlant hospitalité raffinée, services de classe mondiale et découverte des richesses culturelles de l'Afrique.",
-        destinations : "AFRIQUE DU SUD · MAROC · RWANDA · ZOMBIE",
+        destinations : `<a href="hotels-search.html?country=Afrique%20du%20sud">AFRIQUE DU SUD</a> · <a href="hotels-search.html?country=Maroc">MAROC</a> · <a href="hotels-search.html?country=Rwanda">RWANDA</a> · <a href="hotels-search.html?country=Zombie">ZOMBIE</a>`,
         top: "L'Afrique regorge de superbes hôtels qui sauront émerveiller même les voyageurs les plus exigeants. Parmi eux, on trouve l'emblématique Royal Mansour à Marrakech, au Maroc, un véritable palais où l'opulence et le raffinement se rencontrent dans un cadre enchanteur. Ensuite, il y a les luxueux lodges de safari en Afrique de l'Est, tels que le Singita Grumeti en Tanzanie, offrant une expérience unique de proximité avec la faune sauvage africaine dans un cadre spectaculaire.",
         image : "./src/img/afrique.jpg",
-        slide:"Allemagne - Belgique - France - Portugal",
+        slide:`<a href="hotels-search.html?country=Allemagne">Allemagne</a> - <a href="hotels-search.html?country=Belgique">Belgique</a> - <a href="hotels-search.html?country=France">France</a> - <a href="hotels-search.html?country=Portugal">Portugal</a>`,
         address : "Europe",
         slidebg : "./src/img/londres.png",
         hotels:[
@@ -420,10 +420,10 @@ var continents = [
     { 
         continent : "Asie",
         description : "L'Asie, berceau de civilisations millénaires, est une destination fascinante où l'ancien et le moderne se mêlent harmonieusement. Des palais impériaux du Japon aux temples sacrés de l'Inde, en passant par les plages de sable blanc de la Thaïlande et les gratte-ciel étincelants de Hong Kong, l'Asie est un véritable paradis pour les amateurs de voyages luxueux. Nous sommes enchantés de vous présenter notre sélection d'hôtels de luxe à travers le continent asiatique, des complexes balnéaires somptueux des Maldives aux retraites zen du Bhoutan. Découvrez des hébergements d'exception, où l'hospitalité légendaire de l'Asie rencontre le confort haut de gamme, offrant une expérience inégalée pour les voyageurs en quête d'exclusivité et d'émerveillement.",
-        destinations : "COMBODGE · CHINE · HONG KONG · INDE · INDONESIE · JAPON · LAOS · MALAISIE · MYANMAR · PHILIPPINES · SINGAPOUR · SRI LANKA · THAILANDE · VIETNAM",
+        destinations : `<a href="hotels-search.html?country=Combodge">COMBODGE</a> · <a href="hotels-search.html?country=Chine">CHINE</a> · <a href="hotels-search.html?country=Hong%20kong">HONG KONG</a> · <a href="hotels-search.html?country=Inde">INDE</a> · <a href="hotels-search.html?country=Indonesie">INDONESIE</a> · <a href="hotels-search.html?country=Japon">JAPON</a> · <a href="hotels-search.html?country=Laos">LAOS</a> · <a href="hotels-search.html?country=Malaisie">MALAISIE</a> · <a href="hotels-search.html?country=Myanmar">MYANMAR</a> · <a href="hotels-search.html?country=Philippines">PHILIPPINES</a> · <a href="hotels-search.html?country=Singapour">SINGAPOUR</a> · <a href="hotels-search.html?country=Sri%20lanka">SRI LANKA</a> · <a href="hotels-search.html?country=Thailande">THAILANDE</a> · <a href="hotels-search.html?country=Vietnam">VIETNAM</a>`,
         top: "L'Asie regorge de somptueux hôtels qui émerveilleront même les voyageurs les plus exigeants. Parmi eux, on retrouve l'emblématique Marina Bay Sands à Singapour, une merveille architecturale offrant une vue imprenable sur la ville depuis sa piscine à débordement située au sommet des tours. ",
         image : "./src/img/asie.jpg",
-        slide:"Australie - Polynésie de française",
+        slide:`<a href="hotels-search.html?country=Australie">Australie</a> - <a href="hotels-search.html?country=Polynesie%20francaise">Polynésie de française</a>`,
         address : "Océanie",
         slidebg : "./src/img/oceanie.jpg",
         hotels:[
@@ -452,10 +452,10 @@ var continents = [
     { 
         continent : "Ocean Indien",
         description : "L'Océan Indien, avec ses îles tropicales et ses eaux cristallines, est un véritable havre de paix pour les voyageurs en quête d'évasion et de luxe. Que vous rêviez de vous détendre sur les plages de sable blanc des Maldives, d'explorer les époustouflants récifs coralliens de l'île Maurice ou de vous perdre dans les forêts luxuriantes de La Réunion, l'Océan Indien regorge de trésors naturels à découvrir. Nous sommes enchantés de vous présenter notre sélection d'hôtels de luxe dans cette région idyllique, des resorts privés exclusifs des Seychelles aux villas sur pilotis des Maldives. Laissez-vous séduire par des expériences hors du commun, alliant détente, raffinement et paysages à couper le souffle, et vivez des moments inoubliables au cœur de l'Océan Indien.",
-        destinations : "COMBODGE · CHINE · HONG KONG · INDE · INDONESIE · JAPON · LAOS · MALAISIE · MYANMAR · PHILIPPINES · SINGAPOUR · SRI LANKA · THAILANDE · VIETNAM",
+        destinations : `<a href="hotels-search.html?country=Maldives">Maldives</a> · <a href="hotels-search.html?country=Maurice">Maurice</a> · <a href="hotels-search.html?country=Seychelles">Seychelles</a>`,
         top: "L'océan Indien abrite de somptueux hôtels qui invitent les voyageurs à plonger dans un véritable paradis tropical. Parmi eux, on retrouve le légendaire Four Seasons Resort Maldives at Kuda Huraa, où vous pourrez vous détendre dans des villas luxueuses surplombant les eaux turquoises des Maldives. ",
         image : "./src/img/maldives.png",
-        slide:"Arabie Saoudite - Emirats arabes unis - Dubai - Oman - Qatar",
+        slide:`<a href="hotels-search.html?country=Arabie%20saoudite">Arabie Saoudite</a> - <a href="hotels-search.html?country=Emirats%20arabes%20unis">Emirats arabes unis</a> - <a href="hotels-search.html?country=Dubai">Dubai</a> - <a href="hotels-search.html?country=Oman">Oman</a> - <a href="hotels-search.html?country=Qatar">Qatar</a>`,
         address : "Moyen Orient",
         slidebg : "./src/img/qatar2.png",
         hotels:[
@@ -484,10 +484,10 @@ var continents = [
     { 
         continent : "Oceanie",
         description : "L'Océanie, un véritable paradis sur terre, est un continent qui offre une myriade de merveilles naturelles et d'expériences luxueuses. Que vous soyez attiré par les plages de sable blanc de Tahiti, les paysages spectaculaires de l'Australie ou les îles vierges de la Polynésie française, l'Océanie regorge de trésors à découvrir. Nous sommes ravis de vous présenter notre sélection d'hôtels de luxe à travers cette région exotique, des lodges de luxe nichés au cœur de la nature néo-zélandaise aux resorts en bord de mer de l'Australie. Plongez dans une expérience extraordinaire, alliant confort, exclusivité et hospitalité chaleureuse, et laissez-vous séduire par la beauté époustouflante de l'Océanie. Que vous soyez en quête d'aventure, de détente ou de découvertes culturelles, l'Océanie saura vous offrir des moments inoubliables et une escapade luxueuse dont vous vous souviendrez longtemps.",
-        destinations : "AUSTRALIE · POLYNESIE FRANCAISE",
+        destinations : `<a href="hotels-search.html?country=Maldives">AUSTRALIE</a> · <a href="hotels-search.html?country=Polynesie%20francaise">POLYNESIE FRANCAISE</a>`,
         top: "L'Océan Pacifique regorge de magnifiques hôtels qui séduisent les voyageurs en quête de paradis tropical. Parmi eux, on retrouve l'emblématique St. Regis Bora Bora Resort en Polynésie française, où des bungalows sur pilotis vous offrent une expérience de luxe ultime, avec des eaux cristallines et des récifs coralliens colorés à votre porte.",
         image : "./src/img/oceanie.jpg",
-        slide:"Allemagne - Belgique - France - Portugal",
+        slide:`<a href="hotels-search.html?country=Allemagne">Allemagne</a> - <a href="hotels-search.html?country=Belgique">Belgique</a> - <a href="hotels-search.html?country=France">France</a> - <a href="hotels-search.html?country=Portugal">Portugal</a>`,
         address : "Europe",
         slidebg : "./src/img/londres.png",
         hotels:[
@@ -516,10 +516,10 @@ var continents = [
     { 
         continent : "Caraibes",
         description : "Les Caraïbes, un véritable paradis tropical, évoquent des images de plages de sable blanc, d'eaux turquoises et de douces brises tropicales. Que vous souhaitiez vous détendre sur les magnifiques rivages des Bahamas, explorer les récifs coralliens de la Barbade ou vous immerger dans la riche histoire de Cuba, les Caraïbes offrent une expérience de voyage luxueuse et envoûtante. Nous sommes enchantés de vous présenter notre sélection d'hôtels de luxe à travers cette région enchanteresse, des complexes hôteliers haut de gamme des îles Vierges britanniques aux villas privées de la Barbade. Laissez-vous séduire par des hébergements exceptionnels alliant élégance, confort et services haut de gamme, et découvrez la véritable essence du luxe caraïbéen. Que vous recherchiez des vacances reposantes, des activités aquatiques excitantes ou une expérience gastronomique raffinée, les Caraïbes sont prêtes à vous offrir une escapade inoubliable dans un cadre idyllique.",
-        destinations : "ANGUILLA · ILES TURKS ET CAIQUES · PORTO RICO · REPUBLIQUE DOMINICAINE · SAINT-BARTHELEMY · ST VINCENT ET GRENADINES",
+        destinations : `<a href="hotels-search.html?country=Anguilla">ANGUILLA</a> · <a href="hotels-search.html?country=Iles%20turks%20et%20caiques">ILES TURKS ET CAIQUES</a> · <a href="hotels-search.html?country=Porto%20rico">PORTO RICO</a> · <a href="hotels-search.html?country=Republique%20dominicaine">REPUBLIQUE DOMINICAINE</a> · <a href="hotels-search.html?country=Saint%20barthelemy">SAINT-BARTHELEMY</a> · <a href="hotels-search.html?country=St-vincent%20et%20grenadines">ST VINCENT ET GRENADINES</a>`,
         top: "Les Caraïbes regorgent de magnifiques hôtels qui séduisent les voyageurs du monde entier grâce à leur charme tropical et leur atmosphère enchanteresse. Parmi eux, on trouve le célèbre Sandy Lane à la Barbade, un paradis luxueux niché sur une plage de sable blanc immaculée et entouré de jardins tropicaux luxuriants. ",
         image : "./src/img/caraibes.jpg",
-        slide:"Allemagne - Belgique - France - Portugal",
+        slide:`<a href="hotels-search.html?country=Allemagne">Allemagne</a> - <a href="hotels-search.html?country=Belgique">Belgique</a> - <a href="hotels-search.html?country=France">France</a> - <a href="hotels-search.html?country=Portugal">Portugal</a>`,
         address : "Europe",
         slidebg : "./src/img/londres.png",
         hotels:[
@@ -548,10 +548,10 @@ var continents = [
     { 
         continent : "Amerique centrale",
         description : "L'Amérique centrale, une région dynamique et culturellement riche, offre une multitude d'expériences luxueuses pour les voyageurs avides de découvertes. Que vous souhaitiez explorer les anciennes cités mayas du Guatemala, vous détendre sur les plages immaculées du Belize ou vous aventurer dans les forêts tropicales du Costa Rica, l'Amérique centrale regorge de trésors naturels et culturels à explorer. Nous sommes ravis de vous présenter notre sélection d'hôtels de luxe à travers cette région captivante, des lodges écologiques au cœur de la jungle aux complexes balnéaires luxueux en bord de mer. Immergez-vous dans une expérience de voyage exclusive, alliant confort, authenticité et hospitalité chaleureuse, et découvrez la diversité des paysages, des traditions et des saveurs de l'Amérique centrale. Que vous soyez passionné par l'aventure, la détente ou l'exploration culturelle, l'Amérique centrale vous promet des moments inoubliables et une escapade luxueuse dans un cadre enchanteur.",
-        destinations : "COSTA RICA",
+        destinations : `<a href="hotels-search.html?country=Costa%20rica">COSTA RICA</a>`,
         top: "L'Amérique centrale regorge de magnifiques hôtels qui promettent de charmer les voyageurs les plus exigeants et de leur offrir des expériences luxueuses. Parmi eux, on trouve le légendaire Hotel El Convento à San Juan, Porto Rico, qui allie histoire et élégance dans un cadre enchanteur.",
         image : "./src/img/caraibes.jpg",
-        slide:"Laos - Japon - Malaisie - Sri Lanka",
+        slide:`<a href="hotels-search.html?country=Laos">Laos</a> - <a href="hotels-search.html?country=Japon">Japon</a> - <a href="hotels-search.html?country=Malaisie">Malaisie</a> - <a href="hotels-search.html?country=Sri%20lanka">Sri Lanka</a>`,
         address : "Asie",
         slidebg : "./src/img/asie.jpg",
         hotels:[
@@ -580,10 +580,10 @@ var continents = [
     { 
         continent : "Amerique du Nord",
         description : "L'Amérique du Nord, un continent aux multiples visages, offre une pléthore d'expériences luxueuses pour les voyageurs en quête de découvertes et de confort. Que vous soyez attiré par les gratte-ciel étincelants de New York, les paysages grandioses des Rocheuses canadiennes ou les plages ensoleillées de la Californie, l'Amérique du Nord regorge de destinations emblématiques et de trésors cachés. Nous sommes enchantés de vous présenter notre sélection d'hôtels de luxe à travers ce vaste territoire, des hôtels de renommée mondiale au cœur des grandes villes aux lodges isolés dans les régions sauvages. Plongez dans une expérience raffinée où le confort, l'exclusivité et le service impeccable se combinent pour créer des souvenirs inoubliables. Que vous cherchiez à vivre une vie urbaine trépidante, à vous reconnecter avec la nature ou à vous détendre dans des stations balnéaires de renom, l'Amérique du Nord vous offre une escapade luxueuse qui répondra à toutes vos attentes.",
-        destinations : "CANADA · ETATS-UNIS · MEXIQUE",
+        destinations : `<a href="hotels-search.html?country=Canada">CANADA</a> · <a href="hotels-search.html?country=Etats-Unis">ETATS-UNIS</a> · <a href="hotels-search.html?country=Mexique">MEXIQUE</a>`,
         top: "L'Amérique du Nord regorge de magnifiques hôtels qui séduisent les voyageurs les plus exigeants et leur offrent des expériences luxueuses. Parmi eux, on trouve l'emblématique The Plaza à New York, un symbole intemporel du glamour et du raffinement, où des personnalités du monde entier ont séjourné.",
         image : "./src/img/canada.jpg",
-        slide:"Arabie Saoudite - Emirats arabes unis - Dubai - Oman - Qatar",
+        slide:`<a href="hotels-search.html?country=Arabie%20saoudite">Arabie Saoudite</a> - <a href="hotels-search.html?country=Emirats%20arabes%20unis">Emirats arabes unis</a> - <a href="hotels-search.html?country=Dubai">Dubai</a> - <a href="hotels-search.html?country=Oman">Oman</a> - <a href="hotels-search.html?country=Qatar">Qatar</a>`,
         address : "Moyen Orient",
         slidebg : "./src/img/qatar2.png",
         hotels:[
@@ -612,10 +612,10 @@ var continents = [
     { 
         continent : "Amerique du Sud",
         description : "L'Amérique du Sud, un continent vibrant et diversifié, est une destination captivante pour les voyageurs en quête d'expériences luxueuses et d'aventures uniques. Que vous souhaitiez explorer les merveilles naturelles de la forêt amazonienne au Brésil, découvrir les sites historiques de la civilisation inca au Pérou ou vous détendre sur les plages paradisiaques de la côte caribéenne de la Colombie, l'Amérique du Sud regorge de trésors à découvrir. Nous sommes ravis de vous présenter notre sélection d'hôtels de luxe à travers ce continent envoûtant, des haciendas traditionnelles en Équateur aux resorts de luxe en Patagonie. Plongez dans une expérience de voyage exclusive, alliant confort, élégance et hospitalité chaleureuse, et laissez-vous séduire par la beauté époustouflante des paysages, la richesse culturelle et la passion vibrante de l'Amérique du Sud. Que vous soyez attiré par l'aventure, la gastronomie ou l'exploration des sites historiques, l'Amérique du Sud est prête à vous offrir une escapade luxueuse qui comblera tous vos désirs. Que vous cherchiez à vivre une vie urbaine trépidante, à vous reconnecter avec la nature ou à vous détendre dans des stations balnéaires de renom, l'Amérique du Nord vous offre une escapade luxueuse qui répondra à toutes vos attentes.",
-        destinations : "ARGENTINE · BRESIL · COLOMBIE · PEROU",
+        destinations : `<a href="hotels-search.html?country=Argentine">ARGENTINE</a> · <a href="hotels-search.html?country=Bresil">BRESIL</a> · <a href="hotels-search.html?country=Colombie">COLOMBIE</a> · <a href="hotels-search.html?country=Perou">PEROU</a>`,
         top: "L'Amérique du Sud regorge de joyaux hôteliers qui charment les voyageurs les plus exigeants et leur offrent des expériences inoubliables. Parmi eux, on retrouve l'emblématique Copacabana Palace à Rio de Janeiro, qui allie glamour et sophistication au cœur de la vibrante Cidade Maravilhosa.",
         image : "./src/img/colombie.jpg",
-        slide:"Australie - Polynésie de française",
+        slide:`<a href="hotels-search.html?country=Australie">Australie</a> - <a href="hotels-search.html?country=Polynesie%20francaise">Polynésie de française</a>`,
         address : "Océanie",
         slidebg : "./src/img/oceanie.jpg",
         hotels:[
@@ -644,10 +644,10 @@ var continents = [
     { 
         continent : "Moyen Orient",
         description : "Hôtels de luxe au Moyen-Orient Le Moyen-Orient est une destination fascinante qui offre une combinaison unique de richesse culturelle, d'histoire ancienne et de modernité luxueuse. Des villes dynamiques comme Dubaï et Abu Dhabi aux oasis tranquilles d'Oman et aux paysages désertiques du Qatar, la région regorge d'hôtels de luxe qui vous garantissent une expérience mémorable. Imprégnez-vous du glamour incomparable de l'emblématique Burj Al Arab à Dubaï, où le luxe et l'extravagance atteignent des sommets. Découvrez l'élégance intemporelle du Qasr Al Sarab Desert Resort by Anantara, niché au cœur des dunes dorées du désert de Liwa. Ou laissez-vous charmer par l'atmosphère mystique du Alila Jabal Akhdar à Oman, perché sur les montagnes escarpées du Hajjar occidental. Que vous cherchiez à vous immerger dans la modernité dynamique ou à vous évader dans des oasis sereines, le Moyen-Orient vous promet des moments de pure indulgence et d'aventure exotique.",
-        destinations : "ARABIE SAOUDITE · EMIRATES ARABES UNIS · DUBAI · OMAN · QATAR",
+        destinations : `<a href="hotels-search.html?country=Arabie%20saoudite">ARABIE SAOUDITE</a> · <a href="hotels-search.html?country=Emirats%20arabes%20unis">EMIRATES ARABES UNIS</a> · <a href="hotels-search.html?country=Dubai">DUBAI</a> · <a href="hotels-search.html?country=Oman">OMAN</a> · <a href="hotels-search.html?country=Qatar">QATAR</a>`,
         top: "Le Moyen-Orient regorge de joyaux hôteliers qui séduisent les voyageurs les plus exigeants grâce à leur opulence et leur hospitalité légendaires. Parmi eux, on trouve le luxueux Burj Al Arab à Dubaï, une icône architecturale en forme de voile qui surplombe la mer d'Arabie et offre des intérieurs somptueux et des vues à couper le souffle.",
         image : "./src/img/qatar.jpg",
-        slide:"Allemagne - Belgique - France - Portugal",
+        slide:`<a href="hotels-search.html?country=Allemagne">Allemagne</a> - <a href="hotels-search.html?country=Belgique">Belgique</a> - <a href="hotels-search.html?country=France">France</a> - <a href="hotels-search.html?country=Portugal">Portugal</a>`,
         address : "Europe",
         slidebg : "./src/img/londres.png",
         hotels:[

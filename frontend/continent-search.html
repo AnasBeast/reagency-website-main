@@ -170,9 +170,9 @@
             <div id="other-options">
                 <h1 class="plus">NOS AUTRES DESTINATIONS</h1>
                 <p class="options-bottom">
-                    AFRIQUE - AMÉRIQUE DU NORD  <br>
-                    AMÉRIQUE DU SUD - ASIE - CARAÏBES - MOYEN ORIENT   <br>
-                    OCÉAN INDIEN - OCÉANIE
+                    <a href="continent-search.html?continent=Afrique">AFRIQUE</a>  - <a href="continent-search.html?continent=Amerique%20du%20nord">AMÉRIQUE DU NORD</a>  <br>
+                    <a href="continent-search.html?continent=Amerique%20du%20sud">AMÉRIQUE DU SUD</a> - <a href="continent-search.html?continent=Asie">ASIE</a> - <a href="continent-search.html?continent=Caraibes">CARAÏBES</a> - <a href="continent-search.html?continent=Moyen%20orient">MOYEN ORIENT</a>   <br>
+                    <a href="continent-search.html?continent=Ocean%20indien">OCÉAN INDIEN</a> - <a href="continent-search.html?continent=Oceanie">OCÉANIE</a>
 
                 </p>
             </div>
@@ -335,7 +335,7 @@
             </div>
         `;
         roomsSelection.style.backgroundImage = `url(${continent.slidebg})`
-        contentDestinations.textContent=continent.destinations
+        contentDestinations.innerHTML=continent.destinations
 
         // div list
         const hotelsList = document.getElementById("list");

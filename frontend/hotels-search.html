@@ -574,9 +574,8 @@
             }else{
                 hotels=[]
                 for(let i=0;i<ameFilters.length;i++){
-                    filter = ameFilters[i]
                     obj.forEach((hotel)=>{
-                        if(hotel.amenagement.includes(filter)){hotels.push(hotel)}
+                        if(!(hotels.includes(hotel))){if(JSON.stringify(hotel.amenagement)==JSON.stringify(ameFilters)){hotels.push(hotel)}}
                     })
                 }
                 // hotels = obj.filter((hotel)=>hotel.amenagement.toUpperCase()==e.target.value.toUpperCase());
