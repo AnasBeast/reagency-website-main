@@ -13,6 +13,7 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
     <script type="text/javascript" src="src/js/index.js"></script>
@@ -112,11 +113,11 @@
                             Explorer sur la carte
                         </a>
                     </li>
-<!--                     <li>
-                        <a href="#info">
+                    <li>
+                        <a id="photos" onclick="toggleModal()">
                             Voir les photos
                         </a>
-                    </li> -->
+                    </li>
                     <li>
                         <a href="#avis">
                             Avis
@@ -165,6 +166,74 @@
                         
                     </div>
                 </section>
+            </div>
+        </div>
+        <div id="modal" class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true" style="z-index: 999;display: none;">
+            <!--
+              Background backdrop, show/hide based on modal state.
+          
+              Entering: "ease-out duration-300"
+                From: "opacity-0"
+                To: "opacity-100"
+              Leaving: "ease-in duration-200"
+                From: "opacity-100"
+                To: "opacity-0"
+            -->
+            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+          
+            <div class="fixed inset-0 z-10 overflow-y-auto">
+              <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <!--
+                  Modal panel, show/hide based on modal state.
+          
+                  Entering: "ease-out duration-300"
+                    From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    To: "opacity-100 translate-y-0 sm:scale-100"
+                  Leaving: "ease-in duration-200"
+                    From: "opacity-100 translate-y-0 sm:scale-100"
+                    To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                -->
+                <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                    
+                    <div x-data="imageSlider()" class="relative mx-auto max-w-2xl overflow-hidden rounded-md bg-gray-100 p-2 sm:p-4">
+                        
+                        <div class="absolute right-5 top-5 z-10 rounded-full bg-gray-600 px-2 text-center text-sm text-white">
+                            <span x-text="currentIndex"></span>/<span x-text="images.length"></span>
+                            
+                        </div>
+                        <button onclick="toggleModal()" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100">
+                            <span class="sr-only">Close menu</span>
+                            <!-- Heroicon name: outline/x -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                        <button @click="previous()" class="absolute left-5 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-gray-100 shadow-md">
+                            <svg class=" w-8 h-8 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-gray-500 hover:text-gray-600 hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7">
+                                </path>
+                            </svg>
+                        </button>
+                
+                        <button @click="forward()" class="absolute right-5 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-gray-100 shadow-md">
+                            <svg class=" w-8 h-8 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-gray-500 hover:text-gray-600 hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                
+                        <div class="relative h-80" style="width: 30rem">
+                            <template x-for="(image, index) in images">
+                                <div x-show="currentIndex == index + 1" x-transition:enter="transition transform duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition transform duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="absolute top-0">
+                                    <img :src="image" alt="image" class="rounded-sm" />
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
             </div>
         </div>
         <div class="swiper mySwiper">
@@ -227,7 +296,7 @@
         <div id="inter">
             <div id="top">
                 <h1>L'hôtel en bref</h1>
-                <ul class="infos pl-8">
+                <ul class="infos sm:pl-8 mb-4">
                     <li>
                         <button class="infos-active infos-info">INFORMATIONS PRATIQUES </button> 
                     </li>
@@ -549,10 +618,45 @@
                 .then((res) => {
                     hotel = res 
                     document.title = hotel.name
+                    console.log(hotel.images)
                     hotelPage(hotel)
+                    imageSlider(hotel.images) 
                 });
         }
-        displayHotel()
+        displayHotel();
+        const imageSlider = (img) => {
+            return {
+                currentIndex: 1,
+                    images: img==null?[
+                        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+                        "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+                        "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+                        "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+                        "https://images.unsplash.com/photo-1485160497022-3e09382fb310?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+                        "https://images.unsplash.com/photo-1472791108553-c9405341e398?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2137&q=80"
+                    ]:img,
+                    previous() {
+                        if (this.currentIndex > 1) {
+                            this.currentIndex = this.currentIndex - 1;
+                        }
+                    },
+                    forward() {
+                        if (this.currentIndex < this.images.length) {
+                            this.currentIndex = this.currentIndex + 1;
+                        }
+                    },
+            };
+        };
+        const modal = document.querySelector("#modal")
+        function toggleModal(){
+            console.log(modal.style.display)
+            if(modal.style.display=="none"){
+                modal.style.display = "block"
+            }else{
+                modal.style.display = "none"
+            }
+            
+        }
         //Modifiying the page to the current Hotel selected
         function hotelPage(hotel){
             // background-image landing
@@ -788,6 +892,8 @@
                 });
         }
         displaySwiper();
+        
+
         
     </script>
     <script>

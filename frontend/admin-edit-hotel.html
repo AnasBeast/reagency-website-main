@@ -558,7 +558,7 @@
         }
         hotelSubtitle.value = hotel.subtitle;
         hotelDescription.value = hotel.description;
-        hotelImages.value = hotel.images[0];
+        hotelImages.value = hotel.images.join(",");
         hotelServices.value = hotel.services.join(",");
         hotelExceptions.value = hotel.exceptions.join(",");
         hotelRoomsTypes.value = hotel.rooms.length;
