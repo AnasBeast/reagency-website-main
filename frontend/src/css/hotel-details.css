@@ -1318,3 +1318,12 @@ nav #menu div {
 .review__items {
   display: none;
 }
+
+#imageslider{
+  position: fixed;
+  right: -100%;
+  transition: all 2.3s ease;
+}
+.slide{
+  right: 0 !important;
+}
