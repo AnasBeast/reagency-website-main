@@ -604,6 +604,7 @@ nav #menu div {
 }
 
 #content #avis h1 {
+  font-size: 45px;
   width: calc(100% - 200px);
   margin-left: 0;
 }
@@ -766,10 +767,16 @@ nav #menu div {
 
 #content #options h1 {
   width: 90%;
+  font-size: 45px;
   margin-left: 10%;
   margin-bottom: 70px;
 }
-
+.element h3{
+  font-size: 25px;
+}
+.point h2{
+  font-size: 20px;
+}
 #content #options #wrapper {
   width: 80%;
   display: -webkit-box;
