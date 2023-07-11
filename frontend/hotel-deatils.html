@@ -410,7 +410,7 @@
             <h1>Également dans la Collection Regency</h1>
 
             <div id="wrapper">
-                <div class="element">
+                <!-- <div class="element">
                     <div id="background"></div>
                     <h3>CLARIDGE'S</h3>
                 </div>
@@ -423,7 +423,7 @@
                 <div class="element">
                     <div id="background"></div>
                     <h3>HOTEL CAFÉ ROYAL</h3>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -894,6 +894,41 @@
 
             
         }
+
+        
+        // Random Hotels
+        const hotelsList = document.getElementById("wrapper")
+
+        function getRandom(arr, n) {
+            var result = new Array(n),
+                len = arr.length,
+                taken = new Array(len);
+            if (n > len)
+                throw new RangeError("getRandom: more elements taken than available");
+            while (n--) {
+                var x = Math.floor(Math.random() * len);
+                result[n] = arr[x in taken ? taken[x] : x];
+                taken[x] = --len in taken ? taken[len] : len;
+            }
+            return result;
+        }
+
+        async function displayHotels(){
+            await fetch(`${backendURL}/api/todos`)
+                .then((response) => response.json())
+                .then(({hotels}) => {
+                    getRandom(hotels, 3).forEach((hotel) => {
+                        const hotelItem = document.createElement("a");
+                        hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                        hotelItem.classList.add("element");
+                        hotelItem.innerHTML = `
+                            <div id="background" style="background-image : url(${hotel.images[0]})"></div>
+                            <h3>${hotel.name}</h3>`;
+                        hotelsList.appendChild(hotelItem);
+                    })
+                });
+        }
+        displayHotels()
     </script>
     <script>
         // Image Slider
