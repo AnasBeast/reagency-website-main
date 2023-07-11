@@ -450,19 +450,25 @@
                             </div>
                             <p class="my-4">
                                 <strong id="hotel-name">Casa Cipriani New York</strong> <br>
-                                10 South Street <br>
-                                New York, Etats-Unis
+                                <p id="hotel-address">
+                                    10 South Street <br>
+                                    New York, Etats-Unis
+                                </p>
                             </p>
                             <div class="seperation bg-black">
                                 <div></div>
                             </div>
                             <p class="my-4">
                                 <strong>Enregistrement :</strong> <br>
-                                dimance, 25 juin 2023
+                                <p id="arrival">
+                                    dimanche, 25 juin 2023
+                                </p>
                             </p>
                             <p class="my-4">
                                 <strong>Date de départ :</strong> <br>
-                                vendredi, 30 juin 2023
+                                <p id="departure">
+                                    vendredi, 30 juin 2023
+                                </p>
                             </p>
                             <div class="seperation bg-black">
                                 <div></div>
@@ -582,12 +588,18 @@
         displayHotel()
 
         const hotelName = document.getElementById("hotel-name");
+        const hotelAdress = document.getElementById("hotel-address");
+        const arrival = document.getElementById("arrival");
+        const departure = document.getElementById("departure");
         const dateRange = document.getElementById("kt_daterangepicker_1");
         const nbAdultes = document.getElementById("nbAdultes");
         const nbEnfants = document.getElementById("nbEnfants");
         const roomType = document.getElementById("room-type");
         function displayInformations(hotel){
             hotelName.textContent = `${hotel.name}`;
+            hotelAdress.textContent = `${hotel.address}`;
+            arrival.textContent = localStorage.getItem("daterange").split("-")[0];
+            departure.textContent = localStorage.getItem("daterange").split("-")[1];
             dateRange.value=localStorage.getItem("daterange");
             nbAdultes.value=localStorage.getItem("nbAdultes");
             nbEnfants.value=localStorage.getItem("nbEnfants");

@@ -625,9 +625,11 @@
                     <div x-data="imageSlider" class="relative mx-auto h-screen w-full overflow-hidden bg-gray-100 pt-4">
                         
                         <div class="absolute right-5 top-5 z-10 rounded-full bg-gray-600 px-2 text-center text-sm text-white">
+                            
                             <span x-text="currentIndex"></span>/<span x-text="images.length"></span>
                             
                         </div>
+
                         <button onclick="toggleModal()" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100">
                             <span class="sr-only">Close menu</span>
                             
@@ -635,6 +637,8 @@
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
+                        <a href="reservation-hotel.html?id=${hotel._id}" ><button id="slide-btn"> RÉSERVER</button></a>
+
                         <button @click="previous()" class="absolute left-5 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-gray-100 shadow-md">
                             <svg class=" w-8 h-8 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-gray-500 hover:text-gray-600 hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">

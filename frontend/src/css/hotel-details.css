@@ -1327,3 +1327,18 @@ nav #menu div {
 .slide{
   right: 0 !important;
 }
+#slide-btn{
+  background: #021033;
+    color: #fff;
+    font-family: 'Caviar Dreams';
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    -webkit-transition: color 400ms, background 400ms;
+    transition: color 400ms, background 400ms;
+    font-weight: 600;
+    cursor: pointer;
+    /* margin-top: 20px; */
+    margin-left: 65%;
+    margin-bottom: 10px;
+}
