@@ -17,7 +17,7 @@ const hotelSchema = mongoose.Schema({
         {
             name: {type:String, required:true},
             description: {type:String, required:true},
-            img: {type:String, required:true},
+            img: {type:Array, required:true},
         }
     ],
     feedback : [
@@ -59,6 +59,7 @@ const hotelSchema = mongoose.Schema({
 
     },
     stars : {type:String, required:true},
+    display : {type:Boolean, default:false}
 })
 
 module.exports = mongoose.model("Hotel", hotelSchema)

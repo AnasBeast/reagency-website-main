@@ -419,9 +419,9 @@
             await fetch(`${backendURL}/api/todos`)
                 .then((response) => response.json())
                 .then(({hotels}) => {
-                    obj = hotels
+                    obj = hotels.filter((hotel)=>hotel.display==true)
                     hotelsList.innerHTML=""
-                    hotels.forEach((hotel) => {
+                    obj.forEach((hotel) => {
                         const hotelItem = document.createElement("a");
                         hotelItem.classList.add("element");
                         hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;

@@ -386,7 +386,17 @@
                       required="" />
                   </div>
                 </div>
- 
+
+                <div class="mb-4 flex justify-center gap-8 items-center">
+                  <label for="hotel-rating" class="block text-xl font-medium text-gray-900">Display:</label>
+                  <div class="mt-1">
+                    <input type="checkbox" name="hotel-rating"
+                      id="hotel-display"
+                      class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" style="width: 40px;height: 40px;" />
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -527,6 +537,7 @@
       const hotelSpaservices = document.querySelector("#spa-services");
       const hotelSpaloisirs = document.querySelector("#spa-loisirs");
       const hotelRating = document.querySelector("#hotel-rating");
+      const hotelDisplay = document.querySelector("#hotel-display");
       const hotelBtn = document.querySelector("#add-hotelbtn");
 
       const Rooms = document.querySelector("#rooms");
@@ -653,6 +664,7 @@
         hotelSpaservices.value = hotel.informations.spa.services;
         hotelSpaloisirs.value = hotel.informations.spa.loisirs;
         hotelRating.value = hotel.stars;
+        hotelDisplay.checked = hotel.display;
       }
 
       loadHotel()
@@ -728,6 +740,7 @@
             }
           },
           stars : hotelRating.value,
+          display : hotelDisplay.checked,
           token : localStorage.getItem("accessToken")
         }
         console.log(data)

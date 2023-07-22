@@ -349,8 +349,9 @@
                     </div>
                 </div>
                 <div class="background-image">
-                    <img class="room-img" src=${hotel.rooms[i].img} alt="A random unsplash image" />
+                    <img class="room-img" src=${hotel.rooms[i].img[0]} alt="image-room" loading="lazy"/>
                 </div>
+                <div class="swiper-lazy-preloader"></div>
                 `
                 console.log(slide)
                 slides.appendChild(slide)
@@ -361,10 +362,35 @@
             {
                 const room = document.createElement("div")
                 room.classList="w-2/3 py-8 mx-auto"
-                room.innerHTML+=`
-                <h1 class="text-2xl font-semibold">${hotel.rooms[i].name}</h1>
-                <div class="grid grid-cols-2 mt-8" id="room">
-                    <img src=${hotel.rooms[i].img} alt="room">
+
+                const swiperEl = document.createElement("div")
+                swiperEl.className = "swiper"
+
+                const wrapper = document.createElement("div")
+                wrapper.className = "swiper-wrapper"
+
+                
+
+                for(var j=0;j<hotel.rooms[i].img.length;j++)
+                {
+                    var slideEl = document.createElement("div")
+                    slideEl.className = "swiper-slide"
+                    // slideEl.innerHTML=`<div class="swiper-lazy-preloader"></div>`
+                    slideEl.innerHTML+=
+                    `
+                        <img src=${hotel.rooms[i].img[j]} loading="lazy" />
+                    `
+                }
+                wrapper.append(slideEl)
+                swiperEl.append(wrapper)
+                swiperEl.innerHTML+=
+                `
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                `
+                console.log(swiperEl)
+                roomEl = 
+                `
                     <div class="px-8 flex flex-col gap-8">
                         <p><strong>Description :</strong> ${hotel.rooms[i].description}</p>
                         <p><strong>Equipements :</strong> ${hotel.informations.pratiques.equipments}</p>
@@ -374,6 +400,14 @@
                             </button>
                         </a>
                     </div>
+                `
+                room.innerHTML+=`
+                <h1 class="text-2xl font-semibold">${hotel.rooms[i].name}</h1>
+                <div class="grid grid-cols-2 mt-8" id="room">
+                    <div class="swiper">
+                        ${swiperEl.innerHTML}
+                    </div>
+                    ${roomEl}
                 </div>
                 `
                 console.log(room)

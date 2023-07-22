@@ -73,6 +73,7 @@ exports.createHotel = async(req , res , next)=>{
 
         },
         stars : req.body.stars,
+        display : req.body.display
     });
     await hotel
         .save()
