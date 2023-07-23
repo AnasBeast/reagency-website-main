@@ -1042,6 +1042,13 @@ input::-webkit-inner-spin-button {
   #room div{
     padding: 0;
   }
+  .swiper-button-next{
+    left: 46% !important;
+
+  }
+  .swiper-button-prev{
+    left: -46% !important;
+  }
 }
 
 @media only screen and (max-width: 701px) {
@@ -1185,7 +1192,11 @@ input::-webkit-inner-spin-button {
   min-height: 320px;
   background-color: #46677b;
 }
-
+.roomSwipe{
+  width: 100%;
+  height: auto;
+  background-color: #46677b;
+}
 .swiper-slide {
   font-size: 18px;
   background: #fff;

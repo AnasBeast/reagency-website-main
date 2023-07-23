@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
 </head>
 <body>
@@ -124,22 +124,37 @@
         </div>
         <div id="rooms-list">
             <!-- <div class="w-2/3 py-8 mx-auto">
-                <h1 class="text-2xl font-semibold">Deluxe City View King</h1>
-                <div class="grid grid-cols-2 mt-8">
-                    <img src="./src/img/room.png" alt="room">
-                    <div class="px-8 flex flex-col gap-8">
-                        <p><strong>Description :</strong> 94 m2, Vue: Bord de mer direct - Localisation: Etages 18-21 - Baignoire et douche dans toutes les chambres, Balcon ou Terrasse dans toutes les chambres</p>
-                        <p><strong>Equipements :</strong> Connecteur iPod, TV à écran plat, coffre-fort dans la chambre, mini-bar, cafetière / théière, journal quotidien gratuit, produits de salle de bains ESPA</p>
-                        <button type="button" data-te-ripple-init data-te-ripple-color="light"
-                        class="mb-6 text-2xl inline-block w-full bg-blue-950 px-6 pt-4 pb-4 font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
-                        CHOISIR
-                        </button>
+                <h1 class="text-2xl font-semibold">Deluxe Room</h1>
+                <div class="grid grid-cols-2 mt-8" id="room">
+                    <div class="swiper mySwiper1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://img1.10bestmedia.com/Images/Photos/378649/Park-Hyatt-New-York-Manhattan-Sky-Suite-Master-Bedroom-low-res_54_990x660.jpg" loading="lazy">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://img1.10bestmedia.com/Images/Photos/378649/Park-Hyatt-New-York-Manhattan-Sky-Suite-Master-Bedroom-low-res_54_990x660.jpg" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
+                    
+                    <div class="px-8 flex flex-col gap-8">
+                        <p><strong>Description :</strong> 36 m2, Vue: Hyde Park - Localisation : chaque étage -Baignoire et douche dans routes les chambers</p>
+                        <p><strong>Equipements :</strong> Connecteur iPod, TV à écran plat, coffre-fort dans la chambre, mini-bar, cafetière / théière, produits de salle de bains Noble Isle</p>
+                        <a href="reservation-last.html?id=648114ceaf84905a70ac8a5d&amp;room=Deluxe Room">
+                            <button type="button" data-te-ripple-init="" data-te-ripple-color="light" class="mb-6 text-2xl inline-block w-full bg-blue-950 px-6 pt-4 pb-4 font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                            CHOISIR
+                            </button>
+                        </a>
+                    </div>
+                
                 </div>
-            </div> -->
+                </div> -->
         </div>
+        
         <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper wrapper-rooms">
               <!-- <div class="swiper-slide">
                 <div class="title">
                     <div id="title">
@@ -181,9 +196,6 @@
               </div> -->
             </div>
           
-          
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
         
 
@@ -302,6 +314,26 @@
         nbChambres.addEventListener("input" , save(nbChambres))
    </script> -->
     <script>
+        const settings = {
+            loop: true,
+        
+            speed: 900,
+            slidesPerView: "auto",
+            pagination: {
+                el: ".swiper-pagination",
+                type: "bullets"
+            },
+        
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            }
+        };
+        function initSwiper(param) {
+            new Swiper(param,settings)
+        };
+
+
         function GetUrlParameter(sParam){
             var sPageURL= document.URL;
             var sURLVariables = sPageURL.split('?');
@@ -329,12 +361,12 @@
         displayHotel()
         //swiper slide and rooms
         function displaySlide(hotel){
-            const slides = document.querySelector(".swiper-wrapper");
+            const slides = document.querySelector(".wrapper-rooms");
             for (var i = 0; i < hotel.rooms.length; i++) 
             {
                 const slide = document.createElement("div")
                 const room = document.createElement("option")
-                slide.className="swiper-slide"
+                slide.className="swiper-slide banner"
                 slide.innerHTML+=`
                 <div class="title">
                     <div id="title">
@@ -364,7 +396,9 @@
                 room.classList="w-2/3 py-8 mx-auto"
 
                 const swiperEl = document.createElement("div")
-                swiperEl.className = "swiper"
+                swiperEl.className = `swiper mySwiper${i} roomSwipe`
+                
+
 
                 const wrapper = document.createElement("div")
                 wrapper.className = "swiper-wrapper"
@@ -378,10 +412,11 @@
                     // slideEl.innerHTML=`<div class="swiper-lazy-preloader"></div>`
                     slideEl.innerHTML+=
                     `
-                        <img src=${hotel.rooms[i].img[j]} loading="lazy" />
+                        <img class="room-img" src=${hotel.rooms[i].img[j]} loading="lazy" />
                     `
+                    wrapper.append(slideEl)
+
                 }
-                wrapper.append(slideEl)
                 swiperEl.append(wrapper)
                 swiperEl.innerHTML+=
                 `
@@ -404,17 +439,18 @@
                 room.innerHTML+=`
                 <h1 class="text-2xl font-semibold">${hotel.rooms[i].name}</h1>
                 <div class="grid grid-cols-2 mt-8" id="room">
-                    <div class="swiper">
+                    <div class="swiper mySwiper${i} roomSwipe">
                         ${swiperEl.innerHTML}
                     </div>
                     ${roomEl}
                 </div>
                 `
+                
                 console.log(room)
                 roomsList.appendChild(room)
+                initSwiper(`.mySwiper${i}`)
             }
         }
-        
         
 
     </script>
@@ -541,34 +577,12 @@
             btn.addEventListener("click", increment3);
         });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
-        const settings = {
-            loop: true,
-        
-            speed: 700,
-        
-            pagination: {
-            el: ".swiper-pagination",
-            type: "bullets"
-            },
-        
-            navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-            }
-        };
-        
         const swiper = new Swiper(".mySwiper", settings);
 
-        
-
         const dateRange = document.getElementById("kt_daterangepicker_1");
-
-        
-        
         //save daterange
-
         $("#kt_daterangepicker_1").daterangepicker();
         $("#kt_daterangepicker_1").on('apply.daterangepicker', function(){
             localStorage.setItem("daterange",dateRange.value);
