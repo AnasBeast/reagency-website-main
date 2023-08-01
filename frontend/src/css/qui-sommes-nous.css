@@ -1,0 +1,375 @@
+#background-page {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/londres.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+          width: 100%;
+}
+.mail2{
+  margin-top: 20%;
+}
+.background{
+  background-image: url("../img/sunset.jpg") !important;
+}
+.background2{
+  background-image: url("../img/poolside.png") !important;
+}
+#mail{
+  margin-bottom: 0;
+}
+#mail .container{
+  right: 8% !important;
+  left: auto !important;
+  height: 650px !important;
+  top: -40% !important;
+}
+.container2{
+  height: 805px !important;
+  top: -40% !important;
+}
+#side-logo{
+  position: relative;
+  bottom: 100px;
+}
+nav {
+  width: 100%;
+  padding-top: 15px;
+  position: relative;
+  z-index: 997;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav img {
+  width: 200px;
+  margin-left: 30px;
+}
+
+nav #sections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 0;
+}
+
+nav #sections p {
+  font-weight: 600;
+  color: black;
+  font-size: 15px;
+  margin-right: 50px;
+}
+
+nav #menu {
+  width: 30px;
+  height: 25px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  margin-right: 30px;
+  display: none;
+}
+
+nav #menu div {
+  width: 100%;
+  height: 3px;
+  border: none;
+  background: black;
+}
+
+.landing-title{
+  padding: 15%;
+  font-size: 45px;
+  position: relative;
+  text-shadow: 2px 2px black;
+}
+#content #landing #input-wrapper {
+  top: 95%;
+}
+#content #landing #gradient {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  top: 30%;
+  background: #021033;
+  background: -webkit-gradient(linear, left bottom, left top, from(#021033), to(rgba(0, 212, 255, 0)));
+  background: linear-gradient(0deg, #021033 0%, rgba(0, 212, 255, 0) 100%);
+  
+}
+.content-description{
+  background: #F1C6B0;
+  padding: 10%;
+  font-size: 1.5rem;
+}
+.content-subtitle{
+  font-size: 5rem;
+  color: #FF5500;
+}
+#background-page #input-wrapper {
+  top: auto !important;
+  position: relative;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#input-wrapper h1{
+  position: relative;
+  top: 20vh;
+  font-size: 45px;
+  color: white;
+}
+#background-page #msg {
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 35px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(2, 16, 51, 0.58);
+  padding-bottom: 150px;
+}
+
+#background-page #msg #text {
+  margin-top: 50px;
+  width: 80%;
+}
+
+#background-page #msg #text p {
+  text-align: center;
+}
+
+#content {
+  width: 85%;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#content #landing {
+  margin-bottom: 70px;
+  width: 100vw;
+  height: 80vh;
+  -webkit-transition: height 300ms;
+  transition: height 300ms;
+  position: relative;
+  background-image: url(../img/londres.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#content #landing #input-wrapper input[type="text"] {
+  display: block;
+  width: 100%;
+  text-align: start;
+}
+
+#content #contact-cta {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#content #contact-cta img {
+  width: 500px;
+  top: -300px;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: .50;
+}
+
+#content #contact-cta h2 {
+  width: 90%;
+  text-align: center;
+}
+
+#content #contact-cta button {
+  z-index: 997;
+  border: none;
+  border-radius: 0;
+  width: 250px;
+  height: 65px;
+  background: #ff5500;
+  color: #fff;
+  font-family: 'Caviar Dreams';
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 15px;
+  cursor: pointer;
+  -webkit-transition: background 300ms;
+  transition: background 300ms;
+}
+
+#content #contact-cta button:hover {
+  background: #cc4400;
+}
+
+#content #mail {
+  width: 100%;
+  margin-bottom: 250px;
+}
+
+@media only screen and (max-width: 1235px) {
+  nav {
+    height: 100px !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-flow: row nowrap !important;
+            flex-flow: row nowrap !important;
+  }
+  nav img {
+    width: 200px !important;
+    margin-left: 0;
+  }
+  nav #gradient {
+    height: 100px !important;
+  }
+  nav #sections {
+    display: none !important;
+  }
+  nav #menu {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  footer {
+    margin-top: 200px !important;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  #background-page #msg #text {
+    width: 90%;
+  }
+  #background-page #msg #text p {
+    font-size: 25px !important;
+  }
+  .content-subtitle{
+    font-size: 2.5rem;
+  }
+  #content{
+    width: 100%;
+  }
+  #content #landing {
+    height: 30vh;
+  }
+}
+
+@media only screen and (max-width:650px){
+  .container-content{
+    display: flex !important;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  #input-wrapper h1{
+    text-align: center;
+  }
+  .container-content div div img{
+    width: 100%;
+  }
+  .container-content div{
+    text-align: center;
+  }
+  .container-content div p{
+    width: 100%;
+  }
+  .container-fluid{
+    margin-top: 220px;
+  }
+  .landing-title{
+    padding: 10%;
+    padding-top: 25%;
+    font-size: 30px;
+  }
+  .container-fluid div{
+    margin-bottom: 0;
+  }
+  #mail{
+    margin: 0;
+  }
+  #mail #container{
+    height: auto !important;
+    top: 0vw !important;
+    left: 0vw !important;
+    width: 100vw !important;
+  }
+  footer{
+    margin-top: 0px !important;
+  }
+  footer #upper img{
+    width: 80%;
+  }
+  footer #lower{
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}

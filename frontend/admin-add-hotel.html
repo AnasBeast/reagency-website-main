@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin Add Hotel</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 maximum-scale=1"
+    />
+    <link rel="shortcut icon" href="src/img/icon--blanc-png.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <script type="text/javascript" src="src/js/index.js"></script>
+    <a href="admin-dashboard.html"><img src="./src/img/logo-noir.png" alt="logo" class="mx-auto w-56" /></a>
+    <section class=" sm:px-6 lg:px-8 mt-12">
+      <div class="px-4 sm:px-0 mb-4 flex justify-between items-center">
+        <h2 class="text-sm md:text-xl font-medium text-gray-900">Add Hotel</h2>
+       
+      </div>
+      <form class="flex h-full flex-col divide-y divide-gray-200 bg-white" action="#">
+        <div class="h-0 flex-1 overflow-y-auto">
+          <div class="bg-gray-700 py-6 px-4 sm:px-6">
+            <div class="flex items-center justify-between">
+              <h2 class="text-lg font-medium text-white" id="headlessui-dialog-title-:rk:" data-headlessui-state="open">
+                New Hotel
+              </h2>
+            </div>
+            <div class="mt-1">
+              <p class="text-sm text-gray-300">
+                Get started by filling in the information below to
+                add the new hotel.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col justify-between">
+            <div class="divide-y divide-gray-200 px-4 sm:px-6">
+              <div class="space-y-6 pt-6 pb-5">
+                <div>
+                  <label for="hotel-name" class="block text-sm font-medium text-gray-900">Hotel name</label>
+                  <div class="mt-1">
+                    <input type="text" name="hotel-name" id="hotel-name"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" 
+                      placeholder="45 Park Lane"
+                      />
+                  </div>
+                </div>
+                <div>
+                  <label for="address" class="block text-sm font-medium text-gray-900">Hotel address</label>
+                  <div class="mt-1">
+                    <input type="text" name="address" id="address"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" 
+                      placeholder="45 PARK LANE, MAYFAIR, LONDRES, ROYAUME-UNI"
+                      />
+                  </div>
+                </div>
+                <div>
+                  <label for="continent" class="block text-sm font-medium text-gray-900">Region</label>
+                  <div class="mt-1">
+
+                      <select id="continents" class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                        <option selected disabled>Choisissez a region</option>
+                      </select>
+                  </div>
+                </div>
+                <div>
+                  <label for="country-name" class="block text-sm font-medium text-gray-900">Country name</label>
+                  <div class="mt-1">
+                      <select id="countries" class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                        <option selected disabled>Choisissez a country</option>
+                      </select>
+                  </div>
+                </div>
+                <div>
+                  <label for="style" class="block text-sm font-medium text-gray-900">Style</label>
+                  <div class="mt-1">
+                      <select id="style" class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                        <option selected disabled>Choisissez a style</option>
+                      </select>
+                  </div>
+                </div>
+                <div>
+                  <label for="atmosphere" class="block text-sm font-medium text-gray-900">Atmosphere</label>
+                  <div class="mt-1">
+
+                      <select id="atmosphere" class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                        <option selected disabled>Choisissez an atmosphere</option>
+                      </select>
+                  </div>
+                </div>
+                <div>
+                  <label for="amenagement" class="block text-sm font-medium text-gray-900">Amenagement (Maintenez le bouton "CTRL" puis sélectionner l'élément/éléments désiré )</label>
+                  <div class="mt-1">
+
+                      <select id="amenagement" class="block w-full h-64 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" multiple>
+                        <option selected disabled>Choisissez an amenagement</option>
+                      </select>
+                  </div>
+                </div>
+                <div>
+                  <label for="subtitle" class="block text-sm font-medium text-gray-900">Hotel subtitle</label>
+                  <div class="mt-1">
+                    <input type="text" name="subtitle" id="subtitle"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" 
+                      placeholder="Influences Art Deco face à Hyde Park"
+                      />
+                  </div>
+                </div>
+                <div>
+                  <label for="description" class="block text-sm font-medium text-gray-900">Hotel description</label>
+                  <div class="mt-1">
+                    <textarea id="description" name="description" rows="4"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required=""
+                      ></textarea>
+                  </div>
+                </div>
+                <div>
+                  <label for="hotel-images" class="block text-sm font-medium text-gray-900">Hotel images URLs (seperate by",")</label>
+                  <div class="mt-1">
+                    <input type="text" name="hotel-images" id="hotel-images"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" 
+                      placeholder="https://img1.10bestmedia.com/Images/Photos/378649/Park-Hyatt-New-York-Manhattan-Sky-Suite-Master-Bedroom-low-res_54_990x660.jpg"
+                      />
+                  </div>
+                </div>
+                <div>
+                  <label for="services" class="block text-sm font-medium text-gray-900">Hotel services (seperate by
+                    ",")</label>
+                  <div class="mt-1">
+                    <input type="text" name="services" id="services"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" 
+                      placeholder="SPA,PISCINE INTÉRIEURE,CENTRE DE FITNESS,GASTRONOMIQUE"
+                      />
+                  </div>
+                </div>
+                <div>
+                  <label for="exceptions" class="block text-sm font-medium text-gray-900">Hotel exceptions <strong>(seperate by ";")</strong></label>
+                  <div class="mt-1">
+                    <textarea type="text" name="exceptions" id="exceptions"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" 
+                      placeholder="Chaque chambre et suite a une vue donnant sur Hyde Park.;
+Découvrez l'une des suites Penthouse sur le toit avec une terrasse tout autour et une vue imprenable sur Londres.;
+Savourez un repas au premier restaurant londonien, CUT de Wolfgang Puck."
+                      ></textarea>
+                  </div>
+                </div>
+                <div>
+                  <label for="rooms-types" class="block text-sm font-medium text-gray-900">Rooms TYPES</label>
+                  <div class="mt-1 w-full md:w-auto">
+                    <input type="number" name="rooms-types" id="rooms-types"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      value="1" min="1" onkeydown="return false" required="" />
+                  </div>
+                </div>
+                <div id="rooms">
+                  <div class="flex md:flex-row flex-col justify-center items-center gap-4 mt-4">
+                    <label for="room-type" class="w-2/5 block text-sm font-medium text-gray-900">Room n°1 Type : </label>
+                    <div class="mt-1 w-full md:w-1/3">
+                      <input type="text" name="room-type" id="room-type1"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required=""
+                        
+                      />
+                    </div>
+                    <label for="room-description" class="w-2/5 block text-sm font-medium text-gray-900">Room n°1 description : </label>
+                    <div class="mt-1 w-full md:w-full">
+                      <input type="text" name="room-description" id="room-description1"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" 
+                        
+                        />
+                    </div>
+                    <label for="room-image" class="w-2/5 block text-sm font-medium text-gray-900">Room n°1 images URLs : </label>
+                    <div class="mt-1 w-full md:w-full">
+                      <input type="text" name="room-image" id="room-image1"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" 
+                        
+                        />
+                    </div>  
+                  </div>
+                </div>
+
+
+                <div>
+                  <label for="feedback-numbers" class="block text-sm font-medium text-gray-900">Feedbacks</label>
+                  <div class="mt-1">
+                    <input type="number" name="feedback-numbers" id="feedback-numbers"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      value="1" min="0" onkeydown="return false" required="" />
+                  </div>
+                </div>
+                <div id="feedbacks">
+                  <div class="flex md:flex-row flex-col items-center justify-center gap-4 mt-4">
+                    <label for="feedback-name" class="block text-sm font-medium text-gray-900">Feedback n°1 Name : </label>
+                    <div class="mt-1 w-full md:w-auto">
+                      <input type="text" name="feedback-name" id="feedback-name1"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                    <label for="feedback-rate" class="block text-sm font-medium text-gray-900">Feedback n°1 Rate /10 : </label>
+                    <div class="mt-1 w-full md:w-auto">
+                      <input type="text" name="feedback-rate" id="feedback-rate1"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" 
+                        placeholder="8/10"
+                        /> 
+                    </div>
+                    <label for="feedback-note" class="block text-sm font-medium text-gray-900">Feedback n°1 Note : </label>
+                    <div class="mt-1 w-full md:w-auto">
+                      <input type="text" name="feedback-note" id="feedback-note1"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                    <label for="feedback-date" class="block text-sm font-medium text-gray-900">Feedback n°1 date (example: CLIENT DEPUIS SEPTEMBRE 2011, ULTIMATE) : </label>
+                    <div class="mt-1 w-full md:w-auto">
+                      <input type="text" name="feedback-date" id="feedback-date1"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                  </div>
+                </div>
+
+
+                <div>
+                  <label class="block text-xl font-medium text-gray-900">Hotel Informations Pratiques</label>
+                  <label for="arrival-time" class="block text-sm font-medium text-gray-900">Hotel arrival time (ex:15:00) :</label>
+                  <div class="mt-1">
+                    <input type="text" name="arrival-time" id="arrival-time"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+                <div>
+                  <label for="departure-time" class="block text-sm font-medium text-gray-900">Hotel departure time (ex:midi) :</label>
+                  <div class="mt-1">
+                    <input type="text" name="departure-time" id="departure-time"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="rooms-numbers" class="block text-sm font-medium text-gray-900">Rooms numbers (ex:46 chambres et suites) :</label>
+                  <div class="mt-1">
+                    <input type="text" name="rooms-numbers" id="rooms-numbers"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="rooms-equipments" class="block text-sm font-medium text-gray-900">Rooms equipments (ex:Connecteur iPod) :</label>
+                  <div class="mt-1">
+                    <input type="text" name="rooms-equipments" id="rooms-equipments"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="animals" class="block text-sm font-medium text-gray-900">Animals (ex:Chiens non admis) :</label>
+                  <div class="mt-1">
+                    <input type="text" name="animals" id="animals"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="public-space" class="block text-sm font-medium text-gray-900">Internet in Public Space (ex:gratuit) :</label>
+                  <div class="mt-1">
+                    <input type="text" name="public-space" id="public-space"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="in-room" class="block text-sm font-medium text-gray-900">Internet in rooms (ex:gratuit) :</label>
+                  <div class="mt-1">
+                    <input type="text" name="in-room" id="in-room"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="transport" class="block text-sm font-medium text-gray-900">Transport et transfert (ex: soumis à supplément) :</label>
+                  <div class="mt-1">
+                    <input type="text" name="transport" id="transport"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="inclus" class="block text-sm font-medium text-gray-900"> Toujours inclus dans cet hôtel (ex: internet offert, ...) <strong>(seperate by",")</strong> : </label>
+                  <div class="mt-1">
+                    <input type="text" name="inclus" id="inclus"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="kids" class="block text-sm font-medium text-gray-900"> Kids (ex: enfants bienvenus) : </label>
+                  <div class="mt-1">
+                    <input type="text" name="kids" id="kids"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="smokers" class="block text-sm font-medium text-gray-900">Smokers (ex: Espaces publics non-fumeurs) : </label>
+                  <div class="mt-1">
+                    <input type="text" name="smokers" id="smokers"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="smokers-rooms" class="block text-sm font-medium text-gray-900">Smokers Rooms (ex: non disponibles) : </label>
+                  <div class="mt-1">
+                    <input type="text" name="smokers-rooms" id="smokers-rooms"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="rooms-services" class="block text-sm font-medium text-gray-900">Services Disponibles (ex: Hôtel climatisé,Service de blanchisserie,Service de conciergerie) <strong>(seperate by",")</strong> : </label>
+                  <div class="mt-1">
+                    <input type="text" name="rooms-services" id="rooms-services"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+
+
+                <div>
+                  <label class="block text-xl font-medium text-gray-900">Hotel Restaurants and Bars :</label>
+                  <label for="cut" class="block text-sm font-medium text-gray-900">Cut (ex:non disponible) :</label>
+                  <div class="mt-1">
+                    <input type="text" name="cut" id="cut"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+                <div>
+                  <label for="bar" class="block text-sm font-medium text-gray-900">Bar (ex:non disponible) :</label>
+                  <div class="mt-1">
+                    <input type="text" name="bar" id="bar"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+                <div>
+                  <label for="breakfeast-con" class="block text-sm font-medium text-gray-900">Petit déjeuner continental (ex:inclus) :</label>
+                  <div class="mt-1">
+                    <input type="text" name="breakfeast-con" id="breakfeast-con"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+                <div>
+                  <label for="breakfeast-amer" class="block text-sm font-medium text-gray-900">Petit déjeuner américain (ex:inclus) :</label>
+                  <div class="mt-1">
+                    <input type="text" name="breakfeast-amer" id="breakfeast-amer"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xl font-medium text-gray-900">Hotel SPA ET LOISIRS :</label>
+                  <label for="spa-services" class="block text-sm font-medium text-gray-900">Services (ex:Massages,Hammam,Sauna) <strong>(seperate by",")</strong>  :</label>
+                  <div class="mt-1">
+                    <input type="text" name="spa-services" id="spa-services"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+                <div>
+                  <label for="spa-loisirs" class="block text-sm font-medium text-gray-900">Loisirs (ex:Piscine extérieure,Centre de fitness) <strong>(seperate by",")</strong>  :</label>
+                  <div class="mt-1">
+                    <input type="text" name="spa-loisirs" id="spa-loisirs"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="hotel-rating" class="block text-xl font-medium text-gray-900">Hotel Rating /5</label>
+                  <div class="mt-1">
+                    <input type="number" min="1" onkeydown="return false" max="5" name="hotel-rating"
+                      id="hotel-rating"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" />
+                  </div>
+                </div>
+ 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-shrink-0 justify-end px-4 py-4">
+          <a href="admin-dashboard.html">
+            <button id="cancel-btn" type="button"
+            class="rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            Cancel
+            </button>
+          </a>
+         
+          <button type="submit"
+            id="add-hotelbtn"
+            class="ml-4 inline-flex justify-center rounded-md border border-transparent bg-gray-900 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            Add
+          </button>
+        </div>
+      </form>
+    </section>
+    <div class="flex justify-center m-5">
+      <button id="successButton" data-modal-toggle="successModal" class="block text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" type="button">
+      Show success message
+      </button>
+  </div>
+  
+  <!-- Main modal -->
+  <div id="successModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full">
+      <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+          <!-- Modal content -->
+          <div class="relative p-4 text-center bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
+              <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900 p-2 flex items-center justify-center mx-auto mb-3.5">
+                  <svg aria-hidden="true" class="w-8 h-8 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  <span class="sr-only">Success</span>
+              </div>
+              <p class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Successfully added.</p>
+              <button id="continueBtn" data-modal-toggle="successModal" type="button" class="py-2 px-3 text-sm font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-900">
+                  Continue
+              </button>
+          </div>
+      </div>
+  </div>
+
+    <script>
+      const regions = document.querySelector("#continents");
+      regionsList = ["Europe","Asie", "Amérique du Nord","Moyen Orient","Amérique du Sud","Océan Indien","Afrique","Caraibes","Océanie","Amérique Centrale"]
+      for(let i=0;i<regionsList.length;i++){
+        continent = document.createElement("option")
+        continent.value = regionsList[i]
+        continent.textContent = regionsList[i]
+        regions.append(continent)
+      }
+
+      const countries = document.querySelector("#countries");
+      countriesList = ['Afrique du Sud', 'Allemagne', 'Anguilla', 'Antigua-et-Barbuda', 'Arabie saoudite', 'Argentine', 'Australie', 'Autriche', 'Belgique', 'Brésil', 'Cambodge', 'Canada', 'Chine', 'Colombie', 'Costa Rica', 'Danemark', 'Emirates arabes unis', 'Espagne', 'Etats-Unis', 'France', 'Grèce', 'Hong Kong', 'Hongrie', 'Iles Turks et Caïques', 'Inde', 'Indonésie', 'Irlande', 'Israël', 'Italie', 'Japon', 'Laos', 'Malaisie', 'Maldives', 'Maroc', 'Maruice', 'Mexique', 'Monaco', 'Monténégro', 'Myanmar', 'Oman', 'Pays-Bas', 'Philippines', 'Pologne', 'Polynésie française', 'Porto Rico', 'Portugal', 'Pérou', 'Qatar', 'Royaume-Uni', 'Russie', 'Rwanda', 'République dominicaine', 'République tchèque', 'Saint-Barthélemy', 'Seychelles', 'Singapour', 'Sri Lanka', 'St Vincent et Grenadines', 'Suisse', 'Suède', 'Taïwan', 'Thailande', 'Turquie', 'Vietnam', 'Zambie']
+      for(let i=0;i<countriesList.length;i++){
+        country = document.createElement("option")
+        country.value = countriesList[i]
+        country.textContent = countriesList[i]
+        countries.append(country)
+      }
+
+      const style = document.querySelector("#style");
+      styleList = ["Contemporain","Historique","Classique","Design","Insolite"]
+      for(let i=0;i<styleList.length;i++){
+        styleItem = document.createElement("option")
+        styleItem.value = styleList[i]
+        styleItem.textContent = styleList[i]
+        style.append(styleItem)
+      }
+
+      const atmosphere = document.querySelector("#atmosphere");
+      atmosphereList = ["Charme","Nature","Tendance","Intime","Evasion","Tropical","Mythe","Vie de château","Colonial","Campagne"]
+      for(let i=0;i<atmosphereList.length;i++){
+        atmosphereItem = document.createElement("option")
+        atmosphereItem.value = atmosphereList[i]
+        atmosphereItem.textContent = atmosphereList[i]
+        atmosphere.append(atmosphereItem)
+      }
+
+      const amenagement = document.querySelector("#amenagement");
+      amenagementList = ["Centre de fitness","Spa","Piscine extérieure","Parking","Piscine intérieure","Tennis sur site","Club enfants","Plage","Animaux de compagnie","Sports nautiques","Plongée","Golf","Ski"]
+      for(let i=0;i<amenagementList.length;i++){
+        amenagementItem = document.createElement("option")
+        amenagementItem.value = amenagementList[i]
+        amenagementItem.textContent = amenagementList[i]
+        amenagement.append(amenagementItem)
+      }
+    </script>
+    <script>
+      //ADD HOTEL
+      const hotelName = document.querySelector("#hotel-name");
+      const hotelAdress = document.querySelector("#address");
+      const hotelCountry = document.querySelector("#countries");
+      const hotelRegion = document.querySelector("#continents");
+      const hotelStyle = document.querySelector("#style");
+      const hotelAtmosphere = document.querySelector("#atmosphere");
+      const hotelAmenagement = document.querySelector("#amenagement");
+      const hotelSubtitle = document.querySelector("#subtitle");
+      const hotelDescription = document.querySelector("#description");
+      const hotelImages = document.querySelector("#hotel-images");
+      const hotelServices = document.querySelector("#services");
+      const hotelExceptions = document.querySelector("#exceptions");
+      const hotelRoomsTypes = document.querySelector("#rooms-types");
+      const hotelFeedbacks = document.querySelector("#feedback-numbers");
+      const hotelArrivaltime = document.querySelector("#arrival-time");
+      const hotelDeparturetime = document.querySelector("#departure-time");
+      const hotelRoomsnumbers = document.querySelector("#rooms-numbers");
+      const hotelRoomsequipments = document.querySelector("#rooms-equipments");
+      const hotelAnimals = document.querySelector("#animals");
+      const hotelPublicspace = document.querySelector("#public-space");
+      const hotelInroom = document.querySelector("#in-room");
+      const hotelTransport = document.querySelector("#transport");
+      const hotelInclus = document.querySelector("#inclus");
+      const hotelKids = document.querySelector("#kids");
+      const hotelSmokers = document.querySelector("#smokers");
+      const hotelSmokersroom = document.querySelector("#smokers-rooms");
+      const hotelRoomservices = document.querySelector("#rooms-services");
+      const hotelCut = document.querySelector("#cut");
+      const hotelBar = document.querySelector("#bar");
+      const hotelBreakfeastcon = document.querySelector("#breakfeast-con");
+      const hotelBreakfeastamer = document.querySelector("#breakfeast-amer");
+      const hotelSpaservices = document.querySelector("#spa-services");
+      const hotelSpaloisirs = document.querySelector("#spa-loisirs");
+      const hotelRating = document.querySelector("#hotel-rating");
+      const hotelBtn = document.querySelector("#add-hotelbtn");
+
+      async function Addhotel(e){
+        e.preventDefault();
+        // Preparing DATA
+        var rooms=[];
+        for(let i=0;i<hotelRoomsTypes.value;i++){
+          const room = {
+            name : document.querySelector(`#room-type${i+1}`).value,
+            description : document.querySelector(`#room-description${i+1}`).value,
+            img : document.querySelector(`#room-image${i+1}`).split(),
+          }
+          rooms.push(room)
+        }
+
+        var feedbacks=[];
+        for(let i=0;i<hotelFeedbacks.value;i++){
+          const feedback = {
+            name : document.querySelector(`#feedback-name${i+1}`).value,
+            rate : document.querySelector(`#feedback-rate${i+1}`).value,
+            date : document.querySelector(`#feedback-note${i+1}`).value,
+            note : document.querySelector(`#feedback-date${i+1}`).value,
+          }
+          feedbacks.push(feedback)
+        }
+
+        var amenagements=[];
+        for(let i=0;i<hotelAmenagement.selectedOptions.length;i++){
+          console.log(hotelAmenagement.selectedOptions[i])
+          amenagements.push(hotelAmenagement.selectedOptions[i].innerText)
+        }
+        var data = {
+          name: hotelName.value,
+          address: hotelAdress.value,
+          country: hotelCountry.options[hotelCountry.selectedIndex].text,
+          region: hotelRegion.options[hotelRegion.selectedIndex].text,
+          style: hotelStyle.options[hotelStyle.selectedIndex].text,
+          atmosphere: hotelAtmosphere.options[hotelAtmosphere.selectedIndex].text,
+          amenagement: amenagements,
+          subtitle : hotelSubtitle.value,
+          description : hotelDescription.value,
+          images : hotelImages.value.split(","),
+          services : hotelServices.value.split(","),
+          exceptions : hotelExceptions.value.split(";"),
+          rooms : rooms,
+          feedback : feedbacks,
+          informations : {
+            pratiques : {
+              address : hotelAdress.value,
+              arrival : hotelArrivaltime.value,
+              departure : hotelDeparturetime.value,
+              rooms : hotelRoomsnumbers.value,
+              equipments : hotelRoomsequipments.value,
+              animals : hotelAnimals.value,
+              publicSpace : hotelPublicspace.value,
+              inRoom : hotelInroom.value,
+              transfer : hotelTransport.value,
+              inclus : hotelInclus.value.split(","),
+              kids : hotelKids.value,
+              smokers : hotelSmokers.value,
+              smokersRoom : hotelSmokersroom.value,
+              services : hotelRoomservices.value.split(",")
+            },
+            restaurants : {
+              cut: hotelCut.value,
+              bar : hotelBar.value,
+              breakfeastContinental : hotelBreakfeastcon.value,
+              breakfeastAmericain : hotelBreakfeastamer.value,
+            },
+            spa : {
+              services : hotelSpaservices.value,
+              loisirs : hotelSpaloisirs.value,
+            }
+          },
+          stars : hotelRating.value,
+          token : localStorage.getItem("accessToken")
+        }
+        console.log(data)
+        // sending DAT
+        await fetch(`${backendURL}/api/todos`,{
+          method: "POST",
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body : JSON.stringify(data)
+        })
+        .then((response) => response.json())
+        .then((res) => {
+          console.log(res)
+          if(res.message.includes("Hotel")){
+            document.querySelector("#successModal").classList.remove("hidden")
+          }else{
+            alert(res.message)
+          }
+        });
+      }
+      hotelBtn.addEventListener("click",Addhotel)
+
+      document.getElementById("continueBtn").addEventListener("click",function (){
+        document.querySelector("#successModal").classList.add("hidden")
+        window.location.href = 'admin-dashboard.html'
+      })
+      document.addEventListener("DOMContentLoaded", function(event) {
+        document.getElementById('successButton').click();
+      });
+    </script>
+    <script>
+
+      //feedbacks
+      const feedbacksNumbers = document.querySelector("#feedback-numbers");
+      const feedbacks = document.querySelector("#feedbacks")
+      var nbFeedbacks = feedbacksNumbers.value;
+
+      feedbacksNumbers.addEventListener("change", function () {
+        nbFeedbacks = feedbacksNumbers.value;
+        feedbacks.innerHTML = ""
+        for(let i =0 ;i<nbFeedbacks;i++){
+          feedbacks.innerHTML += 
+          `<div class="flex md:flex-row flex-col items-center justify-center gap-4 mt-4">
+                    <label for="feedback-name" class="block text-sm font-medium text-gray-900">Feedback n°${i+1} Name : </label>
+                    <div class="mt-1 w-full md:w-auto">
+                      <input type="text" name="feedback-name" id="feedback-name${i+1}"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                    <label for="feedback-rate" class="block text-sm font-medium text-gray-900">Feedback n°${i+1} Rate /10 : </label>
+                    <div class="mt-1 w-full md:w-auto">
+                      <input type="text" name="feedback-rate" id="feedback-rate${i+1}"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" 
+                        placeholder="8/10"
+                        /> 
+                    </div>
+                    <label for="feedback-note" class="block text-sm font-medium text-gray-900">Feedback n°${i+1} Note : </label>
+                    <div class="mt-1 w-full md:w-auto">
+                      <input type="text" name="feedback-note" id="feedback-note${i+1}"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                    <label for="feedback-date" class="block text-sm font-medium text-gray-900">Feedback n°${i+1} date (example: CLIENT DEPUIS SEPTEMBRE 2011, ULTIMATE) : </label>
+                    <div class="mt-1 w-full md:w-auto">
+                      <input type="text" name="feedback-date" id="feedback-date${i+1}"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                  </div>`
+        }
+      })
+    </script>
+    <script>
+
+      //rooms types
+      const roomsTypes = document.querySelector("#rooms-types");
+      const rooms = document.querySelector("#rooms")
+      var nbRooms = roomsTypes.value;
+
+      roomsTypes.addEventListener("change", function () {
+        nbRooms = roomsTypes.value;
+        rooms.innerHTML = ""
+        for(let i =0 ;i<nbRooms;i++){
+          rooms.innerHTML += 
+          `<div class="flex items-center justify-center gap-4">
+            <label for="room-type" class="w-2/5 block text-sm font-medium text-gray-900">Room n°${i+1} Type : </label>
+                    <div class="mt-1 w-full md:w-1/3">
+                      <input type="text" name="room-type" id="room-type${i+1}"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                    <label for="room-description" class="w-2/5 block text-sm font-medium text-gray-900">Room n°${i+1} description : </label>
+                    <div class="mt-1 w-full md:w-full">
+                      <input type="text" name="room-description" id="room-description${i+1}"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                    <label for="room-image" class="w-2/5 block text-sm font-medium text-gray-900">Room n°${i+1} images URLs : </label>
+                    <div class="mt-1 w-full md:w-full">
+                      <input type="text" name="room-image" id="room-image${i+1}"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" />
+                    </div>
+                  </div>`
+        }
+      })
+    </script>
+    <script>
+      // CHECK ADMIN OR NOT
+      window.onload = async function() {
+        if(!(localStorage.getItem("accessToken"))){
+          window.location.href = 'admin-login.html'
+        }else{
+          await fetch(`${backendURL}/api/admin/checkuser`,{
+          method: "POST",
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body : JSON.stringify({
+            "token" : localStorage.getItem("accessToken")
+          })
+
+        })
+        .then((response) => response.json())
+        .then((res) => {
+          if(res.message.includes("expired")){window.location.href = 'admin-login.html';}
+        });
+        }
+      };
+    </script>
+  </body>
+</html>
