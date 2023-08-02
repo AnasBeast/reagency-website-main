@@ -20,9 +20,14 @@ const showMobileNav = () => {
     document.querySelector('body').classList.add('hidden');
 }
 
+<<<<<<< HEAD
 // const backendURL = "https://reagency-website-main-production.up.railway.app"
 // const backendURL ="http://localhost:8080"
 const backendURL = "https://regencytravelback.com.regencytravel.com"
+=======
+const backendURL = "https://reagency-website-main-production.up.railway.app"
+// const backendURL ="http://localhost:8080"
+>>>>>>> 10cc21e961adf08bd2f12973674ea8caa1eff3a6
 
 var hotelsTest = [
     {   
