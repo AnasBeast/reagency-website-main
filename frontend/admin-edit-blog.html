@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin Edit Blog</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 maximum-scale=1"
+    />
+    <link rel="shortcut icon" href="src/img/icon--blanc-png.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <script type="text/javascript" src="src/js/index.js"></script>
+    <a href="admin-dashboard.html"><img src="./src/img/logo-noir.png" alt="logo" class="mx-auto w-56" /></a>
+    <section class="sm:px-6 lg:px-4 mt-12">
+      <div class="px-4 sm:px-0 mb-4 flex justify-between items-center">
+        <h2 class="text-sm md:text-xl font-medium text-gray-900">Edit Hotel</h2>
+       
+      </div>
+      <form class="flex h-full flex-col divide-y divide-gray-200 bg-white" action="#">
+        <div class="h-0 flex-1 overflow-y-auto">
+          <div class="bg-gray-700 py-6 px-4 sm:px-6">
+            <div class="flex items-center justify-between">
+              <h2 class="text-lg font-medium text-white hotel-title" id="headlessui-dialog-title-:rk:" data-headlessui-state="open">
+                Edit Hotel 45 Park Lane
+              </h2>
+            </div>
+            <div class="mt-1">
+              <p class="text-sm text-gray-300">
+                Get started by filling in the information below to edit the hotel.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col justify-between">
+            <div class="divide-y divide-gray-200 px-4 sm:px-6">
+              <div class="space-y-6 pt-6 pb-5">
+                <div>
+                  <label for="hotel-name" class="block text-sm font-medium text-gray-900">Blog Title</label>
+                  <div class="mt-1">
+                    <input type="text" name="hotel-name" id="hotel-name"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" 
+                      placeholder="5 jours à New York"
+                      />
+                  </div>
+                </div>
+                <div>
+                  <label for="continent" class="block text-sm font-medium text-gray-900">Blog Type</label>
+                  <div class="mt-1">
+
+                      <select id="continents" class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
+                        <option selected disabled>Choisissez le type du blog</option>
+                        <option value="Destinations" >Destinations</option>
+                        <option value="Hotels" >Hotels</option>
+                      </select>
+                  </div>
+                </div>
+                
+                <div>
+                  <label for="subtitle" class="block text-sm font-medium text-gray-900">Blog Date</label>
+                  <div class="mt-1">
+                    <input type="text" name="subtitle" id="subtitle"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" 
+                      placeholder="27 JUN 2023"
+                      />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="description" class="block text-sm font-medium text-gray-900">Blog Description</label>
+                  <div class="mt-1">
+                    <input type="text" name="description" id="description"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" 
+                      placeholder="27 JUN 2023"
+                      />
+                  </div>
+                </div>
+
+
+                <div>
+                  <label for="hotel-images" class="block text-sm font-medium text-gray-900">Blog background-Image URL</label>
+                  <div class="mt-1">
+                    <input type="text" name="hotel-images" id="hotel-images"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" 
+                      placeholder="https://img1.10bestmedia.com/Images/Photos/378649/Park-Hyatt-New-York-Manhattan-Sky-Suite-Master-Bedroom-low-res_54_990x660.jpg"
+                      />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="rooms-types" class="block text-sm font-medium text-gray-900">Paragraphs</label>
+                  <div class="mt-1 w-full md:w-auto">
+                    <input type="number" name="rooms-types" id="rooms-types"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      value="1" min="1" onkeydown="return false" required="" />
+                  </div>
+                </div>
+                <div id="rooms">
+                  <!-- <div class="flex flex-col justify-center items-center gap-4 mt-4">
+                   <div class="flex w-full">
+                      <label for="room-type" class="w-2/5 block text-sm font-medium text-gray-900">Paragraph n°1 Title : </label>
+                      <div class="mt-1 w-full md:w-full">
+                        <input type="text" name="room-type" id="room-type1"
+                          class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required=""
+                        />
+                      </div>
+                   </div>
+                   <div class="flex w-full">
+                    <label for="room-description" class="w-2/5 block text-sm font-medium text-gray-900">Paragraph n°1 description : </label>
+                    <div class="mt-1 w-full md:w-full">
+                      <textarea type="text" name="room-description" id="room-description1"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required="" 
+                        
+                        ></textarea>
+                    </div>
+                   </div>
+                    <div class="flex w-full">
+                      <label for="room-image" class="w-2/5 block text-sm font-medium text-gray-900">Paragraph n°1 images URLs : (seperate by ";")</label>
+                      <div class="mt-1 w-full md:w-full">
+                        <input type="text" name="room-image" id="room-image1"
+                          class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                          required="" 
+                          
+                          />
+                      </div>  
+                    </div>
+                     
+                  </div>-->
+                </div>
+ 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-shrink-0 justify-end px-4 py-4">
+          <a href="admin-dashboard.html">
+            <button id="cancel-btn" type="button"
+            class="rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            Cancel
+            </button>
+          </a>
+         
+          <button type="submit"
+            id="add-hotelbtn"
+            class="ml-4 inline-flex justify-center rounded-md border border-transparent bg-gray-900 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            Edit
+          </button>
+        </div>
+      </form>
+    </section>
+    <div class="flex justify-center m-5">
+      <button id="successButton" data-modal-toggle="successModal" class="block text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" type="button">
+      Show success message
+      </button>
+  </div>
+  
+  <!-- Main modal -->
+  <div id="successModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full">
+      <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+          <!-- Modal content -->
+          <div class="relative p-4 text-center bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
+              <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900 p-2 flex items-center justify-center mx-auto mb-3.5">
+                  <svg aria-hidden="true" class="w-8 h-8 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  <span class="sr-only">Success</span>
+              </div>
+              <p class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Successfully edited.</p>
+              <button id="continueBtn" data-modal-toggle="successModal" type="button" class="py-2 px-3 text-sm font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-900">
+                  Continue
+              </button>
+          </div>
+      </div>
+  </div>
+  
+    
+    <script>
+      // Getting hotel from Page url param
+      function GetUrlParameter(sParam){
+            var sPageURL= document.URL;
+            var sURLVariables = sPageURL.split('?');
+            for (var i = 0; i < sURLVariables.length; i++) 
+            {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) 
+                {
+                    return sParameterName[1];
+                }
+            }
+        }
+        var Pageid = GetUrlParameter("id")
+
+      //ADD HOTEL
+      const hotelName = document.querySelector("#hotel-name");
+      const hotelRegion = document.querySelector("#continents");
+      const hotelSubtitle = document.querySelector("#subtitle");
+      const hotelDescription = document.querySelector("#description");
+      const hotelImages = document.querySelector("#hotel-images");
+      const hotelRoomsTypes = document.querySelector("#rooms-types");
+      const hotelBtn = document.querySelector("#add-hotelbtn");
+      const Rooms = document.querySelector("#rooms");
+
+      var blog;
+      async function loadHotel(){
+        await fetch(`${backendURL}/api/blogs/${Pageid}`)
+        .then((response) => response.json())
+        .then((res) => {
+          blog = res 
+          console.log(res)
+          if(res.message){alert(res.message)}
+          hotelPage(res)
+        });        
+      }
+      loadHotel()
+      async function hotelPage(hotel){
+        document.querySelector(".hotel-title").textContent = `Edit Blog ${hotel.name}`
+
+        hotelName.value = hotel.title;
+        hotelRegion.value = hotel.type;
+        hotelSubtitle.value = hotel.date;
+        hotelDescription.value = hotel.description;
+        hotelImages.value = hotel.bg;
+        hotelRoomsTypes.value = hotel.paragraphs.length;
+        for(let i=0;i<hotelRoomsTypes.value;i++){
+          const room = document.createElement("div");
+          room.classList = "flex flex-col justify-center items-center gap-4 mt-4"
+          room.innerHTML = `
+          <div class="flex w-full">
+            <label for="room-type" class="w-2/5 block text-sm font-medium text-gray-900">Paragraph n°${i+1} Title : </label>
+            <div class="mt-1 w-full md:w-full">
+                        <input type="text" name="room-type" id="room-type${i+1}"
+                          class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required=""
+                        value="${hotel.subtitles[i]}"
+                        />
+                      </div>
+                   </div>
+                   <div class="flex w-full">
+                    <label for="room-description" class="w-2/5 block text-sm font-medium text-gray-900">Paragraph n°${i+1} description : </label>
+                    <div class="mt-1 w-full md:w-full">
+                      <textarea type="text" name="room-description" id="room-description${i+1}"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required=""
+                        value="${hotel.paragraphs[i]}"
+                        >${hotel.paragraphs[i]}</textarea>
+                    </div>
+                   </div>
+                    <div class="flex w-full">
+                      <label for="room-image" class="w-2/5 block text-sm font-medium text-gray-900">Paragraph n°${i+1} images URLs : (seperate by ";")</label>
+                      <div class="mt-1 w-full md:w-full">
+                        <input type="text" name="room-image" id="room-image${i+1}"
+                          class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                          required="" 
+                          value="${hotel.images[i].join(";")}"
+                          />
+                      </div>  
+                    </div>  
+          `
+          Rooms.append(room)
+        }
+      }
+
+
+      async function Addhotel(e){
+        e.preventDefault();
+        // Preparing DATA
+        var paragraphs=[];
+        var subtitles = [];
+        var images = [];
+        for(let i=0;i<hotelRoomsTypes.value;i++){
+          if(i<hotelRoomsTypes.value){
+            subtitles.push(document.querySelector(`#room-type${i+1}`).value);
+            paragraphs.push(document.querySelector(`#room-description${i+1}`).value)
+          }
+          images.push(document.querySelector(`#room-image${i+1}`).value.split(";"))
+        }
+
+        var data = {
+          title: hotelName.value,
+          type: hotelRegion.options[hotelRegion.selectedIndex].text,
+          date : hotelSubtitle.value,
+          description : hotelDescription.value,
+          bg : hotelImages.value,
+          subtitles : subtitles,
+          paragraphs : paragraphs,
+          images : images,
+          
+          token : localStorage.getItem("accessToken")
+        }
+        console.log(data)
+        // sending DAT
+        await fetch(`${backendURL}/api/blogs`,{
+          method: "POST",
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body : JSON.stringify(data)
+        })
+        .then((response) => response.json())
+        .then((res) => {
+          console.log(res)
+          if(res.message.includes("Hotel")){
+            document.querySelector("#successModal").classList.remove("hidden")
+          }else{
+            alert(res.message)
+          }
+        });
+      }
+      hotelBtn.addEventListener("click",Addhotel)
+
+      document.getElementById("continueBtn").addEventListener("click",function (){
+        document.querySelector("#successModal").classList.add("hidden")
+        window.location.href = 'admin-dashboard.html'
+      })
+      document.addEventListener("DOMContentLoaded", function(event) {
+        document.getElementById('successButton').click();
+      });
+    </script>
+    <script>
+
+      //rooms types
+      const roomsTypes = document.querySelector("#rooms-types");
+      const rooms = document.querySelector("#rooms")
+      var nbRooms = roomsTypes.value;
+
+      roomsTypes.addEventListener("change", function () {
+        nbRooms = roomsTypes.value;
+        
+          rooms.innerHTML += 
+          `<div class="flex flex-col justify-center items-center gap-4 mt-4">
+                   <div class="flex w-full">
+                      <label for="room-type" class="w-2/5 block text-sm font-medium text-gray-900">Paragraph n°${nbRooms} Title : </label>
+                      <div class="mt-1 w-full md:w-full">
+                        <input type="text" name="room-type" id="room-type${nbRooms}"
+                          class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required=""
+                        />
+                      </div>
+                   </div>
+                   <div class="flex w-full">
+                    <label for="room-description" class="w-2/5 block text-sm font-medium text-gray-900">Paragraph n°${nbRooms} description : </label>
+                    <div class="mt-1 w-full md:w-full">
+                      <textarea type="text" name="room-description" id="room-description${nbRooms}"
+                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        required=""
+                        ></textarea>
+                    </div>
+                   </div>
+                    <div class="flex w-full">
+                      <label for="room-image" class="w-2/5 block text-sm font-medium text-gray-900">Paragraph n°${nbRooms} images URLs : (seperate by ";")</label>
+                      <div class="mt-1 w-full md:w-full">
+                        <input type="text" name="room-image" id="room-image${nbRooms}"
+                          class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                          required="" />
+                      </div>  
+                    </div>
+                    
+                  </div>`
+        
+      })
+    </script>
+    <script>
+      // CHECK ADMIN OR NOT
+      window.onload = async function() {
+        if(!(localStorage.getItem("accessToken"))){
+          window.location.href = 'admin-login.html'
+        }else{
+          await fetch(`${backendURL}/api/admin/checkuser`,{
+          method: "POST",
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body : JSON.stringify({
+            "token" : localStorage.getItem("accessToken")
+          })
+
+        })
+        .then((response) => response.json())
+        .then((res) => {
+          if(res.message.includes("expired")){window.location.href = 'admin-login.html';}
+        });
+        }
+      };
+    </script>
+  </body>
+</html>

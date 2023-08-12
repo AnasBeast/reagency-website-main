@@ -551,6 +551,7 @@
           hotelPage(hotel)
         });        
       }
+      loadHotel()
       async function hotelPage(hotel){
         document.querySelector(".hotel-title").textContent = `Edit Hotel ${hotel.name}`
 
@@ -667,7 +668,7 @@
         hotelDisplay.checked = hotel.display;
       }
 
-      loadHotel()
+      
       async function Edithotel(e){
         e.preventDefault();
         // Preparing DATA

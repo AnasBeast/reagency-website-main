@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const todoRoutes = require("./routes/todo");
+const blogRoutes = require("./routes/blog");
 const adminRoutes = require("./routes/admin");
 const bookingRoutes = require("./routes/booking");
 
@@ -31,6 +32,7 @@ app.use((req, res, next) => {
     next();
 });
 app.use("/api/todos", todoRoutes);
+app.use("/api/blogs", blogRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/admin", adminRoutes);
 
