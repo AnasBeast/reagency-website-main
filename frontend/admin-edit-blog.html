@@ -16,7 +16,7 @@
     <a href="admin-dashboard.html"><img src="./src/img/logo-noir.png" alt="logo" class="mx-auto w-56" /></a>
     <section class="sm:px-6 lg:px-4 mt-12">
       <div class="px-4 sm:px-0 mb-4 flex justify-between items-center">
-        <h2 class="text-sm md:text-xl font-medium text-gray-900">Edit Hotel</h2>
+        <h2 class="text-sm md:text-xl font-medium text-gray-900">Edit Blog</h2>
        
       </div>
       <form class="flex h-full flex-col divide-y divide-gray-200 bg-white" action="#">
@@ -24,7 +24,7 @@
           <div class="bg-gray-700 py-6 px-4 sm:px-6">
             <div class="flex items-center justify-between">
               <h2 class="text-lg font-medium text-white hotel-title" id="headlessui-dialog-title-:rk:" data-headlessui-state="open">
-                Edit Hotel 45 Park Lane
+                Edit Blog 45 Park Lane
               </h2>
             </div>
             <div class="mt-1">
@@ -80,6 +80,16 @@
                   </div>
                 </div>
 
+                <div>
+                  <label for="banner-image" class="block text-sm font-medium text-gray-900">Blog banner-Image URL</label>
+                  <div class="mt-1">
+                    <input type="text" name="banner-image" id="banner-image"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" 
+                      placeholder="https://img1.10bestmedia.com/Images/Photos/378649/Park-Hyatt-New-York-Manhattan-Sky-Suite-Master-Bedroom-low-res_54_990x660.jpg"
+                      />
+                  </div>
+                </div>
 
                 <div>
                   <label for="hotel-images" class="block text-sm font-medium text-gray-900">Blog background-Image URL</label>
@@ -200,6 +210,7 @@
       const hotelRegion = document.querySelector("#continents");
       const hotelSubtitle = document.querySelector("#subtitle");
       const hotelDescription = document.querySelector("#description");
+      const bannerImg = document.querySelector("#banner-image");
       const hotelImages = document.querySelector("#hotel-images");
       const hotelRoomsTypes = document.querySelector("#rooms-types");
       const hotelBtn = document.querySelector("#add-hotelbtn");
@@ -218,12 +229,13 @@
       }
       loadHotel()
       async function hotelPage(hotel){
-        document.querySelector(".hotel-title").textContent = `Edit Blog ${hotel.name}`
+        document.querySelector(".hotel-title").textContent = `Edit Blog ${hotel.title}`
 
         hotelName.value = hotel.title;
         hotelRegion.value = hotel.type;
         hotelSubtitle.value = hotel.date;
         hotelDescription.value = hotel.description;
+        bannerImg.value = hotel.bannerImg;
         hotelImages.value = hotel.bg;
         hotelRoomsTypes.value = hotel.paragraphs.length;
         for(let i=0;i<hotelRoomsTypes.value;i++){
@@ -285,6 +297,7 @@
           type: hotelRegion.options[hotelRegion.selectedIndex].text,
           date : hotelSubtitle.value,
           description : hotelDescription.value,
+          bannerImg : bannerImg.value,
           bg : hotelImages.value,
           subtitles : subtitles,
           paragraphs : paragraphs,
@@ -294,8 +307,8 @@
         }
         console.log(data)
         // sending DAT
-        await fetch(`${backendURL}/api/blogs`,{
-          method: "POST",
+        await fetch(`${backendURL}/api/blogs/${Pageid}`,{
+          method: "PUT",
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -322,49 +335,7 @@
         document.getElementById('successButton').click();
       });
     </script>
-    <script>
-
-      //rooms types
-      const roomsTypes = document.querySelector("#rooms-types");
-      const rooms = document.querySelector("#rooms")
-      var nbRooms = roomsTypes.value;
-
-      roomsTypes.addEventListener("change", function () {
-        nbRooms = roomsTypes.value;
-        
-          rooms.innerHTML += 
-          `<div class="flex flex-col justify-center items-center gap-4 mt-4">
-                   <div class="flex w-full">
-                      <label for="room-type" class="w-2/5 block text-sm font-medium text-gray-900">Paragraph n°${nbRooms} Title : </label>
-                      <div class="mt-1 w-full md:w-full">
-                        <input type="text" name="room-type" id="room-type${nbRooms}"
-                          class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        required=""
-                        />
-                      </div>
-                   </div>
-                   <div class="flex w-full">
-                    <label for="room-description" class="w-2/5 block text-sm font-medium text-gray-900">Paragraph n°${nbRooms} description : </label>
-                    <div class="mt-1 w-full md:w-full">
-                      <textarea type="text" name="room-description" id="room-description${nbRooms}"
-                        class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        required=""
-                        ></textarea>
-                    </div>
-                   </div>
-                    <div class="flex w-full">
-                      <label for="room-image" class="w-2/5 block text-sm font-medium text-gray-900">Paragraph n°${nbRooms} images URLs : (seperate by ";")</label>
-                      <div class="mt-1 w-full md:w-full">
-                        <input type="text" name="room-image" id="room-image${nbRooms}"
-                          class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                          required="" />
-                      </div>  
-                    </div>
-                    
-                  </div>`
-        
-      })
-    </script>
+    
     <script>
       // CHECK ADMIN OR NOT
       window.onload = async function() {

@@ -18,7 +18,7 @@
     <section class="mx-auto max-w-7xl sm:px-6 lg:px-8 mt-12">
       <div class="px-4 sm:px-0 mb-4 flex justify-between items-center">
         <h2 class="text-sm md:text-xl font-medium text-gray-900">Blogs</h2>
-        <a href="admin-add-hotel.html">
+        <a href="admin-add-blog.html">
           <button
           id="add-hotel"
           type="button"
@@ -63,54 +63,48 @@
       </ul>
     </section>
 
-
-
-    
     <script>
       const reservationsList = document.getElementById("list");
       async function displayBookings() {
         reservationsList.innerHTML=`<img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" alt="" style="width: 100%;">`
-        await fetch(`${backendURL}/api/bookings`,{headers: { "x-access-token" : localStorage.getItem("accessToken")}})
+        await fetch(`${backendURL}/api/blogs`,{headers: { "x-access-token" : localStorage.getItem("accessToken")}})
           .then((response) => response.json())
-          .then(({ bookings }) => {
+          .then(({ blogs }) => {
+            console.log(blogs)
             reservationsList.innerHTML=""
-            bookings.forEach((booking) => {
-              const bookingItem = document.createElement("li");
-              bookingItem.classList.add("mb-4");
-              bookingItem.innerHTML = `
+            blogs.forEach((blog) => {
+              const blogItem = document.createElement("li");
+              blogItem.classList.add("mb-4");
+              blogItem.innerHTML = `
                         <div class="flex items-center py-5 px-4 sm:py-6 sm:px-0 shadow-md border hover:shadow-lg">
                             <div class="flex min-w-0 flex-1 items-center px-4 flex-col justify-center md:flex-row gap-4 md:gap-0">
                                 <div class="min-w-0 flex-1 px-4 flex flex-col md:grid md:grid-cols-4 md:items-center gap-2 md:gap-4">
                                   <div>
-                                    <p> <span class="md:truncate text-sm font-medium text-purple-600"> Titre :</span> ${booking.nom}</p>
+                                    <p> <span class="md:truncate text-sm font-medium text-purple-600"> Titre :</span> ${blog.title}</p>
                                   </div>
                                   <div class="md:block col-span-2">
-                                    <p><span class="md:truncate text-sm font-medium text-purple-600">Type :</span> ${booking.room}</p>
+                                    <p><span class="md:truncate text-sm font-medium text-purple-600">Type :</span> ${blog.type}</p>
                                     
                                   </div>
                                   <div class="md:block">
                                     <p class="mt-2 flex items-center text-sm text-gray-500">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="mr-1.5 h-5 w-5 flex-shrink-0 text-green-400"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path></svg>
-                                        <span class="md:truncate">Date : ${booking.pays}</span></p>
+                                        <span class="md:truncate">Date : ${blog.date}</span></p>
                                     </div>
                                   <div class="md:block col-span-1 col-start-5">
                                     <div>
-                                      <a href="admin-reservation.html?id=${booking._id}">
+                                      <a href="admin-edit-blog.html?id=${blog._id}">
                                         <button type="button" 
                                           class="inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2  focus:ring-offset-2">
-                                          Afficher
+                                          Afficher / Modifier
                                         </button>  
                                       </a>
-                                      <button type="button" 
-                                        class="inline-flex items-center rounded-md border border-gray-300 bg-red-600 text-white px-3 py-2 text-sm font-medium leading-4 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                                        Effacer
-                                    </button>
                                     </div>
                                   </div>
                                 </div>
                             </div>
                         </div>`;
-              reservationsList.appendChild(bookingItem);
+              reservationsList.appendChild(blogItem);
             });
           });
       }

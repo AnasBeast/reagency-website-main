@@ -81,6 +81,16 @@
                   </div>
                 </div>
 
+                <div>
+                  <label for="banner-image" class="block text-sm font-medium text-gray-900">Blog banner-Image URL</label>
+                  <div class="mt-1">
+                    <input type="text" name="banner-image" id="banner-image"
+                      class="block w-full h-8 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required="" 
+                      placeholder="https://img1.10bestmedia.com/Images/Photos/378649/Park-Hyatt-New-York-Manhattan-Sky-Suite-Master-Bedroom-low-res_54_990x660.jpg"
+                      />
+                  </div>
+                </div>
 
                 <div>
                   <label for="hotel-images" class="block text-sm font-medium text-gray-900">Blog background-Image URL</label>
@@ -185,6 +195,7 @@
       const hotelRegion = document.querySelector("#continents");
       const hotelSubtitle = document.querySelector("#subtitle");
       const hotelDescription = document.querySelector("#description");
+      const bannerImg = document.querySelector("#banner-image");
       const hotelImages = document.querySelector("#hotel-images");
       const hotelRoomsTypes = document.querySelector("#rooms-types");
       const hotelBtn = document.querySelector("#add-hotelbtn");
@@ -203,14 +214,12 @@
           images.push(document.querySelector(`#room-image${i+1}`).value.split(";"))
         }
 
-        
-
-        
         var data = {
           title: hotelName.value,
           type: hotelRegion.options[hotelRegion.selectedIndex].text,
           date : hotelSubtitle.value,
           description : hotelDescription.value,
+          bannerImg : bannerImg.value,
           bg : hotelImages.value,
           subtitles : subtitles,
           paragraphs : paragraphs,

@@ -5,6 +5,8 @@ const auth = require("../middleware/auth");
 
 router.post("" ,auth, blogController.createBlog);
 
+router.put("/:id",auth , blogController.updateBlog);
+
 router.get("", blogController.getBlogs);
 
 router.get("/:id", blogController.getBlogById);

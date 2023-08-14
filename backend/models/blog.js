@@ -5,6 +5,7 @@ const blogSchema = mongoose.Schema({
     type : {type:String, required:true},
     description : {type:String, required:true},
     date : {type:String, required:true},
+    bannerImg : {type:String, required:true},
     bg : {type:String, required:true},
     subtitles : [{type:String, required:true}],
     paragraphs : [{type:String, required:true}],

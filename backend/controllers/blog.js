@@ -33,6 +33,7 @@ exports.createBlog = async(req , res , next)=>{
         type : req.body.type,
         description : req.body.description,
         date : req.body.date,
+        bannerImg : req.body.bannerImg,
         bg : req.body.bg,
         subtitles : req.body.subtitles,
         paragraphs : req.body.paragraphs,
@@ -74,7 +75,19 @@ exports.getBlogById = async(req, res , next)=>{
         });
 }
 
+exports.updateBlog = async(req , res , next)=>{
 
+    await Blog.updateOne({_id: req.params.id}, req.body)
+        .then((result)=>{
+            res.status(200).json({message:"Update is successful!"});
+        })
+        .catch((err)=>{
+            res.status(500).json({
+                message: "Couldn't update blog!",
+                error : err,
+            })
+        })
+}
 
 exports.deleteBlog = async(req, res, next) =>{
     await Blog.deleteOne({ _id: req.params.id })

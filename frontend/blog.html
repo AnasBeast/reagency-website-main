@@ -102,28 +102,32 @@
                 <div id="planes" class="grid grid-cols-3 gap-8 w-full text-center">
                     <div>
                         <div>
-                            <img src="./src/img/blog-img-1.png" alt="plane" class="mx-auto">
-                            <div class="text-left mt-4">
-                                <p>DESTINATIONS • 10 MAY 2023</p>
-                                <p class="font-semibold"> <span class="text-xl">QUE FAIRE ET OÙ LOGER EN ALGARVE</span>
+                            <img src="./src/img/blog-img-1.png" alt="plane" class="mx-auto" id="banner-image1">
+                            <div class="text-left mt-4 w-[85%] mx-auto md:w-full">
+                                <p id="type-blog1">DESTINATIONS • 10 MAY 2023</p>
+                                <p class="font-semibold"> <span class="text-xl hover:cursor-pointer" id="title-blog1">QUE FAIRE ET OÙ LOGER EN ALGARVE</span>
                                     <br> <br>
-                                Située dans la région la plus méridionale du 
-                                Portugal, l'Algarve possède un littoral 
-                                accidenté, des plages de sable, des…
+                                    <span id="description-blog1" class="line-limit">
+                                        Située dans la région la plus méridionale du 
+                                        Portugal, l'Algarve possède un littoral 
+                                        accidenté, des plages de sable, des…
 
-                                    RESTAURANTS, ORGANISER DES SOIRÉES PRIVÉES, DES ÉVÉNEMENTS SPÉCIAUX OU ENCORE POUR RÉSERVER DES SOINS SPA, NOTRE CONCIERGERIE DE VOYAGE DE LUXE EST LÀ POUR RÉPONDRE À TOUTES LES EXIGENCES DE NOS CLIENTS.
+                                        RESTAURANTS, ORGANISER DES SOIRÉES PRIVÉES, DES ÉVÉNEMENTS SPÉCIAUX OU ENCORE POUR RÉSERVER DES SOINS SPA, NOTRE CONCIERGERIE DE VOYAGE DE LUXE EST LÀ POUR RÉPONDRE À TOUTES LES EXIGENCES DE NOS CLIENTS.
+                                    </span>
                                 </p>
                             </div>
                         </div>
                         <div class="mt-4">
-                            <img src="./src/img/blog-img-2.png" alt="blog-img-2" >
-                            <div class="text-left mt-4">
-                                <p>DESTINATIONS • 10 MAY 2023</p>
-                                <p class="font-semibold"> <span class="text-xl">ITINÉRAIRE DE 5 JOURS À MIAMI</span>
+                            <img src="./src/img/blog-img-2.png" alt="blog-img-2" class="mx-auto" id="banner-image2">
+                            <div class="text-left mt-4 w-[85%] mx-auto md:w-full">
+                                <p id="type-blog2">DESTINATIONS • 10 MAY 2023</p>
+                                <p class="font-semibold"> <span class="text-xl hover:cursor-pointer" id="title-blog2">ITINÉRAIRE DE 5 JOURS À MIAMI</span>
                                     <br> <br>
-                                  La ville de Miami est située à 
+                                  <span id="description-blog2" class="line-limit">
+                                    La ville de Miami est située à 
                                     la pointe sud-est de l'état 
                                     de Floride, sur Biscayne
+                                  </span>
            
                                 </p>
                             </div>
@@ -132,27 +136,32 @@
                     <div>
                         
                         <div>
-                            <div id="blogbg"></div>
-                            <div class="text-left mt-4">
-                                <p>DESTINATIONS • 10 MAY 2023</p>
-                                <p class="font-semibold"> <span class="text-xl">ITINÉRAIRE DE 4 JOURS À MADRID</span>
+                            <img src="https://www.lartisien.com/blog/wp-content/uploads/2023/06/shutterstock_1444834709-600x700.jpg.webp" alt="blog-img-3" class="mx-auto" id="banner-image3">
+                            <div class="text-left mt-4 w-[85%] mx-auto md:w-full">
+                                <p id="type-blog3">DESTINATIONS • 10 MAY 2023</p>
+                                <p class="font-semibold"> <span class="text-xl hover:cursor-pointer" id="title-blog3">ITINÉRAIRE DE 4 JOURS À MADRID</span>
                                     <br> <br>
-                                    Capitale de l'Espagne, Madrid est l'une 
-                                    des capitales européennes les plus 
-                                    dynamiques avec…
+                                    <span id="description-blog3" class="line-limit">
+                                        Capitale de l'Espagne, Madrid est l'une 
+                                        des capitales européennes les plus 
+                                        dynamiques avec…
+                                    </span>
+                                    
                                     
                                 </p>
                             </div>
                         </div>
 
                         <div>
-                            <img src="./src/img/asie.jpg" alt="plane" class="mx-auto">
-                            <div class="text-left mt-4">
-                                <p>DESTINATIONS • 10 MAY 2023</p>
-                                <p class="font-semibold"> <span class="text-xl">QUE FAIRE ET OÙ LOGER À BALI</span>
+                            <img src="./src/img/asie.jpg" alt="plane" class="mx-auto" id="banner-image4">
+                            <div class="text-left mt-4 w-[85%] mx-auto md:w-full">
+                                <p id="type-blog4">DESTINATIONS • 10 MAY 2023</p>
+                                <p class="font-semibold"> <span class="text-xl hover:cursor-pointer" id="title-blog4">QUE FAIRE ET OÙ LOGER À BALI</span>
                                     <br> <br>
-                                    L'île indonésienne de Bali est située 
-                                    entre les îles de Java et de Lombok. Il…
+                                    <span id="description-blog4" class="line-limit">
+                                        L'île indonésienne de Bali est située 
+                                        entre les îles de Java et de Lombok. Il…
+                                    </span>
                                    
                                 </p>
                             </div>
@@ -361,5 +370,71 @@
 			</div>
         </footer>
     </div>
+    <script>
+        // BLOG 1 
+        const bannerImg1 = document.querySelector("#banner-image1");
+        const type1 = document.querySelector("#type-blog1");
+        const title1 = document.querySelector("#title-blog1");
+        const desc1 = document.querySelector("#description-blog1");
+
+        // BLOG 2 
+        const bannerImg2 = document.querySelector("#banner-image2");
+        const type2 = document.querySelector("#type-blog2");
+        const title2 = document.querySelector("#title-blog2");
+        const desc2 = document.querySelector("#description-blog2");
+
+        // BLOG 3 
+        const bannerImg3 = document.querySelector("#banner-image3");
+        const type3 = document.querySelector("#type-blog3");
+        const title3 = document.querySelector("#title-blog3");
+        const desc3 = document.querySelector("#description-blog3");
+
+        // BLOG 4 
+        const bannerImg4 = document.querySelector("#banner-image4");
+        const type4 = document.querySelector("#type-blog4");
+        const title4 = document.querySelector("#title-blog4");
+        const desc4 = document.querySelector("#description-blog4");
+        async function displayBlogs(){
+            await fetch(`${backendURL}/api/blogs`)
+                .then((response) => response.json())
+                .then(({blogs}) => {
+                    console.log(blogs)
+                    // BLOG 1
+                    bannerImg1.src = blogs[0].bannerImg
+                    type1.textContent = blogs[0].type + " • " + blogs[0].date
+                    title1.textContent = blogs[0].title
+                    desc1.textContent = blogs[0].description
+                    title1.onclick = function(){
+                        window.location.href=`blog-page.html?id=${blogs[0]._id}`
+                    }
+                    // BLOG 2
+                    bannerImg2.src = blogs[1].bannerImg
+                    type2.textContent = blogs[1].type + " • " + blogs[1].date
+                    title2.textContent = blogs[1].title
+                    desc2.textContent = blogs[1].description
+                    title2.onclick = function(){
+                        window.location.href=`blog-page.html?id=${blogs[1]._id}`
+                    }
+                    // BLOG 3
+                    bannerImg3.src = blogs[2].bannerImg
+                    type3.textContent = blogs[2].type + " • " + blogs[2].date
+                    title3.textContent = blogs[2].title
+                    desc3.textContent = blogs[2].description
+                    title3.onclick = function(){
+                        window.location.href=`blog-page.html?id=${blogs[2]._id}`
+                    }
+                    // BLOG 4
+                    bannerImg4.src = blogs[3].bannerImg
+                    type4.textContent = blogs[3].type + " • " + blogs[3].date
+                    title4.textContent = blogs[3].title
+                    desc4.textContent = blogs[3].description
+                    title4.onclick = function(){
+                        window.location.href=`blog-page.html?id=${blogs[3]._id}`
+                    }
+                });
+                
+        }
+        displayBlogs()
+    </script>
 </body>
 </html>

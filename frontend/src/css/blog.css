@@ -99,6 +99,21 @@ nav #menu div {
   background: #F9EFE9;
 
 }
+#banner-image1,#banner-image4{
+  width: 100%;
+  height: 20vw;
+}
+#banner-image2,#banner-image3{
+  width: 100%;
+  height: 40vw;
+}
+.line-limit{
+  overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;
+}
 #content #landing #gradient {
   position: absolute;
   width: 100%;
@@ -430,6 +445,14 @@ nav #menu div {
   h1{
     font-size: 25px !important;
   }
+  #banner-image1,#banner-image4{
+    width: 50%;
+    height: 50%;
+  }
+  #banner-image2,#banner-image3{
+    width: 50%;
+    height: 50%;
+  }
 }
 
 @media only screen and (max-width: 701px) {
@@ -477,6 +500,14 @@ nav #menu div {
   }
   #contact-us-section #wrapper .element{
     width: 100%;
+  }
+  #banner-image1,#banner-image4{
+    width: 85%;
+    height: 85%;
+  }
+  #banner-image2,#banner-image3{
+    width: 85%;
+    height: 85%;
   }
   footer #upper img{
     width: 80%;
