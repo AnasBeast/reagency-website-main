@@ -350,7 +350,7 @@
                             div.className = "element";
                             div.innerHTML=
                             `
-                            <div id="background" style={"background-image":"${blogs[i].bannerImg}"}></div>
+                            <img id="background" src=${blogs[i].bannerImg} alt="blog" />
                             <p class="mt-4">${blogs[i].type}</p>
                             <a class="font-semibold text-xl mt-4 hover:cursor-pointer" href = "blog-page.html?id=${blogs[i]._id}">
                                 ${blogs[i].title}

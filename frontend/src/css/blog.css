@@ -359,17 +359,7 @@ nav #menu div {
       -ms-flex-align: center;
           align-items: center;
 }
-#contact-us-section #wrapper .element:first-child #background {
-  background-image: url("../img/card-img-1.png");
-}
 
-#contact-us-section #wrapper .element:nth-child(2) #background {
-  background-image: url("../img/card-img.jpg");
-}
-
-#contact-us-section #wrapper .element:nth-child(3) #background {
-  background-image: url("../img/card-img-3.png");
-}
 
 #contact-us-section #wrapper .element #background {
   height: 550px;
