@@ -81,9 +81,9 @@
         <div id="landing">
 			<div id="gradient"></div>
             <div class="flex flex-col items-center justify-center landing-title w-full">
-                <p class="text-white font-bold">DESTINATIONS</p>
-                <h3 class="text-3xl text-white font-bold"> <strong> 3 HÔTELS INCONTOURNABLES À SINGAPOUR</strong> </h3>
-                <p class="text-white font-bold">HOTELS • 26 MAY 2023</p>
+                <p class="text-white font-bold" id="blog-type">DESTINATIONS</p>
+                <h3 class="text-3xl text-white font-bold" id="blog-title"> <strong> 3 HÔTELS INCONTOURNABLES À SINGAPOUR</strong> </h3>
+                <p class="text-white font-bold" id="blog-date">HOTELS • 26 MAY 2023</p>
             </div>
             <div id="input-wrapper">
                 <div id="input">
@@ -97,9 +97,11 @@
         
         <div id="list-wrapper">
             <div id="list" class="mb-8 pt-16">
-                <p id="description" class="text-xl max-w-6xl mx-auto mb-6">
-                    Ce n’est pas pour rien que New York est surnommée la ville qui ne dort jamais. La ville fourmille de travailleurs en col blanc qui s’engouffrent dans les gratte-ciels, de taxis jaunes bloqués dans les embouteillages, de magasins ouverts jusqu’à point d’heure voire 24h/24, de publicités qui s’animent sur les façades des immeubles de Timesquare. Séjourner ou vivre à New York, c’est la possibilité d’avoir mille et une vies, ne serait-ce qu’en arpentant la diversité des quartiers de la ville. Le quartier des affaires de Manhattan, le très bobo Brooklyn, le melting pot culturel et ethnique du Queens qui rassemble parmi les meilleurs restaurants de la ville, le Bronx malfamé berceau du Hip Hop et du rap, ainsi que Staten Island, l’autre rive de New York… Lartisien vous a contacté un itinéraire de 5 jours à New York pour profiter au maximum de tout ce que la ville a à offrir.
-                </p>
+                <div class="flex justify-center w-full">
+                    <p id="description" class="text-xl max-w-6xl mx-auto mb-6">
+                        Ce n’est pas pour rien que New York est surnommée la ville qui ne dort jamais. La ville fourmille de travailleurs en col blanc qui s’engouffrent dans les gratte-ciels, de taxis jaunes bloqués dans les embouteillages, de magasins ouverts jusqu’à point d’heure voire 24h/24, de publicités qui s’animent sur les façades des immeubles de Timesquare. Séjourner ou vivre à New York, c’est la possibilité d’avoir mille et une vies, ne serait-ce qu’en arpentant la diversité des quartiers de la ville. Le quartier des affaires de Manhattan, le très bobo Brooklyn, le melting pot culturel et ethnique du Queens qui rassemble parmi les meilleurs restaurants de la ville, le Bronx malfamé berceau du Hip Hop et du rap, ainsi que Staten Island, l’autre rive de New York… Lartisien vous a contacté un itinéraire de 5 jours à New York pour profiter au maximum de tout ce que la ville a à offrir.
+                    </p>
+                </div>
                 <div id="paragraphs" class="flex flex-col max-w-6xl mx-auto space-y-12">
                     
                     <div class="space-y-6">
@@ -122,31 +124,6 @@
                 <div id="contact-us" class="p-8">
                     <h1 class="text-center">INSPIRATION VOYAGE</h1>
                 </div>
-                <!-- <div id="cards" class="mx-auto grid grid-cols-3 gap-8 text-left">
-                    <div>
-                        <img src="./src/img/card-img-1.png" alt="card-img-1">
-                        <p class="mt-4">DESTINATIONS</p>
-                        <h3 class="font-semibold text-xl mt-4">
-                            QUE FAIRE ET OÙ LOGER EN 
-                            ALGARVE
-                        </h3>
-                    </div>
-                    <div>
-                        <img src="./src/img/card-img.jpg" alt="card-img-2">
-                        <p class="mt-4">DESTINATIONS</p>
-                        <h3 class="font-semibold text-xl mt-4">
-                            ITINÉRAIRE DE 4 JOURS À MADRID
-                        </h3>
-                    </div>
-                    <div>
-                        <img src="./src/img/card-img-3.png" alt="card-img-3">
-                        <p class="mt-4">DESTINATIONS</p>
-                        <h3 class="font-semibold text-xl mt-4">
-                            ITINÉRAIRE DE 5 JOURS À MIAMI
-
-                        </h3>
-                    </div>
-                </div> -->
                 <div id="wrapper">
                     <div class="element">
                         <div id="background"></div>
@@ -174,7 +151,33 @@
                         </h3>
                     </div>
                 </div>
-                <button>PLUS DE DESTINATIONS</button>
+                <button onclick="window.location.href = `blog.html`">PLUS DE DESTINATIONS</button>
+                <!-- <div id="cards" class="mx-auto grid grid-cols-3 gap-8 text-left">
+                    <div>
+                        <img src="./src/img/card-img-1.png" alt="card-img-1">
+                        <p class="mt-4">DESTINATIONS</p>
+                        <h3 class="font-semibold text-xl mt-4">
+                            QUE FAIRE ET OÙ LOGER EN 
+                            ALGARVE
+                        </h3>
+                    </div>
+                    <div>
+                        <img src="./src/img/card-img.jpg" alt="card-img-2">
+                        <p class="mt-4">DESTINATIONS</p>
+                        <h3 class="font-semibold text-xl mt-4">
+                            ITINÉRAIRE DE 4 JOURS À MADRID
+                        </h3>
+                    </div>
+                    <div>
+                        <img src="./src/img/card-img-3.png" alt="card-img-3">
+                        <p class="mt-4">DESTINATIONS</p>
+                        <h3 class="font-semibold text-xl mt-4">
+                            ITINÉRAIRE DE 5 JOURS À MIAMI
+
+                        </h3>
+                    </div>
+                </div> -->
+                
             </div>
         </div>
 
@@ -296,7 +299,11 @@
         }
 
         const pList = document.querySelector("#paragraphs");
+        const blogTitle = document.querySelector("#blog-title");
+        const blogType = document.querySelector("#blog-type");
+        const blogDate = document.querySelector("#blog-date");
         const desc = document.querySelector("#description");
+        const bg = document.querySelector("#landing");
 
         var blog;
         async function displayBlog(){
@@ -304,6 +311,10 @@
                 .then((response) => response.json())
                 .then((res) => {
                     blog = res
+                    blogTitle.textContent = res.title;
+                    blogType.textContent = res.type;
+                    blogDate.textContent = res.date;
+                    bg.style.backgroundImage = `url('${res.bg}')`
                     desc.textContent = res.description
                     pList.innerHTML = ""
                     for(let i =0; i<res.paragraphs.length;i++){
@@ -314,9 +325,9 @@
                                 <p class="text-xl">
                                     ${res.paragraphs[i]}
                                 </p>
-                                <div class="flex items-center justify-center gap-12">
-                                    <img src="${res.images[i][0]}" alt="" class="w-[575px] h-[575px]">
-                                    <img src="${res.images[i][1]}" alt="" class="w-[575px] h-[575px]">
+                                <div class="flex flex-col sm:flex-row items-center justify-center gap-12">
+                                    <img src="${res.images[i][0]}" alt="" class="w-[90vw] h-[50vw] sm:w-[30vw] sm:h-[30vw]">
+                                    <img src="${res.images[i][1]}" alt="" class="w-[90vw] h-[50vw] sm:w-[30vw] sm:h-[30vw]">
                                 </div>
                             </div>
                         `
@@ -326,6 +337,33 @@
                 });
         }
         displayBlog()
+
+        const wrapper = document.querySelector("#wrapper")
+        async function displayOthers(){
+            await fetch(`${backendURL}/api/blogs`)
+                .then((response) => response.json())
+                .then(({blogs})=>{
+                    wrapper.innerHTML=""
+                    for(let i = 0;i<blogs.length;i++){
+                        if (!(blogs[i]._id==Pageid)){
+                            let div = document.createElement("div");
+                            div.className = "element";
+                            div.innerHTML=
+                            `
+                            <div id="background" style={"background-image":"${blogs[i].bannerImg}"}></div>
+                            <p class="mt-4">${blogs[i].type}</p>
+                            <a class="font-semibold text-xl mt-4 hover:cursor-pointer" href = "blog-page.html?id=${blogs[i]._id}">
+                                ${blogs[i].title}
+                            </a>
+                            `
+                            wrapper.append(div)
+                            
+                        }
+                    }
+                })
+        }
+
+        displayOthers()
     </script>
 </body>
 </html>

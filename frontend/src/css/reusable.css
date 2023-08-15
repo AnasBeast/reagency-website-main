@@ -710,7 +710,7 @@ footer #lower #phone h3 {
 
 footer #lower #logo {
   height: 40px;
-  margin-right: 60px;
+  margin: 0 auto;
 }
 
 footer #lower #socials {
