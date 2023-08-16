@@ -826,7 +826,18 @@ nav #menu div {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition: height 300ms, width 300ms;
+  transition: height 300ms, width 300ms;
 }
+
+#content #options #wrapper #background:hover{
+  width: 115%;
+  height: 600px;
+}
+
+
 
 #content #selling-points {
   margin-top: 280px;
