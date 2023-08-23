@@ -7,7 +7,7 @@
 }
 
 nav {
-  width: 100%;
+  width: 90%;
   padding-top: 15px;
   position: relative;
   z-index: 997;
@@ -227,7 +227,7 @@ nav #menu div {
 
 #content #options h1 {
   width: 90%;
-  margin-left: 10%;
+  margin-right: 10%;
   margin-bottom: 70px;
 }
 

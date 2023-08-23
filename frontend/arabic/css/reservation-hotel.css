@@ -7,7 +7,7 @@
 }
 
 nav {
-  width: 100%;
+  width: 90%;
   padding-top: 15px;
   position: relative;
   z-index: 997;
@@ -83,6 +83,7 @@ input::-webkit-inner-spin-button {
 #content {
   width: 100%;
   margin: 0;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,7 +94,7 @@ input::-webkit-inner-spin-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-          background: #F7F7F7;
+          background: #F7F3F3;
 }
 .container{
   background: white;
@@ -167,10 +168,7 @@ input::-webkit-inner-spin-button {
           filter: drop-shadow(2.544px 1.59px 0.98px rgba(0, 0, 0, 0.67));
   width: 330px;
 }
-#side-form .flex{
-  box-shadow: -8.429px 7.733px 17.2px 0.8px rgba(0, 0, 0, 0.43);
 
-}
 #content #landing h1 {
   font-size: 100px;
 }
@@ -832,7 +830,7 @@ input::-webkit-inner-spin-button {
 }
 
 #content #selling-points {
-  margin-top: 280px;
+  margin-top: 200px;
 }
 
 #content #mail {
@@ -840,7 +838,9 @@ input::-webkit-inner-spin-button {
   width: 100%;
   margin-bottom: 250px;
 }
-
+#room img{
+  width: 100%;
+}
 @media only screen and (max-width: 1240px) {
   #avis #avis-wrapper {
     width: calc(100% - 150px) !important;
@@ -1042,6 +1042,13 @@ input::-webkit-inner-spin-button {
   #room div{
     padding: 0;
   }
+  .swiper-button-next{
+    left: 46% !important;
+
+  }
+  .swiper-button-prev{
+    left: -46% !important;
+  }
 }
 
 @media only screen and (max-width: 701px) {
@@ -1104,37 +1111,8 @@ input::-webkit-inner-spin-button {
   #content #grid{
     display: flex;
   }
-  #content .mt-12{
-    width: 80%;
-  }
-  #input-label{
-    display: flex;
-    flex-direction: column;
-    
-    justify-content: center;
-  }
-  #input-label label{
-    font-size: 25px;
-  }
-  #input-label select{
-    width: 100%;
-  }
-  #content{
-    padding-bottom: 5%;
-  }
-  form div{
-    display: flex;
-    flex-direction: column;
-  }
-  form div input{
-    width: 100% !important;
-  }
-  #confirm{
-    width: 50% !important;
-  }
   footer{
     padding-top: 0 !important;
-    margin-top: 0 !important;
   }
   footer img {
     max-width: 90%;
@@ -1192,7 +1170,6 @@ input::-webkit-inner-spin-button {
   .infos li button::after{
     opacity: 0;
   }
-  
   footer #upper img{
     width: 80%;
   }
@@ -1215,7 +1192,11 @@ input::-webkit-inner-spin-button {
   min-height: 320px;
   background-color: #46677b;
 }
-
+.roomSwipe{
+  width: 100%;
+  height: auto;
+  background-color: #46677b;
+}
 .swiper-slide {
   font-size: 18px;
   background: #fff;

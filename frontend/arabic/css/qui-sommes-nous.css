@@ -28,13 +28,13 @@
   margin-bottom: 0;
 }
 #mail .container{
-  right: 8% !important;
-  left: auto !important;
-  height: 650px !important;
+  left: 8% !important;
+  right: auto !important;
+  height: 450px !important;
   top: -40% !important;
 }
 .container2{
-  height: 805px !important;
+  height: 625px !important;
   top: -40% !important;
 }
 #side-logo{
@@ -42,7 +42,7 @@
   bottom: 100px;
 }
 nav {
-  width: 100%;
+  width: 90%;
   padding-top: 15px;
   position: relative;
   z-index: 997;

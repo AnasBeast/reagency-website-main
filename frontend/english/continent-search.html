@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Best Hotels in Europe</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+    <link rel="shortcut icon" href="../src/img/icon-png.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/css/reusable.css">
+    <link rel="stylesheet" href="../src/css/continent-search.css">
+</head>
+<body>
+
+    <script type="text/javascript" src="../src/js/index.js"></script>
+    <id id="overlay" onclick="hideMobileNav()"></id>
+
+	<div id="mobileNavbar">
+		<div onclick="hideMobileNav()" id="cross">
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 17 17" xml:space="preserve">
+				<path fill="#fff" d="M9.6,8.5L14,4.1c0.3-0.3,0.3-0.8,0-1.1c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.4L4,3C3.7,2.7,3.2,2.7,2.9,3s-0.3,0.8,0,1.1l4.5,4.5 L2.9,13c-0.3,0.3-0.3,0.8,0,1.1c0.1,0.1,0.3,0.2,0.5,0.2c0.1,0,0.3,0,0.6-0.2l4.5-4.5l4.4,4.5c0.1,0.1,0.3,0.2,0.5,0.2 s0.4,0,0.6-0.2c0.3-0.3,0.3-0.8,0-1.1L9.6,8.5z"></path>
+			</svg>
+		</div>
+
+		<h1>Menu</h1>
+		<div class="seperation"></div>
+
+		<ul class="pl-8 text-white">
+			<a href="qui-sommes-nous.html" ><li>
+				<p class="my-4"> WHO ARE WE </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href="destination.html"><li>
+				<p class="my-4"> DESTINATIONS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href="collection-hotels.html"><li>
+				<p class="my-4"> HOTELS COLLECTION </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href="https://www.govoyages.com/vols/" target="_blank"><li>
+				<p class="my-4"> VOLS </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+            
+			<div class="seperation"></div>
+			<div id="call"><a href="tel:+442035192700"><p>BOOK ONLINE OR CALL </p><p> +44 20 35 19 2700</p></a></div>
+
+			
+		</ul>
+	</div>
+
+	<nav>
+		<a href="index.html">
+            <img src="../src/img/logo-default.png" alt="Logo">
+        </a>
+
+		<div id="sections">
+			<a href="qui-sommes-nous.html"><p>WHO ARE WE</p></a>
+			<a href="destination.html"><p>DESTINATIONS</p></a>
+			<a href="collection-hotels.html"><p>HOTELS COLLECTION</p></a>
+			<a href="https://www.govoyages.com/vols/" target="_blank"><p>VOLS</p></a>
+			<a href="tel:+442035192700"><p>BOOK ONLINE OR CALL <br> +44 20 35 19 2700</p></a>
+		</div>
+
+		<div id="menu" onclick="showMobileNav()">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</nav>
+
+    <div id="content">
+        <div id="landing">
+            <img src="../src/img/hotels/hotel-2.png" alt="" id="backgroundImg" class="background w-full">
+            <img id="logo" src="../src/img/logo-blanc.png" alt="Logo">
+            <div id="text">
+                <h1 id="region"></h1>
+            </div>
+            <div id="input-wrapper">
+				<div id="input">
+					<img style="display: block" src="../src/img/search.png" alt="Search" id="search">
+					<input type="text" id="search-text" placeholder="search for a hotel, a destination">
+				</div>
+
+				<button id="searchBtn">Search</button>
+			</div>
+        </div>
+
+        <div id="list-wrapper">
+            <div id="top">
+                <!-- <h1>Hôtel de luxe en Europe</h1>
+                <p class="content-description">
+                    Que ce soit pour ses cités intemporelles telles que Paris et Venise ou ses 
+                    destinations hors des sentiers battus, comme le Monténégro et la vallée 
+                    du Douro, l'Europe est toujours synonyme de vacances réussies. 
+                    Et nous sommes impatients de partager avec vous nos hôtels préférés sur 
+                    l’ensemble du continent, des châteaux médiévaux de la campagne 
+                    irlandaise aux stations de ski ultra-exclusives des Alpes suisses.
+                </p> -->
+            </div>
+
+            <div id="mid">
+                <h1>DESTINATIONS</h1>
+                <p class="content-destinations">
+                    
+                </p>
+            </div>
+
+            <div id="bottom">
+                <!-- <h1>LES PLUS BEAUX HÔTELS D'EUROPE</h1>
+                <p class="content-top">
+                    L’Europe ne manque pas de magnifiques hôtels, mais il en existe qui laisseraient même 
+                    les voyageurs les plus blasés un peu émerveillés. Il y a bien sûr le Ritz Paris, où Coco Chanel 
+                    et Marcel Proust ont résidé des années. Ensuite, il y a les chics boutiques-hôtels de Santorin, 
+                    où les vues sur la mer Égée sont des plus exquises.
+                </p> -->
+            </div>
+
+            <div id="list">
+
+            </div>
+        </div>
+
+        
+
+
+
+        <div id="selection-chambres" class="title">
+
+            <!-- <div id="title">
+                <h1>Nos destinations préférées en Europe</h1>
+            </div>
+            
+            <div id="seperation"></div>
+
+            <div id="main">
+                <p>Il y a beaucoup de chose que l'on aime en Europe, mais'des villes comme Londres et Paris, avec leur art, 
+                    leur architecture, leurs musées et leurs espaces culturels-pourraient bien être nos endroits-préférés</p>
+                <h1>Londres, Royaume-Uni</h1>
+            </div> -->
+        </div>
+
+        <div id="options">
+            <h1 class="plus">More travel inspiration</h1>
+
+            <div id="wrapper">
+                <div class="element">
+                    <div id="background"></div>
+                    <h3 class="my-2">CLARIDGE'S</h3>
+                </div>
+
+                <div class="element">
+                    <div id="background"></div>
+                    <h3 class="my-2">CORINTHIA LONDON</h3>
+                </div>
+
+                <div class="element">
+                    <div id="background"></div>
+                    <h3 class="my-2">HOTEL CAFÉ ROYAL</h3>
+                </div>
+            </div>
+
+            <div id="other-options">
+                <h1 class="plus">OUR OTHER DESTINATIONS</h1>
+                <p class="options-bottom text-black">
+                    <a href="continent-search.html?continent=Afrique">AFRIQUE</a>  - <a href="continent-search.html?continent=Amerique%20du%20nord">AMÉRIQUE DU NORD</a>  <br>
+                    <a href="continent-search.html?continent=Amerique%20du%20sud">AMÉRIQUE DU SUD</a> - <a href="continent-search.html?continent=Asie">ASIE</a> - <a href="continent-search.html?continent=Caraibes">CARAÏBES</a> - <a href="continent-search.html?continent=Moyen%20orient">MOYEN ORIENT</a>   <br>
+                    <a href="continent-search.html?continent=Ocean%20indien">OCÉAN INDIEN</a> - <a href="continent-search.html?continent=Oceanie">OCÉANIE</a>
+
+                </p>
+            </div>
+        </div>
+
+        <div id="mail">
+            <div id="background" class="py-8 sm:py-0 newsletter flex flex-col items-center text-center justify-center mx-auto">
+                <h2 class="font-medium text-3xl">
+                    RECEIVE OUR NEWSLETTER <br>
+                    EXCLUSIVE OFFERS, UNPRECEDENTED INSPIRATIONS
+                    
+                </h2>
+                <div class="flex gap-4 mt-4 justify-center items-center w-2/3">
+                    <input type="email" id="email" class="block p-3 w-1/2 text-sm text-gray-900 bg-white-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="E-mail address" required="">
+                    <button type="button" data-te-ripple-init="" data-te-ripple-color="light" class="text-center inline-block bg-blue-950 px-6 py-3 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                        SUBSCRIBE
+                    </button>
+                </div>
+                <p class="text-sm mt-12 text-left w-2/3 hidden sm:block">
+                    Your personal data is intended for the legal entity REGENCY TRAVEL SARL in order to provide you with the REGENCY TRAVEL services you have requested, to send you information on the activities and services of REGENCY TRAVEL and to offer you offers adapted to your hobbies. You can at any time object to receiving offers from us by using the unsubscribe link present in each message from REGENCY TRAVEL, request access, have a third party carry, rectify or delete the information concerning you processed by REGENCY TRAVEL. To exercise your rights with REGENCY TRAVEL, write to contact@regencytravel.com. To find out more about the processing of your personal data by REGENCY TRAVEL and your rights, consult our Charter for the protection of personal data and privacy at the following address: <a href="tos.html" style= "cursor: pointer;">Privacy Policy</a> .
+                </p>
+            </div>
+            
+            
+        </div>
+    
+        <footer>
+            <div id="upper">
+                <a href="index.html"><img src="../src/img/logo-blanc.png" alt="Regency Logo"></a>
+                
+                <ul class="hidden sm:block">
+                    <h3>LEARN MORE</h3>
+    
+                    <a href="qui-sommes-nous.html"><li>WHO ARE WE</li></a>
+                    <a href="destination.html"><li>DESTINATIONS</li></a>
+                    <a href="collection-hotels.html"><li>HOTELS COLLECTION</li></a>
+                    
+                </ul>
+                <p class="text-white text-center text-lg sm:hidden mt-4">
+                    <a href="destination.html">Destinations</a>-
+                    <a href="collection-hotels.html">Hotels Collection</a>-
+                    
+                    <a href="contact.html">Contact us</a>-
+                    <a href="blog.html">Blog</a>
+
+                </p>
+                <p class="text-white text-center text-lg sm:hidden">
+                    <a href="tos.html">Terms of Service</a>-
+                    <a href="politique.html">Privacy Policy</a>
+                </p>
+                <ul class="hidden sm:block">
+                    <h3>LET US HELP YOU</h3>
+    
+                    <a href="contact.html"><li>CONTACT US</li></a>
+                    <a href="blog.html"><li>Blog</li></a>
+                    <a href="tos.html"><li>TERMS OF SERVICE</li></a>
+                    <a href="politique.html"><li>PRIVACY POLICY</li></a>
+                </ul>
+    
+                <ul class="hidden sm:block">
+                    <h3>ACCREDITATIONS</h3>
+    
+                    <a href="https://www2.arccorp.com/support-training/arc-check-results/?acn=05715496&formSourceName=StandardForm&sp_exp=yes" target="_blank"><li>CERTIFICATE ARC</li></a>
+                    <a href="https://regencytravel.com/images/CLIA.jpg" target="_blank"><li>CERTIFICATE CLIA</li></a>
+                    <a href="https://regencytravel.com/images/IATA.jpg" target="_blank"><li>CERTIFICATE IATA</li></a>
+                    <a href="https://regencytravel.com/images/CST.jpg" target="_blank"><li>CERTIFICATE CST</li></a>
+                </ul>
+            </div>
+    
+            <div id="lower">
+                <div id="phone" class="hidden sm:flex">
+                    <img src="../src/img/phone.png" alt="Phone">
+                    <h3><a href="tel:+442035192700">+44 20 3519 2700</a></h3>
+                </div>
+                <div id="phone" class="flex flex-col sm:hidden">
+                    <h2>Contact our experts :</h2>
+                    <h3 class="underline"><a href="tel:+442035192700">+44 20 3519 2700</a></h3>
+                </div>
+                <img id="logo" src="../src/img/IATA-white.png" alt="IATA LOGO" class="hidden sm:block">
+    
+                <div id="socials" class="hidden sm:flex">
+                    <a href="#"><img src="../src/img/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="../src/img/Youtube.png" alt="Youtube"></a>
+                    <a href="#"><img src="../src/img/facebook.png" alt="Facebook"></a>
+                </div>
+                <div id="socials" class="flex w-full flex-row justify-around sm:hidden py-4">
+                    <a href="#"><img src="../src/img/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="../src/img/Youtube.png" alt="Youtube"></a>
+                    <a href="#"><img src="../src/img/facebook.png" alt="Facebook"></a>
+                </div>
+				
+            </div>
+			<div class="bitcom">
+				© Copyright Regency Travel 2023. All Rights Reserved. Designed and Developed by <a href="https://bitcom.tn">bitcom</a>
+			</div>
+        </footer>
+    </div>
+
+    <script>
+        // Getting hotel from Page url param
+        function GetUrlParameter(sParam){
+            var sPageURL= document.URL;
+            var sURLVariables = sPageURL.split('?');
+            for (var i = 0; i < sURLVariables.length; i++) 
+            {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) 
+                {
+                    return sParameterName[1].replace(/%20/g, " ");
+                }
+            }
+        }
+        var Pageid = GetUrlParameter("continent")
+        for (var i = 0; i < Pageid.length; i++) 
+        {
+            if(Pageid[i]=="-"){Pageid=Pageid.substring(0,i) + " " + Pageid.substring(i+1);}
+        }
+
+        function GetHotelToDisplay(Pageid)
+        {        
+            if(Pageid.includes("#")){Pageid = Pageid.substring(0,Pageid.indexOf("#"))}
+            for (var i = 0; i < Pageid.length; i++) 
+            {
+                if(Pageid[i]=="-"){Pageid=Pageid.substring(0,i) + " " + Pageid.substring(i+1);}
+            }
+            return continents_EN.find(({ continent }) => continent.toUpperCase() == Pageid.toUpperCase());
+        }
+        
+        //Modifiying the page to the current Hotel selected
+        var continent = GetHotelToDisplay(Pageid);
+        const contentDestinations = document.querySelector(".content-destinations");
+        const landing = document.getElementById("backgroundImg");
+        const roomsSelection = document.getElementById("selection-chambres");
+        landing.src=continent.image;
+        document.title = `Best Hotels in ${continent.continent}`
+        // div TEXT
+        const text = document.getElementById("region");
+        const textTop = document.getElementById("top");
+        const textBottom = document.getElementById("bottom");
+        text.textContent=continent.continent
+        textTop.innerHTML=
+        `       <h1>Luxury hotel in ${continent.continent}</h1>
+                <p class="content-description">
+                    ${continent.description}
+                </p>
+        `;
+        textBottom.innerHTML=
+        `       <h1>THE MOST BEAUTIFUL HOTELS IN ${continent.continent.toUpperCase()}</h1>
+                <p class="content-top">
+                    ${continent.top}
+                </p>
+        `;
+        roomsSelection.innerHTML=
+        `   <div id="title">
+                <h1>Destination ideas</h1>
+            </div>
+            
+            <div id="seperation"></div>
+            <div id="gradient"></div>
+
+            <div id="main">
+                <h1>${continent.address}</h1>
+                <p>${continent.slide}</p>
+            </div>
+        `;
+        roomsSelection.style.backgroundImage = `url(${continent.slidebg})`
+        contentDestinations.innerHTML=continent.destinations
+
+        // div list
+        const hotelsList = document.getElementById("list");
+        /* continent.hotels.forEach((hotel) => {
+            const hotelItem = document.createElement("a");
+            hotelItem.classList.add("element");
+            hotelItem.href=`/hotel-deatils.html?id=${hotel.id}`;
+            hotelItem.innerHTML = `
+            <div>
+                <div id="background" style="background-image : url(${hotel.thumbnail})"></div>
+                <h3>${hotel.name}</h3>
+                <h4>${hotel.region}</h4>
+            </div>
+            <button>RÉSERVER</button>`;
+            hotelsList.appendChild(hotelItem);
+        }) */
+
+        async function displayHotels(){
+            await fetch(`${backendURL}/api/todos`)
+                .then((response) => response.json())
+                .then(({hotels}) => {
+                    obj = hotels
+                    hotelsToDisplay = hotels.filter(hotel=>hotel.region.toUpperCase()==Pageid.toUpperCase())
+                    console.log(hotelsToDisplay)
+                    hotelsToDisplay.forEach((hotel) => {
+                        const hotelItem = document.createElement("a");
+                        hotelItem.classList.add("element");
+                        hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                        hotelItem.innerHTML = `
+                        <div>
+                            <div id="background" style="background-image : url(${hotel.images[0]})"></div>
+                            <h3>${hotel.name}</h3>
+                            <h4>${hotel.region}</h4>
+                        </div>
+                        <button>RÉSERVER</button>`;
+                        hotelsList.appendChild(hotelItem);
+                    })
+                });
+        }
+        displayHotels()
+    </script>
+    <script>
+		//SEARCH
+		const searchBtn = document.querySelector("#searchBtn");
+        const searchText = document.querySelector("#search-text");
+
+		function redirectSearch(){
+			window.location.href = `hotels-search.html?country=${searchText.value}`
+		}
+		searchBtn.addEventListener("click",redirectSearch)
+	</script>
+    <style>#google_translate_element{display:none;}</style>
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
+        }
+        </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

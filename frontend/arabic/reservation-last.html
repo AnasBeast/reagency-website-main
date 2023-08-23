@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <title>Informations Personnelles</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+    <link rel="shortcut icon" href="../src/img/icon-png.png" type="image/x-icon">
+    <link rel="stylesheet" href="../src/css/reusable.css">
+    <link rel="stylesheet" href="../src/css/reservation-last.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+</head>
+<body dir="rtl">
+    <script type="text/javascript" src="../src/js/index.js"></script>
+    <id id="overlay" onclick="hideMobileNav()"></id>
+
+    <div id="mobileNavbar">
+		<div onclick="hideMobileNav()" id="cross">
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 17 17" xml:space="preserve">
+				<path fill="#fff" d="M9.6,8.5L14,4.1c0.3-0.3,0.3-0.8,0-1.1c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.4L4,3C3.7,2.7,3.2,2.7,2.9,3s-0.3,0.8,0,1.1l4.5,4.5 L2.9,13c-0.3,0.3-0.3,0.8,0,1.1c0.1,0.1,0.3,0.2,0.5,0.2c0.1,0,0.3,0,0.6-0.2l4.5-4.5l4.4,4.5c0.1,0.1,0.3,0.2,0.5,0.2 s0.4,0,0.6-0.2c0.3-0.3,0.3-0.8,0-1.1L9.6,8.5z"></path>
+			</svg>
+		</div>
+
+		<h1>القائمة</h1>
+		<div class="seperation"></div>
+
+		<ul class="pl-8 text-white">
+			<a href="qui-sommes-nous.html" ><li>
+				<p class="my-4"> من نحن </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href="destination.html"><li>
+				<p class="my-4"> الوجهات </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href="collection-hotels.html"><li>
+				<p class="my-4"> مجموعة الفنادق </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href="https://www.govoyages.com/vols/" target="_blank"><li>
+				<p class="my-4"> المجلدات </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+            
+			<div class="seperation"></div>
+			<div id="call"><a href="tel:+442035192700"><p>احجز عبر الإنترنت أو اتصل</p><p> +44 20 35 19 2700</p></a></div>
+
+			
+		</ul>
+	</div>
+
+	<nav>
+		<a href="index.html">
+            <img src="../src/img/logo-default.png" alt="Logo">
+        </a>
+
+		<div id="sections">
+			<a href="qui-sommes-nous.html"><p>من نحن</p></a>
+			<a href="destination.html"><p>الوجهات</p></a>
+			<a href="collection-hotels.html"><p>مجموعة الفنادق</p></a>
+			<a href="https://www.govoyages.com/vols/" target="_blank"><p>المجلدات</p></a>
+			<a href="tel:+442035192700"><p>احجز عبر الإنترنت أو اتصل <br> +44 20 35 19 2700</p></a>
+			
+		</div>
+
+		<div id="menu" onclick="showMobileNav()">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</nav>
+
+    <div id="content" class="md:pb-12">
+        <div class="w-2/3 mt-12">
+            <div class="container flex my-4 px-12 mx-auto">
+                <input class="border w-64 outline-none border-none" id="kt_daterangepicker_1" readonly/>
+                <div class="seperation h-20 border">
+                    <div></div>
+                </div>
+                <div class="flex flex-row justify-center items-center w-1/4 h-16 relative bg-transparent mt-1 mx-4">
+                    
+                    <input type="number" id="nbAdultes" min="1" max="4" class="outline-none focus:outline-none text-center font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0" readonly></input>
+                    <h3>Adultes</h3>
+                    
+                </div>
+                <div class="seperation h-20 border">
+                    <div></div>
+                </div>
+                <div class="flex flex-row justify-center items-center w-1/4 h-16 relative bg-transparent mt-1 mx-4">
+                    
+                    <input type="number" id="nbEnfants" min="1" max="4" class="outline-none focus:outline-none text-center font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0" readonly></input>
+                    <h3>Enfants</h3>
+                    
+                </div>
+                <div class="seperation h-20 border">
+                    <div></div>
+                </div>
+                <div class="flex flex-row justify-center items-center w-1/4 h-16 relative bg-transparent mt-1 mx-4">
+                   
+                    <input type="number" id="nbChambres" min="1" max="4" class="outline-none focus:outline-none text-center font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0" readonly></input>
+                    <h3>Chambres</h3>
+                    
+                </div>
+            </div>
+            <div class="seperation bg-blue-950">
+                <div></div>
+            </div>
+            <div id="input-label" class="flex items-center gap-4 my-4"> 
+                
+                <h1 id="room-type" class="text-4xl text-blue-950 font-semibold"></h1>
+                
+            </div>
+            <div class="flex flex-col md:grid md:grid-cols-3 gap-8">
+                <form action="#" class="col-span-2">
+                    <h1 class="mb-4 text-xl"><strong>VOS INFORMATIONS</strong></h1>
+                    <div class="flex">
+                        <select id="civilité" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-28 p-2.5" required>
+                            <option selected disabled>Civilité</option>
+                            <option value="homme">M.</option>
+                            <option value="femme">Mme</option>
+                            <option value="non spécifié">Sp.</option>
+                           
+                        </select>
+                    </div>
+    
+                    <div class="flex gap-4">
+                        <input type="text" id="prenom" class="block mt-4 p-3 w-1/2 text-sm text-black bg-gray-50 border border-black shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Prénom *" required>
+                        <input type="text" id="nom" class="block mt-4 p-3 w-1/2 text-sm text-black bg-gray-50 border border-black shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Nom de famille *" required>
+                    </div>
+                    <div class="flex gap-4">
+                        <input type="email" id="email" class="block mt-4 p-3 w-1/2 text-sm text-black bg-gray-50 border border-black shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Adresse E-mail *" required>
+                        <input type="tel" id="tel" class="block mt-4 p-3 w-1/2 text-sm text-black bg-gray-50 border border-black shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Numéro du téléphone *" required>
+                    </div>
+                    <div class="flex gap-4">
+                        <select class="mt-4 p-3 w-1/2 text-sm text-black bg-gray-50 border border-black shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" id="pays" name="pays">
+                            <option selected disabled>Choisissez votre pays</option>
+                            <option value="AF">Afghanistan</option>
+                            <option value="AX">Aland Islands</option>
+                            <option value="AL">Albania</option>
+                            <option value="DZ">Algeria</option>
+                            <option value="AS">American Samoa</option>
+                            <option value="AD">Andorra</option>
+                            <option value="AO">Angola</option>
+                            <option value="AI">Anguilla</option>
+                            <option value="AQ">Antarctica</option>
+                            <option value="AG">Antigua and Barbuda</option>
+                            <option value="AR">Argentina</option>
+                            <option value="AM">Armenia</option>
+                            <option value="AW">Aruba</option>
+                            <option value="AU">Australia</option>
+                            <option value="AT">Austria</option>
+                            <option value="AZ">Azerbaijan</option>
+                            <option value="BS">Bahamas</option>
+                            <option value="BH">Bahrain</option>
+                            <option value="BD">Bangladesh</option>
+                            <option value="BB">Barbados</option>
+                            <option value="BY">Belarus</option>
+                            <option value="BE">Belgium</option>
+                            <option value="BZ">Belize</option>
+                            <option value="BJ">Benin</option>
+                            <option value="BM">Bermuda</option>
+                            <option value="BT">Bhutan</option>
+                            <option value="BO">Bolivia</option>
+                            <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                            <option value="BA">Bosnia and Herzegovina</option>
+                            <option value="BW">Botswana</option>
+                            <option value="BV">Bouvet Island</option>
+                            <option value="BR">Brazil</option>
+                            <option value="IO">British Indian Ocean Territory</option>
+                            <option value="BN">Brunei Darussalam</option>
+                            <option value="BG">Bulgaria</option>
+                            <option value="BF">Burkina Faso</option>
+                            <option value="BI">Burundi</option>
+                            <option value="KH">Cambodia</option>
+                            <option value="CM">Cameroon</option>
+                            <option value="CA">Canada</option>
+                            <option value="CV">Cape Verde</option>
+                            <option value="KY">Cayman Islands</option>
+                            <option value="CF">Central African Republic</option>
+                            <option value="TD">Chad</option>
+                            <option value="CL">Chile</option>
+                            <option value="CN">China</option>
+                            <option value="CX">Christmas Island</option>
+                            <option value="CC">Cocos (Keeling) Islands</option>
+                            <option value="CO">Colombia</option>
+                            <option value="KM">Comoros</option>
+                            <option value="CG">Congo</option>
+                            <option value="CD">Congo, Democratic Republic of the Congo</option>
+                            <option value="CK">Cook Islands</option>
+                            <option value="CR">Costa Rica</option>
+                            <option value="CI">Cote D'Ivoire</option>
+                            <option value="HR">Croatia</option>
+                            <option value="CU">Cuba</option>
+                            <option value="CW">Curacao</option>
+                            <option value="CY">Cyprus</option>
+                            <option value="CZ">Czech Republic</option>
+                            <option value="DK">Denmark</option>
+                            <option value="DJ">Djibouti</option>
+                            <option value="DM">Dominica</option>
+                            <option value="DO">Dominican Republic</option>
+                            <option value="EC">Ecuador</option>
+                            <option value="EG">Egypt</option>
+                            <option value="SV">El Salvador</option>
+                            <option value="GQ">Equatorial Guinea</option>
+                            <option value="ER">Eritrea</option>
+                            <option value="EE">Estonia</option>
+                            <option value="ET">Ethiopia</option>
+                            <option value="FK">Falkland Islands (Malvinas)</option>
+                            <option value="FO">Faroe Islands</option>
+                            <option value="FJ">Fiji</option>
+                            <option value="FI">Finland</option>
+                            <option value="FR">France</option>
+                            <option value="GF">French Guiana</option>
+                            <option value="PF">French Polynesia</option>
+                            <option value="TF">French Southern Territories</option>
+                            <option value="GA">Gabon</option>
+                            <option value="GM">Gambia</option>
+                            <option value="GE">Georgia</option>
+                            <option value="DE">Germany</option>
+                            <option value="GH">Ghana</option>
+                            <option value="GI">Gibraltar</option>
+                            <option value="GR">Greece</option>
+                            <option value="GL">Greenland</option>
+                            <option value="GD">Grenada</option>
+                            <option value="GP">Guadeloupe</option>
+                            <option value="GU">Guam</option>
+                            <option value="GT">Guatemala</option>
+                            <option value="GG">Guernsey</option>
+                            <option value="GN">Guinea</option>
+                            <option value="GW">Guinea-Bissau</option>
+                            <option value="GY">Guyana</option>
+                            <option value="HT">Haiti</option>
+                            <option value="HM">Heard Island and Mcdonald Islands</option>
+                            <option value="VA">Holy See (Vatican City State)</option>
+                            <option value="HN">Honduras</option>
+                            <option value="HK">Hong Kong</option>
+                            <option value="HU">Hungary</option>
+                            <option value="IS">Iceland</option>
+                            <option value="IN">India</option>
+                            <option value="ID">Indonesia</option>
+                            <option value="IR">Iran, Islamic Republic of</option>
+                            <option value="IQ">Iraq</option>
+                            <option value="IE">Ireland</option>
+                            <option value="IM">Isle of Man</option>
+                            <option value="IL">Israel</option>
+                            <option value="IT">Italy</option>
+                            <option value="JM">Jamaica</option>
+                            <option value="JP">Japan</option>
+                            <option value="JE">Jersey</option>
+                            <option value="JO">Jordan</option>
+                            <option value="KZ">Kazakhstan</option>
+                            <option value="KE">Kenya</option>
+                            <option value="KI">Kiribati</option>
+                            <option value="KP">Korea, Democratic People's Republic of</option>
+                            <option value="KR">Korea, Republic of</option>
+                            <option value="XK">Kosovo</option>
+                            <option value="KW">Kuwait</option>
+                            <option value="KG">Kyrgyzstan</option>
+                            <option value="LA">Lao People's Democratic Republic</option>
+                            <option value="LV">Latvia</option>
+                            <option value="LB">Lebanon</option>
+                            <option value="LS">Lesotho</option>
+                            <option value="LR">Liberia</option>
+                            <option value="LY">Libyan Arab Jamahiriya</option>
+                            <option value="LI">Liechtenstein</option>
+                            <option value="LT">Lithuania</option>
+                            <option value="LU">Luxembourg</option>
+                            <option value="MO">Macao</option>
+                            <option value="MK">Macedonia, the Former Yugoslav Republic of</option>
+                            <option value="MG">Madagascar</option>
+                            <option value="MW">Malawi</option>
+                            <option value="MY">Malaysia</option>
+                            <option value="MV">Maldives</option>
+                            <option value="ML">Mali</option>
+                            <option value="MT">Malta</option>
+                            <option value="MH">Marshall Islands</option>
+                            <option value="MQ">Martinique</option>
+                            <option value="MR">Mauritania</option>
+                            <option value="MU">Mauritius</option>
+                            <option value="YT">Mayotte</option>
+                            <option value="MX">Mexico</option>
+                            <option value="FM">Micronesia, Federated States of</option>
+                            <option value="MD">Moldova, Republic of</option>
+                            <option value="MC">Monaco</option>
+                            <option value="MN">Mongolia</option>
+                            <option value="ME">Montenegro</option>
+                            <option value="MS">Montserrat</option>
+                            <option value="MA">Morocco</option>
+                            <option value="MZ">Mozambique</option>
+                            <option value="MM">Myanmar</option>
+                            <option value="NA">Namibia</option>
+                            <option value="NR">Nauru</option>
+                            <option value="NP">Nepal</option>
+                            <option value="NL">Netherlands</option>
+                            <option value="AN">Netherlands Antilles</option>
+                            <option value="NC">New Caledonia</option>
+                            <option value="NZ">New Zealand</option>
+                            <option value="NI">Nicaragua</option>
+                            <option value="NE">Niger</option>
+                            <option value="NG">Nigeria</option>
+                            <option value="NU">Niue</option>
+                            <option value="NF">Norfolk Island</option>
+                            <option value="MP">Northern Mariana Islands</option>
+                            <option value="NO">Norway</option>
+                            <option value="OM">Oman</option>
+                            <option value="PK">Pakistan</option>
+                            <option value="PW">Palau</option>
+                            <option value="PS">Palestinian Territory, Occupied</option>
+                            <option value="PA">Panama</option>
+                            <option value="PG">Papua New Guinea</option>
+                            <option value="PY">Paraguay</option>
+                            <option value="PE">Peru</option>
+                            <option value="PH">Philippines</option>
+                            <option value="PN">Pitcairn</option>
+                            <option value="PL">Poland</option>
+                            <option value="PT">Portugal</option>
+                            <option value="PR">Puerto Rico</option>
+                            <option value="QA">Qatar</option>
+                            <option value="RE">Reunion</option>
+                            <option value="RO">Romania</option>
+                            <option value="RU">Russian Federation</option>
+                            <option value="RW">Rwanda</option>
+                            <option value="BL">Saint Barthelemy</option>
+                            <option value="SH">Saint Helena</option>
+                            <option value="KN">Saint Kitts and Nevis</option>
+                            <option value="LC">Saint Lucia</option>
+                            <option value="MF">Saint Martin</option>
+                            <option value="PM">Saint Pierre and Miquelon</option>
+                            <option value="VC">Saint Vincent and the Grenadines</option>
+                            <option value="WS">Samoa</option>
+                            <option value="SM">San Marino</option>
+                            <option value="ST">Sao Tome and Principe</option>
+                            <option value="SA">Saudi Arabia</option>
+                            <option value="SN">Senegal</option>
+                            <option value="RS">Serbia</option>
+                            <option value="CS">Serbia and Montenegro</option>
+                            <option value="SC">Seychelles</option>
+                            <option value="SL">Sierra Leone</option>
+                            <option value="SG">Singapore</option>
+                            <option value="SX">Sint Maarten</option>
+                            <option value="SK">Slovakia</option>
+                            <option value="SI">Slovenia</option>
+                            <option value="SB">Solomon Islands</option>
+                            <option value="SO">Somalia</option>
+                            <option value="ZA">South Africa</option>
+                            <option value="GS">South Georgia and the South Sandwich Islands</option>
+                            <option value="SS">South Sudan</option>
+                            <option value="ES">Spain</option>
+                            <option value="LK">Sri Lanka</option>
+                            <option value="SD">Sudan</option>
+                            <option value="SR">Suriname</option>
+                            <option value="SJ">Svalbard and Jan Mayen</option>
+                            <option value="SZ">Swaziland</option>
+                            <option value="SE">Sweden</option>
+                            <option value="CH">Switzerland</option>
+                            <option value="SY">Syrian Arab Republic</option>
+                            <option value="TW">Taiwan, Province of China</option>
+                            <option value="TJ">Tajikistan</option>
+                            <option value="TZ">Tanzania, United Republic of</option>
+                            <option value="TH">Thailand</option>
+                            <option value="TL">Timor-Leste</option>
+                            <option value="TG">Togo</option>
+                            <option value="TK">Tokelau</option>
+                            <option value="TO">Tonga</option>
+                            <option value="TT">Trinidad and Tobago</option>
+                            <option value="TN">Tunisia</option>
+                            <option value="TR">Turkey</option>
+                            <option value="TM">Turkmenistan</option>
+                            <option value="TC">Turks and Caicos Islands</option>
+                            <option value="TV">Tuvalu</option>
+                            <option value="UG">Uganda</option>
+                            <option value="UA">Ukraine</option>
+                            <option value="AE">United Arab Emirates</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="US">United States</option>
+                            <option value="UM">United States Minor Outlying Islands</option>
+                            <option value="UY">Uruguay</option>
+                            <option value="UZ">Uzbekistan</option>
+                            <option value="VU">Vanuatu</option>
+                            <option value="VE">Venezuela</option>
+                            <option value="VN">Viet Nam</option>
+                            <option value="VG">Virgin Islands, British</option>
+                            <option value="VI">Virgin Islands, U.s.</option>
+                            <option value="WF">Wallis and Futuna</option>
+                            <option value="EH">Western Sahara</option>
+                            <option value="YE">Yemen</option>
+                            <option value="ZM">Zambia</option>
+                            <option value="ZW">Zimbabwe</option>
+                        </select>
+                    </div>
+                    <div class="gap-4 sm:gap-0 my-4 flex-row">
+                        <input type="checkbox" name="confirm" id="confirm" required>
+                        <label for="confirm" class="text-sm">EN RÉSERVANT,VOUS DÉCLAREZ AVOIR PRIS CONNAISSANCE ET ACCEPTER NOS CONDITIONS PARTICULIÈRES
+                            DE VENTE ET CHARTE DE CONFIDENTIALITÉ
+                        </label>
+                    </div>
+                    <button type="button" data-te-ripple-init data-te-ripple-color="light"
+                    id="booking-btn"
+                    class="my-6 text-2xl inline-block w-full bg-blue-950 px-6 pt-4 pb-4 font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                    Envoyer la demande de réservation
+                    </button>
+                </form>
+                <div>
+                    <div class="flex flex-col gap-4" id="side-form">
+                        <div class="flex items-center gap-4 justify-center bg-white p-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Calque_1" x="0px" y="0px" viewBox="0 0 116 116" style="enable-background:new 0 0 116 116;" xml:space="preserve" class="injected-svg inject-svg a-icon as--55 w-16" data-src="https://fr.lartisien.com/assets/img/svg/icon-gem.svg">
+                                <circle cx="58" cy="58" fill="#E3E3E3" r="58"></circle>
+                                <g>
+                                    <path fill="#FFFFFF" d="M44.4,49.3L60.2,41h7l4.4,8.3c0,0,2.7,4.7-2.4,6.8c-0.7,2.4-2.8,11-11.3,11.6c-8.4-0.6-10.6-9.2-11.3-11.6   C41.6,53.9,44.4,49.3,44.4,49.3"></path>
+                                    <path d="M58,27.8c-7.4,0-13.6,2.2-15.4,5.1v7.8c1.8-2.9,8-5.1,15.4-5.1c7.4,0,13.7,2.2,15.5,5.1v-7.8C71.7,30,65.4,27.8,58,27.8z"></path>
+                                    <path d="M73.3,43.1c-1.9-2.9-8.1-5-15.3-5s-13.4,2.1-15.3,5c-0.1,0.1-0.1,0.2-0.2,0.3c0.1,2.7,1.2,2.9,1.2,2.9v3.3   c0,0.1,0.1,0.2,0.2,0.3c9.1,1.2,17.2-2.3,19.5-5.3c2.4,6.4,7.6,5.6,8.6,5.3c0.1,0,0.2-0.1,0.2-0.2v-3.3c0,0,1.2-0.2,1.2-2.9   C73.5,43.3,73.4,43.2,73.3,43.1z"></path>
+                                    <g>
+                                        <path d="M56.9,70.3c0,0-4.4-0.5-7.8-2.7c-0.8-0.5-1.8,0.1-1.8,1v2.6c3.4,3.4,9.6,4.2,9.6,4.2V70.3z"></path>
+                                        <path d="M59.1,70.3c0,0,4.4-0.5,7.8-2.7c0.8-0.5,1.8,0.1,1.8,1v2.6c-3.4,3.4-9.6,4.2-9.6,4.2V70.3z"></path>
+                                    </g>
+                                    <path d="M70.8,71.1c-1.9,3.7-6.9,6.6-12.8,6.6c-5.9,0-10.9-2.9-12.8-6.6c0,0-11.5,2.8-13.4,7.9c0,4.4,0,8,0,8.9   c0.1,0.1,0.2,0.2,0.3,0.3c7,6,16,9.7,26,9.7s19-3.6,26-9.7c0.1-0.1,0.2-0.2,0.3-0.3c0-0.9,0-4.6,0-8.9C82.3,74,70.8,71.1,70.8,71.1   z"></path>
+                                    <g>
+                                        <circle fill="#FFFFFF" cx="46.3" cy="82.3" r="1.8"></circle>
+                                        <circle fill="#FFFFFF" cx="69.7" cy="82.3" r="1.8"></circle>
+                                    </g>
+                                    <g>
+                                        <path fill="#FFFFFF" d="M63.9,83.3H52.1c-0.6,0-1-0.5-1-1c0-0.6,0.5-1,1-1h11.9c0.6,0,1,0.5,1,1C65,82.8,64.5,83.3,63.9,83.3z"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <div class="flex-col justify-start items-start">
+                                <p>Réservez en ligne ou appelez</p>
+                                <h3 class="font-semibold">+44 20 35 19 2700</h3>
+                                <p>24 heures sur 24, 7 jours sur 7</p>
+                            </div>
+
+                        </div>
+                        <div class="flex flex-col bg-white p-12">
+                            <h2 class="font-semibold text-lg">Résumé de votre séjour</h2>
+                            <div class="seperation bg-black">
+                                <div></div>
+                            </div>
+                            <p class="my-4">
+                                <strong id="hotel-name">Casa Cipriani New York</strong> <br>
+                                <p id="hotel-address">
+                                    10 South Street <br>
+                                    New York, Etats-Unis
+                                </p>
+                            </p>
+                            <div class="seperation bg-black">
+                                <div></div>
+                            </div>
+                            <p class="my-4">
+                                <strong>Enregistrement :</strong> <br>
+                                <p id="arrival">
+                                    dimanche, 25 juin 2023
+                                </p>
+                            </p>
+                            <p class="my-4">
+                                <strong>Date de départ :</strong> <br>
+                                <p id="departure">
+                                    vendredi, 30 juin 2023
+                                </p>
+                            </p>
+                            <div class="seperation bg-black">
+                                <div></div>
+                            </div>
+                            <p class="my-4">
+                                <strong>2 adultes</strong>
+                            </p>
+                            <div class="seperation bg-black">
+                                <div></div>
+                            </div>
+                            <p class="my-4">
+                                <strong>1 Chambre</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <footer>
+        <div id="upper">
+            <a href="index.html"><img src="../src/img/logo-blanc.png" alt="Regency Logo"></a>
+            
+            <ul class="hidden sm:block">
+                <h3>LEARN MORE</h3>
+
+                <a href="qui-sommes-nous.html"><li>WHO ARE WE</li></a>
+                <a href="destination.html"><li>DESTINATIONS</li></a>
+                <a href="collection-hotels.html"><li>HOTELS COLLECTION</li></a>
+                
+            </ul>
+            <p class="text-white text-center text-lg sm:hidden mt-4">
+                <a href="destination.html">Destinations</a>-
+                <a href="collection-hotels.html">Hotels Collection</a>-
+                
+                <a href="contact.html">Contact us</a>-
+                <a href="blog.html">Blog</a>
+
+            </p>
+            <p class="text-white text-center text-lg sm:hidden">
+                <a href="tos.html">Terms of Service</a>-
+                <a href="politique.html">Privacy Policy</a>
+            </p>
+            <ul class="hidden sm:block">
+                <h3>LET US HELP YOU</h3>
+
+                <a href="contact.html"><li>CONTACT US</li></a>
+                <a href="blog.html"><li>Blog</li></a>
+                <a href="tos.html"><li>TERMS OF SERVICE</li></a>
+                <a href="politique.html"><li>PRIVACY POLICY</li></a>
+            </ul>
+
+            <ul class="hidden sm:block">
+                <h3>ACCREDITATIONS</h3>
+
+                <a href="https://www2.arccorp.com/support-training/arc-check-results/?acn=05715496&formSourceName=StandardForm&sp_exp=yes" target="_blank"><li>CERTIFICATE ARC</li></a>
+                <a href="https://regencytravel.com/images/CLIA.jpg" target="_blank"><li>CERTIFICATE CLIA</li></a>
+                <a href="https://regencytravel.com/images/IATA.jpg" target="_blank"><li>CERTIFICATE IATA</li></a>
+                <a href="https://regencytravel.com/images/CST.jpg" target="_blank"><li>CERTIFICATE CST</li></a>
+            </ul>
+        </div>
+
+        <div id="lower">
+            <div id="phone" class="hidden sm:flex">
+                <img src="../src/img/phone.png" alt="Phone">
+                <h3><a href="tel:+442035192700">+44 20 3519 2700</a></h3>
+            </div>
+            <div id="phone" class="flex flex-col sm:hidden">
+                <h2>Contact our experts :</h2>
+                <h3 class="underline"><a href="tel:+442035192700">+44 20 3519 2700</a></h3>
+            </div>
+            <img id="logo" src="../src/img/IATA-white.png" alt="IATA LOGO" class="hidden sm:block">
+
+            <div id="socials" class="hidden sm:flex">
+                <a href="#"><img src="../src/img/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="../src/img/Youtube.png" alt="Youtube"></a>
+                <a href="#"><img src="../src/img/facebook.png" alt="Facebook"></a>
+            </div>
+            <div id="socials" class="flex w-full flex-row justify-around sm:hidden py-4">
+                <a href="#"><img src="../src/img/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="../src/img/Youtube.png" alt="Youtube"></a>
+                <a href="#"><img src="../src/img/facebook.png" alt="Facebook"></a>
+            </div>
+            
+        </div>
+        <div class="bitcom">
+            © Copyright Regency Travel 2023. All Rights Reserved. Designed and Developed by <a href="https://bitcom.tn">bitcom</a>
+        </div>
+    </footer>
+   
+    <script>
+        function GetUrlParameter(sParam){
+            var sPageURL= document.URL;
+            var sPageURL= sPageURL.split("&")
+            if(sParam=="id"){var sURLVariables = sPageURL[0].split('?');}else{var sURLVariables = sPageURL[1].split('?');}
+            for (var i = 0; i < sURLVariables.length; i++) 
+            {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) 
+                {
+                    return sParameterName[1];
+                }
+            }
+        }
+        var Pageid = GetUrlParameter("id")
+
+        var Pageroom = GetUrlParameter("room")
+        Pageroom = Pageroom.replace(/%20/g, " ");
+
+        var hotel;
+        async function displayHotel(){
+            await fetch(`${backendURL}/api/todos/${Pageid}`)
+                .then((response) => response.json())
+                .then((res) => {
+                    hotel = res 
+                    console.log(hotel)
+                    displayInformations(hotel)
+                });
+        }
+        displayHotel()
+
+        const hotelName = document.getElementById("hotel-name");
+        const hotelAdress = document.getElementById("hotel-address");
+        const arrival = document.getElementById("arrival");
+        const departure = document.getElementById("departure");
+        const dateRange = document.getElementById("kt_daterangepicker_1");
+        const nbAdultes = document.getElementById("nbAdultes");
+        const nbEnfants = document.getElementById("nbEnfants");
+        const roomType = document.getElementById("room-type");
+        function displayInformations(hotel){
+            hotelName.textContent = `${hotel.name}`;
+            hotelAdress.textContent = `${hotel.address}`;
+            arrival.textContent = localStorage.getItem("daterange").split("-")[0];
+            departure.textContent = localStorage.getItem("daterange").split("-")[1];
+            dateRange.value=localStorage.getItem("daterange");
+            nbAdultes.value=localStorage.getItem("nbAdultes");
+            nbEnfants.value=localStorage.getItem("nbEnfants");
+            nbChambres.value = localStorage.getItem("nbChambres");
+            roomType.textContent = Pageroom
+        }
+
+        //SEND RESERVATION
+        const prenom = document.querySelector("#prenom");
+        const nom = document.querySelector("#nom");
+        const pays = document.querySelector("#pays");
+        const email = document.querySelector("#email");
+        const tel = document.querySelector("#tel");
+        const confirmBtn = document.querySelector("#confirm")
+        const bookingBtn = document.querySelector("#booking-btn");
+
+        async function sendBooking(){
+
+            if(confirmBtn.checked){
+                //Prepare Data
+                var data = {
+                    prenom : prenom.value,
+                    nom : nom.value,
+                    pays : pays.value,
+                    email : email.value,
+                    number : tel.value,
+                    hotel : hotel.name,
+                    room : Pageroom,
+                    adultes : localStorage.getItem("nbAdultes"),
+                    enfants : localStorage.getItem("nbEnfants"),
+                    duree : localStorage.getItem("daterange")
+                }
+                //Send Data
+                await fetch(`${backendURL}/api/bookings`,{
+                    method: "POST",
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body : JSON.stringify(data)
+                })
+                .then((response) => response.json())
+                .then((res) => {
+                    if(res.message.includes("sucessfully")){alert("Demande Envoyée");window.location.href="index.html"}
+                    else{alert("Demande non envoyée, VEUILLEZ REMPLIR LES CHAMPS")}
+                });
+            }else{alert("Veuillez accepter nos conditions.")}
+        }
+        bookingBtn.addEventListener("click",sendBooking)
+    </script>
+    <style>#google_translate_element{display:none;}</style>
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
+        }
+        </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

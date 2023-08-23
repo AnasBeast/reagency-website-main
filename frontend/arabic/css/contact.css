@@ -7,7 +7,7 @@
 }
 
 nav {
-  width: 100%;
+  width: 90%;
   padding-top: 15px;
   position: relative;
   z-index: 997;
@@ -97,7 +97,7 @@ nav #menu div {
   -webkit-transition: height 300ms;
   transition: height 300ms;
   position: relative;
-  background-image: url("https://i.postimg.cc/RWnRhjsH/hotel-1.png");
+  background-image: url("https://i.postimg.cc/qv1Zbr2j/hotel-1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -142,7 +142,7 @@ nav #menu div {
 }
 
 #content #list-wrapper #top {
-  width: 90%;
+  width: 75%;
 }
 
 #content #list-wrapper #top h1 {
@@ -181,18 +181,29 @@ nav #menu div {
   width: 80%;
 }
 #contact-us-section{
-  background: #F9EFE9;
+  background: #F7F3F3;
+}
+#contact-us-section .container{
+  width: 75%;
+}
+form button{
+  background-color: #021033 !important;
 }
 .box h1{
   font-size: 20px !important;
   color: #FF5500 !important;
 }
 #contact-us h1{
-  font-weight: 400;
+  font-weight: 600;
   font-size: 45px;
   margin: 0;
   margin-bottom: 14px;
   color: #021033;
+}
+#contact-us .seperation {
+  width: 100%;
+  height: 1px;
+  background: #021033;
 }
 #content #list-wrapper #list .element {
   width: calc(50% - 25px);
@@ -302,11 +313,8 @@ nav #menu div {
   font-size: 25px;
 }
 #mail #background{
-  background-image: url("https://i.postimg.cc/c44RDnTG/planebg.png");
-}
-.color-text{
   color: #FF5500;
-  font-weight: 600;
+  padding-bottom: 10%;
 }
 #background h2{
   margin-bottom: 5rem;
@@ -378,17 +386,35 @@ nav #menu div {
     font-size: 25px !important;
   }
   #contact-us-section{
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
-  #mail #background{
-    height: auto;
+  #content #list-wrapper #top{
+    width: 100%;
   }
-  #mail #background div{
+  #contact-us-section .container{
+    width: 100%;
+  }
+  #top div{
     flex-direction: column;
   }
-  #mail #background div>*{
-    width: 80%;
+  #top button{
+    margin: 0;
+  }
+  #top div p{
+    width: 100%;
+  }
+  #tel{
+    width: 100%;
+  }
+  #background div{
+    flex-direction: column;
+  }
+  #background div>*{
+   width: 100%;
+  }
+  #mail #background {
+    height: auto;
   }
   footer{
     margin-top: 0 !important;

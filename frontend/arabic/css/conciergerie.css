@@ -7,7 +7,7 @@
 }
 
 nav {
-  width: 100%;
+  width: 90%;
   padding-top: 15px;
   position: relative;
   z-index: 997;
@@ -31,7 +31,6 @@ nav img {
   width: 200px;
   margin-left: 30px;
 }
-
 nav #sections {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -93,21 +92,23 @@ nav #menu div {
 
 #content #landing {
   width: 100%;
-  height: auto;
+  height: 70vh;
   -webkit-transition: height 300ms;
   transition: height 300ms;
   position: relative;
-  background-image: url("https://i.postimg.cc/RWnRhjsH/hotel-1.png");
+  background-image: url("https://i.postimg.cc/Xvp3xQBB/slider-conciergerie.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .landing-title{
-  padding: 25%;
+  padding: 15%;
   font-size: 45px;
+  position: relative;
+  text-shadow: 2px 2px black;
 }
 #content #landing #input-wrapper {
-  top: calc(120vh - 30px);
+  top: 95%;
 }
 
 #content #landing #gradient {
@@ -118,6 +119,7 @@ nav #menu div {
   background: #021033;
   background: -webkit-gradient(linear, left bottom, left top, from(#021033), to(rgba(0, 212, 255, 0)));
   background: linear-gradient(0deg, #021033 0%, rgba(0, 212, 255, 0) 100%);
+  
 }
 
 #content #landing #input-wrapper input[type="text"] {
@@ -177,11 +179,14 @@ nav #menu div {
 .box{
   position: relative;
   bottom: 5rem;
-  background: #F9EFE9;
+  background: #F7F3F3;
   width: 80%;
 }
 #contact-us-section{
-  background: #F9EFE9;
+  background: #F7F3F3;
+}
+#contact-us-section .container{
+  width: 80%;
 }
 .box h1{
   font-size: 20px !important;
@@ -302,16 +307,13 @@ nav #menu div {
   font-size: 25px;
 }
 #mail #background{
-  background-image: url("https://i.postimg.cc/c44RDnTG/planebg.png");
-}
-.color-text{
   color: #FF5500;
-  font-weight: 600;
-}
-#background h2{
-  margin-bottom: 5rem;
+  background: url("https://i.postimg.cc/4354FmBj/bg-conciergerie.png");
 }
 
+form button{
+  background-color: #021033 !important;
+}
 @media only screen and (max-width: 1235px) {
   nav {
     height: 100px !important;
@@ -348,7 +350,7 @@ nav #menu div {
     height: 400px !important;
   }
   #list-wrapper {
-    padding-top: 20px !important;
+    padding-top: 40px !important;
   }
   #list-wrapper #list {
     -webkit-box-orient: vertical !important;
@@ -381,24 +383,24 @@ nav #menu div {
     padding-left: 15%;
     padding-right: 15%;
   }
-  #mail #background{
-    height: auto;
+  #content #list-wrapper{
+    margin-top: 0px;
   }
-  #mail #background div{
-    flex-direction: column;
-  }
-  #mail #background div>*{
-    width: 80%;
-  }
-  footer{
-    margin-top: 0 !important;
-  }
+}
+
+@media only screen and (max-width: 460px) {
   footer #upper img{
     width: 80%;
   }
   footer #lower{
     flex-direction: column;
     height: auto;
-    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  #contact-us-section{
+    padding-left: 0%;
+    padding-right: 0%;
   }
 }

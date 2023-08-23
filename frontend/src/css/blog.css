@@ -7,7 +7,7 @@
 }
 
 nav {
-  width: 100%;
+  width: 90%;
   padding-top: 15px;
   position: relative;
   z-index: 997;
@@ -81,7 +81,7 @@ nav #menu div {
   -webkit-transition: height 300ms;
   transition: height 300ms;
   position: relative;
-  background-image: url("../img/view.png");
+  background-image: url("https://i.postimg.cc/TPXXxfKG/image-2023-08-20-114114531.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -232,27 +232,27 @@ nav #menu div {
 }
 
 #content #list-wrapper #list .element:first-child #background {
-  background-image: url("../img/hotels/hotel-1.png");
+  background-image: url("https://i.postimg.cc/RWnRhjsH/hotel-1.png");
 }
 
 #content #list-wrapper #list .element:nth-child(2) #background {
-  background-image: url("../img/hotels/hotel-2.png");
+  background-image: url("https://i.postimg.cc/jWH4Qyrq/hotel-2.png");
 }
 
 #content #list-wrapper #list .element:nth-child(3) #background {
-  background-image: url("../img/hotels/hotel-3.png");
+  background-image: url("https://i.postimg.cc/d7yxM7Pg/hotel-3.png");
 }
 
 #content #list-wrapper #list .element:nth-child(4) #background {
-  background-image: url("../img/hotels/hotel-4.png");
+  background-image: url("https://i.postimg.cc/1n07tLzH/hotel-4.png");
 }
 
 #content #list-wrapper #list .element:nth-child(5) #background {
-  background-image: url("../img/hotels/hotel-5.png");
+  background-image: url("https://i.postimg.cc/mhNK2Fzs/hotel-5.png");
 }
 
 #content #list-wrapper #list .element:nth-child(6) #background {
-  background-image: url("../img/hotels/hotel-6.png");
+  background-image: url("https://i.postimg.cc/SJg5cFf1/hotel-6.png");
 }
 
 #content #list-wrapper #list .element div {
@@ -323,7 +323,7 @@ nav #menu div {
   font-size: 25px;
 }
 #mail #background{
-  background-image: url("../img//planebg.png");
+  background-image: url("https://i.postimg.cc/c44RDnTG/planebg.png");
   color: white;
 }
 
@@ -374,7 +374,7 @@ nav #menu div {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("../img/card-img.jpg");
+  background-image: url("https://i.postimg.cc/GpYGBJ3G/card-img.jpg");
 }
 @media only screen and (max-width: 1235px) {
   nav {

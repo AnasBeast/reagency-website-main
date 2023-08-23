@@ -17,7 +17,7 @@ nav {
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: space-around;
 }
 
 nav img {
@@ -37,6 +37,7 @@ nav #sections {
       -ms-flex-align: center;
           align-items: center;
   margin-right: 0;
+  gap: 15px;
 }
 
 nav #sections p {

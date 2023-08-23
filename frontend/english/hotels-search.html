@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Collection d'hotels</title>
+    <title>Recherche sur "Hotel"</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
-    <link rel="shortcut icon" href="src/img/icon-png.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../src/img/icon-png.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="stylesheet" href="src/css/reusable.css">
-    <link rel="stylesheet" href="src/css/collection-hotels.css">
-
+    <link rel="stylesheet" href="../src/css/reusable.css">
+    <link rel="stylesheet" href="../src/css/hotels-search.css">
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <script type="text/javascript" src="src/js/index.js"></script>
+
+    <script type="text/javascript" src="../src/js/index.js"></script>
     <id id="overlay" onclick="hideMobileNav()"></id>
 
 	<div id="mobileNavbar">
@@ -29,8 +28,8 @@
 		<div class="seperation"></div>
 
 		<ul class="pl-8 text-white">
-			<a href="qui-sommes-nous.html"><li>
-				<p class="my-4"> QUI SOMMES-NOUS </p>
+			<a href="qui-sommes-nous.html" ><li>
+				<p class="my-4"> WHO ARE WE </p>
 
 				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
 			</li></a>
@@ -42,7 +41,7 @@
 			</li></a>
 
 			<a href="collection-hotels.html"><li>
-				<p class="my-4"> COLLECTION D'HOTELS </p>
+				<p class="my-4"> HOTELS COLLECTION </p>
 
 				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
 			</li></a>
@@ -52,41 +51,26 @@
 
 				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
 			</li></a>
-
+            
 			<div class="seperation"></div>
-			<div id="call"><a href="tel:+442035192700"><p>RÉSERVEZ EN LIGNE OU APPELEZ </p><p> +44 20 35 19 2700</p></a></div>
+			<div id="call"><a href="tel:+442035192700"><p>BOOK ONLINE OR CALL </p><p> +44 20 35 19 2700</p></a></div>
 
 			
 		</ul>
 	</div>
+
 	<nav>
-		<a href="index.html"><img src="src/img/logo-default.png" alt="Logo"></a>
+		<a href="index.html">
+            <img src="../src/img/logo-default.png" alt="Logo">
+        </a>
 
 		<div id="sections">
-			<a href="qui-sommes-nous.html"><p>QUI SOMMES-NOUS</p></a>
+			<a href="qui-sommes-nous.html"><p>WHO ARE WE</p></a>
 			<a href="destination.html"><p>DESTINATIONS</p></a>
-			<a href="collection-hotels.html"><p>COLLECTION D'HOTELS</p></a>
+			<a href="collection-hotels.html"><p>HOTELS COLLECTION</p></a>
 			<a href="https://www.govoyages.com/vols/" target="_blank"><p>VOLS</p></a>
-			<a href="tel:+442035192700"><p>RÉSERVEZ EN LIGNE OU APPELEZ <br> +44 20 35 19 2700</p></a>
-            <div class="relative inline-block text-left mr-4">
-                <div id="paysBtn" x-data="{ dropdownOpen: false }" class="relative">
-                    <button @click="dropdownOpen = !dropdownOpen" class="relative border flex items-center rounded-md bg-white p-2 focus:outline-none">
-                      Langues
-                      <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                      </svg>
-                    </button>
-                  
-                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full"></div>
-                  
-                    <div id="drop-pays" x-show="dropdownOpen" class="absolute border right-0 mt-2 p-2 w-28 bg-white rounded-md shadow-xl">
-                      <fieldset class="px-4 h-full space-y-2" >
-                          <option class="hover:cursor-pointer">Arabe</option>
-                          <option class="hover:cursor-pointer">Englais</option>
-                      </fieldset>
-                    </div>
-            </div>
-        </div>
+			<a href="tel:+442035192700"><p>BOOK ONLINE OR CALL <br> +44 20 35 19 2700</p></a>
+		</div>
 
 		<div id="menu" onclick="showMobileNav()">
 			<div></div>
@@ -97,97 +81,25 @@
 
     <div id="content">
         <div id="landing">
-            <div id="gradient"></div>
-            <h1 class="quote">« Chacun des hôtels figurant dans notre collection a été 
-                <br> soigneusement sélectionné <br> pour représenter l’incarnation ultime 
-                du luxe. » <br> 
-
-            </h1>
+            <div class="landing-title">
+                <h1 class="font-semibold">Regency Travel</h1>
+            </div>
             <div id="input-wrapper">
 				<div id="input">
-					<img style="display: block" src="src/img/search.png" alt="Search" id="search">
-					<input type="text" id="search-text" placeholder="recherchez un hotel , une destination">
+					<img style="display: block" src="../src/img/search.png" alt="Search" id="search">
+					<input type="text" id="search-text" placeholder="search for a hotel, a destination">
 				</div>
 
-				<button id="searchBtn">Recherche</button>
+				<button id="searchBtn">Search</button>
 			</div>
         </div>
 
         <div id="list-wrapper">
             <div id="top">
-                <h1>La collection regency</h1>
+                <h1 class="content-title">Hôtel de luxe</h1>
                 <div class="seperation"></div>
 
                 <ul class="pl-12 my-4">
-                    <li>
-                        <div class="flex justify-center">
-                            <div x-data="{ dropdownOpen: false }" class="relative">
-                              <button id="countriesBtn" @click="dropdownOpen = !dropdownOpen" class="relative z-10 flex items-center rounded-md bg-white p-2 focus:outline-none">
-                                Régions du monde
-                                <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                </svg>
-                              </button>
-                            
-                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full" style="z-index: 998;position: fixed;"></div>
-                            
-                              <div id="drop-countries" x-show="dropdownOpen" style="z-index: 999;" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
-                                <fieldset class="px-4 border" >
-                                    <legend class="sr-only">
-                                        Countries
-                                    </legend>
-                            
-                                    <div class="flex gap-4 flex-col items-start my-4" id="countries">
-                                        <div class="flex items-center">
-                                            <input id="country-option-1" type="radio" name="regions" value="Europe" class="regioncheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="country-option-1" aria-describedby="country-option-1">
-                                            <label for="country-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
-                                            Europe
-                                            </label>
-                                        </div>
-                                    </div>
-                            
-                                    
-                            
-                                </fieldset>
-                              </div>
-                            </div>
-                            </div>
-                    </li>
-
-                    <li>
-                        <div class="flex justify-center">
-                            <div id="paysBtn" x-data="{ dropdownOpen: false }" class="relative">
-                              <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 flex items-center rounded-md bg-white p-2 focus:outline-none">
-                                PAYS
-                                <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                </svg>
-                              </button>
-                            
-                              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full" style="z-index: 998;position: fixed;"></div>
-                            
-                              <div id="drop-pays" x-show="dropdownOpen" style="z-index: 999;height: 330px;" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
-                                <fieldset class="px-4 border h-full" >
-                                    <legend class="sr-only">
-                                        PAYS
-                                    </legend>
-                            
-                                    <div class="flex gap-4 flex-col items-start my-4 overflow-y-auto" id="pays" style="height: 90%;">
-                                        <div class="flex items-center">
-                                            <input id="pays-option-1" type="radio" name="countries" value="Etats-Unis" class="countrycheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="pays-option-1" aria-describedby="pays-option-1">
-                                            <label for="pays-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
-                                            Etats-Unis
-                                            </label>
-                                        </div>
-                                    </div>
-                            
-                                    
-                            
-                                </fieldset>
-                              </div>
-                            </div>
-                        </div>
-                    </li>
                     <li>
                         <div class="flex justify-center">
                             <div id="styleBtn" x-data="{ dropdownOpen: false }" class="relative">
@@ -293,23 +205,20 @@
                 </ul>
                 <div class="seperation"></div>
             </div>
-
+            <h2 class="hotel-numbers text-2xl my-4"></h2>
             <div id="list">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" alt="" style="width: 100%;">
-            </div>
-            <!-- <div class="center">
-                <div class="pagination">
-                    <a href="#">&laquo;</a>
-                    <a href="#" class="active">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#">6</a>
-                    <a href="#">&raquo;</a>
+                
+                <a class="element" href="/hotel-deatils.html?id=1">
+                <div>
+                    <div id="background" style="background-image : url(./../src/img/hotels/hotel-2.png)"></div>
+                    <h3>45 Park Lane</h3>
                 </div>
-            </div> -->
+                <button>RÉSERVER</button></a></div>
+                
+            </div>
         </div>
+
+        
 
         <div id="selling-points" class="horizontal-grid">
             <div class="point">
@@ -339,6 +248,20 @@
             </div>
         </div>
 
+        <div id="selection-chambres" class="title">
+
+            <div id="title">
+                <h1>Des idées de destinations</h1>
+            </div>
+            
+            <div id="seperation"></div>
+
+            <div id="main">
+                <h1>Amérique du Nord</h1>
+                <h4>CANADA - ETATS-UNIS - MEXIQUE</h4>
+            </div>
+        </div>
+
         <div id="mail">
             <div id="background"></div>
     
@@ -349,8 +272,8 @@
                 <form>
                     <input type="email" placeholder="Votre Adresse E-mail">
                     <div id="seperation"></div>
+    
                     <button onclick="return false">S'ABONNER</button>
-                    
                 </form>
     
                 <p>
@@ -361,78 +284,123 @@
     
         <footer>
             <div id="upper">
-                <a href="index.html"><img src="src/img/logo-blanc.png" alt="Regency Logo"></a>
+                <a href="index.html"><img src="../src/img/logo-blanc.png" alt="Regency Logo"></a>
                 
                 <ul class="hidden sm:block">
-                    <h3>EN SAVOIR PLUS</h3>
+                    <h3>LEARN MORE</h3>
     
-                    <a href="qui-sommes-nous.html"><li>QUI SOMMES-NOUS</li></a>
+                    <a href="qui-sommes-nous.html"><li>WHO ARE WE</li></a>
                     <a href="destination.html"><li>DESTINATIONS</li></a>
-                    <a href="collection-hotels.html"><li>COLLECTION D'HOTELS</li></a>
+                    <a href="collection-hotels.html"><li>HOTELS COLLECTION</li></a>
                     
                 </ul>
                 <p class="text-white text-center text-lg sm:hidden mt-4">
                     <a href="destination.html">Destinations</a>-
-                    <a href="collection-hotels.html">Collection d'hotels</a>-
+                    <a href="collection-hotels.html">Hotels Collection</a>-
                     
-                    <a href="contact.html">Nous Contacter</a>-
+                    <a href="contact.html">Contact us</a>-
                     <a href="blog.html">Blog</a>
 
                 </p>
                 <p class="text-white text-center text-lg sm:hidden">
-                    <a href="tos.html">Conditions génerales d'utilisation</a>-
-                    <a href="politique.html">Politique de confidentialité</a>
+                    <a href="tos.html">Terms of Service</a>-
+                    <a href="politique.html">Privacy Policy</a>
                 </p>
                 <ul class="hidden sm:block">
-                    <h3>LAISSER-NOUS VOS AIDER</h3>
+                    <h3>LET US HELP YOU</h3>
     
-                    <a href="contact.html"><li>NOUS CONTACTER</li></a>
+                    <a href="contact.html"><li>CONTACT US</li></a>
                     <a href="blog.html"><li>Blog</li></a>
-                    <a href="tos.html"><li>CONDITIONS GENERALES D'UTILISATION</li></a>
-                    <a href="politique.html"><li>POLITIQUE DE CONFIDENTIALITE</li></a>
+                    <a href="tos.html"><li>TERMS OF SERVICE</li></a>
+                    <a href="politique.html"><li>PRIVACY POLICY</li></a>
                 </ul>
     
                 <ul class="hidden sm:block">
                     <h3>ACCREDITATIONS</h3>
     
-                    <a href="https://www2.arccorp.com/support-training/arc-check-results/?acn=05715496&formSourceName=StandardForm&sp_exp=yes"><li>CERTIFICAT ARC</li></a>
-                    <a href="https://regencytravel.com/images/CLIA.jpg"><li>CERTIFICAT CLIA</li></a>
-                    <a href="https://regencytravel.com/images/IATA.jpg"><li>CERTIFICAT IATA</li></a>
-                    <a href="https://regencytravel.com/images/CST.jpg"><li>CERTIFICAT CST</li></a>
+                    <a href="https://www2.arccorp.com/support-training/arc-check-results/?acn=05715496&formSourceName=StandardForm&sp_exp=yes" target="_blank"><li>CERTIFICATE ARC</li></a>
+                    <a href="https://regencytravel.com/images/CLIA.jpg" target="_blank"><li>CERTIFICATE CLIA</li></a>
+                    <a href="https://regencytravel.com/images/IATA.jpg" target="_blank"><li>CERTIFICATE IATA</li></a>
+                    <a href="https://regencytravel.com/images/CST.jpg" target="_blank"><li>CERTIFICATE CST</li></a>
                 </ul>
             </div>
     
             <div id="lower">
                 <div id="phone" class="hidden sm:flex">
-                    <img src="src/img/phone.png" alt="Phone">
+                    <img src="../src/img/phone.png" alt="Phone">
                     <h3><a href="tel:+442035192700">+44 20 3519 2700</a></h3>
                 </div>
                 <div id="phone" class="flex flex-col sm:hidden">
-                    <h2>Contactez nos experts :</h2>
+                    <h2>Contact our experts :</h2>
                     <h3 class="underline"><a href="tel:+442035192700">+44 20 3519 2700</a></h3>
                 </div>
-                <img id="logo" src="src/img/IATA-white.png" alt="IATA LOGO" class="hidden sm:block">
+                <img id="logo" src="../src/img/IATA-white.png" alt="IATA LOGO" class="hidden sm:block">
     
                 <div id="socials" class="hidden sm:flex">
-                    <a href="#"><img src="src/img/instagram.png" alt="Instagram"></a>
-                    <a href="#"><img src="src/img/Youtube.png" alt="Youtube"></a>
-                    <a href="#"><img src="src/img/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="../src/img/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="../src/img/Youtube.png" alt="Youtube"></a>
+                    <a href="#"><img src="../src/img/facebook.png" alt="Facebook"></a>
                 </div>
                 <div id="socials" class="flex w-full flex-row justify-around sm:hidden py-4">
-                    <a href="#"><img src="src/img/instagram.png" alt="Instagram"></a>
-                    <a href="#"><img src="src/img/Youtube.png" alt="Youtube"></a>
-                    <a href="#"><img src="src/img/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="../src/img/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="../src/img/Youtube.png" alt="Youtube"></a>
+                    <a href="#"><img src="../src/img/facebook.png" alt="Facebook"></a>
                 </div>
+				
             </div>
-            <div class="bitcom">
+			<div class="bitcom">
 				© Copyright Regency Travel 2023. All Rights Reserved. Designed and Developed by <a href="https://bitcom.tn">bitcom</a>
 			</div>
         </footer>
     </div>
 
-
     <script>
-        //HOTELS DISPLAY
+        // Getting hotel from Page url param
+        function GetUrlParameter(sParam){
+            var sPageURL= document.URL;
+            var sURLVariables = sPageURL.split('?');
+            for (var i = 0; i < sURLVariables.length; i++) 
+            {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) 
+                {
+                    return sParameterName[1].replace(/%20/g, " ").toUpperCase();
+                }
+            }
+        }
+        var Pageid = GetUrlParameter("country")
+        document.title = `Recherche sur "${Pageid}"`
+        /* for (var i = 0; i < Pageid.length; i++) 
+        {
+            if(Pageid[i]=="-"){Pageid=Pageid.substring(0,i) + " " + Pageid.substring(i+1);}
+        } */
+        const landing = document.getElementById("landing")
+        const dests = {
+            "Europe":['ALLEMAGNE', 'AUTRICHE', 'BELGIQUE', 'DANEMARK', 'ESPAGNE', 'FRANCE', 'GRECE', 'HONGRIE', 'IRLANDE', 'ITALIE', 'MONACO', 'MONTENEGRO', 'PAYS BAS', 'POLOGNE', 'PORTUGAL', 'REPUBLIQUE TCHEQUE', 'ROYAUME-UNI', 'RUSSIE', 'SUEDE', 'SUISSE', 'TURQUIE'],
+            "MoyenOrient":['ARABIE SAOUDITE', 'EMIRATS ARABES UNIS', 'DUBAI', 'OMAN', 'QATAR'],
+            "OcéanIndien":['MALDIVES', 'MAURICE', 'SEYCHELLES'],
+            "Océanie":['AUSTRALIE', 'POLYNESIE FRANCAISE'],
+            "Afrique":['AFRIQUE DU SUD', 'MAROC', 'RWANDA', 'ZOMBIE'],
+            "AmeriqueCentrale":['COSTA RICA'],
+            "AmeriqueduNord":['CANADA', 'ETATS-UNIS', 'MEXIQUE'],
+            "AmeriqueduSud":['ARGENTINE', 'BRESIL', 'COLOMBIE', 'PEROU'],
+            "Asie":['COMBODGE', 'CHINE', 'HONG KONG', 'INDE', 'INDONESIE', 'JAPON', 'LAOS', 'MALAISIE', 'MYANMAR', 'PHILIPPINES', 'SINGAPOUR', 'SRI LANKA', 'THAILANDE', 'VIETNAM'],
+            "Caraibes":['ANGUILLA', 'ILES TURKS ET CAIQUES', 'PORTO RICO', 'REPUBLIQUE DOMINICAINE', 'SAINT BARTHELEMY', 'ST-VINCENT ET GRENADINES']
+        }
+        if(dests.Europe.includes(Pageid)){landing.style.backgroundImage=`url("./../src/img/europe.jpg")`}
+        if(dests.MoyenOrient.includes(Pageid)){landing.style.backgroundImage=`url("./../src/img/qatar.jpg")`}
+        if(dests.OcéanIndien.includes(Pageid)){landing.style.backgroundImage=`url("./../src/img/maldives.png")`}
+        if(dests.Océanie.includes(Pageid)){landing.style.backgroundImage=`url("./../src/img/oceanie.jpg")`}
+        if(dests.Afrique.includes(Pageid)){landing.style.backgroundImage=`url("./../src/img/afrique.jpg")`}
+        if(dests.AmeriqueCentrale.includes(Pageid)){landing.style.backgroundImage=`url("./../src/img/caraibes.jpg")`}
+        if(dests.AmeriqueduNord.includes(Pageid)){landing.style.backgroundImage=`url("./../src/img/canada.jpg")`}
+        if(dests.AmeriqueduSud.includes(Pageid)){landing.style.backgroundImage=`url("./../src/img/colombie.jpg")`}
+        if(dests.Asie.includes(Pageid)){landing.style.backgroundImage=`url("./../src/img/asie.jpg")`}
+        if(dests.Caraibes.includes(Pageid)){landing.style.backgroundImage=`url("./../src/img/caraibes.jpg")`}
+        
+        // DISPLAY SEARCHED HOTELS/DESTINATIONS
+        const searchBtn = document.querySelector("#searchBtn");
+        const searchText = document.querySelector("#search-text");
         var regionElements = document.getElementsByClassName('regioncheckbox');
         var countryElements = document.getElementsByClassName('countrycheckbox');
         var styleElements = document.getElementsByClassName('stylecheckbox');
@@ -440,13 +408,22 @@
         var ameElements = document.getElementsByClassName("amecheckbox");
         const hotelsList = document.getElementById("list");
         var obj;
-        async function displayHotels(){
-            await fetch(`${backendURL}/api/todos`)
+        async function searchHotels(){
+            hotelsList.innerHTML=`<img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" alt="" style="width: 100%;">`
+            Pageid = GetUrlParameter("country")
+            await fetch(`${backendURL}/api/todos/search?query=${Pageid}`,{
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+            })
                 .then((response) => response.json())
-                .then(({hotels}) => {
-                    obj = hotels.filter((hotel)=>hotel.display==true)
+                .then(({data}) => {
+                    console.log(data)
+                    obj = data;
                     hotelsList.innerHTML=""
-                    obj.forEach((hotel) => {
+                    data.forEach((hotel) => {
                         const hotelItem = document.createElement("a");
                         hotelItem.classList.add("element");
                         hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
@@ -458,70 +435,41 @@
                         <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
                         hotelsList.appendChild(hotelItem);
                     })
+                    for(let i=0; i<styleElements.length; i++){
+                        styleElements[i].addEventListener("click", styleFilter);
+                    }
+                    for(let i=0; i<atmElements.length; i++){
+                        atmElements[i].addEventListener("click", atmFilter);
+                    }
+                    for(let i=0; i<ameElements.length; i++){
+                        ameElements[i].addEventListener("click", ameFilter);
+                    }
+                    const hotelCount = document.querySelector(".hotel-numbers")
+                    const title = document.querySelector(".landing-title")
+                    const contentTitle = document.querySelector(".content-title")
+                    contentTitle.textContent = `Hôtels de luxe : ${Pageid.toUpperCase()}`
+                    title.innerHTML=`<h1 class="font-semibold">${Pageid.toUpperCase()}</h1>`
+                    hotelCount.textContent = `${obj.length}  hôtel(s) incontournable(s)`
                 });
-                for(let i=0; i<regionElements.length; i++){
-                    regionElements[i].addEventListener("click", regionFilter);
-                }
-                for(let i=0; i<countryElements.length; i++){
-                    countryElements[i].addEventListener("click", countryFilter);
-                }
-                for(let i=0; i<styleElements.length; i++){
-                    styleElements[i].addEventListener("click", styleFilter);
-                }
-                for(let i=0; i<atmElements.length; i++){
-                    atmElements[i].addEventListener("click", atmFilter);
-                }
-                for(let i=0; i<ameElements.length; i++){
-                    ameElements[i].addEventListener("click", ameFilter);
-                }
         }
-        displayHotels()
-
-        var filters=[];
-        var hotels=[];
-        function regionFilter(e){
-            hotels = obj.filter((hotel)=>hotel.region.toUpperCase()==e.target.value.toUpperCase())
-            hotels.length ==0 ? hotelsList.innerHTML=`<h1 class="text-2xl mb-4">0 hôtel(s) incontournable(s)</h1>` : hotelsList.innerHTML=``
-            hotels.forEach((hotel) => {
-                const hotelItem = document.createElement("a");
-                hotelItem.classList.add("element");
-                hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
-                hotelItem.innerHTML = `
-                <div>
-                    <div id="background" style="background-image : url(${hotel.images[0]})"></div>
-                    <h3>${hotel.name}</h3>
-                </div>
-                <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
-                hotelsList.appendChild(hotelItem);
-            })          
+        function redirectSearch(){
+            var clist = document.getElementsByTagName("input");
+            for (var i = 0; i < clist.length; ++i) { clist[i].checked = false; }
+            window.location.href = `hotels-search.html?country=${searchText.value}`;
         }
+        searchBtn.addEventListener("click",redirectSearch)
+        searchHotels()
 
-        function countryFilter(e){
-            console.log(e.target.value)
-            hotels = obj.filter((hotel)=>hotel.country.toUpperCase()==e.target.value.toUpperCase());
-            hotels.length ==0 ? hotelsList.innerHTML=`<h1 class="text-2xl mb-4">0 hôtel(s) incontournable(s)</h1>` : hotelsList.innerHTML=``
-            hotels.forEach((hotel) => {
-                const hotelItem = document.createElement("a");
-                hotelItem.classList.add("element");
-                hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
-                hotelItem.innerHTML = `
-                <div>
-                    <div id="background" style="background-image : url(${hotel.images[0]})"></div>
-                    <h3>${hotel.name}</h3>
-                </div>
-                <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
-                hotelsList.appendChild(hotelItem);
-            })          
-        }
-
+        const hotelCount = document.querySelector(".hotel-numbers")
         var styleFilters = []
         function styleFilter(e){
             const index = styleFilters.indexOf(e.target.value)
             if(index > -1){styleFilters.splice(index, 1)}else{styleFilters.push(e.target.value)}
             console.log(styleFilters)
             if(styleFilters.length==0){
-                hotels = obj;
-                hotels.length ==0 ? hotelsList.innerHTML=`<h1 class="text-2xl mb-4">0 hôtel(s) incontournable(s)</h1>` : hotelsList.innerHTML=``
+                hotels = obj
+                hotelsList.innerHTML =``
+                hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
                 hotels.forEach((hotel) => {
                     const hotelItem = document.createElement("a");
                     hotelItem.classList.add("element");
@@ -543,7 +491,8 @@
                     })
                 }
                 // hotels = obj.filter((hotel)=>hotel.style.toUpperCase()==e.target.value.toUpperCase());
-                hotels.length ==0 ? hotelsList.innerHTML=`<h1 class="text-2xl mb-4">0 hôtel(s) incontournable(s)</h1>` : hotelsList.innerHTML=``
+                hotelsList.innerHTML =``
+                hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
                 hotels.forEach((hotel) => {
                     const hotelItem = document.createElement("a");
                     hotelItem.classList.add("element");
@@ -556,7 +505,7 @@
                     <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
                     hotelsList.appendChild(hotelItem);
                 })
-            }
+            }       
         }
 
         var atmFilters = []
@@ -565,8 +514,9 @@
             if(index > -1){atmFilters.splice(index, 1)}else{atmFilters.push(e.target.value)}
             console.log(atmFilters)
             if(atmFilters.length==0){
-                hotels = obj;
-                hotels.length ==0 ? hotelsList.innerHTML=`<h1 class="text-2xl mb-4">0 hôtel(s) incontournable(s)</h1>` : hotelsList.innerHTML=``
+                hotels = obj
+                hotelsList.innerHTML =``
+                hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
                 hotels.forEach((hotel) => {
                     const hotelItem = document.createElement("a");
                     hotelItem.classList.add("element");
@@ -588,7 +538,8 @@
                     })
                 }
                 // hotels = obj.filter((hotel)=>hotel.atmosphere.toUpperCase()==e.target.value.toUpperCase());
-                hotels.length ==0 ? hotelsList.innerHTML=`<h1 class="text-2xl mb-4">0 hôtel(s) incontournable(s)</h1>` : hotelsList.innerHTML=``
+                hotelsList.innerHTML =``
+                hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
                 hotels.forEach((hotel) => {
                     const hotelItem = document.createElement("a");
                     hotelItem.classList.add("element");
@@ -612,7 +563,8 @@
             console.log(ameFilters)
             if(ameFilters.length==0){
                 hotels = obj;
-                hotels.length ==0 ? hotelsList.innerHTML=`<h1 class="text-2xl mb-4">0 hôtel(s) incontournable(s)</h1>` : hotelsList.innerHTML=``
+                hotelsList.innerHTML =``
+                hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
                 hotels.forEach((hotel) => {
                     const hotelItem = document.createElement("a");
                     hotelItem.classList.add("element");
@@ -627,15 +579,14 @@
                 }) 
             }else{
                 hotels=[]
-                console.log(hotels)
                 for(let i=0;i<ameFilters.length;i++){
                     obj.forEach((hotel)=>{
                         if(!(hotels.includes(hotel))){if(JSON.stringify(hotel.amenagement)==JSON.stringify(ameFilters)){hotels.push(hotel)}}
                     })
                 }
-                console.log(hotels)
                 // hotels = obj.filter((hotel)=>hotel.amenagement.toUpperCase()==e.target.value.toUpperCase());
-                hotels.length ==0 ? hotelsList.innerHTML=`<h1 class="text-2xl mb-4">0 hôtel(s) incontournable(s)</h1>` : hotelsList.innerHTML=``
+                hotelsList.innerHTML =``
+                hotelCount.textContent = `${hotels.length}  hôtel(s) incontournable(s)`
                 hotels.forEach((hotel) => {
                     const hotelItem = document.createElement("a");
                     hotelItem.classList.add("element");
@@ -651,39 +602,6 @@
             }
              
         }
-        // DISPLAY SEARCHED HOTELS/DESTINATIONS
-        const searchBtn = document.querySelector("#searchBtn");
-        const searchText = document.querySelector("#search-text");
-
-        async function searchHotels(){
-            var clist = document.getElementsByTagName("input");
-            for (var i = 0; i < clist.length; ++i) { clist[i].checked = false; }
-            hotelsList.innerHTML=`<img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" alt="" style="width: 100%;">`
-            await fetch(`${backendURL}/api/todos/search?query=${searchText.value}`,{
-                method: "POST",
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-            })
-                .then((response) => response.json())
-                .then(({data}) => {
-                    hotelsList.innerHTML=""
-                    data.forEach((hotel) => {
-                        const hotelItem = document.createElement("a");
-                        hotelItem.classList.add("element");
-                        hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
-                        hotelItem.innerHTML = `
-                        <div>
-                            <div id="background" style="background-image : url(${hotel.images[0]})"></div>
-                            <h3>${hotel.name}</h3>
-                        </div>
-                        <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>`;
-                        hotelsList.appendChild(hotelItem);
-                    })
-                });
-        }
-        searchBtn.addEventListener("click",searchHotels)
     </script>
     <script>
         // DROPDOWN REMOVE CHECKS WHILE SWAPING
@@ -698,142 +616,26 @@
                 parent.children[i].children[0].checked = false;
             }
         }
-        function countriesChecked(){
-            removeCheck(amenagement);
-            removeCheck(atmosphere);
-            removeCheck(style);
-            removeCheck(pays);
-            ameFilters = [];
-            styleFilters = [];
-            atmFilters = [];
-        }
-        countriesBtn.addEventListener("click",countriesChecked)
-        
-        function paysChecked(){
-            removeCheck(amenagement);
-            removeCheck(atmosphere);
-            removeCheck(style);
-            removeCheck(countries);
-            ameFilters = [];
-            styleFilters = [];
-            atmFilters = [];
-        }
-        paysBtn.addEventListener("click",paysChecked)
 
         function styleChecked(){
             removeCheck(amenagement);
             removeCheck(atmosphere);
-            removeCheck(countries);
-            removeCheck(pays);
-            ameFilters = [];
-            atmFilters = [];
         }
         styleBtn.addEventListener("click",styleChecked)
 
         function atmChecked(){
             removeCheck(amenagement);
-            removeCheck(countries);
             removeCheck(style);
-            removeCheck(pays);
-            ameFilters = [];
-            styleFilters = [];
         }
         atmosphereBtn.addEventListener("click",atmChecked)
 
         function ameChecked(){
-            removeCheck(countries);
             removeCheck(atmosphere);
             removeCheck(style);
-            removeCheck(pays);
-            styleFilters = [];
-            atmFilters = [];
         }
         amenagementsBtn.addEventListener("click",ameChecked)
-        
-
-        /* 
-        const dropCountries = document.querySelector("#drop-countries");
-        const dropPays = document.querySelector("#drop-pays");
-        const dropStyle = document.querySelector("#drop-style");
-        const dropAtmosphere = document.querySelector("#drop-atmosphere");
-        const dropAmenagement = document.querySelector("#drop-amenagements");
-
-        function displayAm(){
-            dropAmenagement.classList.remove("d-none")
-            dropCountries.classList.add("d-none")
-            dropPays.classList.add("d-none")
-            dropStyle.classList.add("d-none")
-            dropAtmosphere.classList.add("d-none")
-        }
-        amenagementsBtn.addEventListener("click",displayAm)
-
-        function displayAtm(){
-            dropAtmosphere.classList.remove("d-none")
-            dropCountries.classList.add("d-none")
-            dropPays.classList.add("d-none")
-            dropStyle.classList.add("d-none")
-            dropAmenagement.classList.add("d-none")
-        }
-        atmosphereBtn.addEventListener("click",displayAtm)
-
-        function displaySty(){
-            dropStyle.classList.remove("d-none")
-            dropCountries.classList.add("d-none")
-            dropPays.classList.add("d-none")
-            dropAtmosphere.classList.add("d-none")
-            dropAmenagement.classList.add("d-none")
-        }
-        styleBtn.addEventListener("click",displaySty)
-
-        function displayPay(){
-            dropPays.classList.remove("d-none")
-            dropCountries.classList.add("d-none")
-            dropStyle.classList.add("d-none")
-            dropAtmosphere.classList.add("d-none")
-            dropAmenagement.classList.add("d-none")
-        }
-        paysBtn.addEventListener("click",displayPay)
-
-        function displayCou(){
-            dropCountries.classList.remove("d-none")
-            dropPays.classList.add("d-none")
-            dropStyle.classList.add("d-none")
-            dropAtmosphere.classList.add("d-none")
-            dropAmenagement.classList.add("d-none")
-        }
-        countriesBtn.addEventListener("click",displayCou) */
-
-
-
     </script>
     <script>
-        const countries = document.querySelector("#countries");
-        countriesList = ["Asie", "Amérique du Nord","Moyen Orient","Amérique du Sud","Océan Indien","Afrique","Caraibes","Océanie","Amérique Centrale" ]
-        for(let i=0;i<countriesList.length;i++){
-            countryItem= document.createElement("div")
-            countryItem.classList = "flex items-center"
-            countryItem.innerHTML=`
-            <input id="country-option-${i+1}" type="radio" name="regions" value="${countriesList[i]}" class="regioncheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="country-option-1" aria-describedby="country-option-1" >
-            <label for="country-option-${i+1}" class="text-sm font-medium text-gray-900 ml-2 block">
-                ${countriesList[i]}
-            </label>
-            `
-            countries.append(countryItem)
-        }
-
-        const pays = document.querySelector("#pays");
-        paysList = ["Royaume-Uni","Italie","France","Chine","Thailande","Suisse","Emirates arabes unis","Espagne","Inde","Indonésie","Japon","Grèce","Mexique","Allemagne","Hong Kong","Brésil","Autriche","Canada","Maldives","Maroc","Oman","Seychelles","Vietnam","Cambodge","Portugal","Pérou","Turquie","Argentine","Malaisie","Monaco","Pays-Bas","Singapour","Afrique du Sud","Danemark","Iles Turks et Caïques","Irlande","Laos","Maruice","Philippines","Polynésie française","Qatar","Russie","Rwanda","République dominicaine","République tchèque","St Vincent et Grenadines","Anguilla","Antigua-et-Barbuda","Arabie saoudite","Australie","Belgique","Colombie","Costa Rica","Hongrie","Israël","Monténégro","Myanmar","Pologne","Porto Rico","Saint-Barthélemy","Sri Lanka","Suède","Taïwan","Zambie"]
-        for(let i=0;i<paysList.length;i++){
-            paysItem = document.createElement("div")
-            paysItem.classList = "flex items-center"
-            paysItem.innerHTML=`
-            <input id="pays-option-${i+1}" type="radio" name="countries" value="${paysList[i]}" class="countrycheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="pays-option-1" aria-describedby="pays-option-1" >
-            <label for="pays-option-${i+1}" class="text-sm font-medium text-gray-900 ml-2 block">
-                ${paysList[i]}
-            </label>
-            `
-            pays.append(paysItem)
-        }
 
         const style = document.querySelector('#style');
         styleList = ["Historique","Classique","Design","Insolite"]
@@ -851,7 +653,7 @@
 
         const atmosphere = document.querySelector("#atmosphere");
         atmosphereList = ["Nature","Tendance","Intime","Evasion","Tropical","Mythe","Vie de château","Colonial","Campagne"]
-        for(let i=0;i<atmosphereList.length;i++){
+        for(let i=0;i<styleList.length;i++){
             atmosphereItem = document.createElement("div")
             atmosphereItem.classList = "flex items-center"
             atmosphereItem.innerHTML=`
@@ -865,7 +667,7 @@
 
         const amenagement = document.querySelector("#amenagement");
         amenagementList = ["Spa","Piscine extérieure","Parking","Piscine intérieure","Tennis sur site","Club enfants","Plage","Animaux de compagnie","Sports nautiques","Plongée","Golf","Ski"]
-        for(let i=0;i<amenagementList.length;i++){
+        for(let i=0;i<styleList.length;i++){
             amenagementItem = document.createElement("div")
             amenagementItem.classList = "flex items-center"
             amenagementItem.innerHTML=`
@@ -877,4 +679,13 @@
             amenagement.append(amenagementItem)
         }
     </script>
+    <style>#google_translate_element{display:none;}</style>
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
+        }
+        </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
+</html>

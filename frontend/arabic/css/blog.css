@@ -7,7 +7,7 @@
 }
 
 nav {
-  width: 100%;
+  width: 90%;
   padding-top: 15px;
   position: relative;
   z-index: 997;
@@ -75,41 +75,45 @@ nav #menu div {
   background: black;
 }
 
-#content {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 #content #landing {
   width: 100%;
-  height: auto;
+  height: 70vh;
   -webkit-transition: height 300ms;
   transition: height 300ms;
   position: relative;
-  background-image: url("https://i.postimg.cc/RWnRhjsH/hotel-1.png");
+  background-image: url("https://i.postimg.cc/TPXXxfKG/image-2023-08-20-114114531.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .landing-title{
-  padding: 25%;
+  padding: 15%;
   font-size: 45px;
+  position: relative;
+  text-shadow: 2px 2px black;
 }
 #content #landing #input-wrapper {
-  top: calc(120vh - 30px);
+  top: 95%;
 }
+.blog-subtitle{
+  background: #F9EFE9;
 
+}
+#banner-image1,#banner-image4{
+  width: 100%;
+  height: 20vw;
+}
+#banner-image2,#banner-image3{
+  width: 100%;
+  height: 40vw;
+}
+.line-limit{
+  overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;
+}
 #content #landing #gradient {
   position: absolute;
   width: 100%;
@@ -138,7 +142,6 @@ nav #menu div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-          background: #F7F3F3;
 }
 
 #content #list-wrapper #top {
@@ -169,10 +172,28 @@ nav #menu div {
 }
 #content #list-wrapper #list h1 {
   font-weight: 600;
-  font-size: 45px;
+  font-size: 30px;
   margin: 0;
   margin-bottom: 14px;
   color: #021033;
+}
+#contact-us-section .container button{
+  background: transparent;
+  border: solid 2px #021033;
+  color: #021033;
+  font-family: 'Caviar Dreams';
+  font-size: 25px;
+  width: 50%;
+  height: 70px;
+  -webkit-transition: color 200ms, background 200ms;
+  transition: color 200ms, background 200ms;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 40px;
+  margin-right: 25%;
+}
+#contact-us-section .container button:hover{
+  background: white;
 }
 .box{
   position: relative;
@@ -303,15 +324,58 @@ nav #menu div {
 }
 #mail #background{
   background-image: url("https://i.postimg.cc/c44RDnTG/planebg.png");
-}
-.color-text{
-  color: #FF5500;
-  font-weight: 600;
-}
-#background h2{
-  margin-bottom: 5rem;
+  color: white;
 }
 
+#cards{
+  width: 90%;
+}
+#contact-us-section #wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#contact-us-section #wrapper .element {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+
+#contact-us-section #wrapper .element #background {
+  height: 550px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#blogbg{
+  height: 673px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("https://i.postimg.cc/GpYGBJ3G/card-img.jpg");
+}
 @media only screen and (max-width: 1235px) {
   nav {
     height: 100px !important;
@@ -371,6 +435,14 @@ nav #menu div {
   h1{
     font-size: 25px !important;
   }
+  #banner-image1,#banner-image4{
+    width: 50%;
+    height: 50%;
+  }
+  #banner-image2,#banner-image3{
+    width: 50%;
+    height: 50%;
+  }
 }
 
 @media only screen and (max-width: 701px) {
@@ -381,17 +453,51 @@ nav #menu div {
     padding-left: 15%;
     padding-right: 15%;
   }
+  nav img{
+    margin-left: 10vw;
+  }
+  img.mt-4{
+    width: 100%;
+  }
+  .blog-subtitle{
+    margin-top: 150px;
+  }
+  .container #cards{
+    display: flex;
+    flex-direction: column;
+  }
+  #contact-us-section .container button{
+    width: 75%;
+    margin-left: 10vw;
+  }
+  #content #mail {
+    width: 100%;
+    margin-top: 100px!important;
+    text-align: center;
+    font-size: 25px;
+  }
+  #background .flex{
+    flex-direction: column;
+  }
+  #email{
+    width: 100%;
+  }
   #mail #background{
     height: auto;
   }
-  #mail #background div{
+  #contact-us-section #wrapper{
     flex-direction: column;
   }
-  #mail #background div>*{
-    width: 80%;
+  #contact-us-section #wrapper .element{
+    width: 100%;
   }
-  footer{
-    margin-top: 0 !important;
+  #banner-image1,#banner-image4{
+    width: 85%;
+    height: 85%;
+  }
+  #banner-image2,#banner-image3{
+    width: 85%;
+    height: 85%;
   }
   footer #upper img{
     width: 80%;
@@ -399,6 +505,8 @@ nav #menu div {
   footer #lower{
     flex-direction: column;
     height: auto;
-    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
   }
 }

@@ -98,7 +98,7 @@ nav #menu div {
   -webkit-transition: height 300ms;
   transition: height 300ms;
   position: relative;
-  background-image: url("../img/beach-house.png");
+  background-image: url("https://i.postimg.cc/y83S5XZt/beach-house.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -200,27 +200,27 @@ nav #menu div {
   max-width: 75%;
 }
 #content #list-wrapper #list .element:first-child #background {
-  background-image: url("../img/hotels/hotel-1.png");
+  background-image: url("https://i.postimg.cc/RWnRhjsH/hotel-1.png");
 }
 
 #content #list-wrapper #list .element:nth-child(2) #background {
-  background-image: url("../img/hotels/hotel-2.png");
+  background-image: url("https://i.postimg.cc/jWH4Qyrq/hotel-2.png");
 }
 
 #content #list-wrapper #list .element:nth-child(3) #background {
-  background-image: url("../img/hotels/hotel-3.png");
+  background-image: url("https://i.postimg.cc/d7yxM7Pg/hotel-3.png");
 }
 
 #content #list-wrapper #list .element:nth-child(4) #background {
-  background-image: url("../img/hotels/hotel-4.png");
+  background-image: url("https://i.postimg.cc/1n07tLzH/hotel-4.png");
 }
 
 #content #list-wrapper #list .element:nth-child(5) #background {
-  background-image: url("../img/hotels/hotel-5.png");
+  background-image: url("https://i.postimg.cc/mhNK2Fzs/hotel-5.png");
 }
 
 #content #list-wrapper #list .element:nth-child(6) #background {
-  background-image: url("../img/hotels/hotel-6.png");
+  background-image: url("https://i.postimg.cc/SJg5cFf1/hotel-6.png");
 }
 
 #content #list-wrapper #list .element div {

@@ -7,7 +7,7 @@
 }
 
 nav {
-  width: 100%;
+  width: 90%;
   padding-top: 15px;
   position: relative;
   z-index: 997;
@@ -92,22 +92,20 @@ nav #menu div {
 }
 
 #content #landing {
+  margin-bottom: 70px;
   width: 100%;
-  height: auto;
+  height: 70vh;
   -webkit-transition: height 300ms;
   transition: height 300ms;
   position: relative;
-  background-image: url("https://i.postimg.cc/RWnRhjsH/hotel-1.png");
+  background-image: url("https://i.postimg.cc/y83S5XZt/beach-house.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.landing-title{
-  padding: 25%;
-  font-size: 45px;
-}
+
 #content #landing #input-wrapper {
-  top: calc(120vh - 30px);
+  top: 95%;
 }
 
 #content #landing #gradient {
@@ -138,11 +136,10 @@ nav #menu div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-          background: #F7F3F3;
 }
 
 #content #list-wrapper #top {
-  width: 90%;
+  width: 70%;
 }
 
 #content #list-wrapper #top h1 {
@@ -155,7 +152,7 @@ nav #menu div {
 
 #content #list-wrapper #list {
   margin-top: 25px;
-  width: 90%;
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -167,33 +164,7 @@ nav #menu div {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-#content #list-wrapper #list h1 {
-  font-weight: 600;
-  font-size: 45px;
-  margin: 0;
-  margin-bottom: 14px;
-  color: #021033;
-}
-.box{
-  position: relative;
-  bottom: 5rem;
-  background: #F9EFE9;
-  width: 80%;
-}
-#contact-us-section{
-  background: #F9EFE9;
-}
-.box h1{
-  font-size: 20px !important;
-  color: #FF5500 !important;
-}
-#contact-us h1{
-  font-weight: 400;
-  font-size: 45px;
-  margin: 0;
-  margin-bottom: 14px;
-  color: #021033;
-}
+
 #content #list-wrapper #list .element {
   width: calc(50% - 25px);
   margin-bottom: 50px;
@@ -208,8 +179,26 @@ nav #menu div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+          text-align: center;
 }
-
+.quote{
+  color: white;
+  font-size: 2rem;
+  padding-top: 10%;
+  max-width: 60%;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 auto;
+  text-shadow: 2px 2px black;
+  position: relative;
+  line-height: 70px;
+}
+.author{
+  font-size: 1.25rem;
+}
+.element div h3{
+  max-width: 75%;
+}
 #content #list-wrapper #list .element:first-child #background {
   background-image: url("https://i.postimg.cc/RWnRhjsH/hotel-1.png");
 }
@@ -272,7 +261,7 @@ nav #menu div {
 #content #list-wrapper #list .element div h3 {
   font-size: 30px;
   color: #fff;
-  z-index: 999;
+  z-index: 300;
 }
 
 #content #list-wrapper #list .element button {
@@ -289,7 +278,6 @@ nav #menu div {
   cursor: pointer;
   margin-top: 20px;
 }
-
 #content #list-wrapper #list .element button:hover {
   color: #fff;
   background: #021033;
@@ -297,21 +285,8 @@ nav #menu div {
 
 #content #mail {
   width: 100%;
-  margin: 0!important;
-  text-align: center;
-  font-size: 25px;
+  margin-bottom: 250px;
 }
-#mail #background{
-  background-image: url("https://i.postimg.cc/c44RDnTG/planebg.png");
-}
-.color-text{
-  color: #FF5500;
-  font-weight: 600;
-}
-#background h2{
-  margin-bottom: 5rem;
-}
-
 @media only screen and (max-width: 1235px) {
   nav {
     height: 100px !important;
@@ -337,9 +312,21 @@ nav #menu div {
   }
 }
 
+@media only screen and (max-width: 1100px) {
+  footer {
+    margin-top: 200px !important;
+  }
+}
+
 @media only screen and (max-width: 1050px) {
   #list-wrapper {
-    padding-top: 100px !important;
+    margin-top: 100px !important;
+  }
+  #mail #container{
+    top: 10% !important;
+  }
+  #content #mail {
+    margin-bottom: 0px;
   }
 }
 
@@ -348,7 +335,7 @@ nav #menu div {
     height: 400px !important;
   }
   #list-wrapper {
-    padding-top: 20px !important;
+    margin-top: 50px !important;
   }
   #list-wrapper #list {
     -webkit-box-orient: vertical !important;
@@ -360,45 +347,83 @@ nav #menu div {
     height: 400px !important;
     width: 100% !important;
   }
-  #planes{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    justify-content: center;
+  .quote{
+    color: white;
+    font-size: 2rem;
+    padding-top: 17.5%;
+    max-width: 90%;
+    margin: 0 auto;
+    text-shadow: 2px 2px black;
+    line-height: normal;
   }
-  h1{
-    font-size: 25px !important;
+  #content #list-wrapper #list{
+    width: 80%;
   }
+  #content #list-wrapper #top{
+    width: 80%;
+  }
+  
 }
 
 @media only screen and (max-width: 701px) {
   #list-wrapper #top h1 {
-    font-size: 25px !important;
+    font-size: 30px !important;
   }
-  #contact-us-section{
-    padding-left: 15%;
-    padding-right: 15%;
+  .quote{
+    font-size: 1.5rem;
+    margin: 0 auto;
+    text-shadow: 2px 2px black;
   }
-  #mail #background{
-    height: auto;
+  #content #list-wrapper #top{
+    width: 90%;
   }
-  #mail #background div{
-    flex-direction: column;
+  #content #list-wrapper #list{
+    width: 90%;
   }
-  #mail #background div>*{
-    width: 80%;
-  }
-  footer{
-    margin-top: 0 !important;
-  }
+}
+
+@media only screen and (max-width: 460px){
   footer #upper img{
-    width: 80%;
+    width: 60%;
+  }
+  footer #lower #phone{
+    margin: 0 auto;
   }
   footer #lower{
     flex-direction: column;
     height: auto;
-    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
   }
 }
+
+/* .center {
+  text-align: center;
+  font-family: monospace;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: #000000;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .5s;
+  border: 1px solid #DDD;
+  margin: 0 4px;
+  font-size: 20px;
+}
+
+.pagination a.active {
+  background-color: #ff5500;
+  color: #FFFFFF;
+  border: 1px solid #ff5500;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #DDD;
+} */

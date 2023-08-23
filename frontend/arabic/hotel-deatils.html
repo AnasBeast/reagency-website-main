@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <title>45 Park Lane</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+    <link rel="shortcut icon" href="../src/img/icon-png.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/reusable.css">
+    <link rel="stylesheet" href="css/hotel-details.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body dir="rtl">
+    <script type="text/javascript" src="../src/js/index.js"></script>
+    <id id="overlay" onclick="hideMobileNav()"></id>
+
+    <div id="mobileNavbar">
+		<div onclick="hideMobileNav()" id="cross">
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 17 17" xml:space="preserve">
+				<path fill="#fff" d="M9.6,8.5L14,4.1c0.3-0.3,0.3-0.8,0-1.1c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.4L4,3C3.7,2.7,3.2,2.7,2.9,3s-0.3,0.8,0,1.1l4.5,4.5 L2.9,13c-0.3,0.3-0.3,0.8,0,1.1c0.1,0.1,0.3,0.2,0.5,0.2c0.1,0,0.3,0,0.6-0.2l4.5-4.5l4.4,4.5c0.1,0.1,0.3,0.2,0.5,0.2 s0.4,0,0.6-0.2c0.3-0.3,0.3-0.8,0-1.1L9.6,8.5z"></path>
+			</svg>
+		</div>
+
+		<h1>القائمة</h1>
+		<div class="seperation"></div>
+
+		<ul class="pl-8 text-white">
+			<a href="qui-sommes-nous.html" ><li>
+				<p class="my-4"> من نحن </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href="destination.html"><li>
+				<p class="my-4"> الوجهات </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href="collection-hotels.html"><li>
+				<p class="my-4"> مجموعة الفنادق </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+
+			<a href="https://www.govoyages.com/vols/" target="_blank"><li>
+				<p class="my-4"> المجلدات </p>
+
+				<svg class="sc-6183098d-0 bkEUxk menu-link__icon as--10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.6 10"><g transform="translate(0 10) rotate(-90)"><path fill="#fff" d="M5.01,5.625a.618.618,0,0,1-.444-.182L.182,1.058A.62.62,0,0,1,1.058.182L4.972,4.1l3.9-3.9a.66.66,0,0,1,.933.933l-4.3,4.3a.659.659,0,0,1-.467.194Z"></path></g></svg>
+			</li></a>
+            
+			<div class="seperation"></div>
+			<div id="call"><a href="tel:+442035192700"><p>احجز عبر الإنترنت أو اتصل</p><p> +44 20 35 19 2700</p></a></div>
+
+			
+		</ul>
+	</div>
+
+	<nav>
+		<a href="index.html">
+            <img src="../src/img/logo-default.png" alt="Logo">
+        </a>
+
+		<div id="sections">
+			<a href="qui-sommes-nous.html"><p>من نحن</p></a>
+			<a href="destination.html"><p>الوجهات</p></a>
+			<a href="collection-hotels.html"><p>مجموعة الفنادق</p></a>
+			<a href="https://www.govoyages.com/vols/" target="_blank"><p>المجلدات</p></a>
+			<a href="tel:+442035192700"><p>احجز عبر الإنترنت أو اتصل <br> +44 20 35 19 2700</p></a>
+			
+		</div>
+
+		<div id="menu" onclick="showMobileNav()">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</nav>
+
+    <div id="content">
+        <div id="landing">
+            <div id="gradient"></div>
+            <img src="../src/img/hotels/hotel-2.png" alt="" id="backgroundImg" class="background w-full">
+            <img id="logo" src="../src/img/logo-blanc.png" alt="Logo">
+
+            <div id="text">
+                
+            </div>
+            <div id="input-wrapper">
+				<div id="input">
+					<img style="display: block" src="../src/img/search.png" alt="Search" id="search">
+					<input type="text" id="search-text" placeholder="search for a hotel, a destination">
+				</div>
+
+				<button id="searchBtn">Search</button>
+			</div>
+           
+        </div>
+
+        <div id="features">
+            <div id="top">
+                <div class="seperation"></div>
+                <ul class="navigation-bar pl-8">
+                    <li>
+                        <a href="#info">
+                            Informations sur l'hôtel
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#info">
+                            Explorer sur la carte
+                        </a>
+                    </li>
+                    <li>
+                        <a id="photos" onclick="toggleModal()">
+                            Voir les photos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#avis">
+                            Avis
+                        </a>
+                    </li>
+                </ul>
+                <div class="seperation"></div>
+            </div>
+
+            <div id="number">
+                <h3>POURQUOI</h3>
+                <h1>100.000</h1>
+                <h3>CLIENTS ONT-ILS FAIT LE CHOIX DE REGENCY TRAVEL?</h3>
+            </div>
+
+            <div id="grid">
+                
+
+                <div id="seperation"></div>
+                
+                <section>
+                    <h1>Rejoignez « Le Club »</h1>
+                    <p id="main">Dès votre première reservation</p>
+
+                    <div id="club-advantages">
+                        <div>
+                            <img src="../src/img/check.png" alt="Check">
+                            <p>L'accès aux meilleurs tarifs disponibles</p>
+                        </div>
+
+                        <div>
+                            <img src="../src/img/check.png" alt="Check">
+                            <p>Votre Guest Experience Manager (GEM) dédié, l'artisan de tous vos voyages</p>
+                        </div>
+                        
+                        <div>
+                            <img src="../src/img/check.png" alt="Check">
+                            <p>Le surclassement selon disponibilité au moment de votre check-in</p>
+                        </div>
+                    </div>
+
+                    
+
+                    <h1>Ce qui distingue cet hôtel</h1>
+                    <div id="distingue">
+                        
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div id="modal" class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true" style="z-index: 999;display: none;">
+            <!--
+              Background backdrop, show/hide based on modal state.
+          
+              Entering: "ease-out duration-300"
+                From: "opacity-0"
+                To: "opacity-100"
+              Leaving: "ease-in duration-200"
+                From: "opacity-100"
+                To: "opacity-0"
+            -->
+            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+          
+            <div class="fixed inset-0 z-10 overflow-y-auto">
+              <div class="flex min-h-full justify-center p-4 text-center items-baseline sm:p-0">
+                <!--
+                  Modal panel, show/hide based on modal state.
+          
+                  Entering: "ease-out duration-300"
+                    From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    To: "opacity-100 translate-y-0 sm:scale-100"
+                  Leaving: "ease-in duration-200"
+                    From: "opacity-100 translate-y-0 sm:scale-100"
+                    To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                -->
+                <div id="imageslider" class="relative transform overflow-hidden h-screen bg-white text-right shadow-xl transition-all ml-auto sm:w-2/3">
+                    
+                    <!-- <div x-data="imageSlider()" class="relative mx-auto max-w-2xl overflow-hidden rounded-md bg-gray-100 p-2 sm:p-4">
+                        
+                        <div class="absolute right-5 top-5 z-10 rounded-full bg-gray-600 px-2 text-center text-sm text-white">
+                            <span x-text="currentIndex"></span>/<span x-text="images.length"></span>
+                            
+                        </div>
+                        <button onclick="toggleModal()" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100">
+                            <span class="sr-only">Close menu</span>
+                            
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                        <button @click="previous()" class="absolute left-5 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-gray-100 shadow-md">
+                            <svg class=" w-8 h-8 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-gray-500 hover:text-gray-600 hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7">
+                                </path>
+                            </svg>
+                        </button>
+                
+                        <button @click="forward()" class="absolute right-5 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-gray-100 shadow-md">
+                            <svg class=" w-8 h-8 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-gray-500 hover:text-gray-600 hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                
+                        <div class="relative h-80" style="width: 30rem">
+                            <template x-for="(image, index) in images">
+                                <div x-show="currentIndex == index + 1" x-transition:enter="transition transform duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition transform duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="absolute top-0">
+                                    <img :src="image" alt="image" class="rounded-sm" />
+                                </div>
+                            </template>
+                        </div>
+                    </div> -->
+                    
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!-- <div class="swiper-slide">
+                <div class="title">
+                    <div id="title">
+                        <h1>Notre sélection de chambres et suites</h1>
+                        <button>VISITER LES CHAMBRES</button>
+                    </div>
+                    <div id="seperation"></div>
+
+                    <div id="main">
+                        <h1>Deluxe Room</h1>
+                        <p>36 m2, Vue: Hyde Park - Localisation : chaque étage -Baignoire et douche dans routes les chambers</p>
+        
+                        <button>RÉSERVER</button>
+                    </div>
+                </div>
+                <div class="background-image">
+                  <img class="room-img" src="../src/img/hotels/hotel-1.png" alt="A random unsplash image" />
+                </div>
+              </div>
+          
+              <div class="swiper-slide">
+                <div class="title">
+                    <div id="title">
+                        <h1>Notre sélection de chambres et suites</h1>
+                        <button>VISITER LES CHAMBRES</button>
+                    </div>
+                    <div id="seperation"></div>
+                    
+                    <div id="main">
+                        <h1>Deluxe Room</h1>
+                        <p>36 m2, Vue: Hyde Park - Localisation : chaque étage -Baignoire et douche dans routes les chambers</p>
+        
+                        <button>RÉSERVER</button>
+                    </div>
+                </div>
+                <div class="background-image">
+                  <img class="room-img" src="../src/img/hotels/hotel-2.png" alt="A random unsplash image" />
+                </div>
+              </div> -->
+            </div>
+          
+          
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        
+
+        <div id="avis">
+            <h1>Nos clients donnent leur avis</h1>
+
+            <div id="avis-wrapper">
+                
+            </div>
+        </div>
+
+        <div id="inter">
+            <div id="top">
+                <h1>L'hôtel en bref</h1>
+                <ul class="infos sm:pr-8 mb-4">
+                    <li>
+                        <button class="infos-active infos-info">INFORMATIONS PRATIQUES </button> 
+                    </li>
+                    <li>
+                        <button class="infos-restau">RESTAURANTS ET BARS </button> 
+
+                    </li>
+                    <li>
+                        <button class="infos-spa">SPA ET LOISIRS </button>
+                        
+                    </li>
+                </ul>
+
+                <div class="seperation"></div>
+            </div>
+        </div>
+
+        <div id="info">
+            
+            <div id="hotel-info" class="horizontal-grid informations">
+                <!-- <div class="point">
+                    <h2>Adresse</h2>
+                    <p>45 Park Lane, Mayfair, Londres</p>
+
+                    <h2>Heure d'arrivée / de départ</h2>
+                    <p><strong>Enregistrement:</strong> 15:00 </p>
+                    <p><strong>Heure de départ:</strong> midi </p>
+
+                    <h2>Chambres</h2>
+                    <p>46 chambres et suites</p>
+                    <p> <strong>Equipements dans les chambres :</strong> Connecteur iPod, TV à écran plat, coffre-fort dans la chambre, mini-bar, cafetière / théière, produits de salle de bains Noble Isle</p>
+                </div>
+                <div class="seperation">
+                    <div></div>
+                </div>
+    
+                <div class="point">
+                    <h2>Internet</h2>
+                    <p><strong>Espaces publics:</strong> gratuit </p>
+                    <p><strong>En chambre :</strong> gratuit</p>
+
+                    <h2>Transport et transfert</h2>
+                    <p><strong>Transfert:</strong> soumis à supplément</p>
+
+                    <h2>Toujours inclus dans cet hôtel</h2>
+                    <p>Internet offert</p>
+
+                    <h2>Animaux de compagnie</h2>
+                    <p>Chiens non admis</p>
+                </div>
+                <div class="seperation">
+                    <div></div>
+                </div>
+    
+                <div class="point">
+                    <h2>Accueil des enfants</h2>
+                    <p>Enfants bienvenus</p>
+
+                    <h2>Politique fumeurs</h2>
+                    <p>Espaces publics non-fumeurs </p>
+                    <p> <strong>Chambres fumeurs :</strong> non disponibles</p>
+
+                    <h2>Services disponibles</h2>
+                    <p>Hôtel climatisé <br> Service de blanchisserie <br> Service de conciergerie</p>
+                </div> -->
+            </div>
+            <div id="hotel-info" class="horizontal-grid restaurants none">
+                <!-- <div class="point">
+                    <h2>Restaurants and bars options</h2>
+
+                    <p><strong>CUT at 45 Park Lane :</strong> Restaurant gastronomique: cuisine steak house, Petit déjeuner, Afternoon tea </p>
+                    <p> <strong>BAR 45 :</strong> Bar</p>
+                </div>
+                <div class="seperation">
+                    <div></div>
+                </div>
+    
+                <div class="point">
+                    <h2>Petit déjeuner</h2>
+                    <p><strong>Petit déjeuner continental:</strong> disponible </p>
+                    <p><strong>Petit déjeuner américain :</strong> disponible</p>
+
+                    
+                </div> -->
+                
+            </div>
+            <div id="hotel-info" class="horizontal-grid spa none">
+                <!-- <div class="point">
+                    <h2>Spa (The Spa at 45 Park Lane)</h2>
+                    
+                    <p> Massages</p>
+
+                    <p> Hammam</p>
+                </div>
+                <div class="seperation">
+                    <div></div>
+                </div>
+    
+                <div class="point">
+                    <h2>Loisirs</h2>
+                    <p>Piscine intérieure </p>
+                    <p>Centre de fitness</p>
+
+                    
+                </div> -->
+                
+            </div>
+        </div>
+
+        <div id="options">
+            <h1>Également dans la Collection Regency</h1>
+
+            <div id="wrapper">
+                <!-- <div class="element">
+                    <div id="background"></div>
+                    <h3>CLARIDGE'S</h3>
+                </div>
+
+                <div class="element">
+                    <div id="background"></div>
+                    <h3>CORINTHIA LONDON</h3>
+                </div>
+
+                <div class="element">
+                    <div id="background"></div>
+                    <h3>HOTEL CAFÉ ROYAL</h3>
+                </div> -->
+            </div>
+        </div>
+
+        <div id="selling-points" class="horizontal-grid">
+            <div class="point">
+                <h1>Une Collection unique des plus beaux hôtels du monde</h1>
+                <p>Nous les sélectionnons personnellement et tous sont exceptionnels</p>
+                <button onclick="window.location.href = `collection-hotels.html`">DÉCOUVREZ NOTRE COLLECTION</button>
+            </div>
+            <div class="seperation">
+                <div></div>
+            </div>
+
+            <div class="point">
+                <h1>Un accompagnement ultra-personnalisé</h1>
+                <p>Tous les avantages "Le Club" et un Guest Experience Manager dédié à votre écoute pour des séjours parfaits, conçus sur-mesure.</p>
+                <div id="phone">
+                    <p>Conctactez-nous au</p>
+                    <p><a href="tel:+442035192700">+44 20 3519 2700</a></p>
+                </div>
+            </div>
+            <div class="seperation">
+                <div></div>
+            </div>
+
+            <div class="point">
+                <h1>Une expérience hotelière de prestige</h1>
+                <p>Les meilleurs hôtels, les meilleures prestations, les meilleurs services, tout simplement.</p>
+            </div>
+        </div>
+
+        <div id="mail">
+            <div id="background"></div>
+    
+            <div id="container">
+                <h2>DES OFFRES EXCLUSIVES, DES <br> INSPIRATIONS INÉDITES</h2>
+                <h3>Recevez notre newsletter</h3>
+    
+                <form>
+                    <input type="email" placeholder="Votre Adresse E-mail">
+                    <div id="seperation"></div>
+    
+                    <button onclick="return false">S'ABONNER</button>
+                </form>
+    
+                <p>
+                    Vos données personnelles sont destinées à l'entité juridique REGENCY TRAVEL SARL dans le but de vous fournir les services REGENCY TRAVEL que vous avez demandés, de vous envoyer des informations sur les activités et services de REGENCY TRAVEL et de vous proposer des offres adaptées à vos centres d'intérêt. Vous pouvez à tout moment vous opposer à recevoir des offres de notre part en utilisant le lien de désinscription présent dans chaque message de REGENCY TRAVEL, demander à accéder, faire porter à un tiers, rectifier ou supprimer les informations vous concernant traitées par REGENCY TRAVEL. Pour exercer vos droits auprès de REGENCY TRAVEL, écrivez à contact@regencytravel.com . Pour en savoir plus sur le traitement de vos données personnelles par REGENCY TRAVEL et sur vos droits, consultez notre Charte pour la protection des données personnelles et de la vie privée à l'adresse suivante : <a href="tos.html" style="cursor: pointer;">Politique de confidentialité</a> .
+                </p>
+            </div>
+        </div>
+    
+        <footer>
+            <div id="upper">
+                <a href="index.html"><img src="../src/img/logo-blanc.png" alt="Regency Logo"></a>
+                
+                <ul class="hidden sm:block">
+                    <h3>معرفة المزيد</h3>
+    
+                    <a href="who-are-we.html"><li>من نحن</li></a>
+                    <a href="destination.html"><li>الوجهات</li></a>
+                    <a href="collection-hotels.html"><li>مجموعة الفنادق</li></a>
+                    
+                </ul>
+                <p class="text-white text-center text-lg sm:hidden mt-4">
+                    <a href="destination.html">الوجهات</a>-
+                    <a href="collection-hotels.html">مجموعة الفنادق</a>-
+                    
+                    <a href="contact.html">اتصل بنا</a>-
+                    <a href="blog.html">المدونة</a>
+
+                </p>
+                <p class="text-white text-center text-lg sm:hidden">
+                    <a href="tos.html">شروط الخدمة</a>-
+                    <a href="policy.html">سياسة الخصوصية</a>
+                </p>
+                <ul class="hidden sm:block">
+                    <h3>دعنا نساعدك</h3>
+    
+                    <a href="contact.html"><li>اتصل بنا</li></a>
+                    <a href="blog.html"><li>المدونة</li></a>
+                    <a href="tos.html"><li>شروط الخدمة</li></a>
+                    <a href="policy.html"><li>سياسة الخصوصية</li></a>
+                </ul>
+    
+                <ul class="hidden sm:block">
+                    <h3>الاعتمادات</h3>
+    
+                    <a href="https://www2.arccorp.com/support-training/arc-check-results/?acn=05715496&formSourceName=StandardForm&sp_exp=yes" target="_blank"><li>شهادة ARC</li></a>
+                    <a href="https://regencytravel.com/images/CLIA.jpg" target="_blank"><li>شهادة CLIA</li></a>
+                    <a href="https://regencytravel.com/images/IATA.jpg" target="_blank"><li>شهادة IATA</li></a>
+                    <a href="https://regencytravel.com/images/CST.jpg" target="_blank"><li>شهادة CST</li></a>
+                </ul>
+            </div>
+    
+            <div id="lower">
+                <div id="phone" class="hidden sm:flex flex-row-reverse">
+                    <img src="../src/img/phone.png" alt="Phone">
+                    <h3><a href="tel:+442035192700">+44 20 3519 2700</a></h3>
+                </div>
+                <div id="phone" class="flex flex-col sm:hidden">
+                    <h2>اتصل بخبرائنا:</h2>
+                    <h3 class="underline"><a href="tel:+442035192700">+44 20 3519 2700</a></h3>
+                </div>
+                <img id="logo" src="../src/img/IATA-white.png" alt="IATA LOGO" class="hidden sm:block">
+    
+                <div id="socials" class="hidden sm:flex">
+                    <a href="#"><img src="../src/img/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="../src/img/Youtube.png" alt="Youtube"></a>
+                    <a href="#"><img src="../src/img/facebook.png" alt="Facebook"></a>
+                </div>
+                <div id="socials" class="flex w-full flex-row justify-around sm:hidden py-4">
+                    <a href="#"><img src="../src/img/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="../src/img/Youtube.png" alt="Youtube"></a>
+                    <a href="#"><img src="../src/img/facebook.png" alt="Facebook"></a>
+                </div>
+				
+            </div>
+			<div class="bitcom">
+				© حقوق الطبع والنشر لشركة ريجنسي ترافيل 2023. جميع الحقوق محفوظة. تم تصميمه وتطويره بواسطة <a href="https://bitcom.tn">bitcom</a>
+			</div>
+        </footer>
+    </div>
+
+    <script>
+        const restaurants = document.querySelector(".restaurants");
+        const informations = document.querySelector(".informations");
+        const spa = document.querySelector(".spa");
+
+        const infoBtn = document.querySelector(".infos-info")
+        const restauBtn = document.querySelector(".infos-restau")
+        const spaBtn = document.querySelector(".infos-spa")
+
+
+        function displayInfomartions(){
+            infoBtn.classList.add("infos-active")
+            restauBtn.classList.remove("infos-active")
+            spaBtn.classList.remove("infos-active")
+
+            informations.classList.remove("none")
+            restaurants.classList.add("none")
+            spa.classList.add("none")
+        }
+        infoBtn.addEventListener("click",displayInfomartions)
+
+        function displayRestaurants(){
+            infoBtn.classList.remove("infos-active")
+            restauBtn.classList.add("infos-active")
+            spaBtn.classList.remove("infos-active")
+
+            informations.classList.add("none")
+            restaurants.classList.remove("none")
+            spa.classList.add("none")
+        }
+        restauBtn.addEventListener("click",displayRestaurants)
+
+        function displaySpa(){
+            infoBtn.classList.remove("infos-active")
+            restauBtn.classList.remove("infos-active")
+            spaBtn.classList.add("infos-active")
+
+            informations.classList.add("none")
+            restaurants.classList.add("none")
+            spa.classList.remove("none")
+        }
+        spaBtn.addEventListener("click",displaySpa)
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        // Getting hotel from Page url param
+        function GetUrlParameter(sParam){
+            var sPageURL= document.URL;
+            var sURLVariables = sPageURL.split('?');
+            for (var i = 0; i < sURLVariables.length; i++) 
+            {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) 
+                {
+                    return sParameterName[1];
+                }
+            }
+        }
+        var Pageid = GetUrlParameter("id")
+        
+
+        function GetHotelToDisplay(Pageid)
+        {        
+            if(Pageid.includes("#")){Pageid = Pageid.substring(0,Pageid.indexOf("#"))}
+
+            return hotels.find(({ id }) => id == Pageid);
+        }
+
+        var hotel;
+        async function displayHotel(){
+            await fetch(`${backendURL}/api/todos/${Pageid}`)
+                .then((response) => response.json())
+                .then((res) => {
+                    hotel = res 
+                    document.title = hotel.name
+                    console.log(hotel.images)
+                    hotelPage(hotel)
+                    document.querySelector("#imageslider").innerHTML=
+                    `
+                    <div x-data="imageSlider" class="relative mx-auto h-screen w-full overflow-hidden bg-gray-100 pt-4">
+                        
+                        <div class="absolute right-5 top-5 z-10 rounded-full bg-gray-600 px-2 text-center text-sm text-white">
+                            
+                            <span x-text="currentIndex"></span>/<span x-text="images.length"></span>
+                            
+                        </div>
+
+                        <button onclick="toggleModal()" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100">
+                            <span class="sr-only">Close menu</span>
+                            
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                        <a href="reservation-hotel.html?id=${hotel._id}" ><button id="slide-btn"> RÉSERVER</button></a>
+
+                        <button @click="previous()" class="absolute left-5 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-gray-100 shadow-md">
+                            <svg class=" w-8 h-8 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-gray-500 hover:text-gray-600 hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7">
+                                </path>
+                            </svg>
+                        </button>
+                
+                        <button @click="forward()" class="absolute right-5 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-gray-100 shadow-md">
+                            <svg class=" w-8 h-8 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-gray-500 hover:text-gray-600 hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                
+                        <div class="relative h-80" style="width: 100%">
+                            <template x-for="(image, index) in images">
+                                <div x-show="currentIndex == index + 1" x-transition:enter="transition transform duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition transform duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="w-full absolute top-0">
+                                    <img :src="image" alt="image" class="h-screen w-full rounded-sm" />
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                    `
+                });
+        }
+        displayHotel();
+        const imageSlider = () => {
+            return {
+                currentIndex: 1,
+                    images: hotel.images,
+                    previous() {
+                        if (this.currentIndex > 1) {
+                            this.currentIndex = this.currentIndex - 1;
+                        }
+                    },
+                    forward() {
+                        if (this.currentIndex < this.images.length) {
+                            this.currentIndex = this.currentIndex + 1;
+                        }
+                    },
+            };
+        };
+        const modal = document.querySelector("#modal")
+        const slider = document.querySelector("#imageslider")
+        function toggleModal(){
+            console.log(modal.style.display)
+            if(modal.style.display=="none"){
+                modal.style.display = "block"
+                slider.classList.add("slide")
+            }else{
+                modal.style.display = "none"
+                slider.classList.remove("slide")
+
+
+            }
+            
+        }
+        //Modifiying the page to the current Hotel selected
+        function hotelPage(hotel){
+            // background-image landing
+            const landing = document.getElementById("backgroundImg");
+            landing.src=hotel.images[0];
+            // div TEXT
+            const text = document.getElementById("text");
+            const stars = document.createElement("div");
+            stars.id="stars"
+            stars.classList = "flex gap-2"
+            for (var i = 0; i < parseInt(hotel.stars); i++) 
+            {
+                const starItem = document.createElement("img");
+                starItem.src="../src/img/star.png";
+                stars.appendChild(starItem);
+            }
+
+            const subTitle = `<h1>${hotel.name}</h1><h3>${hotel.address}</h3>`
+            text.appendChild(stars);
+            text.innerHTML+=subTitle;
+
+            // div grid
+            const grid = document.getElementById("grid")
+            const services = document.createElement("div");
+            services.id="underlined"
+
+            for (var i = 0; i < hotel.services.length; i++) 
+            {
+                const serviceItem = document.createElement("p");
+                serviceItem.textContent=hotel.services[i];
+                services.appendChild(serviceItem);
+            }
+            const gridSection = `
+                    <section>
+                        <h1>${hotel.subtitle}</h1>
+                        <p id="main">${hotel.description}</p>
+                        <div id="underlined">
+                            ${services.innerHTML}    
+                        </div>
+                        <a href="reservation-hotel.html?id=${hotel._id}"><button> RÉSERVER</button></a>
+                    </section>`;
+
+            grid.innerHTML = gridSection + grid.innerHTML
+            // div distingue
+            const distingue = document.getElementById('distingue')
+            for (var i = 0; i < hotel.exceptions.length; i++) 
+            {
+                const exceptionItem = document.createElement("p");
+                exceptionItem.textContent=hotel.exceptions[i];
+                distingue.appendChild(exceptionItem);
+            }
+
+            // div avis-wrapper
+            const feedbacks  = document.getElementById("avis-wrapper")
+            if(hotel.feedback.length==0){
+                const feedbackItem = document.createElement("div");
+                feedbackItem.className = "avis"
+                var note = 
+                `<div id="top">
+                    <h3>Aucun Client n'a donné son avis sur cet Hotel.</h3>
+                </div>
+        
+                <div id="seperation"></div>`
+                feedbackItem.innerHTML+=note
+                feedbacks.appendChild(feedbackItem);
+            }
+            for (var i = 0; i < hotel.feedback.length; i++) 
+            {
+                const feedbackItem = document.createElement("div");
+                feedbackItem.className = "avis"
+                var note = 
+                `<div id="top">
+                    <h3>${hotel.feedback[i].name}</h3>
+                    <h3>${hotel.feedback[i].rate}</h3>
+                </div>
+        
+                <h2>${hotel.feedback[i].date}</h2>
+        
+                <div id="seperation"></div>
+        
+                <p>${hotel.feedback[i].note}</p>
+                `
+                feedbackItem.innerHTML+=note
+                feedbacks.appendChild(feedbackItem);
+            }
+
+            // hotel-info
+            const infos = document.querySelector(".informations");
+            const restaus = document.querySelector(".restaurants");
+            const spas = document.querySelector(".spa");
+            const hotelBref = hotel.informations;
+
+            var hotelServices = document.createElement("div")
+            for (var i = 0; i < hotelBref.pratiques.services.length; i++) 
+            {
+                const service = document.createElement("p");
+                service.textContent = hotelBref.pratiques.services[i]
+                hotelServices.innerHTML+=service.innerHTML + "<br>"
+            }
+
+            var spaServices = document.createElement("div")
+            for (var i = 0; i < hotelBref.spa.services.length; i++) 
+            {
+                const service = document.createElement("p");
+                service.textContent = hotelBref.spa.services[i]
+                spaServices.innerHTML+=service.innerHTML + "<br>"
+            }
+
+            var loisirs = document.createElement("div")
+            for (var i = 0; i < hotelBref.spa.loisirs.length; i++) 
+            {
+                const service = document.createElement("p");
+                service.textContent = hotelBref.spa.loisirs[i]
+                loisirs.innerHTML+=service.innerHTML + "<br>"
+            }
+
+            var inclusion = document.createElement("p")
+            for (var i = 0; i < hotelBref.pratiques.inclus.length; i++) 
+            {
+                var inclus = document.createElement("p")
+                inclus.textContent = hotelBref.pratiques.inclus[i]
+                inclusion.innerHTML+=inclus.innerHTML + "<br>"
+            }
+            const hotelInfo = `
+            <div class="point">
+                <h2>Adresse</h2>
+                <p>${hotelBref.pratiques.address}</p>
+                <h2>Heure d'arrivée / de départ</h2>
+                <p><strong>Enregistrement:</strong> ${hotelBref.pratiques.arrival} </p>
+                <p><strong>Heure de départ:</strong> ${hotelBref.pratiques.departure} </p>
+                <h2>Chambres</h2>
+                <p>${hotelBref.pratiques.rooms}</p>
+                <p> <strong>Equipements dans les chambres :</strong> ${hotelBref.pratiques.equipments}</p>
+            </div>
+            <div class="seperation">
+                <div></div>
+            </div>
+        
+            <div class="point">
+                <h2>Internet</h2>
+                <p><strong>Espaces publics:</strong> ${hotelBref.pratiques.publicSpace} </p>
+                <p><strong>En chambre :</strong> ${hotelBref.pratiques.inRoom}</p>
+                <h2>Transport et transfert</h2>
+                <p><strong>Transfert:</strong> ${hotelBref.pratiques.transfer}</p>
+                <h2>Toujours inclus dans cet hôtel</h2>
+                <p>${inclusion.innerHTML}</p>
+                <h2>Animaux de compagnie</h2>
+                <p>${hotelBref.pratiques.animals}</p>
+            </div>
+            <div class="seperation">
+                <div></div>
+            </div>
+        
+            <div class="point">
+                <h2>Accueil des enfants</h2>
+                <p>${hotelBref.pratiques.kids}</p>
+                <h2>Politique fumeurs</h2>
+                <p>${hotelBref.pratiques.smokers}</p>
+                <p> <strong>Chambres fumeurs :</strong> ${hotelBref.pratiques.smokersRoom}</p>
+                <h2>Services disponibles</h2>
+                ${hotelServices.innerHTML}
+            </div>`
+
+            const hotelRestau = `
+            <div class="point">
+                <h2>Restaurants et bars options</h2>
+                <p><strong>${hotelBref.restaurants.cut}</strong> </p>
+                <p> <strong>${hotelBref.restaurants.bar}</strong> </p>
+            </div>
+            <div class="seperation">
+                <div></div>
+            </div>
+    
+            <div class="point">
+                <h2>Petit déjeuner</h2>
+                <p><strong>Petit déjeuner continental:</strong> ${hotelBref.restaurants.breakfeastContinental} </p>
+                <p><strong>Petit déjeuner américain :</strong> ${hotelBref.restaurants.breakfeastAmericain}</p>
+            </div>`
+
+            const hotelSpa = `
+            <div class="point">
+                <h2>Spa (The Spa at 45 Park Lane)</h2>
+                ${spaServices.innerHTML}
+            </div>
+            <div class="seperation">
+                <div></div>
+            </div>
+            <div class="point">
+                <h2>Loisirs</h2>
+                ${loisirs.innerHTML}
+            </div>`
+            infos.innerHTML+=hotelInfo
+            restaus.innerHTML+=hotelRestau
+            spas.innerHTML+=hotelSpa
+
+            
+        }
+
+        
+        // Random Hotels
+        const hotelsList = document.getElementById("wrapper")
+
+        function getRandom(arr, n) {
+            var result = new Array(n),
+                len = arr.length,
+                taken = new Array(len);
+            if (n > len)
+                throw new RangeError("getRandom: more elements taken than available");
+            while (n--) {
+                var x = Math.floor(Math.random() * len);
+                result[n] = arr[x in taken ? taken[x] : x];
+                taken[x] = --len in taken ? taken[len] : len;
+            }
+            return result;
+        }
+
+        async function displayHotels(){
+            await fetch(`${backendURL}/api/todos`)
+                .then((response) => response.json())
+                .then(({hotels}) => {
+                    getRandom(hotels, 3).forEach((hotel) => {
+                        const hotelItem = document.createElement("a");
+                        hotelItem.href=`hotel-deatils.html?id=${hotel._id}`;
+                        hotelItem.classList.add("element");
+                        hotelItem.innerHTML = `
+                            <div id="background"  style="background-image : url(${hotel.images[0]})"></div>
+                            <h3 class="text-black">${hotel.name}</h3>`;
+                        hotelsList.appendChild(hotelItem);
+                    })
+                });
+        }
+        displayHotels()
+    </script>
+    <script>
+        // Image Slider
+        var hotel;
+        async function displaySwiper(){
+            await fetch(`${backendURL}/api/todos/${Pageid}`)
+                .then((response) => response.json())
+                .then((res) => {
+                    hotel = res 
+                    const slides = document.querySelector(".swiper-wrapper");
+                    for (var i = 0; i < hotel.rooms.length; i++) 
+                        {
+                            const slide = document.createElement("div")
+                            slide.className="swiper-slide"
+                            slide.innerHTML+=`
+                            <div class="title">
+                                <div id="title">
+                                    <h1>Notre sélection de chambres et suites</h1>
+                                    <button>VISITER LES CHAMBRES</button>
+                                </div>
+                                <div id="seperation"></div>
+
+                                <div id="main">
+                                    <h1>${hotel.rooms[i].name}</h1>
+                                    <p>${hotel.rooms[i].description}</p>
+                        
+                                    <button><a href="reservation-hotel.html?id=${hotel._id}"> RÉSERVER</a></button>
+                                </div>
+                            </div>
+                            <div class="background-image">
+                                <img class="room-img" src=${hotel.rooms[i].img} alt="A random unsplash image" />
+                            </div>`
+
+                            slides.appendChild(slide)
+                        }
+                });
+        }
+        displaySwiper();
+        
+
+        
+    </script>
+    <script>
+		//SEARCH
+		const searchBtn = document.querySelector("#searchBtn");
+        const searchText = document.querySelector("#search-text");
+
+		function redirectSearch(){
+			window.location.href = `hotels-search.html?country=${searchText.value}`
+		}
+		searchBtn.addEventListener("click",redirectSearch)
+	</script>
+    <script>
+        const settings = {
+            loop: true,
+        
+            speed: 700,
+        
+            pagination: {
+            el: ".swiper-pagination",
+            type: "bullets"
+            },
+        
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+            }
+        };
+        
+        const swiper = new Swiper(".mySwiper", settings);
+    </script>
+        <!--
+        This code will translate page contents automatically (without user input)
+        Settings located at line 9, current script will translate french to arabic
+        -->
+        <style>#google_translate_element{display:none;}</style>
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
+            }
+            </script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

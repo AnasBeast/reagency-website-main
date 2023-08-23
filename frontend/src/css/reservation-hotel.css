@@ -479,7 +479,7 @@ input::-webkit-inner-spin-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("../img/room.png");
+  background-image: url("https://i.postimg.cc/VNG9PLNH/room.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -810,15 +810,15 @@ input::-webkit-inner-spin-button {
 }
 
 #content #options #wrapper .element:first-child #background {
-  background-image: url("../img/hotels/hotel-1.png");
+  background-image: url("https://i.postimg.cc/GpYGBJ3G/card-img.jpg");
 }
 
 #content #options #wrapper .element:nth-child(2) #background {
-  background-image: url("../img/hotels/hotel-3.png");
+  background-image: url("https://i.postimg.cc/d7yxM7Pg/hotel-3.png");
 }
 
 #content #options #wrapper .element:nth-child(3) #background {
-  background-image: url("../img/hotels/hotel-4.png");
+  background-image: url("https://i.postimg.cc/1n07tLzH/hotel-4.png");
 }
 
 #content #options #wrapper .element #background {
