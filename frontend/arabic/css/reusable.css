@@ -104,7 +104,7 @@ body.hidden {
   height: 25px;
   border: solid #ffff 1px;
   position: absolute;
-  right: 20px;
+  left: 20px;
   top: 20px;
   padding: 7px;
   border-radius: 50px;
@@ -365,7 +365,7 @@ nav #menu div {
 
 @media only screen and (max-width: 1050px) {
   #input-wrapper {
-    margin-left: 5%;
+    margin-right: 5%;
     width: 90%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
