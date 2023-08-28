@@ -671,7 +671,7 @@ nav #menu div {
 
 #content #inter #top {
   width: calc(100% - 150px);
-  margin-right: 100px;
+  margin-left: 0;
 }
 
 #content #inter #top h1 {

@@ -87,16 +87,16 @@
             <div id="input-wrapper">
 				<div id="input">
 					<img style="display: block" src="../src/img/search.png" alt="Search" id="search">
-					<input type="text" id="search-text" placeholder="search for a hotel, a destination">
+					<input type="text" id="search-text" placeholder="البحث عن فندق، وجهة">
 				</div>
 
-				<button id="searchBtn">Search</button>
+				<button id="searchBtn">يبحث</button>
 			</div>
         </div>
 
         <div id="list-wrapper">
             <div id="top">
-                <h1 class="content-title">Hôtel de luxe</h1>
+                <h1 class="content-title">فندق فاخر</h1>
                 <div class="seperation"></div>
 
                 <ul class="pl-12 my-4">
@@ -115,14 +115,14 @@
                               <div id="drop-style" x-show="dropdownOpen" style="z-index: 999;" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                                 <fieldset class="px-4 border" >
                                     <legend class="sr-only">
-                                        STYLE
+                                        أسلوب
                                     </legend>
                             
                                     <div class="flex gap-4 flex-col items-start my-4" id="style">
                                         <div class="flex items-center">
                                             <input id="style-option-1" type="checkbox" name="style" value="Contemporain" class="stylecheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="style-option-1" aria-describedby="style-option-1">
                                             <label for="style-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
-                                                Contemporain
+                                                معاصر
                                             </label>
                                         </div>
                                     </div>
@@ -138,7 +138,7 @@
                         <div class="flex justify-center">
                             <div id="atmosphereBtn" x-data="{ dropdownOpen: false }" class="relative">
                               <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 flex items-center rounded-md bg-white p-2 focus:outline-none">
-                                ATMOSPHÈRE
+                                أَجواء
                                 <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                   <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                                 </svg>
@@ -149,14 +149,14 @@
                               <div id="drop-atmosphere" x-show="dropdownOpen" style="z-index: 999;" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                                 <fieldset class="px-4 border">
                                     <legend class="sr-only">
-                                        ATMOSPHÈRE
+                                        أَجواء
                                     </legend>
                             
                                     <div class="flex gap-4 flex-col items-start my-4" id="atmosphere">
                                         <div class="flex items-center">
                                             <input id="atmosphere-option-1" type="checkbox" name="atmosphere" value="Charme" class="atmcheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="atmosphere-option-1" aria-describedby="atmosphere-option-1">
                                             <label for="atmosphere-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
-                                                Charme
+                                                سحر
                                             </label>
                                         </div>
                                     </div>
@@ -172,7 +172,7 @@
                         <div class="flex justify-center">
                             <div x-data="{ dropdownOpen: false }" class="relative">
                               <button id="amenagementsBtn" @click="dropdownOpen = !dropdownOpen" class="relative z-10 flex items-center rounded-md bg-white p-2 focus:outline-none">
-                                AMÉNAGEMENTS
+                                وسائل الراحة
                                 <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                   <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                                 </svg>
@@ -183,14 +183,14 @@
                               <div id="drop-amenagements" x-show="dropdownOpen" style="z-index: 999;" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
                                 <fieldset class="px-4 border" >
                                     <legend class="sr-only">
-                                        AMÉNAGEMENTS
+                                        وسائل الراحة
                                     </legend>
                             
                                     <div class="flex gap-4 flex-col items-start my-4" id="amenagement">
                                         <div class="flex items-center">
                                             <input id="amenagement-option-1" type="checkbox" name="amenagement" value="Centre de fitness" class="amecheckbox h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="amenagement-option-1" aria-describedby="amenagement-option-1">
                                             <label for="amenagement-option-1" class="text-sm font-medium text-gray-900 ml-2 block">
-                                                Centre de fitness
+                                                مركز اللياقة البدنية
                                             </label>
                                         </div>
                                     </div>
@@ -213,7 +213,7 @@
                     <div id="background" style="background-image : url(./../src/img/hotels/hotel-2.png)"></div>
                     <h3>45 Park Lane</h3>
                 </div>
-                <button>RÉSERVER</button></a></div>
+                <button>للحجز</button></a></div>
                 
             </div>
         </div>
@@ -222,19 +222,19 @@
 
         <div id="selling-points" class="horizontal-grid">
             <div class="point">
-                <h1>Une Collection unique des plus beaux hôtels du monde</h1>
-                <p>Nous les sélectionnons personnellement et tous sont exceptionnels</p>
-                <button onclick="window.location.href = `collection-hotels.html`">DÉCOUVREZ NOTRE COLLECTION</button>
+                <h1>مجموعة فريدة من أجمل الفنادق في العالم</h1>
+                <p>نحن نختارهم شخصيًا وكلهم استثنائيون</p>
+                <button onclick="window.location.href = `collection-hotels.html`">اكتشف مجموعتنا</button>
             </div>
             <div class="seperation">
                 <div></div>
             </div>
 
             <div class="point">
-                <h1>Un accompagnement ultra-personnalisé</h1>
-                <p>Tous les avantages "Le Club" et un Guest Experience Manager dédié à votre écoute pour des séjours parfaits, conçus sur-mesure.</p>
-                <div id="phone">
-                    <p>Conctactez-nous au</p>
+                <h1>دعم مخصص للغاية</h1>
+                <p>جميع مزايا "Le Club" ومدير تجربة الضيوف المخصص لخدمتك للحصول على إقامات مثالية ومصممة خصيصًا.</p>
+                <div معرف = "الهاتف">
+                    <p>اتصل بنا على</p>
                     <p><a href="tel:+33184112032">+44 20 3519 2700</a></p>
                 </div>
             </div>
@@ -243,22 +243,22 @@
             </div>
 
             <div class="point">
-                <h1>Une expérience hotelière de prestige</h1>
-                <p>Les meilleurs hôtels, les meilleures prestations, les meilleurs services, tout simplement.</p>
+                <h1>تجربة فندقية مرموقة</h1>
+                <p>أفضل الفنادق، أفضل الخدمات، أفضل الخدمات بكل بساطة.</p>
             </div>
         </div>
 
         <div id="selection-chambres" class="title">
 
             <div id="title">
-                <h1>Des idées de destinations</h1>
+                <h1>أفكار للوجهات</h1>
             </div>
             
             <div id="seperation"></div>
 
             <div id="main">
-                <h1>Amérique du Nord</h1>
-                <h4>CANADA - ETATS-UNIS - MEXIQUE</h4>
+                <h1>أمريكا الشمالية</h1>
+                <h4>كندا - الولايات المتحدة - المكسيك</h4>
             </div>
         </div>
 
@@ -266,18 +266,18 @@
             <div id="background"></div>
     
             <div id="container">
-                <h2>DES OFFRES EXCLUSIVES, DES <br> INSPIRATIONS INÉDITES</h2>
-                <h3>Recevez notre newsletter</h3>
+                <h2>عروض حصرية، <br> إلهامات غير مسبوقة</h2>
+                <h3>احصل على رسالتنا الإخبارية</h3>
     
                 <form>
-                    <input type="email" placeholder="Votre Adresse E-mail">
+                    <input type="email" placeholder="بريدك الالكتروني">
                     <div id="seperation"></div>
     
-                    <button onclick="return false">S'ABONNER</button>
+                    <button onclick="return false">يشترك</button>
                 </form>
     
                 <p>
-                    Vos données personnelles sont destinées à l'entité juridique REGENCY TRAVEL SARL dans le but de vous fournir les services REGENCY TRAVEL que vous avez demandés, de vous envoyer des informations sur les activités et services de REGENCY TRAVEL et de vous proposer des offres adaptées à vos centres d'intérêt. Vous pouvez à tout moment vous opposer à recevoir des offres de notre part en utilisant le lien de désinscription présent dans chaque message de REGENCY TRAVEL, demander à accéder, faire porter à un tiers, rectifier ou supprimer les informations vous concernant traitées par REGENCY TRAVEL. Pour exercer vos droits auprès de REGENCY TRAVEL, écrivez à contact@regencytravel.com . Pour en savoir plus sur le traitement de vos données personnelles par REGENCY TRAVEL et sur vos droits, consultez notre Charte pour la protection des données personnelles et de la vie privée à l'adresse suivante : <a href="tos.html" style="cursor: pointer;">Politique de confidentialité</a> .
+                    إن بياناتك الشخصية مخصصة للكيان القانوني REGENCY TRAVEL SARL لتزويدك بخدمات REGENCY TRAVEL التي طلبتها، ولإرسال معلومات إليك عن أنشطة وخدمات REGENCY TRAVEL ولتقديم عروض تتكيف مع هواياتك. يمكنك في أي وقت الاعتراض على تلقي العروض منا باستخدام رابط إلغاء الاشتراك الموجود في كل رسالة من REGENCY TRAVEL، أو طلب الوصول، أو الاستعانة بطرف ثالث لنقل أو تصحيح أو حذف المعلومات المتعلقة بك التي تمت معالجتها بواسطة REGENCY TRAVEL. لممارسة حقوقك مع REGENCY TRAVEL، اكتب إلى contact@regencytravel.com. لمعرفة المزيد حول معالجة بياناتك الشخصية بواسطة REGENCY TRAVEL وحقوقك، راجع ميثاقنا لحماية البيانات الشخصية والخصوصية على العنوان التالي: <a href="tos.html" style= "cursor: pointer; ">سياسة الخصوصية</a> .
                 </p>
             </div>
         </div>
@@ -287,51 +287,51 @@
                 <a href="index.html"><img src="../src/img/logo-blanc.png" alt="Regency Logo"></a>
                 
                 <ul class="hidden sm:block">
-                    <h3>LEARN MORE</h3>
+                    <h3>معرفة المزيد</h3>
     
-                    <a href="qui-sommes-nous.html"><li>WHO ARE WE</li></a>
-                    <a href="destination.html"><li>DESTINATIONS</li></a>
-                    <a href="collection-hotels.html"><li>HOTELS COLLECTION</li></a>
+                    <a href="who-are-we.html"><li>من نحن</li></a>
+                    <a href="destination.html"><li>الوجهات</li></a>
+                    <a href="collection-hotels.html"><li>مجموعة الفنادق</li></a>
                     
                 </ul>
                 <p class="text-white text-center text-lg sm:hidden mt-4">
-                    <a href="destination.html">Destinations</a>-
-                    <a href="collection-hotels.html">Hotels Collection</a>-
+                    <a href="destination.html">الوجهات</a>-
+                    <a href="collection-hotels.html">مجموعة الفنادق</a>-
                     
-                    <a href="contact.html">Contact us</a>-
-                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">اتصل بنا</a>-
+                    <a href="blog.html">المدونة</a>
 
                 </p>
                 <p class="text-white text-center text-lg sm:hidden">
-                    <a href="tos.html">Terms of Service</a>-
-                    <a href="politique.html">Privacy Policy</a>
+                    <a href="tos.html">شروط الخدمة</a>-
+                    <a href="policy.html">سياسة الخصوصية</a>
                 </p>
                 <ul class="hidden sm:block">
-                    <h3>LET US HELP YOU</h3>
+                    <h3>دعنا نساعدك</h3>
     
-                    <a href="contact.html"><li>CONTACT US</li></a>
-                    <a href="blog.html"><li>Blog</li></a>
-                    <a href="tos.html"><li>TERMS OF SERVICE</li></a>
-                    <a href="politique.html"><li>PRIVACY POLICY</li></a>
+                    <a href="contact.html"><li>اتصل بنا</li></a>
+                    <a href="blog.html"><li>المدونة</li></a>
+                    <a href="tos.html"><li>شروط الخدمة</li></a>
+                    <a href="policy.html"><li>سياسة الخصوصية</li></a>
                 </ul>
     
                 <ul class="hidden sm:block">
-                    <h3>ACCREDITATIONS</h3>
+                    <h3>الاعتمادات</h3>
     
-                    <a href="https://www2.arccorp.com/support-training/arc-check-results/?acn=05715496&formSourceName=StandardForm&sp_exp=yes" target="_blank"><li>CERTIFICATE ARC</li></a>
-                    <a href="https://regencytravel.com/images/CLIA.jpg" target="_blank"><li>CERTIFICATE CLIA</li></a>
-                    <a href="https://regencytravel.com/images/IATA.jpg" target="_blank"><li>CERTIFICATE IATA</li></a>
-                    <a href="https://regencytravel.com/images/CST.jpg" target="_blank"><li>CERTIFICATE CST</li></a>
+                    <a href="https://www2.arccorp.com/support-training/arc-check-results/?acn=05715496&formSourceName=StandardForm&sp_exp=yes" target="_blank"><li>شهادة ARC</li></a>
+                    <a href="https://regencytravel.com/images/CLIA.jpg" target="_blank"><li>شهادة CLIA</li></a>
+                    <a href="https://regencytravel.com/images/IATA.jpg" target="_blank"><li>شهادة IATA</li></a>
+                    <a href="https://regencytravel.com/images/CST.jpg" target="_blank"><li>شهادة CST</li></a>
                 </ul>
             </div>
     
             <div id="lower">
-                <div id="phone" class="hidden sm:flex">
+                <div id="phone" class="hidden sm:flex flex-row-reverse">
                     <img src="../src/img/phone.png" alt="Phone">
                     <h3><a href="tel:+33184112032">+44 20 3519 2700</a></h3>
                 </div>
                 <div id="phone" class="flex flex-col sm:hidden">
-                    <h2>Contact our experts :</h2>
+                    <h2>اتصل بخبرائنا:</h2>
                     <h3 class="underline"><a href="tel:+33184112032">+44 20 3519 2700</a></h3>
                 </div>
                 <img id="logo" src="../src/img/IATA-white.png" alt="IATA LOGO" class="hidden sm:block">
@@ -349,7 +349,7 @@
 				
             </div>
 			<div class="bitcom">
-				© Copyright Regency Travel 2023. All Rights Reserved. Designed and Developed by <a href="https://bitcom.tn">bitcom</a>
+				© حقوق الطبع والنشر لشركة ريجنسي ترافيل 2023. جميع الحقوق محفوظة. تم تصميمه وتطويره بواسطة <a href="https://bitcom.tn">bitcom</a>
 			</div>
         </footer>
     </div>
