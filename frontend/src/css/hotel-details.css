@@ -1138,14 +1138,18 @@ nav #menu div {
   .title #main button {
     width: 80%;
   }
-  #avis h1 {
-    font-size: 20px;
+  #content #avis h1 {
+    font-size: 30px;
   }
   #content #features {
     margin-bottom: 75px;
   }
   #content #inter #top h1{
-    font-size: 20px;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  #inter #top ul li{
+    font-size: 14px !important;
   }
   #inter #top ul{
     flex-direction: row;
