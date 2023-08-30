@@ -29,7 +29,6 @@ nav {
 
 nav img {
   width: 200px;
-  margin-left: 30px;
 }
 
 nav #sections {
@@ -453,9 +452,7 @@ nav #menu div {
     padding-left: 15%;
     padding-right: 15%;
   }
-  nav img{
-    margin-left: 10vw;
-  }
+
   img.mt-4{
     width: 100%;
   }
