@@ -68,24 +68,7 @@
 			<a href="collection-hotels.html"><p>COLLECTION D'HOTELS</p></a>
 			<a href="https://www.govoyages.com/vols/" target="_blank"><p>VOLS</p></a>
 			<a href="tel:+33184112032"><p>RÉSERVEZ EN LIGNE OU APPELEZ <br> +33 1 84 11 20 32</p></a>
-            <div class="relative inline-block text-left mr-4">
-                <div id="paysBtn" x-data="{ dropdownOpen: false }" class="relative">
-                    <button @click="dropdownOpen = !dropdownOpen" class="relative border flex items-center rounded-md bg-white p-2 focus:outline-none">
-                      Langues
-                      <svg class="h-5 w-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                      </svg>
-                    </button>
-                  
-                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full"></div>
-                  
-                    <div id="drop-pays" x-show="dropdownOpen" class="absolute border right-0 mt-2 p-2 w-28 bg-white rounded-md shadow-xl">
-                      <fieldset class="px-4 h-full space-y-2" >
-                          <option class="hover:cursor-pointer">Arabe</option>
-                          <option class="hover:cursor-pointer">Englais</option>
-                      </fieldset>
-                    </div>
-            </div>
+            
         </div>
 
 		<div id="menu" onclick="showMobileNav()">
