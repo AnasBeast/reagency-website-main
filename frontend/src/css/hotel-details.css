@@ -621,6 +621,7 @@ nav #menu div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+            gap: 40px;
 }
 
 #content #avis #avis-wrapper .avis {
