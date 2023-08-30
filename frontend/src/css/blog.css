@@ -484,6 +484,7 @@ nav #menu div {
   }
   #contact-us-section #wrapper{
     flex-direction: column;
+    gap: 20px;
   }
   #contact-us-section #wrapper .element{
     width: 100%;
