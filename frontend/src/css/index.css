@@ -114,7 +114,7 @@ nav #menu div {
 }
 
 #content #current-dest {
-  height: 100%;
+  height: auto;
   width: 100%;
   background: #021033;
   padding-top: 75px;
