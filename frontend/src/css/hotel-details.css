@@ -1166,6 +1166,9 @@ nav #menu div {
   #content #options #wrapper{
     gap: 40px;
   }
+  #content #avis #avis-wrapper{
+    gap: 20px;
+  }
   /* .infos li button::after{
     opacity: 0;
   } */
