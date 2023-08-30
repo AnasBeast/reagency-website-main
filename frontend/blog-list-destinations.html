@@ -96,8 +96,8 @@
             <div id="top">
                 <div class="flex justify-center gap-6 sm:gap-12 text-md sm:text-2xl mt-8">
                     <a href="blog-list-last.html" class="hover:underline mr-[4px]"><p>Derniers Articles</p></a>
-                    <a href="blog-list-hotels.html" class="font-bold"><p>Hôtels</p></a>
-                    <a href="#" class="hover:underline mr-[4px]"><p>Destinations</p></a>
+                    <a href="blog-list-hotels.html" class="hover:underline"><p>Hôtels</p></a>
+                    <a href="#" class="font-bold mr-[4px]"><p>Destinations</p></a>
                 </div>
                 <div class="seperation"></div>
             </div>
@@ -257,7 +257,7 @@
                 .then((response) => response.json())
                 .then(({blogs}) => {
                     console.log(blogs)
-                    obj = blogs.filter((blog)=>blog.type=="Hotels");
+                    obj = blogs.filter((blog)=>blog.type=="Destinations");
                     console.log(obj)
                     hotelsList.innerHTML=""
                     obj.forEach((hotel) => {

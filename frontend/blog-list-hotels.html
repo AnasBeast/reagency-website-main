@@ -257,7 +257,7 @@
                 .then((response) => response.json())
                 .then(({blogs}) => {
                     console.log(blogs)
-                    obj = blogs.filter((blog)=>blog.type=="Destinations");
+                    obj = blogs.filter((blog)=>blog.type=="Hotels");
                     console.log(obj)
                     hotelsList.innerHTML=""
                     obj.forEach((hotel) => {
