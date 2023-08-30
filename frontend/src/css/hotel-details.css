@@ -1163,6 +1163,9 @@ nav #menu div {
   #content #inter , #content #avis{
     margin-bottom: 40px;
   }
+  #content #options #wrapper{
+    gap: 40px;
+  }
   /* .infos li button::after{
     opacity: 0;
   } */
