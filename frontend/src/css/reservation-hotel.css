@@ -1038,6 +1038,7 @@ input::-webkit-inner-spin-button {
     flex-direction: column;
     padding-right: 10px;
     padding-left: 10px;
+    gap: 20px;
   }
   #room div{
     padding: 0;
