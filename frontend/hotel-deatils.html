@@ -825,12 +825,12 @@
             }
             const hotelInfo = `
             <div class="point">
-                <h2>Adresse</h2>
+                <h2 class="font-bold">Adresse</h2>
                 <p>${hotelBref.pratiques.address}</p>
-                <h2>Heure d'arrivée / de départ</h2>
+                <h2 class="font-bold">Heure d'arrivée / de départ</h2>
                 <p><strong>Enregistrement:</strong> ${hotelBref.pratiques.arrival} </p>
                 <p><strong>Heure de départ:</strong> ${hotelBref.pratiques.departure} </p>
-                <h2>Chambres</h2>
+                <h2 class="font-bold">Chambres</h2>
                 <p>${hotelBref.pratiques.rooms}</p>
                 <p> <strong>Equipements dans les chambres :</strong> ${hotelBref.pratiques.equipments}</p>
             </div>
@@ -839,14 +839,14 @@
             </div>
         
             <div class="point">
-                <h2>Internet</h2>
+                <h2 class="font-bold">Internet</h2>
                 <p><strong>Espaces publics:</strong> ${hotelBref.pratiques.publicSpace} </p>
                 <p><strong>En chambre :</strong> ${hotelBref.pratiques.inRoom}</p>
-                <h2>Transport et transfert</h2>
+                <h2 class="font-bold">Transport et transfert</h2>
                 <p><strong>Transfert:</strong> ${hotelBref.pratiques.transfer}</p>
-                <h2>Toujours inclus dans cet hôtel</h2>
+                <h2 class="font-bold">Toujours inclus dans cet hôtel</h2>
                 <p>${inclusion.innerHTML}</p>
-                <h2>Animaux de compagnie</h2>
+                <h2 class="font-bold">Animaux de compagnie</h2>
                 <p>${hotelBref.pratiques.animals}</p>
             </div>
             <div class="seperation">
@@ -854,18 +854,18 @@
             </div>
         
             <div class="point">
-                <h2>Accueil des enfants</h2>
+                <h2 class="font-bold">Accueil des enfants</h2>
                 <p>${hotelBref.pratiques.kids}</p>
-                <h2>Politique fumeurs</h2>
+                <h2 class="font-bold">Politique fumeurs</h2>
                 <p>${hotelBref.pratiques.smokers}</p>
                 <p> <strong>Chambres fumeurs :</strong> ${hotelBref.pratiques.smokersRoom}</p>
-                <h2>Services disponibles</h2>
+                <h2 class="font-bold">Services disponibles</h2>
                 ${hotelServices.innerHTML}
             </div>`
 
             const hotelRestau = `
             <div class="point">
-                <h2>Restaurants et bars options</h2>
+                <h2 class="font-bold">Restaurants et bars options</h2>
                 <p><strong>${hotelBref.restaurants.cut}</strong> </p>
                 <p> <strong>${hotelBref.restaurants.bar}</strong> </p>
             </div>
@@ -874,21 +874,21 @@
             </div>
     
             <div class="point">
-                <h2>Petit déjeuner</h2>
+                <h2 class="font-bold">Petit déjeuner</h2>
                 <p><strong>Petit déjeuner continental:</strong> ${hotelBref.restaurants.breakfeastContinental} </p>
                 <p><strong>Petit déjeuner américain :</strong> ${hotelBref.restaurants.breakfeastAmericain}</p>
             </div>`
 
             const hotelSpa = `
             <div class="point">
-                <h2>Spa (The Spa at 45 Park Lane)</h2>
+                <h2 class="font-bold">Spa (The Spa at 45 Park Lane)</h2>
                 ${spaServices.innerHTML}
             </div>
             <div class="seperation">
                 <div></div>
             </div>
             <div class="point">
-                <h2>Loisirs</h2>
+                <h2 class="font-bold">Loisirs</h2>
                 ${loisirs.innerHTML}
             </div>`
             infos.innerHTML+=hotelInfo
