@@ -1171,6 +1171,9 @@ nav #menu div {
   #content #avis #avis-wrapper{
     gap: 20px;
   }
+  #content #grid section:first-child #underlined{
+    display: none;
+  }
   /* .infos li button::after{
     opacity: 0;
   } */
