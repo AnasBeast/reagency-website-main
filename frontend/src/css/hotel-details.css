@@ -1031,6 +1031,15 @@ nav #menu div {
 }
 
 @media only screen and (max-width: 701px) {
+  #top ul{
+    margin-left: 0px;
+    justify-content: space-between;
+  }
+  #slide-btn{
+    margin-left: 10% !important;
+    margin-bottom: 5% !important;
+    margin: 0 auto;
+  }
   #number h1 {
     font-size: 100px !important;
   }

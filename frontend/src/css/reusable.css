@@ -888,8 +888,14 @@ footer #lower #socials img {
 }
 
 @media only screen and (max-width: 701px) {
-  #top ul {
+  #top ul{
+    display: none;
+  }
+  #top .navigation-bar li:nth-child(2) {
     display: none !important;
+  }
+  #top .navigation-bar{
+    display: flex !important;
   }
   footer #upper {
     -ms-flex-flow: column wrap;

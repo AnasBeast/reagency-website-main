@@ -66,10 +66,10 @@
                     <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full"></div>
                   
                     <div x-show="dropdownOpen" class="absolute border right-0 mt-2 mr-12 p-2 w-28 bg-blue rounded-md shadow-xl">
-                      <fieldset class="px-4 h-full space-y-2" >
-                          <option class="hover:cursor-pointer" onclick="window.location.href = `./arabic/index.html`">Arabe</option>
-                          <option class="hover:cursor-pointer" onclick="window.location.href = `./english/index.html`">Anglais</option>
-                      </fieldset>
+                      <div class="px-4 h-full space-y-2" >
+                          <a class="hover:cursor-pointer" onclick="window.location.href = `./arabic/index.html`">Arabe</a>
+                          <a class="hover:cursor-pointer" onclick="window.location.href = `./english/index.html`">Anglais</a>
+                      </div>
                     </div>
 				</div>
 			</a>
