@@ -545,7 +545,7 @@ Savourez un repas au premier restaurant londonien, CUT de Wolfgang Puck."
           const room = {
             name : document.querySelector(`#room-type${i+1}`).value,
             description : document.querySelector(`#room-description${i+1}`).value,
-            img : document.querySelector(`#room-image${i+1}`).split(),
+            img : document.querySelector(`#room-image${i+1}`).value.split(";"),
           }
           rooms.push(room)
         }

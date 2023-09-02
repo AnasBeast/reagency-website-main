@@ -59,7 +59,7 @@ const hotelSchema = mongoose.Schema({
 
     },
     stars : {type:String, required:true},
-    display : {type:Boolean, default:false}
+    display : {type:Boolean, default:true}
 })
 
 module.exports = mongoose.model("Hotel", hotelSchema)
