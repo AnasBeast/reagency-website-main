@@ -896,6 +896,17 @@ footer #lower #socials img {
   }
   #top .navigation-bar{
     display: flex !important;
+    text-align: center;
+    justify-content: center;
+  }
+  #top .navigation-bar li{
+    padding: 4px;
+    border: 1px solid ;
+    border-right: 0px;
+    margin-right: 0;
+  }
+  #top .navigation-bar li:nth-child(4){
+    border-right: 1px solid;
   }
   footer #upper {
     -ms-flex-flow: column wrap;

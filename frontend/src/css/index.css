@@ -447,12 +447,12 @@ nav #menu div {
   background-position: center;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
-  -webkit-transition: height 300ms, width 300ms;
-  transition: height 300ms, width 300ms;
+  -webkit-transition: height 200ms, width 200ms;
+  transition: height 200ms, width 200ms;
 }
 #content #actualités #posts #background:hover{
-  width: 115%;
-  height: 700px;
+  width: 100%;
+  height: 625px;
 }
 #content #actualités #posts .post #text {
   width: 100%;
