@@ -901,6 +901,8 @@ footer #lower #socials img {
   }
   #top .navigation-bar li{
     padding: 4px;
+    padding-left: 30px;
+    padding-right: 30px;
     border: 1px solid ;
     border-right: 0px;
     margin-right: 0;

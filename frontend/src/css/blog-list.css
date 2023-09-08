@@ -106,7 +106,7 @@ nav #menu div {
   -webkit-transition: height 300ms;
   transition: height 300ms;
   position: relative;
-  background-image: url("https://i.postimg.cc/NG1y1jcq/paris.png");
+  background-image: url("https://cdn.mos.cms.futurecdn.net/fs5rJxVnkbrumyJyfQ8tQg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -476,6 +476,13 @@ nav #menu div {
 @media only screen and (max-width: 701px) {
   #list-wrapper #top h1 {
     font-size: 25px !important;
+  }
+  #top div{
+    border: 1px solid;
+    text-align: center;
+  }
+  #top div a{
+    border-right: 1px solid;
   }
   footer{
     margin-top: 0 !important;
