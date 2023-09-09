@@ -1034,6 +1034,7 @@ nav #menu div {
   #content #features #top{
     width: 100%;
   }
+ 
   #top ul{
     margin-left: 0px;
     justify-content: space-between;
@@ -1189,8 +1190,12 @@ nav #menu div {
   /* .infos li button::after{
     opacity: 0;
   } */
-  #top .seperation{
+  #top .seperation:nth-child(1){
     height: 0;
+  }
+  #top .seperation{
+    width: 80%;
+    margin: 0 auto;
   }
   footer #upper img{
     width: 80%;

@@ -477,13 +477,7 @@ nav #menu div {
   #list-wrapper #top h1 {
     font-size: 25px !important;
   }
-  #top div{
-    border: 1px solid;
-    text-align: center;
-  }
-  #top div a{
-    border-right: 1px solid;
-  }
+  
   footer{
     margin-top: 0 !important;
   }
