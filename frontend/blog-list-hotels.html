@@ -237,12 +237,6 @@
        
        
         // DISPLAY SEARCHED HOTELS/DESTINATIONS
-        const searchText = document.querySelector("#search-text");
-        var regionElements = document.getElementsByClassName('regioncheckbox');
-        var countryElements = document.getElementsByClassName('countrycheckbox');
-        var styleElements = document.getElementsByClassName('stylecheckbox');
-        var atmElements = document.getElementsByClassName("atmcheckbox");
-        var ameElements = document.getElementsByClassName("amecheckbox");
         const hotelsList = document.getElementById("list");
         var obj;
         async function searchHotels(){
@@ -291,6 +285,15 @@
 
         const hotelCount = document.querySelector(".hotel-numbers")
     </script>
-    
+    <script>
+		//SEARCH
+		const searchBtn = document.querySelector("#searchBtn");
+        const searchText = document.querySelector("#search-text");
+
+		function redirectSearch(){
+			window.location.href = `hotels-search.html?country=${searchText.value}`
+		}
+		searchBtn.addEventListener("click",redirectSearch)
+	</script>
 </body>
 </html>
