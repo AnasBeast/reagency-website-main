@@ -22,8 +22,8 @@ const showMobileNav = () => {
 
 // const backendURL = "https://reagency-website-main-production.up.railway.app"
 // const backendURL ="http://localhost:8080"
-// const backendURL = "https://reagency-website-main-eo7z.vercel.app"
-const backendURL = "http://162.19.67.48:8080"
+const backendURL = "https://reagency-website-main-eo7z.vercel.app"
+// const backendURL = "http://162.19.67.48:8080"
 
 var hotelsTest = [
     {   
